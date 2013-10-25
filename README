@@ -1,0 +1,8 @@
+gPodder 4 for Sailfish OS
+=========================
+
+This repository contains the platform-specific customizations and packaging for
+running gPodder 4 on Sailfish OS.
+
+On Sailfish OS, we take Python and PyOtherSide from the mer-python3 project.
+Qt 5 is already shipped with the OS, so no need to package it up separately.

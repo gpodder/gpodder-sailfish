@@ -1,0 +1,6 @@
+[submodule "gpodder-core"]
+	path = gpodder-core
+	url = git://github.com/gpodder/gpodder-core.git
+[submodule "gpodder-ui-qml"]
+	path = gpodder-ui-qml
+	url = git://github.com/gpodder/gpodder-ui-qml.git
