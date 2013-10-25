@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Name=gPodder
+Icon=org.gpodder.sailfish
+Exec=sailfish-qml org.gpodder.sailfish
