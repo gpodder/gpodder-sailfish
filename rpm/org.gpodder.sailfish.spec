@@ -29,6 +29,7 @@ gPodder downloads and manages free audio and video content for you.
 TARGET=%{buildroot}/%{_datadir}/%{name}/qml
 mkdir -p $TARGET
 cp -rpv gpodder-core/src/* $TARGET/
+cp -rpv podcastparser/podcastparser.py $TARGET/
 cp -rpv gpodder-ui-qml/main.py gpodder-ui-qml/qml $TARGET/
 cp -rpv %{name}.qml $TARGET/
 

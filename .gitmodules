@@ -4,3 +4,6 @@
 [submodule "gpodder-ui-qml"]
 	path = gpodder-ui-qml
 	url = git://github.com/gpodder/gpodder-ui-qml.git
+[submodule "podcastparser"]
+	path = podcastparser
+	url = git://github.com/gpodder/podcastparser.git
