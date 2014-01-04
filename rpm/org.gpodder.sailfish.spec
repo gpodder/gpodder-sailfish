@@ -30,7 +30,8 @@ TARGET=%{buildroot}/%{_datadir}/%{name}/qml
 mkdir -p $TARGET
 cp -rpv gpodder-core/src/* $TARGET/
 cp -rpv podcastparser/podcastparser.py $TARGET/
-cp -rpv gpodder-ui-qml/main.py gpodder-ui-qml/qml $TARGET/
+cp -rpv gpodder-ui-qml/main.py $TARGET/
+cp -rpv qml $TARGET/
 cp -rpv %{name}.qml $TARGET/
 
 TARGET=%{buildroot}/%{_datadir}/applications
@@ -43,7 +44,6 @@ cp -rpv %{name}.png $TARGET/
 
 %files
 %defattr(-,root,root,-)
-%doc gpodder-core/README gpodder-core/LICENSE.GPLv3 gpodder-core/LICENSE.ISC
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
