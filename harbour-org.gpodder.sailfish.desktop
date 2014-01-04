@@ -2,5 +2,5 @@
 Type=Application
 X-Nemo-Application-Type=silica-qt5
 Name=gPodder
-Icon=org.gpodder.sailfish
-Exec=sailfish-qml org.gpodder.sailfish
+Icon=harbour-org.gpodder.sailfish
+Exec=sailfish-qml harbour-org.gpodder.sailfish

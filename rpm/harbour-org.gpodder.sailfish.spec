@@ -2,7 +2,7 @@
 %define __os_install_post %{___build_post}
 
 Summary: Media and podcast aggregator
-Name: org.gpodder.sailfish
+Name: harbour-org.gpodder.sailfish
 Version: 4.0.0
 Release: 1
 Source: %{name}-%{version}.tar.gz
@@ -10,7 +10,6 @@ BuildArch: noarch
 URL: http://gpodder.org/
 License: ISC / GPLv3
 Group: System/GUI/Other
-Requires: python3-base
 Requires: pyotherside-qml-plugin-python3-qt5
 Requires: sailfishsilica-qt5
 Requires: libsailfishapp-launcher
