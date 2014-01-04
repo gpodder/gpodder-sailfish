@@ -118,7 +118,6 @@ Page {
 
                 Component.onCompleted: {
                     py.setHandler('refreshing', function (is_refreshing) {
-                        refresherButton.visible = !is_refreshing;
                         if (!is_refreshing) {
                             freshEpisodesHeader.text = 'Fresh episodes';
                         }
