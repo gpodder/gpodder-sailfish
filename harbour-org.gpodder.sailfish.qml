@@ -27,7 +27,7 @@ ApplicationWindow {
     cover: CoverBackground {
         CoverPlaceholder {
             text: "gPodder"
-            icon.source: "/usr/share/icons/hicolor/86x86/apps/org.gpodder.sailfish.png"
+            icon.source: "/usr/share/icons/hicolor/86x86/apps/harbour-org.gpodder.sailfish.png"
         }
     }
 }
