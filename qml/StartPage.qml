@@ -19,10 +19,10 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
-SlidePage {
+Page {
     id: startPage
-    canClose: false
 
     function update_stats() {
         py.call('main.get_stats', [], function (result) {
@@ -42,7 +42,22 @@ SlidePage {
         py.setHandler('update-stats', undefined);
     }
 
-    Flickable {
+    SilicaFlickable {
+        id: startPageFlickable
+
+        PullDownMenu {
+            MenuItem {
+                text: 'Now playing'
+                onClicked: pgst.loadPage('PlayerPage.qml');
+            }
+            MenuItem {
+                text: "Settings"
+                onClicked: pgst.loadPage('Settings.qml');
+            }
+        }
+
+        VerticalScrollDecorator { flickable: startPageFlickable }
+
         Connections {
             target: pgst
             onReadyChanged: {
@@ -63,17 +78,22 @@ SlidePage {
             width: startPage.width
             spacing: 20 * pgst.scalef
 
-            SlidePageHeader {
+            PageHeader {
                 title: 'gPodder'
             }
 
-            StartPageButton {
+            SectionHeader {
+                text: 'Subscriptions'
+            }
+
+            BackgroundItem {
                 id: subscriptionsPane
 
-                title: 'Subscriptions'
                 onClicked: pgst.loadPage('PodcastsPage.qml');
+                width: startPage.width
+                height: startPage.height / 5
 
-                PLabel {
+                Label {
                     id: stats
 
                     anchors {
@@ -82,55 +102,40 @@ SlidePage {
                         margins: 20 * pgst.scalef
                     }
                 }
-
-                ButtonArea {
-                    anchors {
-                        bottom: parent.bottom
-                        right: parent.right
-                    }
-
-                    transparent: true
-                    onClicked: pgst.loadPage('Subscribe.qml');
-                    width: subscriptions.width + 2*subscriptions.anchors.margins
-                    height: subscriptions.height + 2*subscriptions.anchors.margins
-
-                    Image {
-                        id: subscriptions
-                        source: 'images/subscriptions.png'
-
-                        anchors {
-                            bottom: parent.bottom
-                            right: parent.right
-                            margins: 20 * pgst.scalef
-                        }
-                    }
-                }
             }
 
-            StartPageButton {
-                id: freshEpisodesPage
+            SectionHeader {
+                id: freshEpisodesHeader
+                text: 'Fresh episodes'
+            }
 
-                title: 'Fresh episodes'
+            BackgroundItem {
+                id: freshEpisodesPage
+                height: startPage.height / 6
+                width: parent.width
+
                 onClicked: pgst.loadPage('FreshEpisodes.qml');
 
                 Component.onCompleted: {
                     py.setHandler('refreshing', function (is_refreshing) {
-                        refresherButtonArea.visible = !is_refreshing;
+                        refresherButton.visible = !is_refreshing;
                         if (!is_refreshing) {
-                            freshEpisodesPage.title = 'Fresh episodes';
+                            freshEpisodesHeader.text = 'Fresh episodes';
                         }
                     });
 
                     py.setHandler('refresh-progress', function (pos, total) {
-                        freshEpisodesPage.title = 'Refreshing feeds (' + pos + '/' + total + ')';
+                        freshEpisodesHeader.text = 'Refreshing feeds (' + pos + '/' + total + ')';
                     });
                 }
 
                 Row {
-                    anchors.bottom: parent.bottom
-                    anchors.bottomMargin: 50 * pgst.scalef
-                    anchors.leftMargin: 20 * pgst.scalef
+                    id: freshRow
+
+                    anchors.verticalCenter: parent.verticalCenter
                     anchors.left: parent.left
+                    anchors.margins: spacing
+
                     spacing: 10 * pgst.scalef
 
                     Repeater {
@@ -142,106 +147,17 @@ SlidePage {
                             width: 80 * pgst.scalef
                             height: 80 * pgst.scalef
 
-                            PLabel {
+                            /*
+                            Label {
                                 anchors {
                                     horizontalCenter: parent.horizontalCenter
-                                    top: parent.bottom
-                                    margins: 5 * pgst.scalef
+                                    bottom: parent.bottom
                                 }
 
                                 text: modelData.newEpisodes
                             }
+                            */
                         }
-                    }
-                }
-
-                ButtonArea {
-                    id: refresherButtonArea
-
-                    anchors {
-                        bottom: parent.bottom
-                        right: parent.right
-                    }
-
-                    transparent: true
-                    onClicked: py.call('main.check_for_episodes');
-                    width: refresher.width + 2*refresher.anchors.margins
-                    height: refresher.height + 2*refresher.anchors.margins
-
-                    Image {
-                        id: refresher
-                        source: 'images/search.png'
-
-                        anchors {
-                            bottom: parent.bottom
-                            right: parent.right
-                            margins: 20 * pgst.scalef
-                        }
-                    }
-                }
-            }
-
-            ButtonArea {
-                onClicked: pgst.loadPage('PlayerPage.qml');
-
-                anchors {
-                    left: recommendationsPane.left
-                    right: recommendationsPane.right
-                }
-
-                height: 100 * pgst.scalef
-
-                PLabel {
-                    anchors.centerIn: parent
-                    text: 'Now playing'
-                }
-            }
-
-            ButtonArea {
-                onClicked: pgst.loadPage('Settings.qml');
-
-                anchors {
-                    left: recommendationsPane.left
-                    right: recommendationsPane.right
-                }
-
-                height: 100 * pgst.scalef
-
-                PLabel {
-                    anchors.centerIn: parent
-                    text: 'Settings'
-                }
-            }
-
-            StartPageButton {
-                id: recommendationsPane
-
-                title: 'Recommendations'
-                onClicked: pgst.loadPage('Settings.qml');
-
-                Row {
-                    anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        bottom: parent.bottom
-                        margins: 40 * pgst.scalef
-                    }
-
-                    spacing: 20 * pgst.scalef
-
-                    Connections {
-                        target: pgst
-                        onReadyChanged: {
-                            if (pgst.ready) {
-                                py.call('main.load_podcasts', [], function (podcasts) {
-                                    recommendationsRepeater.model = podcasts.splice(0, 4);
-                                });
-                            }
-                        }
-                    }
-
-                    Repeater {
-                        id: recommendationsRepeater
-                        Image { source: modelData.coverart; sourceSize { width: 80 * pgst.scalef; height: 80 * pgst.scalef } }
                     }
                 }
             }

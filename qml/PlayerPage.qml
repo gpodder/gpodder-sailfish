@@ -19,10 +19,11 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
 import 'constants.js' as Constants
 
-SlidePage {
+Page {
     id: playerPage
 
     property string episodeTitle
@@ -33,7 +34,7 @@ SlidePage {
         });
     }
 
-    Flickable {
+    SilicaFlickable {
         id: flickable
         anchors.fill: parent
 
@@ -46,7 +47,7 @@ SlidePage {
             width: playerPage.width
             spacing: 10 * pgst.scalef
 
-            SlidePageHeader {
+            PageHeader {
                 title: 'Now playing'
             }
 
@@ -68,14 +69,13 @@ SlidePage {
                 ]
             }
 
-            PSlider {
+            Slider {
                 width: playerPage.width
                 value: player.playbackRate
-                min: 0.5
-                max: 3.0
-                onValueChangeRequested: {
-                    player.playbackRate = newValue
-                    value = player.playbackRate
+                minimumValue: 0.5
+                maximumValue: 3.0
+                onSliderValueChanged: {
+                    player.playbackRate = sliderValue
                 }
             }
         }

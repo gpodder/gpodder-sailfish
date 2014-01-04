@@ -19,10 +19,11 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
 import 'constants.js' as Constants
 
-ButtonArea {
+BackgroundItem {
     id: podcastItem
 
     Rectangle {
@@ -36,7 +37,6 @@ ButtonArea {
         opacity: .4
     }
 
-    transparent: true
     height: 80 * pgst.scalef
 
     anchors {
@@ -44,7 +44,7 @@ ButtonArea {
         right: parent.right
     }
 
-    PLabel {
+    Label {
         anchors {
             left: parent.left
             right: downloadStatusIcon.left

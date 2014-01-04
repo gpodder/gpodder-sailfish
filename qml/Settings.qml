@@ -19,14 +19,13 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
-SlidePage {
-    SlidePageHeader { title: 'Settings' }
+Page {
+    PageHeader { title: 'Settings' }
 
-    Text {
+    Label {
         anchors.centerIn: parent
-        color: 'white'
-        font.pixelSize: 50 * pgst.scalef
         text: 'TODO'
     }
 }

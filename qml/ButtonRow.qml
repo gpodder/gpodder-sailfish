@@ -19,6 +19,7 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
 Row {
     id: buttonRow
@@ -30,12 +31,12 @@ Row {
         id: repeater
         model: buttonRow.model
 
-        delegate: ButtonArea {
+        delegate: BackgroundItem {
             height: buttonRow.height
             width: buttonRow.width / repeater.count
             onClicked: buttonRow.model[index].clicked()
 
-            PLabel {
+            Label {
                 anchors.centerIn: parent
                 text: modelData.label
             }

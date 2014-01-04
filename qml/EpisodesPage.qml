@@ -19,14 +19,13 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.0
 
 import 'util.js' as Util
 
-SlidePage {
+Page {
     id: episodesPage
-
-    hasPull: true
 
     property int podcast_id
     property string title
@@ -34,34 +33,44 @@ SlidePage {
     width: parent.width
     height: parent.height
 
+    RemorsePopup { id: remorse }
+
     Component.onCompleted: {
         py.call('main.load_episodes', [podcast_id], function (episodes) {
             Util.updateModelFrom(episodeListModel, episodes);
         });
     }
 
-    PullMenu {
-        PullMenuItem {
-            source: 'images/play.png'
-            onClicked: {
-                pgst.loadPage('PlayerPage.qml');
-                episodesPage.unPull();
-            }
-        }
-
-        PullMenuItem {
-            source: 'images/delete.png'
-            onClicked: {
-                py.call('main.unsubscribe', [episodesPage.podcast_id]);
-                episodesPage.closePage();
-            }
-        }
-    }
-
-    PListView {
+    SilicaListView {
         id: episodeList
-        title: episodesPage.title
+
+        VerticalScrollDecorator { flickable: episodeList }
+
+        anchors.fill: parent
+        header: PageHeader {
+            title: episodesPage.title
+        }
+
         model: ListModel { id: episodeListModel }
+
+        PullDownMenu {
+            MenuItem {
+                text: 'Now playing'
+                onClicked: pgst.loadPage('PlayerPage.qml');
+            }
+
+            MenuItem {
+                text: 'Unsubscribe'
+                onClicked: {
+                    remorse.execute("Unsubscribing", function() {
+                        py.call('main.unsubscribe', [episodesPage.podcast_id]);
+                        if (pageStack.currentPage == episodesPage) {
+                            pageStack.pop();
+                        }
+                    })
+                }
+            }
+        }
 
         delegate: EpisodeItem {
             onClicked: pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});

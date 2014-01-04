@@ -19,10 +19,11 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
 import 'constants.js' as Constants
 
-SlidePage {
+Page {
     id: detailPage
 
     property int episode_id
@@ -35,9 +36,23 @@ SlidePage {
         });
     }
 
-    Flickable {
+    SilicaFlickable {
         id: flickable
         anchors.fill: parent
+
+        VerticalScrollDecorator { flickable: flickable }
+
+        PullDownMenu {
+            MenuItem {
+                text: 'Now playing'
+                onClicked: pgst.loadPage('PlayerPage.qml');
+            }
+
+            MenuItem {
+                text: 'Play'
+                onClicked: player.playbackEpisode(detailPage.episode_id)
+            }
+        }
 
         contentWidth: detailColumn.width
         contentHeight: detailColumn.height + detailColumn.spacing
@@ -48,22 +63,11 @@ SlidePage {
             width: detailPage.width
             spacing: 10 * pgst.scalef
 
-            SlidePageHeader {
+            PageHeader {
                 title: detailPage.title
             }
 
-            ButtonArea {
-                width: detailPage.width
-                height: 100 * pgst.scalef
-                onClicked: player.playbackEpisode(detailPage.episode_id)
-
-                PLabel {
-                    anchors.centerIn: parent
-                    text: 'Play'
-                }
-            }
-
-            PLabel {
+            Label {
                 id: label
                 width: parent.width * .8
                 font.pixelSize: 30 * pgst.scalef

@@ -19,24 +19,17 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
-ButtonArea {
+Column {
     id: startPageButton
-
     property string title
 
     anchors.horizontalCenter: parent.horizontalCenter
     width: parent.width * .9
     height: 200 * pgst.scalef
 
-    PLabel {
-        anchors {
-            right: parent.right
-            top: parent.top
-            margins: 20 * pgst.scalef
-        }
-
+    SectionHeader {
         text: startPageButton.title
     }
 }
-

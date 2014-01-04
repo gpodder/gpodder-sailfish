@@ -19,28 +19,29 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
-SlidePage {
+Page {
     id: subscribe
 
-    SlidePageHeader { title: 'Add subscription' }
+    PageHeader { title: 'Add subscription' }
 
     Column {
         anchors.centerIn: parent
         spacing: 30 * pgst.scalef
 
-        PTextField {
+        TextField {
             id: input
             width: subscribe.width *.8
             placeholderText: 'Feed URL'
         }
 
-        ButtonArea {
+        BackgroundItem {
             id: button
             width: input.width
             height: input.height
 
-            PLabel {
+            Label {
                 anchors.centerIn: parent
                 text: 'Subscribe'
             }
@@ -50,14 +51,17 @@ SlidePage {
                 button.visible = false;
                 input.visible = false;
                 py.call('main.subscribe', [input.text], function () {
-                    subscribe.closePage();
+                    if (pageStack.currentPage == subscribe) {
+                        pageStack.pop();
+                    }
                 });
             }
         }
 
-        PBusyIndicator {
+        BusyIndicator {
             id: loading
             visible: false
+            running: visible
             anchors.horizontalCenter: parent.horizontalCenter
         }
     }

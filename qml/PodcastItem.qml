@@ -19,11 +19,10 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
-ButtonArea {
+BackgroundItem {
     id: podcastItem
-
-    transparent: true
 
     height: 100 * pgst.scalef
     anchors {
@@ -50,12 +49,13 @@ ButtonArea {
         source: coverart
     }
 
-    PBusyIndicator {
+    BusyIndicator {
         anchors.centerIn: cover
         visible: updating
+        running: visible
     }
 
-    PLabel {
+    Label {
         anchors {
             left: cover.right
             leftMargin: 10 * pgst.scalef

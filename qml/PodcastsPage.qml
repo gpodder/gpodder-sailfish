@@ -19,12 +19,12 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
 import 'util.js' as Util
 
-SlidePage {
+Page {
     id: podcastsPage
-    hasPull: true
 
     function reload() {
         loading.visible = true;
@@ -65,41 +65,38 @@ SlidePage {
         py.setHandler('updated-podcast', undefined);
     }
 
-    PullMenu {
-        PullMenuItem {
-            source: 'images/play.png'
-            onClicked: {
-                pgst.loadPage('PlayerPage.qml');
-                podcastsPage.unPull();
-            }
-        }
-
-        PullMenuItem {
-            source: 'images/search.png'
-            onClicked: {
-                podcastsPage.unPull();
-                py.call('main.check_for_episodes');
-            }
-        }
-
-        PullMenuItem {
-            source: 'images/subscriptions.png'
-            onClicked: {
-                pgst.loadPage('Subscribe.qml');
-                podcastsPage.unPull();
-            }
-        }
-    }
-
-    PLabel {
+    Label {
         id: loading
         anchors.centerIn: parent
         text: 'Loading'
     }
 
-    PListView {
+    SilicaListView {
         id: podcastList
-        title: 'Subscriptions'
+        anchors.fill: parent
+
+        VerticalScrollDecorator { flickable: podcastList }
+
+        PullDownMenu {
+            MenuItem {
+                text: 'Now playing'
+                onClicked: pgst.loadPage('PlayerPage.qml');
+            }
+
+            MenuItem {
+                text: 'Check for new episodes'
+                onClicked: py.call('main.check_for_episodes');
+            }
+
+            MenuItem {
+                text: 'Add new podcast'
+                onClicked: pgst.loadPage('Subscribe.qml');
+            }
+        }
+
+        header: PageHeader {
+            title: 'Subscriptions'
+        }
 
         section.property: 'section'
         section.delegate: SectionHeader { text: section }

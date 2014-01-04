@@ -22,7 +22,12 @@ import Sailfish.Silica 1.0
 import 'qml'
 
 ApplicationWindow {
-    initialPage: Page {
-        Main {}
+    initialPage: Main {}
+
+    cover: CoverBackground {
+        CoverPlaceholder {
+            text: "gPodder"
+            icon.source: "/usr/share/icons/hicolor/86x86/apps/org.gpodder.sailfish.png"
+        }
     }
 }

@@ -19,10 +19,11 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 
 import 'util.js' as Util
 
-SlidePage {
+Page {
     id: freshEpisodes
     property bool ready: false
 
@@ -33,14 +34,36 @@ SlidePage {
         });
     }
 
-    PBusyIndicator {
+    BusyIndicator {
         visible: !freshEpisodes.ready
+        running: visible
         anchors.centerIn: parent
     }
 
-    PListView {
+    SilicaListView {
         id: freshEpisodesList
-        title: 'Fresh episodes'
+        anchors.fill: parent
+
+        VerticalScrollDecorator { flickable: freshEpisodesList }
+
+        PullDownMenu {
+            MenuItem {
+                text: 'Now playing'
+                onClicked: pgst.loadPage('PlayerPage.qml');
+            }
+
+            MenuItem {
+                text: 'Mark all as old'
+            }
+
+            MenuItem {
+                text: 'Download all episodes'
+            }
+        }
+
+        header: PageHeader {
+            title: 'Fresh episodes'
+        }
 
         model: ListModel { id: freshEpisodesListModel }
 

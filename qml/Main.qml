@@ -19,9 +19,10 @@
  */
 
 import QtQuick 2.0
+import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.0
 
-Item {
+Page {
     id: pgst
     property bool ready: false
 
@@ -52,9 +53,9 @@ Item {
                 component.errorString());
         }
         if (properties === undefined) {
-            component.createObject(pgst);
+            pageStack.push(component.createObject(pgst));
         } else {
-            component.createObject(pgst, properties);
+            pageStack.push(component.createObject(pgst, properties));
         }
     }
 
@@ -95,9 +96,10 @@ Item {
         id: player
     }
 
-    PBusyIndicator {
+    BusyIndicator {
         anchors.centerIn: parent
         visible: !pgst.ready
+        running: visible
     }
 
     StartPage {
