@@ -21,10 +21,24 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-BackgroundItem {
+ListItem {
     id: podcastItem
 
-    height: 100 * pgst.scalef
+    menu: Component {
+        ContextMenu {
+            MenuItem {
+                text: 'Unsubscribe'
+                onClicked: {
+                    var ctx = { py: py, id: id };
+                    podcastItem.remorseAction('Unsubscribing', function () {
+                        ctx.py.call('main.unsubscribe', [ctx.id]);
+                    });
+                }
+            }
+        }
+    }
+
+    contentHeight: 100 * pgst.scalef
     anchors {
         left: parent.left
         right: parent.right
