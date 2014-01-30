@@ -44,6 +44,7 @@ PodcastsPage {
     signal downloadProgress(int episode_id, real progress)
     signal downloaded(int episode_id)
     signal deleted(int episode_id)
+    signal isNewChanged(int episode_id, bool is_new)
 
     function loadPage(filename, properties) {
         var component = Qt.createComponent(filename);
@@ -73,6 +74,7 @@ PodcastsPage {
             setHandler('download-progress', pgst.downloadProgress);
             setHandler('downloaded', pgst.downloaded);
             setHandler('deleted', pgst.deleted);
+            setHandler('is-new-changed', pgst.isNewChanged);
 
             var path = Qt.resolvedUrl('..').substr('file://'.length);
             addImportPath(path);

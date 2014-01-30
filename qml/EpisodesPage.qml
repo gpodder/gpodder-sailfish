@@ -54,7 +54,11 @@ Page {
         }
         onDeleted: {
             Util.updateModelWith(episodeListModel, 'id', episode_id,
-                {'downloadState': Constants.state.deleted});
+                {'downloadState': Constants.state.deleted, 'isNew': false});
+        }
+        onIsNewChanged: {
+            Util.updateModelWith(episodeListModel, 'id', episode_id,
+                {'isNew': is_new});
         }
     }
 

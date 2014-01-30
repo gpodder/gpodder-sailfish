@@ -58,6 +58,12 @@ ListItem {
                     });
                 }
             }
+            MenuItem {
+                text: 'Toggle New'
+                onClicked: {
+                    py.call('main.toggle_new', [id]);
+                }
+            }
         }
     }
 
@@ -81,6 +87,9 @@ ListItem {
         truncationMode: TruncationMode.Fade
         text: title
 
+        // need to set opacity via color, as truncationMode overrides opacity
+        color: Theme.rgba(isNew ? Theme.highlightColor : Theme.primaryColor, opacity)
+
         opacity: {
             switch (downloadState) {
                 case Constants.state.normal: return 0.8;
@@ -96,10 +105,10 @@ ListItem {
         anchors {
             right: parent.right
             verticalCenter: parent.verticalCenter
-            rightMargin: (30 * pgst.scalef) * (text != '')
+            rightMargin: (20 * pgst.scalef) * (text != '')
         }
 
-        font.pixelSize: parent.contentHeight
+        font.pixelSize: podcastItem.contentHeight * 0.4
         font.bold: true
 
         opacity: titleItem.opacity
