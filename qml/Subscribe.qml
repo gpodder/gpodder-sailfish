@@ -49,6 +49,7 @@ Dialog {
             label: 'Feed URL'
             placeholderText: label
             inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
+            EnterKey.onClicked: subscribe.accept()
         }
     }
 }
