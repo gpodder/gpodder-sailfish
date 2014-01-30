@@ -47,11 +47,6 @@ Page {
                 text: 'Now playing'
                 onClicked: pgst.loadPage('PlayerPage.qml');
             }
-
-            MenuItem {
-                text: 'Play'
-                onClicked: player.playbackEpisode(detailPage.episode_id)
-            }
         }
 
         contentWidth: detailColumn.width
@@ -61,7 +56,7 @@ Page {
             id: detailColumn
 
             width: detailPage.width
-            spacing: 10 * pgst.scalef
+            spacing: Theme.paddingMedium
 
             PageHeader {
                 title: detailPage.title
@@ -69,9 +64,11 @@ Page {
 
             Label {
                 id: label
-                width: parent.width * .8
-                font.pixelSize: 30 * pgst.scalef
-                anchors.horizontalCenter: parent.horizontalCenter
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    margins: Theme.paddingMedium
+                }
                 wrapMode: Text.WordWrap
             }
         }

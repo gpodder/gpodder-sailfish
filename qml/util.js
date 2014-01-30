@@ -31,3 +31,14 @@ function updateModelFrom(model, data) {
         model.remove(model.count-1);
     }
 }
+
+function updateModelWith(model, key, value, update) {
+    for (var row=0; row<model.count; row++) {
+        var current = model.get(row);
+        if (current[key] == value) {
+            for (var key in update) {
+                model.setProperty(row, key, update[key]);
+            }
+        }
+    }
+}

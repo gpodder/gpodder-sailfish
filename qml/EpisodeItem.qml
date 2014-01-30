@@ -23,7 +23,7 @@ import Sailfish.Silica 1.0
 
 import 'constants.js' as Constants
 
-BackgroundItem {
+ListItem {
     id: podcastItem
 
     Rectangle {
@@ -33,11 +33,35 @@ BackgroundItem {
             left: parent.left
         }
         width: parent.width * progress
-        color: Constants.colors.download
-        opacity: .4
+        color: Theme.highlightColor
+        opacity: .7
     }
 
-    height: 80 * pgst.scalef
+    menu: Component {
+        ContextMenu {
+            MenuItem {
+                text: 'Download'
+                onClicked: {
+                    py.call('main.download_episode', [id]);
+                }
+            }
+            MenuItem {
+                text: 'Play'
+                onClicked: player.playbackEpisode(id);
+            }
+            MenuItem {
+                text: 'Delete'
+                onClicked: {
+                    var ctx = { py: py, id: id };
+                    podcastItem.remorseAction('Deleting', function () {
+                        ctx.py.call('main.delete_episode', [ctx.id]);
+                    });
+                }
+            }
+        }
+    }
+
+    contentHeight: 80 * pgst.scalef
 
     anchors {
         left: parent.left
@@ -45,6 +69,8 @@ BackgroundItem {
     }
 
     Label {
+        id: titleItem
+
         anchors {
             left: parent.left
             right: downloadStatusIcon.left
@@ -54,9 +80,17 @@ BackgroundItem {
 
         elide: Text.ElideRight
         text: title
+
+        opacity: {
+            switch (downloadState) {
+                case Constants.state.normal: return 0.8;
+                case Constants.state.downloaded: return 1;
+                case Constants.state.deleted: return 0.3;
+            }
+        }
     }
 
-    Image {
+    Label {
         id: downloadStatusIcon
 
         anchors {
@@ -65,11 +99,16 @@ BackgroundItem {
             margins: 30 * pgst.scalef
         }
 
-        source: {
+        font.pixelSize: parent.contentHeight
+        font.bold: true
+
+        opacity: titleItem.opacity
+
+        text: {
             switch (downloadState) {
                 case Constants.state.normal: return '';
-                case Constants.state.downloaded: return 'images/play.png';
-                case Constants.state.deleted: return 'images/delete.png';
+                case Constants.state.downloaded: return '♫';
+                case Constants.state.deleted: return '';
             }
         }
     }

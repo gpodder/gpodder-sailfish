@@ -23,6 +23,7 @@ import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.0
 
 import 'util.js' as Util
+import 'constants.js' as Constants
 
 Page {
     id: episodesPage
@@ -39,6 +40,22 @@ Page {
         py.call('main.load_episodes', [podcast_id], function (episodes) {
             Util.updateModelFrom(episodeListModel, episodes);
         });
+    }
+
+    Connections {
+        target: pgst
+        onDownloadProgress: {
+            Util.updateModelWith(episodeListModel, 'id', episode_id,
+                {'progress': progress});
+        }
+        onDownloaded: {
+            Util.updateModelWith(episodeListModel, 'id', episode_id,
+                {'progress': 0, 'downloadState': Constants.state.downloaded});
+        }
+        onDeleted: {
+            Util.updateModelWith(episodeListModel, 'id', episode_id,
+                {'downloadState': Constants.state.deleted});
+        }
     }
 
     SilicaListView {

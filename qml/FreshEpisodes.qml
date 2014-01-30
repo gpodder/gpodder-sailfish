@@ -75,11 +75,6 @@ Page {
 
             Connections {
                 target: pgst
-                onDownloadProgress: {
-                    if (episode_id == id) {
-                        freshEpisodesListModel.setProperty(index, 'progress', progress);
-                    }
-                }
                 onDownloaded: {
                     if (id == episode_id) {
                         freshEpisodesListModel.remove(index);
