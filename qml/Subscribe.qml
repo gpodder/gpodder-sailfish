@@ -21,48 +21,34 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-Page {
+Dialog {
     id: subscribe
+    canAccept: input.text != ''
 
-    PageHeader { title: 'Add subscription' }
+    SubscribeProgress {
+        id: progress
+    }
+
+    onAccepted: {
+        py.call('main.subscribe', [input.text], function () {
+            // TODO
+        });
+    }
 
     Column {
-        anchors.centerIn: parent
-        spacing: 30 * pgst.scalef
+        anchors.fill: parent
+
+        DialogHeader {
+            title: 'Add subscription'
+            acceptText: 'Subscribe'
+        }
 
         TextField {
             id: input
-            width: subscribe.width *.8
-            placeholderText: 'Feed URL'
-        }
-
-        BackgroundItem {
-            id: button
-            width: input.width
-            height: input.height
-
-            Label {
-                anchors.centerIn: parent
-                text: 'Subscribe'
-            }
-
-            onClicked: {
-                loading.visible = true;
-                button.visible = false;
-                input.visible = false;
-                py.call('main.subscribe', [input.text], function () {
-                    if (pageStack.currentPage == subscribe) {
-                        pageStack.pop();
-                    }
-                });
-            }
-        }
-
-        BusyIndicator {
-            id: loading
-            visible: false
-            running: visible
-            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width
+            label: 'Feed URL'
+            placeholderText: label
+            inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
         }
     }
 }
