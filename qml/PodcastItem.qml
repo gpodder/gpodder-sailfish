@@ -35,6 +35,37 @@ ListItem {
                     });
                 }
             }
+
+            MenuItem {
+                text: 'Rename'
+                onClicked: {
+                    var ctx = { py: py, id: id };
+                    pageStack.push('RenameDialog.qml', {
+                        activityName: 'Rename podcast',
+                        affirmativeAction: 'Rename',
+                        inputLabel: 'Podcast name',
+                        initialValue: title,
+                        callback: function (new_title) {
+                            ctx.py.call('main.rename_podcast', [ctx.id, new_title]);
+                        }
+                    });
+                }
+            }
+            MenuItem {
+                text: 'Change section'
+                onClicked: {
+                    var ctx = { py: py, id: id };
+                    pageStack.push('RenameDialog.qml', {
+                        activityName: 'Change section',
+                        affirmativeAction: 'Move',
+                        inputLabel: 'Section',
+                        initialValue: section,
+                        callback: function (new_section) {
+                            ctx.py.call('main.change_section', [ctx.id, new_section]);
+                        }
+                    });
+                }
+            }
         }
     }
 

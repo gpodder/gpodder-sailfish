@@ -107,7 +107,7 @@ Page {
         }
 
         ViewPlaceholder {
-            enabled: podcastList.count == 0
+            enabled: podcastListModel.count == 0 && pgst.ready
             text: 'No subscriptions'
         }
     }
