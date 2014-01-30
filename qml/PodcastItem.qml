@@ -78,7 +78,7 @@ ListItem {
             verticalCenter: parent.verticalCenter
         }
 
-        elide: Text.ElideRight
+        truncationMode: TruncationMode.Fade
         text: title
     }
 }

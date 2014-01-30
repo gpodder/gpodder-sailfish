@@ -92,6 +92,11 @@ Page {
         delegate: EpisodeItem {
             onClicked: pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});
         }
+
+        ViewPlaceholder {
+            enabled: episodeList.count == 0
+            text: 'No episodes'
+        }
     }
 }
 

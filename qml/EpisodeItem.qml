@@ -78,7 +78,7 @@ ListItem {
             margins: 30 * pgst.scalef
         }
 
-        elide: Text.ElideRight
+        truncationMode: TruncationMode.Fade
         text: title
 
         opacity: {
@@ -96,7 +96,7 @@ ListItem {
         anchors {
             right: parent.right
             verticalCenter: parent.verticalCenter
-            margins: 30 * pgst.scalef
+            rightMargin: (30 * pgst.scalef) * (text != '')
         }
 
         font.pixelSize: parent.contentHeight

@@ -27,10 +27,10 @@ Page {
     id: podcastsPage
 
     function reload() {
-        loading.visible = true;
+        pgst.ready = false;
         py.call('main.load_podcasts', [], function (podcasts) {
             Util.updateModelFrom(podcastListModel, podcasts);
-            loading.visible = false;
+            pgst.ready = true;
         });
     }
 
@@ -65,12 +65,6 @@ Page {
         py.setHandler('updated-podcast', undefined);
     }
 
-    Label {
-        id: loading
-        anchors.centerIn: parent
-        text: 'Loading'
-    }
-
     SilicaListView {
         id: podcastList
         anchors.fill: parent
@@ -81,6 +75,11 @@ Page {
             MenuItem {
                 text: 'Now playing'
                 onClicked: pgst.loadPage('PlayerPage.qml');
+            }
+
+            MenuItem {
+                text: "Settings"
+                onClicked: pgst.loadPage('Settings.qml');
             }
 
             MenuItem {
@@ -105,6 +104,11 @@ Page {
 
         delegate: PodcastItem {
             onClicked: pgst.loadPage('EpisodesPage.qml', {'podcast_id': id, 'title': title});
+        }
+
+        ViewPlaceholder {
+            enabled: podcastList.count == 0
+            text: 'No subscriptions'
         }
     }
 }

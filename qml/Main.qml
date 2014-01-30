@@ -22,13 +22,11 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.0
 
-Page {
+PodcastsPage {
     id: pgst
     property bool ready: false
 
     property real scalef: width / 480
-
-    anchors.fill: parent
 
     function update(page, x) {
         var index = -1;
@@ -99,13 +97,9 @@ Page {
     }
 
     BusyIndicator {
+        size: BusyIndicatorSize.Large
         anchors.centerIn: parent
         visible: !pgst.ready
         running: visible
-    }
-
-    StartPage {
-        id: startPage
-        visible: pgst.ready
     }
 }
