@@ -20,7 +20,8 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import io.thp.pyotherside 1.0
+
+import 'common'
 
 PodcastsPage {
     id: pgst
@@ -40,11 +41,9 @@ PodcastsPage {
         children[index-1].opacity = x / width;
     }
 
-    signal downloading(int episode_id)
-    signal downloadProgress(int episode_id, real progress)
-    signal downloaded(int episode_id)
-    signal deleted(int episode_id)
-    signal isNewChanged(int episode_id, bool is_new)
+    GPodderCore {
+        id: py
+    }
 
     function loadPage(filename, properties) {
         var component = Qt.createComponent(filename);
@@ -59,41 +58,6 @@ PodcastsPage {
         }
     }
 
-    Python {
-        id: py
-
-        Component.onCompleted: {
-            addImportPath('.');
-
-            setHandler('hello', function (version, copyright) {
-                console.log('gPodder version ' + version + ' starting up');
-                console.log('Copyright: ' + copyright);
-            });
-
-            setHandler('downloading', pgst.downloading);
-            setHandler('download-progress', pgst.downloadProgress);
-            setHandler('downloaded', pgst.downloaded);
-            setHandler('deleted', pgst.deleted);
-            setHandler('is-new-changed', pgst.isNewChanged);
-
-            var path = Qt.resolvedUrl('..').substr('file://'.length);
-            addImportPath(path);
-
-            // Load the Python side of things
-            importModule('main', function() {
-                pgst.ready = true;
-            });
-        }
-
-        onReceived: {
-            console.log('unhandled message: ' + data);
-        }
-
-        onError: {
-            console.log('Python failure: ' + traceback);
-        }
-    }
-
     Player {
         id: player
     }
@@ -101,7 +65,7 @@ PodcastsPage {
     BusyIndicator {
         size: BusyIndicatorSize.Large
         anchors.centerIn: parent
-        visible: !pgst.ready
+        visible: !py.ready
         running: visible
     }
 }

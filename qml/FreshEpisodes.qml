@@ -21,7 +21,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-import 'util.js' as Util
+import 'common/util.js' as Util
 
 Page {
     id: freshEpisodes
@@ -74,7 +74,7 @@ Page {
             onClicked: py.call('main.download_episode', [id]);
 
             Connections {
-                target: pgst
+                target: py
                 onDownloaded: {
                     if (id == episode_id) {
                         freshEpisodesListModel.remove(index);

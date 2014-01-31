@@ -31,6 +31,7 @@ cp -rpv gpodder-core/src/* $TARGET/
 cp -rpv podcastparser/podcastparser.py $TARGET/
 cp -rpv gpodder-ui-qml/main.py $TARGET/
 cp -rpv qml $TARGET/
+cp -rpv gpodder-ui-qml/common $TARGET/qml/
 cp -rpv %{name}.qml $TARGET/
 
 TARGET=%{buildroot}/%{_datadir}/applications

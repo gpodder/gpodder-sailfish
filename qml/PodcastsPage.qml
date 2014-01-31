@@ -21,16 +21,14 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-import 'util.js' as Util
+import 'common/util.js' as Util
 
 Page {
     id: podcastsPage
 
     function reload() {
-        pgst.ready = false;
         py.call('main.load_podcasts', [], function (podcasts) {
             Util.updateModelFrom(podcastListModel, podcasts);
-            pgst.ready = true;
         });
     }
 
@@ -107,7 +105,7 @@ Page {
         }
 
         ViewPlaceholder {
-            enabled: podcastListModel.count == 0 && pgst.ready
+            enabled: podcastListModel.count == 0 && py.ready
             text: 'No subscriptions'
         }
     }

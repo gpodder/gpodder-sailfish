@@ -22,7 +22,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.0
 
-import 'util.js' as Util
+import 'common/util.js' as Util
 import 'constants.js' as Constants
 
 Page {
@@ -43,7 +43,7 @@ Page {
     }
 
     Connections {
-        target: pgst
+        target: py
         onDownloadProgress: {
             Util.updateModelWith(episodeListModel, 'id', episode_id,
                 {'progress': progress});
