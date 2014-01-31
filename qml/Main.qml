@@ -45,6 +45,10 @@ PodcastsPage {
         id: py
     }
 
+    GPodderPlayback {
+        id: player
+    }
+
     function loadPage(filename, properties) {
         var component = Qt.createComponent(filename);
         if (component.status != Component.Ready) {
@@ -56,10 +60,6 @@ PodcastsPage {
         } else {
             pageStack.push(component.createObject(pgst, properties));
         }
-    }
-
-    Player {
-        id: player
     }
 
     BusyIndicator {
