@@ -60,6 +60,10 @@ Page {
             Util.updateModelWith(episodeListModel, 'id', episode_id,
                 {'isNew': is_new});
         }
+        onStateChanged: {
+            Util.updateModelWith(episodeListModel, 'id', episode_id,
+                {'downloadState': state});
+        }
     }
 
     SilicaListView {
@@ -93,9 +97,7 @@ Page {
             }
         }
 
-        delegate: EpisodeItem {
-            onClicked: pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});
-        }
+        delegate: EpisodeItem {}
 
         ViewPlaceholder {
             enabled: episodeList.count == 0

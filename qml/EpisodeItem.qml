@@ -24,7 +24,8 @@ import Sailfish.Silica 1.0
 import 'constants.js' as Constants
 
 ListItem {
-    id: podcastItem
+    id: episodeItem
+    property bool isPlaying: ((player.episode == id) && player.isPlaying)
 
     Rectangle {
         anchors {
@@ -37,31 +38,57 @@ ListItem {
         opacity: .7
     }
 
+    onClicked: showMenu()
+
     menu: Component {
-        ContextMenu {
-            MenuItem {
-                text: 'Download'
+        IconContextMenu {
+            IconMenuItem {
+                text: episodeItem.isPlaying ? 'Pause' : 'Play'
+                icon.source: 'image://theme/icon-m-' + (episodeItem.isPlaying ? 'pause' : 'play')
                 onClicked: {
+                    if (episodeItem.isPlaying) {
+                        player.pause();
+                    } else {
+                        player.playbackEpisode(id);
+                    }
+                }
+            }
+
+            IconMenuItem {
+                text: 'Download'
+                icon.source: 'image://theme/icon-m-download'
+                visible: downloadState != Constants.state.downloaded
+                onClicked: {
+                    episodeItem.hideMenu();
                     py.call('main.download_episode', [id]);
                 }
             }
-            MenuItem {
-                text: 'Play'
-                onClicked: player.playbackEpisode(id);
-            }
-            MenuItem {
+
+            IconMenuItem {
                 text: 'Delete'
+                icon.source: 'image://theme/icon-m-delete'
+                visible: downloadState != Constants.state.deleted
                 onClicked: {
+                    episodeItem.hideMenu();
                     var ctx = { py: py, id: id };
-                    podcastItem.remorseAction('Deleting', function () {
+                    episodeItem.remorseAction('Deleting', function () {
                         ctx.py.call('main.delete_episode', [ctx.id]);
                     });
                 }
             }
-            MenuItem {
+
+            IconMenuItem {
                 text: 'Toggle New'
+                icon.source: 'image://theme/icon-m-favorite' + (isNew ? '-selected' : '')
+                onClicked: py.call('main.toggle_new', [id]);
+            }
+
+            IconMenuItem {
+                text: 'Shownotes'
+                icon.source: 'image://theme/icon-m-message'
                 onClicked: {
-                    py.call('main.toggle_new', [id]);
+                    episodeItem.hideMenu();
+                    pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});
                 }
             }
         }
@@ -108,7 +135,7 @@ ListItem {
             rightMargin: (20 * pgst.scalef) * (text != '')
         }
 
-        font.pixelSize: podcastItem.contentHeight * 0.4
+        font.pixelSize: episodeItem.contentHeight * 0.4
         font.bold: true
 
         opacity: titleItem.opacity

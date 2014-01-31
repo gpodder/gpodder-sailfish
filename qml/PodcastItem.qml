@@ -25,10 +25,12 @@ ListItem {
     id: podcastItem
 
     menu: Component {
-        ContextMenu {
-            MenuItem {
+        IconContextMenu {
+            IconMenuItem {
                 text: 'Unsubscribe'
+                icon.source: 'image://theme/icon-m-delete'
                 onClicked: {
+                    podcastItem.hideMenu();
                     var ctx = { py: py, id: id };
                     podcastItem.remorseAction('Unsubscribing', function () {
                         ctx.py.call('main.unsubscribe', [ctx.id]);
@@ -36,9 +38,11 @@ ListItem {
                 }
             }
 
-            MenuItem {
+            IconMenuItem {
                 text: 'Rename'
+                icon.source: 'image://theme/icon-m-edit'
                 onClicked: {
+                    podcastItem.hideMenu();
                     var ctx = { py: py, id: id };
                     pageStack.push('RenameDialog.qml', {
                         activityName: 'Rename podcast',
@@ -51,9 +55,12 @@ ListItem {
                     });
                 }
             }
-            MenuItem {
+
+            IconMenuItem {
                 text: 'Change section'
+                icon.source: 'image://theme/icon-m-shuffle'
                 onClicked: {
+                    podcastItem.hideMenu();
                     var ctx = { py: py, id: id };
                     pageStack.push('RenameDialog.qml', {
                         activityName: 'Change section',
