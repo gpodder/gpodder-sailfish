@@ -84,7 +84,7 @@ ListItem {
 
     Image {
         id: cover
-        visible: !updating
+        visible: !updating && coverart
 
         anchors {
             left: parent.left
@@ -99,6 +99,22 @@ ListItem {
         height: 80 * pgst.scalef
 
         source: coverart
+    }
+
+    Rectangle {
+        anchors.fill: cover
+        visible: !updating && !coverart
+        color: Theme.rgba(Theme.highlightColor, 0.5)
+
+        clip: true
+
+        Label {
+            anchors.centerIn: parent
+
+            font.pixelSize: parent.height * 0.8
+            text: title[0]
+            color: Theme.highlightColor
+        }
     }
 
     BusyIndicator {
