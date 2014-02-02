@@ -25,10 +25,6 @@ Dialog {
     id: subscribe
     canAccept: input.text != ''
 
-    SubscribeProgress {
-        id: progress
-    }
-
     onAccepted: {
         py.call('main.subscribe', [input.text], function () {
             // TODO
