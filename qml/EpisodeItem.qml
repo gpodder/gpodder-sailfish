@@ -28,14 +28,36 @@ ListItem {
     property bool isPlaying: ((player.episode == id) && player.isPlaying)
 
     Rectangle {
+        anchors.fill: parent
+        color: Theme.highlightColor
+        visible: (progress > 0) || isPlaying
+        opacity: 0.1
+    }
+
+    Rectangle {
         anchors {
             top: parent.top
+            left: parent.left
+        }
+
+        height: parent.height * 0.2
+        width: parent.width * progress
+
+        color: Theme.highlightColor
+        opacity: .5
+    }
+
+    Rectangle {
+        anchors {
             bottom: parent.bottom
             left: parent.left
         }
-        width: parent.width * progress
-        color: Theme.highlightColor
-        opacity: .7
+
+        height: parent.height * 0.2
+        width: parent.width * playbackProgress
+
+        color: isPlaying ? Theme.highlightColor : Theme.secondaryHighlightColor
+        opacity: .5
     }
 
     onClicked: showMenu()

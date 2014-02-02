@@ -118,7 +118,7 @@ Page {
                 maximumValue: player.duration
                 onDownChanged: {
                     if (!down) {
-                        player.seek(sliderValue)
+                        player.seekAndSync(sliderValue)
                     }
                 }
             }
@@ -142,7 +142,7 @@ Page {
                     } else if (diff < -12) {
                         diff += 24;
                     }
-                    player.seek(player.position + 1000 * 60 * diff);
+                    player.seekAndSync(player.position + 1000 * 60 * diff);
                     oldHour = hour;
                 }
 
@@ -153,7 +153,7 @@ Page {
                     } else if (diff < -30) {
                         diff += 60;
                     }
-                    player.seek(player.position + 1000 * 10 * diff);
+                    player.seekAndSync(player.position + 1000 * 10 * diff);
                     oldMinute = minute;
                 }
             }

@@ -50,6 +50,10 @@ Page {
             Util.updateModelWith(episodeListModel, 'id', episode_id,
                 {'progress': progress});
         }
+        onPlaybackProgress: {
+            Util.updateModelWith(episodeListModel, 'id', episode_id,
+                {'playbackProgress': progress});
+        }
         onDownloaded: {
             Util.updateModelWith(episodeListModel, 'id', episode_id,
                 {'progress': 0, 'downloadState': Constants.state.downloaded});
