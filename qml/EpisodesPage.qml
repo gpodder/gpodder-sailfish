@@ -31,6 +31,8 @@ Page {
     property int podcast_id
     property string title
 
+    onStatusChanged: pgst.handlePageStatusChange(status)
+
     width: parent.width
     height: parent.height
 
@@ -79,11 +81,6 @@ Page {
         model: ListModel { id: episodeListModel }
 
         PullDownMenu {
-            MenuItem {
-                text: 'Now playing'
-                onClicked: pgst.loadPage('PlayerPage.qml');
-            }
-
             MenuItem {
                 text: 'Unsubscribe'
                 onClicked: {

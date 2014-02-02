@@ -22,16 +22,19 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 import 'constants.js' as Constants
+import 'common/util.js' as Util
 
 Page {
     id: playerPage
 
     property string episodeTitle
 
-    Component.onCompleted: {
-        py.call('main.show_episode', [player.episode], function (episode) {
-            playerPage.episodeTitle = episode.title;
-        });
+    onStatusChanged: {
+        if (status == PageStatus.Activating) {
+            py.call('main.show_episode', [player.episode], function (episode) {
+                playerPage.episodeTitle = episode.title;
+            });
+        }
     }
 
     SilicaFlickable {
@@ -41,41 +44,117 @@ Page {
         contentWidth: column.width
         contentHeight: column.height + column.spacing
 
+        PullDownMenu {
+            MenuItem {
+                text: player.isPlaying ? 'Pause': 'Play'
+                onClicked: {
+                    if (player.isPlaying) {
+                        player.pause();
+                    } else {
+                        player.play();
+                    }
+                }
+            }
+        }
+
         Column {
             id: column
 
             width: playerPage.width
-            spacing: 10 * pgst.scalef
 
             PageHeader {
                 title: 'Now playing'
             }
 
-            ButtonRow {
-                width: playerPage.width
-                model: [
-                    { label: 'Play', clicked: function() {
-                        player.play();
-                    }},
-                    { label: 'Pause', clicked: function() {
-                        player.pause();
-                    }},
-                    { label: 'Details', clicked: function() {
-                        pgst.loadPage('EpisodeDetail.qml', {
-                            episode_id: player.episode,
-                            title: playerPage.episodeTitle
-                        });
-                    }}
-                ]
+            Label {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    margins: Theme.paddingLarge
+                }
+
+                truncationMode: TruncationMode.Fade
+                horizontalAlignment: Text.AlignRight
+                text: episodeTitle
+                color: Theme.rgba(Theme.highlightColor, 0.7)
+                font.pixelSize: Theme.fontSizeSmall
+            }
+
+            Connections {
+                target: player
+                onPositionChanged: {
+                    if (!positionSlider.down) {
+                        positionSlider.value = player.position;
+                    }
+                }
+            }
+
+            Item {
+                width: parent.width
+                height: Theme.itemSizeSmall
+            }
+
+            Label {
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+
+                font.pixelSize: Theme.fontSizeLarge
+                text: Util.formatPosition(positionSlider.value/1000, player.duration/1000)
+                color: positionSlider.highlighted ? Theme.highlightColor : Theme.primaryColor
+            }
+
+            Item {
+                width: parent.width
+                height: Theme.paddingMedium
             }
 
             Slider {
-                width: playerPage.width
-                value: player.playbackRate
-                minimumValue: 0.5
-                maximumValue: 3.0
-                onSliderValueChanged: {
-                    player.playbackRate = sliderValue
+                id: positionSlider
+                width: parent.width
+
+                value: player.position
+                minimumValue: 0
+                maximumValue: player.duration
+                onDownChanged: {
+                    if (!down) {
+                        player.seek(sliderValue)
+                    }
+                }
+            }
+
+            Item {
+                width: parent.width
+                height: Theme.itemSizeLarge
+            }
+
+            TimePicker {
+                hourMode: DateTime.TwentyFourHours
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                property int oldHour: hour
+                property int oldMinute: minute
+
+                onHourChanged: {
+                    var diff = hour - oldHour;
+                    if (diff > 12) {
+                        diff -= 24;
+                    } else if (diff < -12) {
+                        diff += 24;
+                    }
+                    player.seek(player.position + 1000 * 60 * diff);
+                    oldHour = hour;
+                }
+
+                onMinuteChanged: {
+                    var diff = minute - oldMinute;
+                    if (diff > 30) {
+                        diff -= 60;
+                    } else if (diff < -30) {
+                        diff += 60;
+                    }
+                    player.seek(player.position + 1000 * 10 * diff);
+                    oldMinute = minute;
                 }
             }
         }

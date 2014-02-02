@@ -48,11 +48,6 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: 'Now playing'
-                onClicked: pgst.loadPage('PlayerPage.qml');
-            }
-
-            MenuItem {
                 text: 'Mark all as old'
             }
 

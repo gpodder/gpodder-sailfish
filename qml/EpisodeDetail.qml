@@ -29,6 +29,8 @@ Page {
     property int episode_id
     property string title
 
+    onStatusChanged: pgst.handlePageStatusChange(status)
+
     Component.onCompleted: {
         label.text = 'Loading...';
         py.call('main.show_episode', [episode_id], function (episode) {
@@ -41,13 +43,6 @@ Page {
         anchors.fill: parent
 
         VerticalScrollDecorator { flickable: flickable }
-
-        PullDownMenu {
-            MenuItem {
-                text: 'Now playing'
-                onClicked: pgst.loadPage('PlayerPage.qml');
-            }
-        }
 
         contentWidth: detailColumn.width
         contentHeight: detailColumn.height + detailColumn.spacing

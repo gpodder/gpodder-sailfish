@@ -29,6 +29,19 @@ PodcastsPage {
 
     property real scalef: width / 480
 
+    property var playerPage: undefined
+
+    onStatusChanged: pgst.handlePageStatusChange(status)
+
+    function handlePageStatusChange(st) {
+        if (st == PageStatus.Active) {
+            if (playerPage === undefined) {
+                playerPage = Qt.createComponent('PlayerPage.qml').createObject(pgst);
+            }
+            pageStack.pushAttached(playerPage);
+        }
+    }
+
     function update(page, x) {
         var index = -1;
         for (var i=0; i<children.length; i++) {
@@ -49,16 +62,21 @@ PodcastsPage {
         id: player
     }
 
-    function loadPage(filename, properties) {
+    function loadPage(filename, properties, replace) {
         var component = Qt.createComponent(filename);
         if (component.status != Component.Ready) {
             console.log('Error loading ' + filename + ':' +
                 component.errorString());
         }
+
         if (properties === undefined) {
-            pageStack.push(component.createObject(pgst));
-        } else {
+            properties = {};
+        }
+
+        if (replace != true) {
             pageStack.push(component.createObject(pgst, properties));
+        } else {
+            pageStack.replace(component.createObject(pgst, properties));
         }
     }
 

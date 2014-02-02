@@ -71,11 +71,6 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: 'Now playing'
-                onClicked: pgst.loadPage('PlayerPage.qml');
-            }
-
-            MenuItem {
                 text: "Settings"
                 onClicked: pgst.loadPage('Settings.qml');
             }
