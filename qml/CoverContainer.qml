@@ -50,7 +50,7 @@ CoverBackground {
         }
 
         CoverAction {
-            iconSource: 'image://theme/icon-cover-next'
+            iconSource: 'image://theme/icon-cover-next-song'
             onTriggered: {
                 if (player.episode != 0 && player.isPlaying) {
                     player.seekAndSync(player.position + 1000 * 30);
