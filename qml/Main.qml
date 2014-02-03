@@ -56,6 +56,7 @@ PodcastsPage {
 
     GPodderCore {
         id: py
+        progname: 'harbour-org.gpodder.sailfish'
     }
 
     GPodderPlayback {

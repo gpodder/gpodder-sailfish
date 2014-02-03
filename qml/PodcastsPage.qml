@@ -27,8 +27,6 @@ import 'common/util.js' as Util
 Page {
     id: podcastsPage
 
-    Component.onCompleted: podcastListModel.reload();
-
     SilicaListView {
         id: podcastList
         anchors.fill: parent
