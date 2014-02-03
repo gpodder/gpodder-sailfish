@@ -30,17 +30,7 @@ Dialog {
     property var callback
 
     canAccept: input.text != ''
-
-    SubscribeProgress {
-        id: progress
-    }
-
-    onAccepted: {
-        rename.callback(input.text)
-        //py.call('main.rename', [ername, input.text], function () {
-        //    // TODO
-        //});
-    }
+    onAccepted: rename.callback(input.text);
 
     Column {
         anchors.fill: parent
@@ -56,6 +46,8 @@ Dialog {
             label: rename.inputLabel
             placeholderText: label
             text: initialValue
+            focus: enabled
+            enabled: rename.status == PageStatus.Active
             //inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
             EnterKey.onClicked: rename.accept()
         }

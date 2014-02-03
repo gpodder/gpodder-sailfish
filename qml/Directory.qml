@@ -21,29 +21,44 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-Dialog {
-    id: subscribe
+import 'common'
 
-    canAccept: input.text != ''
-    onAccepted: py.call('main.subscribe', [input.text]);
+Page {
+    id: directory
 
-    Column {
+    property var callback
+
+    function start(query, callback) {
+        directory.callback = callback;
+        directorySearchModel.search(query, function() {
+            busyIndicator.visible = false;
+        });
+    }
+
+    SilicaListView {
         anchors.fill: parent
 
-        DialogHeader {
-            title: 'Add subscription'
-            acceptText: 'Subscribe'
+        header: PageHeader {
+            title: 'Search results'
         }
 
-        TextField {
-            id: input
-            width: parent.width
-            label: 'Feed URL'
-            placeholderText: label
-            focus: enabled
-            enabled: subscribe.status == PageStatus.Active
-            inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
-            EnterKey.onClicked: subscribe.accept()
+        VerticalScrollDecorator { }
+
+        model: GPodderDirectorySearchModel { id: directorySearchModel }
+
+        delegate: DirectoryItem {
+            onClicked: {
+                directory.callback(url);
+                pageStack.pop();
+            }
         }
+    }
+
+    BusyIndicator {
+        id: busyIndicator
+        size: BusyIndicatorSize.Large
+        anchors.centerIn: parent
+        visible: true
+        running: visible
     }
 }

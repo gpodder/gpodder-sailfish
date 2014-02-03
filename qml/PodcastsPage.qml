@@ -48,6 +48,11 @@ Page {
                 text: 'Add new podcast'
                 onClicked: pgst.loadPage('Subscribe.qml');
             }
+
+            MenuItem {
+                text: 'Search gpodder.net'
+                onClicked: pgst.loadPage('DirectoryDialog.qml');
+            }
         }
 
         header: PageHeader {

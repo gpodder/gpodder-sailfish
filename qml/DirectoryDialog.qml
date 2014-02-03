@@ -2,7 +2,7 @@
 /**
  *
  * gPodder QML UI Reference Implementation
- * Copyright (c) 2013, Thomas Perl <m@thp.io>
+ * Copyright (c) 2013, 2014, Thomas Perl <m@thp.io>
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -22,28 +22,35 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Dialog {
-    id: subscribe
-
+    id: directory
     canAccept: input.text != ''
-    onAccepted: py.call('main.subscribe', [input.text]);
+
+    acceptDestination: Component { Directory { } }
+    acceptDestinationAction: PageStackAction.Replace
+
+    onAccepted: {
+        var ctx = { py: py };
+        acceptDestinationInstance.start(input.text, function (url) {
+            ctx.py.call('main.subscribe', [url]);
+        });
+    }
 
     Column {
         anchors.fill: parent
 
         DialogHeader {
-            title: 'Add subscription'
-            acceptText: 'Subscribe'
+            title: 'Search gpodder.net'
+            acceptText: 'Search'
         }
 
         TextField {
             id: input
             width: parent.width
-            label: 'Feed URL'
-            placeholderText: label
+            label: 'Search term'
             focus: enabled
-            enabled: subscribe.status == PageStatus.Active
-            inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
-            EnterKey.onClicked: subscribe.accept()
+            enabled: directory.status == PageStatus.Active
+            placeholderText: label
+            EnterKey.onClicked: directory.accept()
         }
     }
 }
