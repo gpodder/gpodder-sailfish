@@ -1,7 +1,8 @@
+
 /**
  *
- * gPodder for Sailfish OS
- * Copyright (c) 2013, Thomas Perl <m@thp.io>
+ * gPodder QML UI Reference Implementation
+ * Copyright (c) 2013, 2014, Thomas Perl <m@thp.io>
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -20,7 +21,8 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-ApplicationWindow {
-    initialPage: Main { id: main }
-    cover: main.cover
+
+CoverPlaceholder {
+    icon.source: '/usr/share/icons/hicolor/86x86/apps/harbour-org.gpodder.sailfish.png'
+    text: 'gPodder\n' + podcastListModel.count + ' podcasts'
 }

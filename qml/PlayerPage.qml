@@ -26,16 +26,6 @@ import 'common/util.js' as Util
 Page {
     id: playerPage
 
-    property string episodeTitle
-
-    onStatusChanged: {
-        if (status == PageStatus.Activating) {
-            py.call('main.show_episode', [player.episode], function (episode) {
-                playerPage.episodeTitle = episode.title;
-            });
-        }
-    }
-
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
@@ -74,7 +64,7 @@ Page {
 
                 truncationMode: TruncationMode.Fade
                 horizontalAlignment: Text.AlignRight
-                text: episodeTitle
+                text: player.episode_title
                 color: Theme.rgba(Theme.highlightColor, 0.7)
                 font.pixelSize: Theme.fontSizeSmall
             }

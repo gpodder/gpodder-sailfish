@@ -30,6 +30,7 @@ PodcastsPage {
     property real scalef: width / 480
 
     property var playerPage: undefined
+    property var cover: CoverContainer { }
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 
@@ -69,6 +70,8 @@ PodcastsPage {
         id: player
         onPlayerCreated: pgst.createPlayerPage();
     }
+
+    GPodderPodcastListModel { id: podcastListModel }
 
     function loadPage(filename, properties, replace) {
         var component = Qt.createComponent(filename);
