@@ -36,26 +36,25 @@ CoverBackground {
     }
 
     CoverActionList {
+        enabled: player.episode != 0 && player.isPlaying
+
         CoverAction {
-            iconSource: 'image://theme/icon-cover-' + (player.isPlaying ? 'pause' : 'play')
-            onTriggered: {
-                if (player.episode != 0) {
-                    if (player.isPlaying) {
-                        player.pause();
-                    } else {
-                        player.play();
-                    }
-                }
-            }
+            iconSource: 'image://theme/icon-cover-pause'
+            onTriggered: player.pause();
         }
 
         CoverAction {
             iconSource: 'image://theme/icon-cover-next-song'
-            onTriggered: {
-                if (player.episode != 0 && player.isPlaying) {
-                    player.seekAndSync(player.position + 1000 * 30);
-                }
-            }
+            onTriggered: player.seekAndSync(player.position + 1000 * 30);
+        }
+    }
+
+    CoverActionList {
+        enabled: player.episode != 0 && !player.isPlaying
+
+        CoverAction {
+            iconSource: 'image://theme/icon-cover-play'
+            onTriggered: player.play();
         }
     }
 }
