@@ -37,11 +37,11 @@ cp -rpv gpodder-ui-qml/common $TARGET/qml/
 
 TARGET=%{buildroot}/%{_datadir}/applications
 mkdir -p $TARGET
-cp -rpv %{source1} $TARGET/
+cp -rpv %{SOURCE1} $TARGET/
 
 TARGET=%{buildroot}/%{_datadir}/icons/hicolor/86x86/apps/
 mkdir -p $TARGET
-cp -rpv %{source2} $TARGET/
+cp -rpv %{SOURCE2} $TARGET/
 
 %files
 %defattr(-,root,root,-)
