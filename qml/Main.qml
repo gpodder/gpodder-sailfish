@@ -35,6 +35,12 @@ PodcastsPage {
 
     function handlePageStatusChange(st) {
         if (st == PageStatus.Active) {
+            createPlayerPage();
+        }
+    }
+
+    function createPlayerPage() {
+        if (player.episode != 0) {
             if (playerPage === undefined) {
                 playerPage = Qt.createComponent('PlayerPage.qml').createObject(pgst);
             }
@@ -61,6 +67,7 @@ PodcastsPage {
 
     GPodderPlayback {
         id: player
+        onPlayerCreated: pgst.createPlayerPage();
     }
 
     function loadPage(filename, properties, replace) {
