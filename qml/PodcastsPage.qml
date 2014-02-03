@@ -34,16 +34,16 @@ Page {
         VerticalScrollDecorator { flickable: podcastList }
 
         PullDownMenu {
-            MenuItem {
-                text: "Settings"
-                onClicked: pgst.loadPage('Settings.qml');
-            }
+            busy: py.refreshing
 
             MenuItem {
-                text: 'Check for new episodes'
+                text: py.refreshing ? 'Checking for new episodes...' : 'Check for new episodes'
+                enabled: podcastListModel.count > 0 && !py.refreshing
                 onClicked: py.call('main.check_for_episodes');
             }
+        }
 
+        PushUpMenu {
             MenuItem {
                 text: 'Add new podcast'
                 onClicked: pgst.loadPage('Subscribe.qml');
