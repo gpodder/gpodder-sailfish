@@ -22,6 +22,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 import 'common/constants.js' as Constants
+import 'common/util.js' as Util
 
 ListItem {
     id: episodeItem
@@ -100,9 +101,10 @@ ListItem {
             }
 
             IconMenuItem {
+                id: toggleNew
                 text: 'Toggle New'
                 icon.source: 'image://theme/icon-m-favorite' + (isNew ? '-selected' : '')
-                onClicked: py.call('main.toggle_new', [id]);
+                onClicked: Util.disableUntilReturn(toggleNew, py, 'main.toggle_new', [id]);
             }
 
             IconMenuItem {
