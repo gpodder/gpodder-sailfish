@@ -1,0 +1,6 @@
+gpodder
+jsonconfig.py
+main.py
+podcastparser.py
+qml/common
+__pycache__
