@@ -56,5 +56,14 @@ CoverBackground {
             iconSource: 'image://theme/icon-cover-play'
             onTriggered: player.play();
         }
+
+        CoverAction {
+            iconSource: 'image://theme/icon-cover-refresh'
+            onTriggered: {
+                if (!py.refreshing) {
+                    py.call('main.check_for_episodes');
+                }
+            }
+        }
     }
 }
