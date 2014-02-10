@@ -37,6 +37,11 @@ Page {
             busy: py.refreshing
 
             MenuItem {
+                text: 'Fresh episodes'
+                onClicked: pgst.loadPage('FreshEpisodes.qml');
+            }
+
+            MenuItem {
                 text: py.refreshing ? 'Checking for new episodes...' : 'Check for new episodes'
                 enabled: podcastListModel.count > 0 && !py.refreshing
                 onClicked: py.call('main.check_for_episodes');

@@ -21,15 +21,17 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+import 'common'
 import 'common/util.js' as Util
 
 Page {
     id: freshEpisodes
     property bool ready: false
 
+    onStatusChanged: pgst.handlePageStatusChange(status)
+
     Component.onCompleted: {
-        py.call('main.get_fresh_episodes', [], function (episodes) {
-            Util.updateModelFrom(freshEpisodesListModel, episodes);
+        episodesListModel.loadFreshEpisodes(function () {
             freshEpisodes.ready = true;
         });
     }
@@ -46,39 +48,20 @@ Page {
 
         VerticalScrollDecorator { flickable: freshEpisodesList }
 
-        PullDownMenu {
-            MenuItem {
-                text: 'Mark all as old'
-            }
-
-            MenuItem {
-                text: 'Download all episodes'
-            }
-        }
-
         header: PageHeader {
             title: 'Fresh episodes'
         }
 
-        model: ListModel { id: freshEpisodesListModel }
+        model: GPodderEpisodeListModel { id: episodesListModel }
 
         section.property: 'published'
         section.delegate: SectionHeader { text: section }
 
-        delegate: EpisodeItem {
-            onClicked: py.call('main.download_episode', [id]);
+        delegate: EpisodeItem {}
 
-            Connections {
-                target: py
-                onDownloaded: {
-                    if (id == episode_id) {
-                        freshEpisodesListModel.remove(index);
-                    }
-                }
-            }
-
-            //pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});
+        ViewPlaceholder {
+            enabled: freshEpisodesList.count == 0 && freshEpisodes.ready
+            text: 'No fresh episodes'
         }
     }
 }
-
