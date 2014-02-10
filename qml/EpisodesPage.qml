@@ -55,6 +55,13 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: 'Mark episodes as old'
+                onClicked: {
+                    py.call('main.mark_episodes_as_old', [episodesPage.podcast_id]);
+                }
+            }
+
+            MenuItem {
                 text: 'Unsubscribe'
                 onClicked: {
                     remorse.execute("Unsubscribing", function() {
