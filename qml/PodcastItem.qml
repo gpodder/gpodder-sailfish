@@ -126,14 +126,26 @@ ListItem {
     Label {
         anchors {
             left: cover.right
-            leftMargin: 10 * pgst.scalef
-            rightMargin: 10 * pgst.scalef
-            right: parent.right
+            leftMargin: Theme.paddingMedium
+            rightMargin: Theme.paddingMedium
+            right: downloadsLabel.left
             verticalCenter: parent.verticalCenter
         }
 
         truncationMode: TruncationMode.Fade
         text: title
+        color: newEpisodes ? Theme.highlightColor : Theme.primaryColor
+    }
+
+    Label {
+        id: downloadsLabel
+        anchors {
+            right: parent.right
+            rightMargin: Theme.paddingMedium
+            verticalCenter: parent.verticalCenter
+        }
+
+        text: downloaded ? downloaded : ''
     }
 }
 
