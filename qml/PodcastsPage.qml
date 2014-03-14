@@ -37,6 +37,11 @@ Page {
             busy: py.refreshing
 
             MenuItem {
+                text: 'About'
+                onClicked: pgst.loadPage('AboutPage.qml');
+            }
+
+            MenuItem {
                 text: 'Fresh episodes'
                 onClicked: pgst.loadPage('FreshEpisodes.qml');
             }
