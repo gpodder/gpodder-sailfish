@@ -38,7 +38,15 @@ Page {
     RemorsePopup { id: remorse }
 
     Component.onCompleted: {
-        episodeListModel.loadEpisodes(podcast_id);
+        episodeListModel.podcast_id = podcast_id;
+        episodeListModel.setQuery(episodeListModel.queries.All);
+        episodeListModel.reload();
+    }
+
+    BusyIndicator {
+        visible: !episodeListModel.ready
+        running: visible
+        anchors.centerIn: parent
     }
 
     SilicaListView {
@@ -72,13 +80,15 @@ Page {
                     })
                 }
             }
+
+            EpisodeListFilterItem { model: episodeListModel }
         }
 
         delegate: EpisodeItem {}
 
         ViewPlaceholder {
-            enabled: episodeList.count == 0
-            text: 'No episodes'
+            enabled: episodeList.count == 0 && episodeListModel.ready
+            text: 'No episodes found'
         }
     }
 }

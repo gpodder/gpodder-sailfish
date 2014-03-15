@@ -26,18 +26,16 @@ import 'common/util.js' as Util
 
 Page {
     id: freshEpisodes
-    property bool ready: false
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 
     Component.onCompleted: {
-        episodesListModel.loadFreshEpisodes(function () {
-            freshEpisodes.ready = true;
-        });
+        episodesListModel.setQuery(episodesListModel.queries.Fresh);
+        episodesListModel.reload();
     }
 
     BusyIndicator {
-        visible: !freshEpisodes.ready
+        visible: !episodesListModel.ready
         running: visible
         anchors.centerIn: parent
     }
@@ -46,10 +44,14 @@ Page {
         id: freshEpisodesList
         anchors.fill: parent
 
+        PullDownMenu {
+            EpisodeListFilterItem { id: filterItem; model: episodesListModel }
+        }
+
         VerticalScrollDecorator { flickable: freshEpisodesList }
 
         header: PageHeader {
-            title: 'Fresh episodes'
+            title: 'Episodes: ' + filterItem.currentFilter
         }
 
         model: GPodderEpisodeListModel { id: episodesListModel }
@@ -60,8 +62,8 @@ Page {
         delegate: EpisodeItem {}
 
         ViewPlaceholder {
-            enabled: freshEpisodesList.count == 0 && freshEpisodes.ready
-            text: 'No fresh episodes'
+            enabled: freshEpisodesList.count == 0 && episodesListModel.ready
+            text: 'No episodes found'
         }
     }
 }

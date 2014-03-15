@@ -42,8 +42,8 @@ Page {
             }
 
             MenuItem {
-                text: 'Fresh episodes'
-                onClicked: pgst.loadPage('FreshEpisodes.qml');
+                text: 'Filter episodes'
+                onClicked: pgst.loadPage('AllEpisodesPage.qml');
             }
 
             MenuItem {
