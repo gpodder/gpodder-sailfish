@@ -70,7 +70,10 @@ Page {
         }
 
         section.property: 'section'
-        section.delegate: SectionHeader { text: section }
+        section.delegate: SectionHeader {
+            text: section
+            horizontalAlignment: Text.AlignHCenter
+        }
 
         model: podcastListModel
 

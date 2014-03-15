@@ -26,19 +26,37 @@ Page {
 
     property int episode_id
     property string title
+    property string link
+    property bool ready: false
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 
     Component.onCompleted: {
-        label.text = 'Loading...';
         py.call('main.show_episode', [episode_id], function (episode) {
-            label.text = episode.description;
+            descriptionLabel.text = episode.description;
+            metadataLabel.text = episode.metadata;
+            detailPage.link = episode.link;
+            detailPage.ready = true;
         });
+    }
+
+    BusyIndicator {
+        visible: !detailPage.ready
+        running: visible
+        anchors.centerIn: parent
     }
 
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
+
+        PullDownMenu {
+            MenuItem {
+                text: 'Visit website'
+                onClicked: Qt.openUrlExternally(detailPage.link);
+                enabled: detailPage.link != ''
+            }
+        }
 
         VerticalScrollDecorator { flickable: flickable }
 
@@ -52,11 +70,39 @@ Page {
             spacing: Theme.paddingMedium
 
             PageHeader {
-                title: detailPage.title
+                title: 'Shownotes'
             }
 
             Label {
-                id: label
+                text: detailPage.title
+                wrapMode: Text.WordWrap
+                font.pixelSize: Theme.fontSizeLarge
+                color: Theme.highlightColor
+
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    margins: Theme.paddingMedium
+                }
+            }
+
+            Label {
+                id: metadataLabel
+
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.secondaryColor
+
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    margins: Theme.paddingMedium
+                }
+
+                wrapMode: Text.WordWrap
+            }
+
+            Label {
+                id: descriptionLabel
                 anchors {
                     left: parent.left
                     right: parent.right
