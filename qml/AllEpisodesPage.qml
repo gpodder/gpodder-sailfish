@@ -56,7 +56,7 @@ Page {
 
         model: GPodderEpisodeListModel { id: episodesListModel }
 
-        section.property: 'published'
+        section.property: 'section'
         section.delegate: SectionHeader { text: section }
 
         delegate: EpisodeItem {}
