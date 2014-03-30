@@ -26,7 +26,6 @@ import 'common/util.js' as Util
 CoverPlaceholder {
     id: podcastsCover
 
-    icon.source: '/usr/share/icons/hicolor/86x86/apps/harbour-org.gpodder.sailfish.png'
     property string _info_text: 'gPodder'
     text: refreshingIndicator.visible ? '' : _info_text
 

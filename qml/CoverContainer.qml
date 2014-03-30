@@ -25,6 +25,13 @@ import 'common/util.js' as Util
 
 
 CoverBackground {
+    Image {
+        source: 'cover.png'
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        height: sourceSize.height * width / sourceSize.width
+    }
+
     PodcastsCover {
         id: podcastsCover
         visible: !playerCover.visible
