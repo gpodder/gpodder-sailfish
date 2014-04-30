@@ -21,6 +21,8 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+import 'common/util.js' as Util
+
 Page {
     id: detailPage
 
@@ -28,6 +30,7 @@ Page {
     property string title
     property string link
     property bool ready: false
+    property var chapters: ([])
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 
@@ -35,6 +38,7 @@ Page {
         py.call('main.show_episode', [episode_id], function (episode) {
             descriptionLabel.text = episode.description;
             metadataLabel.text = episode.metadata;
+            detailPage.chapters = episode.chapters;
             detailPage.link = episode.link;
             detailPage.ready = true;
         });
@@ -70,7 +74,7 @@ Page {
             spacing: Theme.paddingMedium
 
             PageHeader {
-                title: 'Shownotes'
+                title: 'Episode details'
             }
 
             Label {
@@ -99,6 +103,82 @@ Page {
                 }
 
                 wrapMode: Text.WordWrap
+            }
+
+            CustomExpander {
+                id: chaptersExpander
+                visible: detailPage.chapters.length > 0
+
+                width: parent.width
+                expandedHeight: chaptersColumn.childrenRect.height
+
+                Column {
+                    id: chaptersColumn
+
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        margins: Theme.paddingMedium
+                    }
+
+                    Item { height: Theme.paddingMedium; width: parent.width }
+
+                    Label {
+                        text: 'Chapters'
+                        anchors {
+                            left: parent.left
+                        }
+                        color: Theme.highlightColor
+                    }
+
+                    Repeater {
+                        model: detailPage.chapters
+
+                        delegate: ListItem {
+                            enabled: false
+                            contentHeight: Theme.itemSizeExtraSmall
+
+                            Label {
+                                id: durationLabel
+
+                                anchors {
+                                    left: parent.left
+                                    verticalCenter: parent.verticalCenter
+                                }
+
+                                text: Util.formatDuration(modelData.start)
+                                font.pixelSize: Theme.fontSizeSmall
+                                color: Theme.secondaryColor
+                            }
+
+                            Label {
+                                id: titleLabel
+
+                                anchors {
+                                    left: durationLabel.right
+                                    verticalCenter: parent.verticalCenter
+                                    leftMargin: Theme.paddingMedium
+                                    right: parent.right
+                                }
+
+                                width: parent.width
+                                text: modelData.title
+                                color: Theme.primaryColor
+                                truncationMode: TruncationMode.Fade
+                            }
+                        }
+                    }
+                }
+            }
+
+            Label {
+                text: 'Shownotes'
+                color: Theme.highlightColor
+
+                anchors {
+                    left: parent.left
+                    leftMargin: Theme.paddingMedium
+                }
             }
 
             Label {
