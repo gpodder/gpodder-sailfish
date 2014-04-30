@@ -34,6 +34,10 @@ Page {
         contentHeight: column.height + column.spacing
 
         PullDownMenu {
+            PlayerChaptersItem {
+                model: player.episode_chapters
+            }
+
             MenuItem {
                 text: player.isPlaying ? 'Pause': 'Play'
                 onClicked: {
