@@ -64,5 +64,7 @@ Page {
                 text: modelData
             }
         }
+
+        VerticalScrollDecorator { }
     }
 }
