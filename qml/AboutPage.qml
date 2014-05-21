@@ -76,6 +76,8 @@ Page {
                         'License: ISC / GPLv3 or later',
                         'Website: http://gpodder.org/',
                         '',
+                        'Sailfish OS artwork by Stephan Beyerle',
+                        '',
                         'gPodder Core ' + py.coreversion,
                         'gPodder QML UI ' + py.uiversion,
                         'PyOtherSide ' + py.pluginVersion(),
