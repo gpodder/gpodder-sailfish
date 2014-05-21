@@ -25,7 +25,7 @@ ContextMenu {
     default property alias children: container.children
 
     Item {
-        height: Theme.itemSizeLarge
+        height: Theme.itemSizeMedium
         width: parent.width
         Row {
             id: container

@@ -118,7 +118,7 @@ ListItem {
         }
     }
 
-    contentHeight: 80 * pgst.scalef
+    contentHeight: Theme.itemSizeSmall
 
     anchors {
         left: parent.left
@@ -132,14 +132,20 @@ ListItem {
             left: parent.left
             right: downloadStatusIcon.left
             verticalCenter: parent.verticalCenter
-            margins: 30 * pgst.scalef
+            margins: Theme.paddingMedium
         }
 
         truncationMode: TruncationMode.Fade
         text: title
 
         // need to set opacity via color, as truncationMode overrides opacity
-        color: Theme.rgba(isNew ? Theme.highlightColor : Theme.primaryColor, opacity)
+        color: {
+            if (episodeItem.highlighted) {
+                return Theme.highlightColor
+            } else {
+                Theme.rgba(isNew ? Theme.highlightColor : Theme.primaryColor, opacity)
+            }
+        }
 
         opacity: {
             switch (downloadState) {
@@ -156,13 +162,15 @@ ListItem {
         anchors {
             right: parent.right
             verticalCenter: parent.verticalCenter
-            rightMargin: (20 * pgst.scalef) * (text != '')
+            rightMargin: text ? Theme.paddingMedium : 0
         }
 
-        font.pixelSize: episodeItem.contentHeight * 0.4
+        font.pixelSize: Theme.fontSizeLarge
         font.bold: true
 
         opacity: titleItem.opacity
+
+        color: titleItem.color
 
         text: {
             switch (downloadState) {

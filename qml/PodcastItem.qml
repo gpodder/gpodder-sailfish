@@ -76,7 +76,8 @@ ListItem {
         }
     }
 
-    contentHeight: 100 * pgst.scalef
+    contentHeight: Theme.itemSizeMedium
+
     anchors {
         left: parent.left
         right: parent.right
@@ -88,15 +89,15 @@ ListItem {
 
         anchors {
             left: parent.left
-            leftMargin: 10 * pgst.scalef
+            leftMargin: Theme.paddingMedium
             verticalCenter: parent.verticalCenter
         }
 
         sourceSize.width: width
         sourceSize.height: height
 
-        width: 80 * pgst.scalef
-        height: 80 * pgst.scalef
+        width: Theme.iconSizeMedium
+        height: Theme.iconSizeMedium
 
         source: coverart
     }
@@ -124,6 +125,7 @@ ListItem {
     }
 
     Label {
+        id: titleLabel
         anchors {
             left: cover.right
             leftMargin: Theme.paddingMedium
@@ -134,7 +136,7 @@ ListItem {
 
         truncationMode: TruncationMode.Fade
         text: title
-        color: newEpisodes ? Theme.highlightColor : Theme.primaryColor
+        color: (newEpisodes || podcastItem.highlighted) ? Theme.highlightColor : Theme.primaryColor
     }
 
     Label {
@@ -145,6 +147,7 @@ ListItem {
             verticalCenter: parent.verticalCenter
         }
 
+        color: titleLabel.color
         text: downloaded ? downloaded : ''
     }
 }

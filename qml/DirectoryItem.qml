@@ -24,7 +24,7 @@ import Sailfish.Silica 1.0
 ListItem {
     id: directoryItem
 
-    contentHeight: Theme.itemSizeMedium + Theme.paddingSmall * 2
+    contentHeight: Theme.itemSizeMedium
     height: contentHeight
 
     anchors {
@@ -46,8 +46,8 @@ ListItem {
         sourceSize.width: width
         sourceSize.height: height
 
-        width: Theme.itemSizeMedium
-        height: Theme.itemSizeMedium
+        width: Theme.iconSizeMedium
+        height: Theme.iconSizeMedium
 
         source: scaled_logo_url
     }

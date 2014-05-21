@@ -27,8 +27,6 @@ PodcastsPage {
     id: pgst
     property bool ready: false
 
-    property real scalef: width / 480
-
     property var playerPage: undefined
     property var cover: CoverContainer { }
 

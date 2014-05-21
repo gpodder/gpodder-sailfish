@@ -175,6 +175,9 @@ Page {
                 text: 'Shownotes'
                 color: Theme.highlightColor
 
+                // Only show if we also have a chapters list
+                visible: chaptersExpander.visible
+
                 anchors {
                     left: parent.left
                     leftMargin: Theme.paddingMedium
