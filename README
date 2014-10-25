@@ -4,3 +4,9 @@ gPodder 4 for Sailfish OS
 This repository contains the platform-specific customizations and packaging for
 running gPodder 4 on Sailfish OS. Python 3.3.3 and PyOtherSide is already included
 in the device repositories starting with Sailfish OS 1.0.3.8.
+
+To build, make sure you have make and rpm installed, then:
+
+    make -f dist.mk
+
+This should give you an installable .rpm file in the current directory.
