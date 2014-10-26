@@ -55,6 +55,7 @@ Page {
         }
 
         model: GPodderEpisodeListModel { id: episodesListModel }
+        GPodderEpisodeListModelConnections {}
 
         section.property: 'section'
         section.delegate: SectionHeader {

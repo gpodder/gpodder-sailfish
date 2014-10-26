@@ -70,6 +70,7 @@ PodcastsPage {
     }
 
     GPodderPodcastListModel { id: podcastListModel }
+    GPodderPodcastListModelConnections {}
 
     function loadPage(filename, properties, replace) {
         var component = Qt.createComponent(filename);

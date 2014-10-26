@@ -60,6 +60,7 @@ Page {
         }
 
         model: GPodderEpisodeListModel { id: episodeListModel }
+        GPodderEpisodeListModelConnections {}
 
         PullDownMenu {
             MenuItem {
