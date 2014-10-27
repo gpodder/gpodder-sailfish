@@ -34,7 +34,7 @@ ListItem {
 
     Image {
         id: cover
-        opacity: scaled_logo_url && status == Image.Ready
+        opacity: image && status == Image.Ready
         Behavior on opacity { FadeAnimation { } }
 
         anchors {
@@ -49,7 +49,7 @@ ListItem {
         width: Theme.iconSizeMedium
         height: Theme.iconSizeMedium
 
-        source: scaled_logo_url
+        source: image
     }
 
     Rectangle {
@@ -73,12 +73,24 @@ ListItem {
         anchors {
             left: cover.right
             leftMargin: Theme.paddingSmall
-            rightMargin: Theme.paddingSmall
-            right: parent.right
+            rightMargin: subs.text ? Theme.paddingSmall : 0
+            right: subs.left
             verticalCenter: parent.verticalCenter
         }
 
         truncationMode: TruncationMode.Fade
         text: title
+    }
+
+    Label {
+        id: subs
+
+        anchors {
+            right: parent.right
+            rightMargin: Theme.paddingSmall
+            verticalCenter: parent.verticalCenter
+        }
+
+        text: (subscribers > 0) ? subscribers : ''
     }
 }

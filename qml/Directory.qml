@@ -26,9 +26,18 @@ import 'common'
 Page {
     id: directory
 
+    property string provider
+    property string query: '-'
     property var callback
 
-    function start(query, callback) {
+    Component.onCompleted: {
+        if (directory.query !== '-') {
+            directory.start(directory.provider, directory.query, directory.callback);
+        }
+    }
+
+    function start(provider, query, callback) {
+        directory.provider = provider;
         directory.callback = callback;
         directorySearchModel.search(query, function() {
             busyIndicator.visible = false;
@@ -39,12 +48,12 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
-            title: 'Search results'
+            title: directory.provider
         }
 
         VerticalScrollDecorator { }
 
-        model: GPodderDirectorySearchModel { id: directorySearchModel }
+        model: GPodderDirectorySearchModel { id: directorySearchModel; provider: directory.provider }
 
         delegate: DirectoryItem {
             onClicked: {

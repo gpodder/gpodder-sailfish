@@ -23,23 +23,24 @@ import Sailfish.Silica 1.0
 
 Dialog {
     id: directory
+
+    property string provider
+    property var callback
+
     canAccept: input.text != ''
 
     acceptDestination: Component { Directory { } }
     acceptDestinationAction: PageStackAction.Replace
 
     onAccepted: {
-        var ctx = { py: py };
-        acceptDestinationInstance.start(input.text, function (url) {
-            ctx.py.call('main.subscribe', [url]);
-        });
+        acceptDestinationInstance.start(directory.provider, input.text, directory.callback);
     }
 
     Column {
         anchors.fill: parent
 
         DialogHeader {
-            title: 'Search gpodder.net'
+            title: directory.provider
             acceptText: 'Search'
         }
 

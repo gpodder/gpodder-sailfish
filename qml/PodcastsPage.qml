@@ -60,8 +60,8 @@ Page {
             }
 
             MenuItem {
-                text: 'Search gpodder.net'
-                onClicked: pgst.loadPage('DirectoryDialog.qml');
+                text: 'Discover new podcasts'
+                onClicked: pgst.loadPage('DirectorySelectionDialog.qml');
             }
         }
 
