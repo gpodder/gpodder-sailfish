@@ -28,6 +28,8 @@ Page {
 
     property int episode_id
     property string title
+    property string description
+    property string metadata
     property string link
     property bool ready: false
     property var chapters: ([])
@@ -36,8 +38,9 @@ Page {
 
     Component.onCompleted: {
         py.call('main.show_episode', [episode_id], function (episode) {
-            descriptionLabel.text = episode.description;
-            metadataLabel.text = episode.metadata;
+            detailPage.title = episode.title;
+            detailPage.description = episode.description;
+            detailPage.metadata = episode.metadata;
             detailPage.chapters = episode.chapters;
             detailPage.link = episode.link;
             detailPage.ready = true;
@@ -91,7 +94,7 @@ Page {
             }
 
             Label {
-                id: metadataLabel
+                text: detailPage.metadata
 
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.secondaryColor
@@ -185,13 +188,15 @@ Page {
             }
 
             Label {
-                id: descriptionLabel
+                text: detailPage.description
+                linkColor: Theme.highlightColor
                 anchors {
                     left: parent.left
                     right: parent.right
                     margins: Theme.paddingMedium
                 }
                 wrapMode: Text.WordWrap
+                onLinkActivated: Qt.openUrlExternally(link)
             }
         }
     }
