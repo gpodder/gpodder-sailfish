@@ -73,6 +73,15 @@ ListItem {
                     });
                 }
             }
+
+            IconMenuItem {
+                text: 'Podcast details'
+                icon.source: 'image://theme/icon-m-message'
+                onClicked: {
+                    podcastItem.hideMenu();
+                    pgst.loadPage('PodcastDetail.qml', {podcast_id: id, title: title});
+                }
+            }
         }
     }
 

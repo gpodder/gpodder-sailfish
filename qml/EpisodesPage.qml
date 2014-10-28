@@ -64,6 +64,13 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: 'Podcast details'
+                onClicked: {
+                    pgst.loadPage('PodcastDetail.qml', {podcast_id: episodesPage.podcast_id, title: episodesPage.title});
+                }
+            }
+
+            MenuItem {
                 text: 'Mark episodes as old'
                 onClicked: {
                     py.call('main.mark_episodes_as_old', [episodesPage.podcast_id]);
