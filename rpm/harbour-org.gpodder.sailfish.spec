@@ -5,9 +5,7 @@ Summary: Media and podcast aggregator
 Name: harbour-org.gpodder.sailfish
 Version: 4.3.0
 Release: 1
-Source0: %{name}-%{version}.tar.gz
-Source1: %{name}.desktop
-Source2: %{name}.png
+Source: %{name}-%{version}.tar.gz
 BuildArch: noarch
 URL: http://gpodder.org/
 License: ISC / GPLv3
@@ -37,11 +35,11 @@ cp -rpv gpodder-ui-qml/common $TARGET/qml/
 
 TARGET=%{buildroot}/%{_datadir}/applications
 mkdir -p $TARGET
-cp -rpv %{SOURCE1} $TARGET/
+cp -rpv %{name}.desktop $TARGET/
 
 TARGET=%{buildroot}/%{_datadir}/icons/hicolor/86x86/apps/
 mkdir -p $TARGET
-cp -rpv %{SOURCE2} $TARGET/
+cp -rpv %{name}.png $TARGET/
 
 %files
 %defattr(-,root,root,-)
