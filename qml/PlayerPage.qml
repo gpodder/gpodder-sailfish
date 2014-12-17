@@ -111,7 +111,7 @@ Page {
 
             Item {
                 width: parent.width
-                height: Theme.itemSizeSmall
+                height: Theme.paddingSmall
             }
 
             Label {
@@ -126,7 +126,7 @@ Page {
 
             Item {
                 width: parent.width
-                height: Theme.paddingMedium
+                height: Theme.paddingSmall
             }
 
             Slider {
@@ -139,6 +139,53 @@ Page {
                 onDownChanged: {
                     if (!down) {
                         player.seekAndSync(sliderValue)
+                    }
+                }
+            }
+
+            SectionHeader {
+                text: 'Play queue'
+                visible: playQueueRepeater.count > 0
+            }
+
+            Repeater {
+                id: playQueueRepeater
+                model: player.queue
+                property Item contextMenu
+
+                property var queueConnections: Connections {
+                    target: player
+
+                    onQueueUpdated: {
+                        playQueueRepeater.model = player.queue;
+                    }
+                }
+
+                ListItem {
+                    id: playQueueListItem
+
+                    width: parent.width
+
+                    menu: ContextMenu {
+                        MenuItem {
+                            text: 'Remove from queue'
+                            onClicked: player.removeQueueIndex(index);
+                        }
+                    }
+
+                    Label {
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            margins: Theme.paddingMedium
+                            verticalCenter: parent.verticalCenter
+                        }
+
+                        text: modelData.title
+                    }
+
+                    onClicked: {
+                        player.jumpToQueueIndex(index);
                     }
                 }
             }

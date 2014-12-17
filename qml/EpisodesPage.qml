@@ -78,6 +78,21 @@ Page {
             }
 
             MenuItem {
+                text: 'Enqueue episodes in player'
+                onClicked: {
+                    var startPlayback = Util.atMostOnce(function () {
+                        if (!player.isPlaying) {
+                            player.jumpToQueueIndex(0);
+                        }
+                    });
+
+                    episodeListModel.forEachEpisode(function (episode) {
+                        player.enqueueEpisode(episode.id, startPlayback);
+                    });
+                }
+            }
+
+            MenuItem {
                 text: 'Unsubscribe'
                 onClicked: {
                     remorse.execute("Unsubscribing", function() {

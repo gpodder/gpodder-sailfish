@@ -75,6 +75,16 @@ ListItem {
                         player.playbackEpisode(id);
                     }
                 }
+
+                onPressAndHold: {
+                    player.enqueueEpisode(id, function () {
+                        if (!player.isPlaying) {
+                            player.jumpToQueueIndex(0);
+                        } else {
+                            pageStack.navigateForward(PageStackAction.Animated);
+                        }
+                    });
+                }
             }
 
             IconMenuItem {
