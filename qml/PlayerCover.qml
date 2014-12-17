@@ -40,6 +40,17 @@ Column {
     }
 
     Label {
+        visible: player.sleepTimerRunning
+        text: 'Sleep timer: ' + Util.formatDuration(player.sleepTimerRemaining)
+
+        width: parent.width
+        horizontalAlignment: Text.AlignHCenter
+        color: Theme.secondaryHighlightColor
+        wrapMode: Text.Wrap
+        font.pixelSize: Theme.fontSizeExtraSmall
+    }
+
+    Label {
         text: player.episode_title
         width: parent.width
         horizontalAlignment: Text.AlignHCenter

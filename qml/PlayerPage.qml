@@ -39,6 +39,17 @@ Page {
             }
 
             MenuItem {
+                text: player.sleepTimerRunning ? 'Stop sleep timer' : 'Sleep timer'
+                onClicked: {
+                    if (player.sleepTimerRunning) {
+                        player.stopSleepTimer();
+                    } else {
+                        pageStack.push('SleepTimerDialog.qml', { player: player });
+                    }
+                }
+            }
+
+            MenuItem {
                 text: player.isPlaying ? 'Pause': 'Play'
                 onClicked: {
                     if (player.isPlaying) {
@@ -71,6 +82,22 @@ Page {
                 text: player.episode_title
                 color: Theme.rgba(Theme.highlightColor, 0.7)
                 font.pixelSize: Theme.fontSizeSmall
+            }
+
+            Label {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    margins: Theme.paddingLarge
+                }
+
+                visible: player.sleepTimerRunning
+
+                truncationMode: TruncationMode.Fade
+                horizontalAlignment: Text.AlignRight
+                text: 'Sleep timer: ' + Util.formatDuration(player.sleepTimerRemaining)
+                color: Theme.rgba(Theme.highlightColor, 0.7)
+                font.pixelSize: Theme.fontSizeExtraSmall
             }
 
             Connections {
