@@ -3,7 +3,7 @@
 
 Summary: Media and podcast aggregator
 Name: harbour-org.gpodder.sailfish
-Version: 4.3.0
+Version: 4.4.0
 Release: 1
 Source: %{name}-%{version}.tar.gz
 BuildArch: noarch
