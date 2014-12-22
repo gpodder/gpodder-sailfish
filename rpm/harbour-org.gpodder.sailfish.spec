@@ -10,7 +10,7 @@ BuildArch: noarch
 URL: http://gpodder.org/
 License: ISC / GPLv3
 Group: System/GUI/Other
-Requires: pyotherside-qml-plugin-python3-qt5
+Requires: pyotherside-qml-plugin-python3-qt5 >= 1.3.0
 Requires: sailfishsilica-qt5
 Requires: libsailfishapp-launcher
 
