@@ -50,6 +50,12 @@ Page {
             }
 
             MenuItem {
+                text: 'Clear play queue'
+                enabled: playQueueRepeater.count > 0
+                onClicked: player.clearQueue()
+            }
+
+            MenuItem {
                 text: player.isPlaying ? 'Pause': 'Play'
                 onClicked: {
                     if (player.isPlaying) {
