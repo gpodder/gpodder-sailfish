@@ -7,3 +7,6 @@
 [submodule "podcastparser"]
 	path = podcastparser
 	url = git://github.com/gpodder/podcastparser.git
+[submodule "minidb"]
+	path = minidb
+	url = git://github.com/thp/minidb.git

@@ -4,3 +4,4 @@ main.py
 podcastparser.py
 qml/common
 __pycache__
+minidb.py
