@@ -30,7 +30,12 @@ ContextMenu {
         Row {
             id: container
 
-            anchors.centerIn: parent
+            anchors {
+                verticalCenter: parent.verticalCenter
+                right: parent.right
+                margins: Theme.paddingLarge
+            }
+
             spacing: Theme.paddingLarge
         }
     }
