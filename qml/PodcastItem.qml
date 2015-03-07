@@ -27,6 +27,15 @@ ListItem {
     menu: Component {
         IconContextMenu {
             IconMenuItem {
+                text: 'Refresh'
+                icon.source: 'image://theme/icon-m-refresh'
+                onClicked: {
+                    podcastItem.hideMenu();
+                    py.call('main.check_for_episodes', [url]);
+                }
+            }
+
+            IconMenuItem {
                 text: 'Unsubscribe'
                 icon.source: 'image://theme/icon-m-delete'
                 onClicked: {
