@@ -23,6 +23,7 @@ import Sailfish.Silica 1.0
 
 Dialog {
     id: directory
+    allowedOrientations: Orientation.All
 
     property string provider
     property var callback

@@ -23,6 +23,7 @@ import Sailfish.Silica 1.0
 
 Dialog {
     id: subscribe
+    allowedOrientations: Orientation.All
 
     canAccept: input.text != ''
     onAccepted: py.call('main.subscribe', [input.text]);

@@ -26,6 +26,7 @@ import 'common/util.js' as Util
 
 Page {
     id: episodesPage
+    allowedOrientations: Orientation.All
 
     property int podcast_id
     property string title

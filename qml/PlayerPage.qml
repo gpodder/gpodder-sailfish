@@ -25,6 +25,7 @@ import 'common/util.js' as Util
 
 Page {
     id: playerPage
+    allowedOrientations: Orientation.All
 
     SilicaFlickable {
         id: flickable

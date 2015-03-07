@@ -25,6 +25,7 @@ import 'common'
 
 Page {
     id: directory
+    allowedOrientations: Orientation.All
 
     property string provider
     property string query: '-'

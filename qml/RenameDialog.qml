@@ -23,6 +23,8 @@ import Sailfish.Silica 1.0
 
 Dialog {
     id: rename
+    allowedOrientations: Orientation.All
+
     property string activityName
     property string affirmativeAction
     property string inputLabel

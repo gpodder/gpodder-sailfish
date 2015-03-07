@@ -23,6 +23,7 @@ import Sailfish.Silica 1.0
 
 Page {
     id: directorySelectionDialog
+    allowedOrientations: Orientation.All
 
     property var model
     property int selectedIndex: -1

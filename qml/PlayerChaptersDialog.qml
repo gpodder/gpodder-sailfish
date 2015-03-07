@@ -25,6 +25,7 @@ import 'common/util.js' as Util
 
 Page {
     id: chapterSelector
+    allowedOrientations: Orientation.All
 
     property var model
     property var player

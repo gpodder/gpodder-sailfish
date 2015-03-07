@@ -23,6 +23,7 @@ import Sailfish.Silica 1.0
 
 Page {
     id: aboutPage
+    allowedOrientations: Orientation.All
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 

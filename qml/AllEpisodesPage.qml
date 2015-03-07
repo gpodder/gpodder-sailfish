@@ -26,6 +26,7 @@ import 'common/util.js' as Util
 
 Page {
     id: freshEpisodes
+    allowedOrientations: Orientation.All
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 

@@ -26,6 +26,7 @@ import 'common/util.js' as Util
 
 Page {
     id: podcastsPage
+    allowedOrientations: Orientation.All
 
     SilicaListView {
         id: podcastList
