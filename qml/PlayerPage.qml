@@ -21,6 +21,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+import 'common'
 import 'common/util.js' as Util
 
 Page {
@@ -150,6 +151,53 @@ Page {
                 }
             }
 
+            Row {
+                anchors {
+                    right: parent.right
+                    margins: Theme.paddingMedium
+                }
+
+                height: Theme.itemSizeLarge
+                spacing: Theme.paddingMedium
+
+                IconMenuItem {
+                    text: '- 1 min'
+                    icon.source: 'image://theme/icon-m-previous'
+
+                    GPodderAutoFire {
+                        running: parent.down
+                        onFired: player.seekAndSync(player.position - 1000 * 60)
+                    }
+                }
+
+                IconMenuItem {
+                    text: '- 10 sec'
+                    icon.source: 'image://theme/icon-m-previous'
+                    GPodderAutoFire {
+                        running: parent.down
+                        onFired: player.seekAndSync(player.position - 1000 * 10)
+                    }
+                }
+
+                IconMenuItem {
+                    text: '+ 10 sec'
+                    icon.source: 'image://theme/icon-m-next'
+                    GPodderAutoFire {
+                        running: parent.down
+                        onFired: player.seekAndSync(player.position + 1000 * 10)
+                    }
+                }
+
+                IconMenuItem {
+                    text: '+ 1 min'
+                    icon.source: 'image://theme/icon-m-next'
+                    GPodderAutoFire {
+                        running: parent.down
+                        onFired: player.seekAndSync(player.position + 1000 * 60)
+                    }
+                }
+            }
+
             SectionHeader {
                 text: 'Play queue'
                 visible: playQueueRepeater.count > 0
@@ -189,46 +237,12 @@ Page {
                         }
 
                         text: modelData.title
+                        truncationMode: TruncationMode.Fade
                     }
 
                     onClicked: {
                         player.jumpToQueueIndex(index);
                     }
-                }
-            }
-
-            Item {
-                width: parent.width
-                height: Theme.itemSizeLarge
-            }
-
-            TimePicker {
-                hourMode: DateTime.TwentyFourHours
-                anchors.horizontalCenter: parent.horizontalCenter
-
-                property int oldHour: hour
-                property int oldMinute: minute
-
-                onHourChanged: {
-                    var diff = hour - oldHour;
-                    if (diff > 12) {
-                        diff -= 24;
-                    } else if (diff < -12) {
-                        diff += 24;
-                    }
-                    player.seekAndSync(player.position + 1000 * 60 * diff);
-                    oldHour = hour;
-                }
-
-                onMinuteChanged: {
-                    var diff = minute - oldMinute;
-                    if (diff > 30) {
-                        diff -= 60;
-                    } else if (diff < -30) {
-                        diff += 60;
-                    }
-                    player.seekAndSync(player.position + 1000 * 10 * diff);
-                    oldMinute = minute;
                 }
             }
         }
