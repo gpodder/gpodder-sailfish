@@ -55,21 +55,23 @@ Page {
         VerticalScrollDecorator { flickable: episodeList }
 
         anchors.fill: parent
-        header: PageHeader {
-            title: episodesPage.title
+        header: BackgroundItem {
+            height: pageHeader.height
+            width: parent.width
+            PageHeader {
+                id: pageHeader
+                title: episodesPage.title
+            }
+
+            onClicked: {
+                pgst.loadPage('PodcastDetail.qml', {podcast_id: episodesPage.podcast_id, title: episodesPage.title});
+            }
         }
 
         model: GPodderEpisodeListModel { id: episodeListModel }
         GPodderEpisodeListModelConnections {}
 
         PullDownMenu {
-            MenuItem {
-                text: 'Podcast details'
-                onClicked: {
-                    pgst.loadPage('PodcastDetail.qml', {podcast_id: episodesPage.podcast_id, title: episodesPage.title});
-                }
-            }
-
             MenuItem {
                 text: 'Mark episodes as old'
                 onClicked: {
