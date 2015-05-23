@@ -38,8 +38,8 @@ Page {
             busy: py.refreshing
 
             MenuItem {
-                text: 'About'
-                onClicked: pgst.loadPage('AboutPage.qml');
+                text: 'Settings'
+                onClicked: pgst.loadPage('SettingsPage.qml');
             }
 
             MenuItem {
