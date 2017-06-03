@@ -68,6 +68,8 @@ PodcastsPage {
         id: player
         onPlayerCreated: pgst.createPlayerPage();
     }
+    
+    MprisPlayer {}
 
     GPodderPodcastListModel { id: podcastListModel }
     GPodderPodcastListModelConnections {}
