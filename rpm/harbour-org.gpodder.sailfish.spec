@@ -13,6 +13,7 @@ Group: System/GUI/Other
 Requires: pyotherside-qml-plugin-python3-qt5 >= 1.3.0
 Requires: sailfishsilica-qt5
 Requires: libsailfishapp-launcher
+Requires: mpris-qt5
 
 %description
 gPodder downloads and manages free audio and video content for you.
