@@ -70,6 +70,7 @@ PodcastsPage {
     }
     
     MprisPlayer {}
+    MediaKeys {}
 
     GPodderPodcastListModel { id: podcastListModel }
     GPodderPodcastListModelConnections {}
