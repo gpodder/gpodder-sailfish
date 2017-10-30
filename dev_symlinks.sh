@@ -2,8 +2,12 @@
 # Create symlinks into Git submodules, so the project can
 # be started with qmlscene directly from a source checkout
 
-# array of symlinks in form "$TARGET","$LINK_NAME"
-SYMLINKS=("gpodder-core/src/gpodder","gpodder" "podcastparser/podcastparser.py","podcastparser.py" "gpodder-ui-qml/main.py","main.py" "../gpodder-ui-qml/common","qml/common" "minidb/minidb.py","minidb.py")
+# array of symlinks in form "$TARGET","$LINK_NAME", take care of the spaces between the entries
+SYMLINKS=("gpodder-core/src/gpodder","gpodder" \
+	"podcastparser/podcastparser.py","podcastparser.py" \
+	"gpodder-ui-qml/main.py","main.py" \
+	"../gpodder-ui-qml/common","qml/common" \
+	"minidb/minidb.py","minidb.py")
 
 help() {
 	echo "Manage symlinks into Git submodules, so the project can
