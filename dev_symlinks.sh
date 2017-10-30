@@ -18,11 +18,6 @@ default behaviour: create symlinks into Git submodules
 }
 
 create_symlinks() {
-#	ln -sf gpodder-core/src/gpodder .
-#	ln -sf podcastparser/podcastparser.py .
-#	ln -sf gpodder-ui-qml/main.py .
-#	ln -sf ../gpodder-ui-qml/common qml
-#	ln -sf minidb/minidb.py .
 
 	# emulate iteration over tuples by splitting at ','
 	OLDIFS=$IFS
