@@ -58,7 +58,7 @@ case "$1" in
 	'')
 		create_symlinks;;
 	*)
-		echo "invalid argument"
+		echo "invalid argument. Try \`$0 --help\` for more information."
 		exit -1
 esac
 
