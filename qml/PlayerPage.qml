@@ -56,17 +56,6 @@ Page {
                 enabled: playQueueRepeater.count > 0
                 onClicked: player.clearQueue()
             }
-
-            MenuItem {
-                text: player.isPlaying ? 'Pause': 'Play'
-                onClicked: {
-                    if (player.isPlaying) {
-                        player.pause();
-                    } else {
-                        player.play();
-                    }
-                }
-            }
         }
 
         Column {
