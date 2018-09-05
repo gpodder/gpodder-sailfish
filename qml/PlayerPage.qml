@@ -180,6 +180,18 @@ Page {
                 }
 
                 IconMenuItem {
+                    text: player.isPlaying ? 'Pause' : 'Play'
+                    onClicked: {
+                        if (player.isPlaying) {
+                            player.pause();
+                        } else {
+                            player.play();
+                        }
+                    }
+                    icon.source: player.isPlaying ? 'image://theme/icon-m-pause' : 'image://theme/icon-m-play'
+                }
+
+                IconMenuItem {
                     text: '+ 10 sec'
                     icon.source: 'image://theme/icon-m-next'
                     GPodderAutoFire {
