@@ -142,7 +142,7 @@ Page {
 
             Row {
                 anchors {
-                    right: parent.right
+                    horizontalCenter: parent.horizontalCenter
                     margins: Theme.paddingMedium
                 }
 
