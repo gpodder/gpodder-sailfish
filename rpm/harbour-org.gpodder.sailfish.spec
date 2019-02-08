@@ -3,7 +3,7 @@
 
 Summary: Media and podcast aggregator
 Name: harbour-org.gpodder.sailfish
-Version: 4.6.0
+Version: 4.7.0
 Release: 1
 Source: %{name}-%{version}.tar.gz
 BuildArch: noarch
@@ -33,6 +33,7 @@ cp -rpv podcastparser/podcastparser.py $TARGET/
 cp -rpv minidb/minidb.py $TARGET/
 cp -rpv gpodder-ui-qml/main.py $TARGET/
 cp -rpv qml $TARGET/
+cp -rpv translations $TARGET/
 cp -rpv gpodder-ui-qml/common $TARGET/qml/
 
 TARGET=%{buildroot}/%{_datadir}/applications

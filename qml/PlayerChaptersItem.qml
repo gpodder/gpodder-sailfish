@@ -30,6 +30,6 @@ MenuItem {
     property var model
 
     visible: model.length > 0
-    text: 'Chapters'
+    text: qsTr("Chapters')
     onClicked: pageStack.push('PlayerChaptersDialog.qml', { model: model, player: player });
 }

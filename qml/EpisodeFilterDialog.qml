@@ -32,7 +32,7 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
-            title: 'Filter episode list'
+            title: qsTr("Filter episode list")
         }
 
         model: {

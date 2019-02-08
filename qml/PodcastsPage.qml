@@ -38,17 +38,17 @@ Page {
             busy: py.refreshing
 
             MenuItem {
-                text: 'Settings'
+                text: qsTr("Settings")
                 onClicked: pgst.loadPage('SettingsPage.qml');
             }
 
             MenuItem {
-                text: 'Filter episodes'
+                text: qsTr("Filter episodes")
                 onClicked: pgst.loadPage('AllEpisodesPage.qml');
             }
 
             MenuItem {
-                text: py.refreshing ? 'Checking for new episodes...' : 'Check for new episodes'
+                text: py.refreshing ? qsTr("Checking for new episodes...") : qsTr("Check for new episodes")
                 enabled: podcastListModel.count > 0 && !py.refreshing
                 onClicked: py.call('main.check_for_episodes');
             }
@@ -56,18 +56,18 @@ Page {
 
         PushUpMenu {
             MenuItem {
-                text: 'Add new podcast'
+                text: qsTr("Add new podcast")
                 onClicked: pgst.loadPage('Subscribe.qml');
             }
 
             MenuItem {
-                text: 'Discover new podcasts'
+                text: qsTr("Discover new podcasts")
                 onClicked: pgst.loadPage('DirectorySelectionDialog.qml');
             }
         }
 
         header: PageHeader {
-            title: 'Subscriptions'
+            title: qsTr("Subscriptions")
         }
 
         section.property: 'section'
@@ -84,7 +84,7 @@ Page {
 
         ViewPlaceholder {
             enabled: podcastListModel.count == 0 && py.ready
-            text: 'No subscriptions'
+            text: qsTr("No subscriptions")
         }
     }
 }

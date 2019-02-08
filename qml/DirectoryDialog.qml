@@ -48,7 +48,7 @@ Dialog {
         TextField {
             id: input
             width: parent.width
-            label: 'Search term'
+            label: qsTr("Search term")
             focus: enabled
             enabled: directory.status == PageStatus.Active
             placeholderText: label

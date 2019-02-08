@@ -44,7 +44,7 @@ Page {
 
 
             PageHeader {
-                title: 'About gPodder'
+                title: qsTr("About gPodder")
             }
 
             Column {
@@ -73,11 +73,11 @@ Page {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     text: [
-                        '© 2005-2014 Thomas Perl and the gPodder Team',
-                        'License: ISC / GPLv3 or later',
-                        'Website: http://gpodder.org/',
+                        '© 2005-2014 '+ qsTr("Thomas Perl and the gPodder Team"),
+                        qsTr("License: ISC / GPLv3 or later"),
+                        qsTr("Website: ") + 'http://gpodder.org/',
                         '',
-                        'Sailfish OS artwork by Stephan Beyerle',
+                        qsTr("Sailfish OS artwork by Stephan Beyerle"),
                         '',
                         'gPodder Core ' + py.coreversion,
                         'gPodder QML UI ' + py.uiversion,

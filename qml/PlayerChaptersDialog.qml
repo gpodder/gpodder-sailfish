@@ -34,7 +34,7 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
-            title: 'Chapters'
+            title: qsTr("Chapters")
         }
 
         model: chapterSelector.model

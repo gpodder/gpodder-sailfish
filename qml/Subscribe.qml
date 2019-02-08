@@ -32,14 +32,14 @@ Dialog {
         anchors.fill: parent
 
         DialogHeader {
-            title: 'Add subscription'
-            acceptText: 'Subscribe'
+            title: qsTr("Add subscription")
+            acceptText: qsTr("Subscribe")
         }
 
         TextField {
             id: input
             width: parent.width
-            label: 'Feed URL'
+            label: qsTr("Feed URL")
             placeholderText: label
             focus: enabled
             enabled: subscribe.status == PageStatus.Active

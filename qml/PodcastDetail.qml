@@ -86,7 +86,7 @@ Page {
             spacing: Theme.paddingMedium
 
             PageHeader {
-                title: 'Podcast details'
+                title: qsTr("Podcast details")
             }
 
             CustomExpander {
@@ -131,7 +131,7 @@ Page {
             }
 
             Label {
-                text: 'Section: ' + podcastDetail.section
+                text: qsTr("Section: ") + podcastDetail.section
 
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.secondaryColor
