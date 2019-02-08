@@ -162,6 +162,14 @@
     </message>
 </context>
 <context>
+    <name>PlayerChaptersItem</name>
+    <message>
+        <location filename="../qml/PlayerChaptersItem.qml" line="33"/>
+        <source>Chapters</source>
+        <translation>Capítulos</translation>
+    </message>
+</context>
+<context>
     <name>PlayerCover</name>
     <message>
         <location filename="../qml/PlayerCover.qml" line="44"/>
