@@ -248,6 +248,16 @@
 <context>
     <name>PodcastDetail</name>
     <message>
+        <location filename="../qml/PodcastDetail.qml" line="66"/>
+        <source>Copy feed URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastDetail.qml" line="71"/>
+        <source>Visit website</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/PodcastDetail.qml" line="89"/>
         <source>Podcast details</source>
         <translation type="unfinished"></translation>

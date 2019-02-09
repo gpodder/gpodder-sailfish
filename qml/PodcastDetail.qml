@@ -63,12 +63,12 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: 'Copy feed URL'
+                text: qsTr("Copy feed URL")
                 onClicked: Clipboard.text = podcastDetail.url;
             }
 
             MenuItem {
-                text: 'Visit website'
+                text: qsTr("Visit website")
                 onClicked: Qt.openUrlExternally(podcastDetail.link);
                 enabled: podcastDetail.link != ''
             }
