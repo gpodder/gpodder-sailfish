@@ -324,6 +324,29 @@
     </message>
 </context>
 <context>
+    <name>PodcastsCover</name>
+    <message>
+        <location filename="../qml/PodcastsCover.qml" line="35"/>
+        <source>podcasts</source>
+        <translation>podcasts</translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastsCover.qml" line="36"/>
+        <source>episodes</source>
+        <translation>episodios</translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastsCover.qml" line="37"/>
+        <source>new episodes</source>
+        <translation>episodios nuevos</translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastsCover.qml" line="38"/>
+        <source>downloaded</source>
+        <translation>descargados</translation>
+    </message>
+</context>
+<context>
     <name>PodcastsPage</name>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="41"/>
