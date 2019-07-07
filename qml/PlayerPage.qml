@@ -56,17 +56,6 @@ Page {
                 enabled: playQueueRepeater.count > 0
                 onClicked: player.clearQueue()
             }
-
-            MenuItem {
-                text: player.isPlaying ? 'Pause': 'Play'
-                onClicked: {
-                    if (player.isPlaying) {
-                        player.pause();
-                    } else {
-                        player.play();
-                    }
-                }
-            }
         }
 
         Column {
@@ -153,7 +142,7 @@ Page {
 
             Row {
                 anchors {
-                    right: parent.right
+                    horizontalCenter: parent.horizontalCenter
                     margins: Theme.paddingMedium
                 }
 
@@ -177,6 +166,18 @@ Page {
                         running: parent.down
                         onFired: player.seekAndSync(player.position - 1000 * 10)
                     }
+                }
+
+                IconMenuItem {
+                    text: player.isPlaying ? 'Pause' : 'Play'
+                    onClicked: {
+                        if (player.isPlaying) {
+                            player.pause();
+                        } else {
+                            player.play();
+                        }
+                    }
+                    icon.source: player.isPlaying ? 'image://theme/icon-m-pause' : 'image://theme/icon-m-play'
                 }
 
                 IconMenuItem {
