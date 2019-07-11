@@ -27,6 +27,7 @@ import 'common/util.js' as Util
 ListItem {
     id: episodeItem
     property bool isPlaying: ((player.episode == id) && player.isPlaying)
+    property variant mime: mime_type.split('/')
 
     Rectangle {
         anchors.fill: parent
@@ -186,10 +187,29 @@ ListItem {
     }
 
     Label {
-        id: downloadStatusIcon
+        id: videoIcon
 
         anchors {
             right: parent.right
+            verticalCenter: parent.verticalCenter
+            rightMargin: text ? Theme.paddingMedium : 0
+        }
+
+        font.pixelSize: Theme.fontSizeLarge
+        font.bold: true
+
+        opacity: titleItem.opacity
+
+        color: titleItem.color
+
+        text: mime[0] == 'video' ? '🎬' : '';
+    }
+
+    Label {
+        id: downloadStatusIcon
+
+        anchors {
+            right: mime[0] == 'video' ? videoIcon.left : parent.right
             verticalCenter: parent.verticalCenter
             rightMargin: text ? Theme.paddingMedium : 0
         }
