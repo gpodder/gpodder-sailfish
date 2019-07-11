@@ -41,7 +41,7 @@ Page {
             }
 
             MenuItem {
-                text: player.sleepTimerRunning ? 'Stop sleep timer' : 'Sleep timer'
+                text: player.sleepTimerRunning ? qsTr("Stop sleep timer") : qsTr("Sleep timer")
                 onClicked: {
                     if (player.sleepTimerRunning) {
                         player.stopSleepTimer();
@@ -52,7 +52,7 @@ Page {
             }
 
             MenuItem {
-                text: 'Clear play queue'
+                text: qsTr("Clear play queue")
                 enabled: playQueueRepeater.count > 0
                 onClicked: player.clearQueue()
             }
@@ -64,7 +64,7 @@ Page {
             width: playerPage.width
 
             PageHeader {
-                title: 'Now playing'
+                title: qsTr("Now playing")
             }
 
             Label {
@@ -92,7 +92,7 @@ Page {
 
                 truncationMode: TruncationMode.Fade
                 horizontalAlignment: Text.AlignRight
-                text: 'Sleep timer: ' + Util.formatDuration(player.sleepTimerRemaining)
+                text: qsTr("Sleep timer: ") + Util.formatDuration(player.sleepTimerRemaining)
                 color: Theme.rgba(Theme.highlightColor, 0.7)
                 font.pixelSize: Theme.fontSizeExtraSmall
             }
@@ -150,7 +150,7 @@ Page {
                 spacing: Theme.paddingMedium
 
                 IconMenuItem {
-                    text: '- 1 min'
+                    text: qsTr("- 1 min")
                     icon.source: 'image://theme/icon-m-previous'
 
                     GPodderAutoFire {
@@ -160,7 +160,7 @@ Page {
                 }
 
                 IconMenuItem {
-                    text: '- 10 sec'
+                    text: qsTr("- 10 sec")
                     icon.source: 'image://theme/icon-m-previous'
                     GPodderAutoFire {
                         running: parent.down
@@ -169,7 +169,7 @@ Page {
                 }
 
                 IconMenuItem {
-                    text: player.isPlaying ? 'Pause' : 'Play'
+                    text: player.isPlaying ? qsTr("Pause") : qsTr("Play")
                     onClicked: {
                         if (player.isPlaying) {
                             player.pause();
@@ -181,7 +181,7 @@ Page {
                 }
 
                 IconMenuItem {
-                    text: '+ 10 sec'
+                    text: qsTr("+ 10 sec")
                     icon.source: 'image://theme/icon-m-next'
                     GPodderAutoFire {
                         running: parent.down
@@ -190,7 +190,7 @@ Page {
                 }
 
                 IconMenuItem {
-                    text: '+ 1 min'
+                    text: qsTr("+ 1 min")
                     icon.source: 'image://theme/icon-m-next'
                     GPodderAutoFire {
                         running: parent.down
@@ -200,7 +200,7 @@ Page {
             }
 
             SectionHeader {
-                text: 'Play queue'
+                text: qsTr("Play queue")
                 visible: playQueueRepeater.count > 0
             }
 
@@ -224,7 +224,7 @@ Page {
 
                     menu: ContextMenu {
                         MenuItem {
-                            text: 'Remove from queue'
+                            text: qsTr("Remove from queue")
                             onClicked: player.removeQueueIndex(index);
                         }
                     }

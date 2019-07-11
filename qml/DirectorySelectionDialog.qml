@@ -38,7 +38,7 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
-            title: 'Select provider'
+            title: qsTr("Select provider")
         }
 
         model: directorySelectionDialog.model

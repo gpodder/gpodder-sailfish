@@ -52,7 +52,7 @@ Page {
         VerticalScrollDecorator { flickable: freshEpisodesList }
 
         header: PageHeader {
-            title: 'Episodes: ' + filterItem.currentFilter
+            title: qsTr("Episodes: ") + filterItem.currentFilter
         }
 
         model: GPodderEpisodeListModel { id: episodeListModel }
@@ -68,7 +68,7 @@ Page {
 
         ViewPlaceholder {
             enabled: freshEpisodesList.count == 0 && episodeListModel.ready
-            text: 'No episodes found'
+            text: qsTr("No episodes found")
         }
     }
 }

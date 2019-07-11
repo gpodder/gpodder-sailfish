@@ -30,6 +30,6 @@ MenuItem {
     property var model
     property string currentFilter: model.filters[model.currentFilterIndex].label
 
-    text: 'Filter: ' + currentFilter
+    text: qsTr("Filter: ") + currentFilter
     onClicked: pageStack.push('EpisodeFilterDialog.qml', { model: model });
 }

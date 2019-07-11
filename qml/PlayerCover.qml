@@ -41,7 +41,7 @@ Column {
 
     Label {
         visible: player.sleepTimerRunning
-        text: 'Sleep timer: ' + Util.formatDuration(player.sleepTimerRemaining)
+        text: qsTr("Sleep timer: ") + Util.formatDuration(player.sleepTimerRemaining)
 
         width: parent.width
         horizontalAlignment: Text.AlignHCenter

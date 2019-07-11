@@ -32,10 +32,10 @@ CoverPlaceholder {
     function update_stats() {
         py.call('main.get_stats', [], function (result) {
             podcastsCover._info_text = Util.format(
-                '{podcasts} podcasts\n' +
-                '{episodes} episodes\n' +
-                '{newEpisodes} new episodes\n' +
-                '{downloaded} downloaded',
+                '{podcasts} '+qsTr("podcasts")+'\n' +
+                '{episodes} '+qsTr("episodes")+'\n' +
+                '{newEpisodes} '+qsTr("new episodes")+'\n' +
+                '{downloaded} '+qsTr("downloaded"),
                 result);
         });
     }

@@ -50,7 +50,7 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: 'About'
+                text: qsTr("About")
                 onClicked: pgst.loadPage('AboutPage.qml');
             }
         }
@@ -60,17 +60,17 @@ Page {
             spacing: Theme.paddingMedium
 
             PageHeader {
-                title: 'Settings'
+                title: qsTr("Settings")
             }
 
             SectionHeader {
-                text: 'YouTube'
+                text: qsTr("YouTube")
                 horizontalAlignment: Text.AlignHCenter
             }
 
             TextField {
                 id: youtube_api_key_v3
-                label: 'API Key (v3)'
+                label: qsTr("API Key (v3)")
                 placeholderText: label
                 width: parent.width
                 inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
@@ -79,13 +79,13 @@ Page {
             }
 
             SectionHeader {
-                text: 'Limits'
+                text: qsTr("Limits")
                 horizontalAlignment: Text.AlignHCenter
             }
 
             Slider {
                 id: limit_episodes
-                label: 'Maximum episodes per feed'
+                label: qsTr("Maximum episodes per feed")
                 valueText: value
                 width: parent.width
                 minimumValue: 100

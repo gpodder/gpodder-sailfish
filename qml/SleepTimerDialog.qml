@@ -31,7 +31,7 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
-            title: 'Sleep timer'
+            title: qsTr("Sleep timer")
         }
 
         model: player.durationChoices
@@ -54,7 +54,7 @@ Page {
                 }
 
                 color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
-                text: modelData + ' minutes'
+                text: modelData + qsTr(" minutes")
             }
         }
 

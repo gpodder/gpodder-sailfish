@@ -60,7 +60,7 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: 'Visit website'
+                text: qsTr("Visit website")
                 onClicked: Qt.openUrlExternally(detailPage.link);
                 enabled: detailPage.link != ''
             }
@@ -78,7 +78,7 @@ Page {
             spacing: Theme.paddingMedium
 
             PageHeader {
-                title: 'Episode details'
+                title: qsTr("Episode details")
             }
 
             Label {
@@ -128,7 +128,7 @@ Page {
                     Item { height: Theme.paddingMedium; width: parent.width }
 
                     Label {
-                        text: 'Chapters'
+                        text: qsTr("Chapters")
                         anchors {
                             left: parent.left
                         }
@@ -176,7 +176,7 @@ Page {
             }
 
             Label {
-                text: 'Shownotes'
+                text: qsTr("Shownotes")
                 color: Theme.highlightColor
 
                 // Only show if we also have a chapters list

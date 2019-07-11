@@ -74,14 +74,14 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: 'Mark episodes as old'
+                text: qsTr("Mark episodes as old")
                 onClicked: {
                     py.call('main.mark_episodes_as_old', [episodesPage.podcast_id]);
                 }
             }
 
             MenuItem {
-                text: 'Enqueue episodes in player'
+                text: qsTr("Enqueue episodes in player")
                 onClicked: {
                     var startPlayback = Util.atMostOnce(function () {
                         if (!player.isPlaying) {
@@ -96,7 +96,7 @@ Page {
             }
 
             MenuItem {
-                text: 'Unsubscribe'
+                text: qsTr("Unsubscribe")
                 onClicked: {
                     remorse.execute("Unsubscribing", function() {
                         py.call('main.unsubscribe', [episodesPage.podcast_id]);
@@ -114,7 +114,7 @@ Page {
 
         ViewPlaceholder {
             enabled: episodeList.count == 0 && episodeListModel.ready
-            text: 'No episodes found'
+            text: qsTr("No episodes found")
         }
     }
 }

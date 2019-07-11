@@ -63,12 +63,12 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: 'Copy feed URL'
+                text: qsTr("Copy feed URL")
                 onClicked: Clipboard.text = podcastDetail.url;
             }
 
             MenuItem {
-                text: 'Visit website'
+                text: qsTr("Visit website")
                 onClicked: Qt.openUrlExternally(podcastDetail.link);
                 enabled: podcastDetail.link != ''
             }
@@ -86,7 +86,7 @@ Page {
             spacing: Theme.paddingMedium
 
             PageHeader {
-                title: 'Podcast details'
+                title: qsTr("Podcast details")
             }
 
             CustomExpander {
@@ -131,7 +131,7 @@ Page {
             }
 
             Label {
-                text: 'Section: ' + podcastDetail.section
+                text: qsTr("Section: ") + podcastDetail.section
 
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.secondaryColor

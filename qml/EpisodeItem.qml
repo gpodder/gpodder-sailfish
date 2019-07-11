@@ -67,7 +67,7 @@ ListItem {
     menu: Component {
         IconContextMenu {
             IconMenuItem {
-                text: episodeItem.isPlaying ? 'Pause' : 'Play'
+                text: episodeItem.isPlaying ? qsTr("Pause") : qsTr("Play")
                 icon.source: 'image://theme/icon-m-' + (episodeItem.isPlaying ? 'pause' : 'play')
                 onClicked: {
                     if (episodeItem.isPlaying) {
@@ -89,7 +89,7 @@ ListItem {
             }
 
             IconMenuItem {
-                text: 'Download'
+                text: qsTr("Download")
                 icon.source: 'image://theme/icon-m-download'
                 visible: downloadState != Constants.state.downloaded
                 onClicked: {
@@ -99,7 +99,7 @@ ListItem {
             }
 
             IconMenuItem {
-                text: 'Delete'
+                text: qsTr("Delete")
                 icon.source: 'image://theme/icon-m-delete'
                 visible: downloadState != Constants.state.deleted
                 onClicked: {
@@ -113,13 +113,13 @@ ListItem {
 
             IconMenuItem {
                 id: toggleNew
-                text: 'Toggle New'
+                text: qsTr("Toggle New")
                 icon.source: 'image://theme/icon-m-favorite' + (isNew ? '-selected' : '')
                 onClicked: Util.disableUntilReturn(toggleNew, py, 'main.toggle_new', [id]);
             }
 
             IconMenuItem {
-                text: 'Shownotes'
+                text: qsTr("Shownotes")
                 icon.source: 'image://theme/icon-m-message'
                 onClicked: {
                     episodeItem.hideMenu();

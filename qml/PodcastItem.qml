@@ -27,7 +27,7 @@ ListItem {
     menu: Component {
         IconContextMenu {
             IconMenuItem {
-                text: 'Refresh'
+                text: qsTr("Refresh")
                 icon.source: 'image://theme/icon-m-refresh'
                 onClicked: {
                     podcastItem.hideMenu();
@@ -36,27 +36,27 @@ ListItem {
             }
 
             IconMenuItem {
-                text: 'Unsubscribe'
+                text: qsTr("Unsubscribe")
                 icon.source: 'image://theme/icon-m-delete'
                 onClicked: {
                     podcastItem.hideMenu();
                     var ctx = { py: py, id: id };
-                    podcastItem.remorseAction('Unsubscribing', function () {
+                    podcastItem.remorseAction(qsTr("Unsubscribing"), function () {
                         ctx.py.call('main.unsubscribe', [ctx.id]);
                     });
                 }
             }
 
             IconMenuItem {
-                text: 'Rename'
+                text: qsTr("Rename")
                 icon.source: 'image://theme/icon-m-edit'
                 onClicked: {
                     podcastItem.hideMenu();
                     var ctx = { py: py, id: id };
                     pageStack.push('RenameDialog.qml', {
-                        activityName: 'Rename podcast',
-                        affirmativeAction: 'Rename',
-                        inputLabel: 'Podcast name',
+                        activityName: qsTr("Rename podcast"),
+                        affirmativeAction: qsTr("Rename"),
+                        inputLabel: qsTr("Podcast name"),
                         initialValue: title,
                         callback: function (new_title) {
                             ctx.py.call('main.rename_podcast', [ctx.id, new_title]);
@@ -66,15 +66,15 @@ ListItem {
             }
 
             IconMenuItem {
-                text: 'Change section'
+                text: qsTr("Change section")
                 icon.source: 'image://theme/icon-m-shuffle'
                 onClicked: {
                     podcastItem.hideMenu();
                     var ctx = { py: py, id: id };
                     pageStack.push('RenameDialog.qml', {
-                        activityName: 'Change section',
-                        affirmativeAction: 'Move',
-                        inputLabel: 'Section',
+                        activityName: qsTr("Change section"),
+                        affirmativeAction: qsTr("Move"),
+                        inputLabel: qsTr("Section"),
                         initialValue: section,
                         callback: function (new_section) {
                             ctx.py.call('main.change_section', [ctx.id, new_section]);
@@ -84,7 +84,7 @@ ListItem {
             }
 
             IconMenuItem {
-                text: 'Podcast details'
+                text: qsTr("Podcast detail")
                 icon.source: 'image://theme/icon-m-message'
                 onClicked: {
                     podcastItem.hideMenu();
