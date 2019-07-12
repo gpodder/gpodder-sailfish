@@ -92,32 +92,32 @@
 <context>
     <name>EpisodeItem</name>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="69"/>
+        <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Pause</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="69"/>
+        <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Play</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="91"/>
+        <location filename="../qml/EpisodeItem.qml" line="92"/>
         <source>Download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="101"/>
+        <location filename="../qml/EpisodeItem.qml" line="102"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="115"/>
+        <location filename="../qml/EpisodeItem.qml" line="116"/>
         <source>Toggle New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="121"/>
+        <location filename="../qml/EpisodeItem.qml" line="122"/>
         <source>Shownotes</source>
         <translation type="unfinished"></translation>
     </message>

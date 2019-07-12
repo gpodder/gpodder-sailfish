@@ -1,5 +1,7 @@
+# >> macros
 # Prevent brp-python-bytecompile from running
 %define __os_install_post %{___build_post}
+# << macros
 
 Summary: Media and podcast aggregator
 Name: harbour-org.gpodder.sailfish
@@ -19,45 +21,37 @@ Requires: mpris-qt5
 gPodder downloads and manages free audio and video content for you.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}
+
+# >> setup
+# << setup
 
 %build
-# Nothing to do
+# >> build pre
+# << build pre
+
+
+
+# >> build post
+# << build post
 
 %install
+rm -rf %{buildroot}
+%qmake5_install
+# >> install pre
+# << install pre
 
-TARGET=%{buildroot}/%{_datadir}/%{name}
-mkdir -p $TARGET
-cp -rpv gpodder-core/src/* $TARGET/
-cp -rpv podcastparser/podcastparser.py $TARGET/
-cp -rpv minidb/minidb.py $TARGET/
-cp -rpv gpodder-ui-qml/main.py $TARGET/
-cp -rpv qml $TARGET/
-cp -rpv translations $TARGET/
-cp -rpv gpodder-ui-qml/common $TARGET/qml/
+# >> install post
+# << install post
 
-TARGET=%{buildroot}/%{_datadir}/applications
-mkdir -p $TARGET
-cp -rpv %{name}.desktop $TARGET/
+%post
 
-TARGET=%{buildroot}/%{_datadir}/icons/hicolor/86x86/apps/
-mkdir -p $TARGET
-cp -rpv icons/86x86/%{name}.png $TARGET/
-
-TARGET=%{buildroot}/%{_datadir}/icons/hicolor/108x108/apps/
-mkdir -p $TARGET
-cp -rpv icons/108x108/%{name}.png $TARGET/
-
-TARGET=%{buildroot}/%{_datadir}/icons/hicolor/128x128/apps/
-mkdir -p $TARGET
-cp -rpv icons/128x128/%{name}.png $TARGET/
-
-TARGET=%{buildroot}/%{_datadir}/icons/hicolor/256x256/apps/
-mkdir -p $TARGET
-cp -rpv icons/256x256/%{name}.png $TARGET/
+%postun
 
 %files
 %defattr(-,root,root,-)
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
+# >> files
+# << files
