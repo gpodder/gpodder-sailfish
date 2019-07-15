@@ -15,7 +15,6 @@ License:    ISC / GPLv3
 BuildArch:  noarch
 URL:        http://gpodder.org/
 Source0:    %{name}-%{version}.tar.bz2
-Source100:  harbour-org.gpodder.sailfish.yaml
 Requires:   pyotherside-qml-plugin-python3-qt5 >= 1.3.0
 Requires:   sailfishsilica-qt5
 Requires:   libsailfishapp-launcher
