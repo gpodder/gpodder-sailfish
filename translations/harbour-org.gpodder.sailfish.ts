@@ -102,22 +102,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="92"/>
+        <location filename="../qml/EpisodeItem.qml" line="82"/>
         <source>Download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="102"/>
+        <location filename="../qml/EpisodeItem.qml" line="92"/>
+        <source>Enqueue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodeItem.qml" line="105"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="116"/>
+        <location filename="../qml/EpisodeItem.qml" line="119"/>
         <source>Toggle New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="122"/>
+        <location filename="../qml/EpisodeItem.qml" line="125"/>
         <source>Shownotes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -195,52 +200,57 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="172"/>
+        <location filename="../qml/PlayerPage.qml" line="177"/>
         <source>Pause</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="172"/>
+        <location filename="../qml/PlayerPage.qml" line="177"/>
         <source>Play</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="67"/>
+        <location filename="../qml/PlayerPage.qml" line="71"/>
         <source>Now playing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="95"/>
+        <location filename="../qml/PlayerPage.qml" line="67"/>
+        <source>Player</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="100"/>
         <source>Sleep timer: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="153"/>
+        <location filename="../qml/PlayerPage.qml" line="158"/>
         <source>- 1 min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="163"/>
+        <location filename="../qml/PlayerPage.qml" line="168"/>
         <source>- 10 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="184"/>
+        <location filename="../qml/PlayerPage.qml" line="189"/>
         <source>+ 10 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="193"/>
+        <location filename="../qml/PlayerPage.qml" line="198"/>
         <source>+ 1 min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="203"/>
-        <source>Play queue</source>
+        <location filename="../qml/PlayerPage.qml" line="208"/>
+        <source>Enqueue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="227"/>
+        <location filename="../qml/PlayerPage.qml" line="232"/>
         <source>Remove from queue</source>
         <translation type="unfinished"></translation>
     </message>
