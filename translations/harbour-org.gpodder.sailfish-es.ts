@@ -246,7 +246,7 @@
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="208"/>
-        <source>Enqueue</source>
+        <source>Queue</source>
         <translation>En cola</translation>
     </message>
     <message>

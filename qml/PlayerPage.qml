@@ -205,7 +205,7 @@ Page {
             }
 
             SectionHeader {
-                text: qsTr("Enqueue")
+                text: qsTr("Queue")
                 visible: playQueueRepeater.count > 0
             }
 
