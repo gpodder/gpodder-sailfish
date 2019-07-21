@@ -19,6 +19,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
 import Sailfish.Silica 1.0
 
 ContextMenu {
@@ -32,11 +33,10 @@ ContextMenu {
 
             anchors {
                 verticalCenter: parent.verticalCenter
-                right: parent.right
-                margins: Theme.paddingLarge
+                horizontalCenter: parent.horizontalCenter
+                leftMargin: Theme.horizontalPageMargin
+                rightMargin: Theme.horizontalPageMargin
             }
-
-            spacing: Theme.paddingLarge
         }
     }
 }

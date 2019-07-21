@@ -76,16 +76,6 @@ ListItem {
                         player.playbackEpisode(id);
                     }
                 }
-
-                onPressAndHold: {
-                    player.enqueueEpisode(id, function () {
-                        if (!player.isPlaying) {
-                            player.jumpToQueueIndex(0);
-                        } else {
-                            pageStack.navigateForward(PageStackAction.Animated);
-                        }
-                    });
-                }
             }
 
             IconMenuItem {
@@ -97,6 +87,19 @@ ListItem {
                     py.call('main.download_episode', [id]);
                 }
             }
+            
+            IconMenuItem {
+				text: qsTr("Enqueue")
+				icon.source: 'image://theme/icon-m-down'
+				onClicked: {
+                    player.enqueueEpisode(id, function () {
+						if (player.episode==0) {
+								player.jumpToQueueIndex(0);
+						}
+					});
+					episodeItem.hideMenu();
+                }
+			}
 
             IconMenuItem {
                 text: qsTr("Delete")
