@@ -45,6 +45,8 @@ INSTALLS += \
 
 TRANSLATIONS += \
     translations/harbour-org.gpodder.sailfish-es.ts \
+    translations/harbour-org.gpodder.sailfish-de.ts \
+    translations/harbour-org.gpodder.sailfish-bg.ts \
     translations/harbour-org.gpodder.sailfish.ts \
 
 DISTFILES += \
