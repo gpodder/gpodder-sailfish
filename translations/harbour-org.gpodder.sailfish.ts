@@ -117,6 +117,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/EpisodeItem.qml" line="111"/>
+        <source>Deleting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
         <source>Toggle New</source>
         <translation type="unfinished"></translation>
