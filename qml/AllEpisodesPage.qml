@@ -25,13 +25,13 @@ import 'common'
 import 'common/util.js' as Util
 
 Page {
-    id: freshEpisodes
+    id: filteredEpisodes
     allowedOrientations: Orientation.All
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 
     Component.onCompleted: {
-        episodeListModel.setQuery(episodeListModel.queries.Fresh);
+        episodeListModel.setQuery(episodeListModel.queries.Downloaded);
         episodeListModel.reload();
     }
 
@@ -42,14 +42,14 @@ Page {
     }
 
     SilicaListView {
-        id: freshEpisodesList
+        id: filteredEpisodesList
         anchors.fill: parent
 
         PullDownMenu {
             EpisodeListFilterItem { id: filterItem; model: episodeListModel }
         }
 
-        VerticalScrollDecorator { flickable: freshEpisodesList }
+        VerticalScrollDecorator { flickable: filteredEpisodesList }
 
         header: PageHeader {
             title: qsTr("Episodes: ") + filterItem.currentFilter
@@ -67,7 +67,7 @@ Page {
         delegate: EpisodeItem {}
 
         ViewPlaceholder {
-            enabled: freshEpisodesList.count == 0 && episodeListModel.ready
+            enabled: filteredEpisodesList.count == 0 && episodeListModel.ready
             text: qsTr("No episodes found")
         }
     }
