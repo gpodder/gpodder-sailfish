@@ -90,7 +90,7 @@ ListItem {
             
             IconMenuItem {
 				text: qsTr("Enqueue")
-				icon.source: 'image://theme/icon-m-down'
+                icon.source: 'image://theme/icon-m-add'
 				onClicked: {
                     player.enqueueEpisode(id, function () {
 						if (player.episode==0) {
