@@ -117,6 +117,11 @@
         <translation>Изтриване</translation>
     </message>
     <message>
+        <location filename="../qml/EpisodeItem.qml" line="111"/>
+        <source>Deleting</source>
+        <translation>Ще се изтрие</translation>
+    </message>
+    <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
         <source>Toggle New</source>
         <translation>Като нов</translation>
