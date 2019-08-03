@@ -16,7 +16,7 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="77"/>
         <source>License: ISC / GPLv3 or later</source>
-        <translation>Лиценз: ISC / GPLv3 или по-късен </translation>
+        <translation>Лиценз: ISC / GPLv3 или по-късен</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="78"/>
@@ -115,6 +115,11 @@
         <location filename="../qml/EpisodeItem.qml" line="105"/>
         <source>Delete</source>
         <translation>Изтриване</translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodeItem.qml" line="111"/>
+        <source>Deleting</source>
+        <translation>Ще се изтрие</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
@@ -217,7 +222,7 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="67"/>
         <source>Player</source>
-        <translation>Прослушвач</translation>
+        <translation>Прослушване</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="100"/>
