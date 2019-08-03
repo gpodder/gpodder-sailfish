@@ -119,7 +119,7 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="111"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrando</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
