@@ -123,7 +123,7 @@ ListItem {
 
             IconMenuItem {
                 text: qsTr("Shownotes")
-                icon.source: 'image://theme/icon-m-message'
+                icon.source: 'image://theme/icon-m-about'
                 onClicked: {
                     episodeItem.hideMenu();
                     pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});
