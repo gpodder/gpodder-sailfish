@@ -28,7 +28,7 @@ ListItem {
         IconContextMenu {
             IconMenuItem {
                 text: qsTr("Refresh")
-                icon.source: 'image://theme/icon-m-refresh'
+                icon.source: 'image://theme/icon-m-sync'
                 onClicked: {
                     podcastItem.hideMenu();
                     py.call('main.check_for_episodes', [url]);
@@ -85,7 +85,7 @@ ListItem {
 
             IconMenuItem {
                 text: qsTr("Podcast detail")
-                icon.source: 'image://theme/icon-m-message'
+                icon.source: 'image://theme/icon-m-about'
                 onClicked: {
                     podcastItem.hideMenu();
                     pgst.loadPage('PodcastDetail.qml', {podcast_id: id, title: title});
