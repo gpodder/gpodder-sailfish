@@ -45,7 +45,11 @@ INSTALLS += \
 
 TRANSLATIONS += \
     translations/harbour-org.gpodder.sailfish-es.ts \
+    translations/harbour-org.gpodder.sailfish-de.ts \
+    translations/harbour-org.gpodder.sailfish-bg.ts \
     translations/harbour-org.gpodder.sailfish.ts \
+
+TRANSLATION_SOURCES += /$$_PRO_FILE_PWD_/gpodder-ui-qml/common/
 
 DISTFILES += \
     translations/*.ts

@@ -90,7 +90,7 @@ ListItem {
             
             IconMenuItem {
 				text: qsTr("Enqueue")
-				icon.source: 'image://theme/icon-m-down'
+                icon.source: 'image://theme/icon-m-add'
 				onClicked: {
                     player.enqueueEpisode(id, function () {
 						if (player.episode==0) {
@@ -108,7 +108,7 @@ ListItem {
                 onClicked: {
                     episodeItem.hideMenu();
                     var ctx = { py: py, id: id };
-                    episodeItem.remorseAction('Deleting', function () {
+                    episodeItem.remorseAction(qsTr("Deleting"), function () {
                         ctx.py.call('main.delete_episode', [ctx.id]);
                     });
                 }
