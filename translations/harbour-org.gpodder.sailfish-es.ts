@@ -119,7 +119,7 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="111"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrando</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
@@ -161,6 +161,49 @@
         <location filename="../qml/EpisodesPage.qml" line="117"/>
         <source>No episodes found</source>
         <translation>No se han encontrado episodios</translation>
+    </message>
+</context>
+<context>
+    <name>GPodderEpisodeListModel</name>
+    <message>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="43"/>
+        <source>All</source>
+        <translation>Todos</translation>
+    </message>
+    <message>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="44"/>
+        <source>Fresh</source>
+        <translation>Recientes</translation>
+    </message>
+    <message>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
+        <source>Downloaded</source>
+        <translation>Descargados</translation>
+    </message>
+    <message>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
+        <source>Unplayed downloads</source>
+        <translation>Descargas sin reproducir</translation>
+    </message>
+    <message>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
+        <source>Finished downloads</source>
+        <translation>Descargas reproducidas</translation>
+    </message>
+    <message>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
+        <source>Hide deleted</source>
+        <translation>Ocultar borrados</translation>
+    </message>
+    <message>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
+        <source>Deleted episodes</source>
+        <translation>Episodios borrados</translation>
+    </message>
+    <message>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
+        <source>Short downloads (&lt; 10 min)</source>
+        <translation>Descargas cortas ( &lt; 10 min)</translation>
     </message>
 </context>
 <context>
