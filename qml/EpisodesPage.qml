@@ -74,6 +74,18 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: qsTr("Unsubscribe")
+                onClicked: {
+                    remorse.execute("Unsubscribing", function() {
+                        py.call('main.unsubscribe', [episodesPage.podcast_id]);
+                        if (pageStack.currentPage == episodesPage) {
+                            pageStack.pop();
+                        }
+                    })
+                }
+            }
+
+            MenuItem {
                 text: qsTr("Mark episodes as old")
                 onClicked: {
                     py.call('main.mark_episodes_as_old', [episodesPage.podcast_id]);
@@ -92,18 +104,6 @@ Page {
                     episodeListModel.forEachEpisode(function (episode) {
                         player.enqueueEpisode(episode.id, startPlayback);
                     });
-                }
-            }
-
-            MenuItem {
-                text: qsTr("Unsubscribe")
-                onClicked: {
-                    remorse.execute("Unsubscribing", function() {
-                        py.call('main.unsubscribe', [episodesPage.podcast_id]);
-                        if (pageStack.currentPage == episodesPage) {
-                            pageStack.pop();
-                        }
-                    })
                 }
             }
 
