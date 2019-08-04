@@ -439,7 +439,7 @@
     <message>
         <location filename="../qml/PodcastsPage.qml" line="64"/>
         <source>Discover new podcasts</source>
-        <translation>Намиране на нови подкасти</translation>
+        <translation>Откриване на нови подкасти</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="70"/>
