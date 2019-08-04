@@ -62,7 +62,7 @@ ListItem {
         opacity: .5
     }
 
-    onClicked: showMenu()
+    onClicked: openMenu()
 
     menu: Component {
         IconContextMenu {
@@ -83,7 +83,7 @@ ListItem {
                 icon.source: 'image://theme/icon-m-download'
                 visible: downloadState != Constants.state.downloaded
                 onClicked: {
-                    episodeItem.hideMenu();
+                    episodeItem.closeMenu();
                     py.call('main.download_episode', [id]);
                 }
             }
@@ -97,7 +97,7 @@ ListItem {
 								player.jumpToQueueIndex(0);
 						}
 					});
-					episodeItem.hideMenu();
+                    episodeItem.closeMenu();
                 }
 			}
 
@@ -106,7 +106,7 @@ ListItem {
                 icon.source: 'image://theme/icon-m-delete'
                 visible: downloadState != Constants.state.deleted
                 onClicked: {
-                    episodeItem.hideMenu();
+                    episodeItem.closeMenu();
                     var ctx = { py: py, id: id };
                     episodeItem.remorseAction(qsTr("Deleting"), function () {
                         ctx.py.call('main.delete_episode', [ctx.id]);
@@ -125,7 +125,7 @@ ListItem {
                 text: qsTr("Shownotes")
                 icon.source: 'image://theme/icon-m-about'
                 onClicked: {
-                    episodeItem.hideMenu();
+                    episodeItem.closeMenu();
                     pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});
                 }
             }

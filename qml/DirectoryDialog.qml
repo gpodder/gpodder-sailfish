@@ -42,7 +42,7 @@ Dialog {
 
         DialogHeader {
             title: directory.provider
-            acceptText: 'Search'
+            acceptText: qsTr("Search")
         }
 
         TextField {

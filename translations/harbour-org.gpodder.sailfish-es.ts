@@ -45,6 +45,11 @@
 <context>
     <name>DirectoryDialog</name>
     <message>
+        <location filename="../qml/DirectoryDialog.qml" line="45"/>
+        <source>Search</source>
+        <translation>Buscar</translation>
+    </message>
+    <message>
         <location filename="../qml/DirectoryDialog.qml" line="51"/>
         <source>Search term</source>
         <translation>Término de búsqueda</translation>
