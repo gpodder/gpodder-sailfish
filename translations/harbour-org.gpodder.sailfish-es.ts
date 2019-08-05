@@ -148,17 +148,17 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="89"/>
         <source>Mark episodes as old</source>
         <translation>Marcar episodios como antiguos</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="84"/>
+        <location filename="../qml/EpisodesPage.qml" line="96"/>
         <source>Enqueue episodes in player</source>
         <translation>Poner episodios en cola</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="99"/>
+        <location filename="../qml/EpisodesPage.qml" line="77"/>
         <source>Unsubscribe</source>
         <translation>Eliminar suscripción</translation>
     </message>
