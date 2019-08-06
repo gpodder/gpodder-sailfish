@@ -47,7 +47,7 @@
     <message>
         <location filename="../qml/DirectoryDialog.qml" line="45"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Търсене</translation>
     </message>
     <message>
         <location filename="../qml/DirectoryDialog.qml" line="51"/>
@@ -148,17 +148,17 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="89"/>
         <source>Mark episodes as old</source>
         <translation>Отбелязване като стари</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="84"/>
+        <location filename="../qml/EpisodesPage.qml" line="96"/>
         <source>Enqueue episodes in player</source>
         <translation>Добавяне към опашката</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="99"/>
+        <location filename="../qml/EpisodesPage.qml" line="77"/>
         <source>Unsubscribe</source>
         <translation>Отабониране</translation>
     </message>
@@ -173,42 +173,42 @@
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="43"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Всички</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="44"/>
         <source>Fresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Нови и неизтеглени</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
         <source>Downloaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Изтеглени</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Unplayed downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Непускани епизоди</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Finished downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Изслушани епизоди</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Hide deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Без изтритите</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Deleted episodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Изтрити епизоди</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Short downloads (&lt; 10 min)</source>
-        <translation type="unfinished"></translation>
+        <translation>Кратки епизоди (&lt; 10 мин)</translation>
     </message>
 </context>
 <context>
@@ -439,7 +439,7 @@
     <message>
         <location filename="../qml/PodcastsPage.qml" line="64"/>
         <source>Discover new podcasts</source>
-        <translation>Намиране на нови подкасти</translation>
+        <translation>Откриване на нови подкасти</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="70"/>
