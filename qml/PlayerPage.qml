@@ -71,6 +71,19 @@ Page {
 				text: qsTr("Now playing")
 				visible: player.episode!=0
 			}
+            Label {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    margins: Theme.paddingLarge
+                }
+                text: player.podcast_title
+                horizontalAlignment: Text.AlignHCenter
+                color: Theme.secondaryHighlightColor
+                wrapMode: Text.Wrap
+                font.pixelSize: Theme.fontSizeSmall
+            }
+
 
             Label {
                 anchors {
@@ -80,7 +93,7 @@ Page {
                 }
 
                 truncationMode: TruncationMode.Fade
-                horizontalAlignment: Text.AlignRight
+                horizontalAlignment: Text.AlignHCenter
                 text: player.episode_title
                 color: Theme.rgba(Theme.highlightColor, 0.7)
                 font.pixelSize: Theme.fontSizeSmall

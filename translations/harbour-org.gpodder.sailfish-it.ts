@@ -253,12 +253,12 @@
         <translation>Pulisci coda di riproduzione</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="177"/>
+        <location filename="../qml/PlayerPage.qml" line="190"/>
         <source>Pause</source>
         <translation>Pausa</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="177"/>
+        <location filename="../qml/PlayerPage.qml" line="190"/>
         <source>Play</source>
         <translation>Riproduci</translation>
     </message>
@@ -273,37 +273,37 @@
         <translation>Player</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="100"/>
+        <location filename="../qml/PlayerPage.qml" line="113"/>
         <source>Sleep timer: </source>
         <translation>Timer spegnimento: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="158"/>
+        <location filename="../qml/PlayerPage.qml" line="171"/>
         <source>- 1 min</source>
         <translation>- 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="168"/>
+        <location filename="../qml/PlayerPage.qml" line="181"/>
         <source>- 10 sec</source>
         <translation>- 10 sec</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="189"/>
+        <location filename="../qml/PlayerPage.qml" line="202"/>
         <source>+ 10 sec</source>
         <translation>+ 10 sec</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="198"/>
+        <location filename="../qml/PlayerPage.qml" line="211"/>
         <source>+ 1 min</source>
         <translation>+ 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="208"/>
+        <location filename="../qml/PlayerPage.qml" line="221"/>
         <source>Queue</source>
         <translation>Coda</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="232"/>
+        <location filename="../qml/PlayerPage.qml" line="245"/>
         <source>Remove from queue</source>
         <translation>Rimuovi dalla coda</translation>
     </message>

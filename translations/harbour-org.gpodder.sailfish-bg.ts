@@ -253,12 +253,12 @@
         <translation>Изчистване на опашката</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="177"/>
+        <location filename="../qml/PlayerPage.qml" line="190"/>
         <source>Pause</source>
         <translation>Паузиране</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="177"/>
+        <location filename="../qml/PlayerPage.qml" line="190"/>
         <source>Play</source>
         <translation>Пускане</translation>
     </message>
@@ -273,37 +273,37 @@
         <translation>Прослушване</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="100"/>
+        <location filename="../qml/PlayerPage.qml" line="113"/>
         <source>Sleep timer: </source>
         <translation>Отброяване до заспиване: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="158"/>
+        <location filename="../qml/PlayerPage.qml" line="171"/>
         <source>- 1 min</source>
         <translation>- 1 мин</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="168"/>
+        <location filename="../qml/PlayerPage.qml" line="181"/>
         <source>- 10 sec</source>
         <translation>- 10 сек</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="189"/>
+        <location filename="../qml/PlayerPage.qml" line="202"/>
         <source>+ 10 sec</source>
         <translation>+ 10 сек</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="198"/>
+        <location filename="../qml/PlayerPage.qml" line="211"/>
         <source>+ 1 min</source>
         <translation>+ 1 мин</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="208"/>
+        <location filename="../qml/PlayerPage.qml" line="221"/>
         <source>Queue</source>
         <translation>Опашка</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="232"/>
+        <location filename="../qml/PlayerPage.qml" line="245"/>
         <source>Remove from queue</source>
         <translation>Премахване от опашката</translation>
     </message>
