@@ -253,12 +253,12 @@
         <translation>Playliste löschen</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="190"/>
+        <location filename="../qml/PlayerPage.qml" line="189"/>
         <source>Pause</source>
         <translation>Pause</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="190"/>
+        <location filename="../qml/PlayerPage.qml" line="189"/>
         <source>Play</source>
         <translation>Abspielen</translation>
     </message>
@@ -273,37 +273,37 @@
         <translation>Player</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="113"/>
+        <location filename="../qml/PlayerPage.qml" line="112"/>
         <source>Sleep timer: </source>
         <translation>Sleeptimer: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="171"/>
+        <location filename="../qml/PlayerPage.qml" line="170"/>
         <source>- 1 min</source>
         <translation>- 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="181"/>
+        <location filename="../qml/PlayerPage.qml" line="180"/>
         <source>- 10 sec</source>
         <translation>- 10 s</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="202"/>
+        <location filename="../qml/PlayerPage.qml" line="201"/>
         <source>+ 10 sec</source>
         <translation>+ 10 s</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="211"/>
+        <location filename="../qml/PlayerPage.qml" line="210"/>
         <source>+ 1 min</source>
         <translation>+ 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="221"/>
+        <location filename="../qml/PlayerPage.qml" line="220"/>
         <source>Queue</source>
         <translation>Playliste</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="245"/>
+        <location filename="../qml/PlayerPage.qml" line="244"/>
         <source>Remove from queue</source>
         <translation>Von Playliste entfernen</translation>
     </message>

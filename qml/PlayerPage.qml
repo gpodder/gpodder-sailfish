@@ -66,24 +66,23 @@ Page {
             PageHeader {
                 title: qsTr("Player")
             }
-            
+
             SectionHeader {
 				text: qsTr("Now playing")
 				visible: player.episode!=0
-			}
-            Label {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    margins: Theme.paddingLarge
-                }
-                text: player.podcast_title
-                horizontalAlignment: Text.AlignHCenter
-                color: Theme.secondaryHighlightColor
-                wrapMode: Text.Wrap
-                font.pixelSize: Theme.fontSizeSmall
             }
 
+            CustomExpander {
+                width: parent.width
+                expandedHeight: coverImage.height
+
+                Image {
+                    id: coverImage
+                    source: player.podcast_coverart
+                    fillMode: Image.PreserveAspectFit
+                    width: parent.width
+                }
+            }
 
             Label {
                 anchors {
