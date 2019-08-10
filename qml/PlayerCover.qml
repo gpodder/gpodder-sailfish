@@ -23,14 +23,20 @@ import Sailfish.Silica 1.0
 
 import 'common/util.js' as Util
 
-
 Column {
+
     anchors {
         left: parent.left
         right: parent.right
-        verticalCenter: parent.verticalCenter
-        margins: Theme.paddingSmall
     }
+
+    Image {
+        id: image
+        source: player.podcast_coverart
+        width: parent.width
+        height: sourceSize.height * width / sourceSize.width
+    }
+
 
     Label {
         anchors.horizontalCenter: parent.horizontalCenter
@@ -56,14 +62,5 @@ Column {
         horizontalAlignment: Text.AlignHCenter
         color: Theme.highlightColor
         wrapMode: Text.Wrap
-    }
-
-    Label {
-        text: player.podcast_title
-        width: parent.width
-        horizontalAlignment: Text.AlignHCenter
-        color: Theme.secondaryHighlightColor
-        wrapMode: Text.Wrap
-        font.pixelSize: Theme.fontSizeExtraSmall
     }
 }
