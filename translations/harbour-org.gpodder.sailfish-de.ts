@@ -45,6 +45,11 @@
 <context>
     <name>DirectoryDialog</name>
     <message>
+        <location filename="../qml/DirectoryDialog.qml" line="45"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/DirectoryDialog.qml" line="51"/>
         <source>Search term</source>
         <translation>Suchbegriff</translation>
@@ -143,17 +148,17 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="89"/>
         <source>Mark episodes as old</source>
         <translation>Markiere Folge als gehört</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="84"/>
+        <location filename="../qml/EpisodesPage.qml" line="96"/>
         <source>Enqueue episodes in player</source>
         <translation>Episoden zur Playliste hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="99"/>
+        <location filename="../qml/EpisodesPage.qml" line="77"/>
         <source>Unsubscribe</source>
         <translation>Abonnement aufheben</translation>
     </message>

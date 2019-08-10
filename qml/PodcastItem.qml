@@ -28,9 +28,9 @@ ListItem {
         IconContextMenu {
             IconMenuItem {
                 text: qsTr("Refresh")
-                icon.source: 'image://theme/icon-m-refresh'
+                icon.source: 'image://theme/icon-m-sync'
                 onClicked: {
-                    podcastItem.hideMenu();
+                    podcastItem.closeMenu();
                     py.call('main.check_for_episodes', [url]);
                 }
             }
@@ -39,7 +39,7 @@ ListItem {
                 text: qsTr("Unsubscribe")
                 icon.source: 'image://theme/icon-m-delete'
                 onClicked: {
-                    podcastItem.hideMenu();
+                    podcastItem.closeMenu();
                     var ctx = { py: py, id: id };
                     podcastItem.remorseAction(qsTr("Unsubscribing"), function () {
                         ctx.py.call('main.unsubscribe', [ctx.id]);
@@ -51,7 +51,7 @@ ListItem {
                 text: qsTr("Rename")
                 icon.source: 'image://theme/icon-m-edit'
                 onClicked: {
-                    podcastItem.hideMenu();
+                    podcastItem.closeMenu();
                     var ctx = { py: py, id: id };
                     pageStack.push('RenameDialog.qml', {
                         activityName: qsTr("Rename podcast"),
@@ -69,7 +69,7 @@ ListItem {
                 text: qsTr("Change section")
                 icon.source: 'image://theme/icon-m-shuffle'
                 onClicked: {
-                    podcastItem.hideMenu();
+                    podcastItem.closeMenu();
                     var ctx = { py: py, id: id };
                     pageStack.push('RenameDialog.qml', {
                         activityName: qsTr("Change section"),
@@ -85,9 +85,9 @@ ListItem {
 
             IconMenuItem {
                 text: qsTr("Podcast detail")
-                icon.source: 'image://theme/icon-m-message'
+                icon.source: 'image://theme/icon-m-about'
                 onClicked: {
-                    podcastItem.hideMenu();
+                    podcastItem.closeMenu();
                     pgst.loadPage('PodcastDetail.qml', {podcast_id: id, title: title});
                 }
             }

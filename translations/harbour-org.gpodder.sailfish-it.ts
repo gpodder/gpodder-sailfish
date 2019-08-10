@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="it_IT">
 <context>
     <name>AboutPage</name>
     <message>
         <location filename="../qml/AboutPage.qml" line="47"/>
         <source>About gPodder</source>
-        <translation type="unfinished"></translation>
+        <translation>Info su gPodder</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="76"/>
         <source>Thomas Perl and the gPodder Team</source>
-        <translation type="unfinished"></translation>
+        <translation>Thomas Perl e il team gPodder</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="77"/>
         <source>License: ISC / GPLv3 or later</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenza: ISC / GPLv3 o successiva</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="78"/>
         <source>Website: </source>
-        <translation type="unfinished"></translation>
+        <translation>Sito web: </translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="80"/>
         <source>Sailfish OS artwork by Stephan Beyerle</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafica per Sailfish OS di Stephan Beyerle</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../qml/AllEpisodesPage.qml" line="55"/>
         <source>Episodes: </source>
-        <translation type="unfinished"></translation>
+        <translation>Episodi: </translation>
     </message>
     <message>
         <location filename="../qml/AllEpisodesPage.qml" line="71"/>
         <source>No episodes found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun episodio</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../qml/DirectoryDialog.qml" line="51"/>
         <source>Search term</source>
-        <translation type="unfinished"></translation>
+        <translation>Termine di ricerca</translation>
     </message>
 </context>
 <context>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../qml/DirectorySelectionDialog.qml" line="41"/>
         <source>Select provider</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona provider</translation>
     </message>
 </context>
 <context>
@@ -68,22 +68,22 @@
     <message>
         <location filename="../qml/EpisodeDetail.qml" line="63"/>
         <source>Visit website</source>
-        <translation type="unfinished"></translation>
+        <translation>Visita sito web</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeDetail.qml" line="81"/>
         <source>Episode details</source>
-        <translation type="unfinished"></translation>
+        <translation>Dettagli episodi</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeDetail.qml" line="131"/>
         <source>Chapters</source>
-        <translation type="unfinished"></translation>
+        <translation>Capitoli</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeDetail.qml" line="179"/>
         <source>Shownotes</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
 </context>
 <context>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../qml/EpisodeFilterDialog.qml" line="35"/>
         <source>Filter episode list</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtra lista episodi</translation>
     </message>
 </context>
 <context>
@@ -99,42 +99,42 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausa</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Riproduci</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="82"/>
         <source>Download</source>
-        <translation type="unfinished"></translation>
+        <translation>Scarica</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="92"/>
         <source>Enqueue</source>
-        <translation type="unfinished"></translation>
+        <translation>Accoda</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="105"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="111"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminazione</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
         <source>Toggle New</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna come nuovo</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="125"/>
         <source>Shownotes</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
 </context>
 <context>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../qml/EpisodeListFilterItem.qml" line="33"/>
         <source>Filter: </source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro: </translation>
     </message>
 </context>
 <context>
@@ -150,22 +150,22 @@
     <message>
         <location filename="../qml/EpisodesPage.qml" line="89"/>
         <source>Mark episodes as old</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna episodio come vecchio</translation>
     </message>
     <message>
         <location filename="../qml/EpisodesPage.qml" line="96"/>
         <source>Enqueue episodes in player</source>
-        <translation type="unfinished"></translation>
+        <translation>Accoda episodi nel player</translation>
     </message>
     <message>
         <location filename="../qml/EpisodesPage.qml" line="77"/>
         <source>Unsubscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>Disiscriviti</translation>
     </message>
     <message>
         <location filename="../qml/EpisodesPage.qml" line="117"/>
         <source>No episodes found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun episodio</translation>
     </message>
 </context>
 <context>
@@ -173,42 +173,42 @@
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="43"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="44"/>
         <source>Fresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuovi</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
         <source>Downloaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Scaricati</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Unplayed downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Download non riprodotti</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Finished downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Download completati</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Hide deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascondi eliminati</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Deleted episodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Episodi eliminati</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Short downloads (&lt; 10 min)</source>
-        <translation type="unfinished"></translation>
+        <translation>Download corti (&lt; 10 min)</translation>
     </message>
 </context>
 <context>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../qml/PlayerChaptersDialog.qml" line="37"/>
         <source>Chapters</source>
-        <translation type="unfinished"></translation>
+        <translation>Capitoli</translation>
     </message>
 </context>
 <context>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../qml/PlayerChaptersItem.qml" line="33"/>
         <source>Chapters</source>
-        <translation type="unfinished"></translation>
+        <translation>Capitoli</translation>
     </message>
 </context>
 <context>
@@ -232,7 +232,7 @@
     <message>
         <location filename="../qml/PlayerCover.qml" line="44"/>
         <source>Sleep timer: </source>
-        <translation type="unfinished"></translation>
+        <translation>Timer spegnimento: </translation>
     </message>
 </context>
 <context>
@@ -240,72 +240,72 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="44"/>
         <source>Stop sleep timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferma timer spegnimento</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="44"/>
         <source>Sleep timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Timer spegnimento</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="55"/>
         <source>Clear play queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulisci coda di riproduzione</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="177"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausa</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="177"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Riproduci</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="71"/>
         <source>Now playing</source>
-        <translation type="unfinished"></translation>
+        <translation>In riproduzione</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="67"/>
         <source>Player</source>
-        <translation type="unfinished"></translation>
+        <translation>Player</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="100"/>
         <source>Sleep timer: </source>
-        <translation type="unfinished"></translation>
+        <translation>Timer spegnimento: </translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="158"/>
         <source>- 1 min</source>
-        <translation type="unfinished"></translation>
+        <translation>- 1 min</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="168"/>
         <source>- 10 sec</source>
-        <translation type="unfinished"></translation>
+        <translation>- 10 sec</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="189"/>
         <source>+ 10 sec</source>
-        <translation type="unfinished"></translation>
+        <translation>+ 10 sec</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="198"/>
         <source>+ 1 min</source>
-        <translation type="unfinished"></translation>
+        <translation>+ 1 min</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="208"/>
         <source>Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Coda</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="232"/>
         <source>Remove from queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi dalla coda</translation>
     </message>
 </context>
 <context>
@@ -313,22 +313,22 @@
     <message>
         <location filename="../qml/PodcastDetail.qml" line="66"/>
         <source>Copy feed URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia feed URL</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="71"/>
         <source>Visit website</source>
-        <translation type="unfinished"></translation>
+        <translation>Visita sito web</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="89"/>
         <source>Podcast details</source>
-        <translation type="unfinished"></translation>
+        <translation>Dettagli podcast</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="134"/>
         <source>Section: </source>
-        <translation type="unfinished"></translation>
+        <translation>Sezione: </translation>
     </message>
 </context>
 <context>
@@ -336,54 +336,54 @@
     <message>
         <location filename="../qml/PodcastItem.qml" line="30"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="39"/>
         <source>Unsubscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>Disiscriviti</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="44"/>
         <source>Unsubscribing</source>
-        <translation type="unfinished"></translation>
+        <translation>Annullamento iscrizione</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="51"/>
         <location filename="../qml/PodcastItem.qml" line="58"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Rinomina</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="57"/>
         <source>Rename podcast</source>
-        <translation type="unfinished"></translation>
+        <translation>Rinomina podcast</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="59"/>
         <source>Podcast name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome podcast</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="69"/>
         <location filename="../qml/PodcastItem.qml" line="75"/>
         <source>Change section</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambia sezione</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="76"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="77"/>
         <source>Section</source>
-        <translation type="unfinished"></translation>
+        <translation>Sezione</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="87"/>
         <source>Podcast detail</source>
-        <translation type="unfinished"></translation>
+        <translation>Dettagli podcast</translation>
     </message>
 </context>
 <context>
@@ -391,22 +391,22 @@
     <message>
         <location filename="../qml/PodcastsCover.qml" line="35"/>
         <source>podcasts</source>
-        <translation type="unfinished"></translation>
+        <translation>podcast</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsCover.qml" line="36"/>
         <source>episodes</source>
-        <translation type="unfinished"></translation>
+        <translation>episodi</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsCover.qml" line="37"/>
         <source>new episodes</source>
-        <translation type="unfinished"></translation>
+        <translation>nuovi episodi</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsCover.qml" line="38"/>
         <source>downloaded</source>
-        <translation type="unfinished"></translation>
+        <translation>scaricati</translation>
     </message>
 </context>
 <context>
@@ -414,42 +414,42 @@
     <message>
         <location filename="../qml/PodcastsPage.qml" line="41"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="46"/>
         <source>Filter episodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtra episodi</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="51"/>
         <source>Checking for new episodes...</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo nuovi episodi...</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="51"/>
         <source>Check for new episodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Controlla nuovi episodi</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="59"/>
         <source>Add new podcast</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi nuovo podcast</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="64"/>
         <source>Discover new podcasts</source>
-        <translation type="unfinished"></translation>
+        <translation>Scopri nuovi podcast</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="70"/>
         <source>Subscriptions</source>
-        <translation type="unfinished"></translation>
+        <translation>iscrizioni</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="87"/>
         <source>No subscriptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna iscrizione</translation>
     </message>
 </context>
 <context>
@@ -457,32 +457,32 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="53"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Info</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="63"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="67"/>
         <source>YouTube</source>
-        <translation type="unfinished"></translation>
+        <translation>YouTube</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="73"/>
         <source>API Key (v3)</source>
-        <translation type="unfinished"></translation>
+        <translation>API Key (v3)</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="82"/>
         <source>Limits</source>
-        <translation type="unfinished"></translation>
+        <translation>Limiti</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="88"/>
         <source>Maximum episodes per feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Massimo episodi per feed</translation>
     </message>
 </context>
 <context>
@@ -490,12 +490,12 @@
     <message>
         <location filename="../qml/SleepTimerDialog.qml" line="34"/>
         <source>Sleep timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Timer spegnimento</translation>
     </message>
     <message>
         <location filename="../qml/SleepTimerDialog.qml" line="57"/>
         <source> minutes</source>
-        <translation type="unfinished"></translation>
+        <translation> minuti</translation>
     </message>
 </context>
 <context>
@@ -503,17 +503,17 @@
     <message>
         <location filename="../qml/Subscribe.qml" line="35"/>
         <source>Add subscription</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi iscrizione</translation>
     </message>
     <message>
         <location filename="../qml/Subscribe.qml" line="36"/>
         <source>Subscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>Iscriviti</translation>
     </message>
     <message>
         <location filename="../qml/Subscribe.qml" line="42"/>
         <source>Feed URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL feed</translation>
     </message>
 </context>
 </TS>
