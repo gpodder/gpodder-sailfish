@@ -9,15 +9,21 @@ MprisPlayer {
 
     serviceName: "gpodder"
 
-    property string title: streamTitle
+    property string artist
+    property string song
 
-    onTitleChanged: {
-        if (title != "") {
-            var metadata = mprisPlayer.metadata
-            metadata[Mpris.metadataToString(Mpris.Title)] = title
-            mprisPlayer.metadata = metadata
-        }
+    onArtistChanged: {
+        var metadata = mprisPlayer.metadata
+        metadata[Mpris.metadataToString(Mpris.Artist)] = artist // Podcast Title
+        mprisPlayer.metadata = metadata
     }
+
+    onSongChanged: {
+        var metadata = mprisPlayer.metadata
+        metadata[Mpris.metadataToString(Mpris.Title)] = song // Episode Title
+        mprisPlayer.metadata = metadata
+    }
+
 
     // Mpris2 Root Interface
     identity: "Mpris gpodder-sailfish"
@@ -40,8 +46,10 @@ MprisPlayer {
         else if (player.playbackState == MediaPlayer.PausedState) return Mpris.Paused
         else return Mpris.Stopped
     }
+
     onPlaybackStatusChanged: {
-        title = player.episode_title
+        song = player.episode_title
+        artist = player.podcast_title
     }
 
     onPauseRequested: {
