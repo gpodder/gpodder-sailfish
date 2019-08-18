@@ -122,7 +122,7 @@ Page {
                 visible: player.sleepTimerRunning
 
                 truncationMode: TruncationMode.Fade
-                horizontalAlignment: Text.AlignRight
+                horizontalAlignment: Text.AlignHCenter
                 text: qsTr("Sleep timer: ") + Util.formatDuration(player.sleepTimerRemaining)
                 color: Theme.rgba(Theme.highlightColor, 0.7)
                 font.pixelSize: Theme.fontSizeExtraSmall
