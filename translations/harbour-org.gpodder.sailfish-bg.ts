@@ -230,7 +230,7 @@
 <context>
     <name>PlayerCover</name>
     <message>
-        <location filename="../qml/PlayerCover.qml" line="114"/>
+        <location filename="../qml/PlayerCover.qml" line="119"/>
         <source>Sleep timer: </source>
         <translation type="unfinished">Отброяване до заспиване: </translation>
     </message>

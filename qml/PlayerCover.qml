@@ -30,12 +30,19 @@ Column {
         right: parent.right
     }
 
+    Rectangle{
+        id:emptySquare
+        anchors.top: parent.top
+        width: parent.width
+        height: parent.width
+        visible: false
+    }
+
     Image {
         id: coverArtImage
         visible: source != ""
         source: player.podcast_coverart
         sourceSize.width: parent.width
-        //height: sourceSize.height * width / sourceSize.width
         fillMode: Image.Pad
     }
 
@@ -87,9 +94,7 @@ Column {
             }
 
             OpacityRampEffect {
-                offset: 0.5
-                // FIXME: OpacityRampEffect spits a warning when
-                // songTitle doesn't have an actual text
+                offset: 0.66
                 sourceItem: episodeTitle
                 enabled: episodeTitle.implicitWidth > Math.ceil(episodeTitle.width)
             }
@@ -101,7 +106,7 @@ Column {
         id: durationLabel
         width: parent.width
         visible: true
-        anchors.top: coverArtImage.bottom
+        anchors.top: emptySquare.bottom
         horizontalAlignment: Text.AlignHCenter
         text: Util.formatPosition(player.position/1000, player.duration/1000)
         color: Theme.highlightColor
