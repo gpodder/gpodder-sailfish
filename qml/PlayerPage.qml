@@ -164,6 +164,7 @@ Page {
                 value: player.position
                 minimumValue: 0
                 maximumValue: player.duration
+                handleVisible: false
                 onDownChanged: {
                     if (!down) {
                         player.seekAndSync(sliderValue)
