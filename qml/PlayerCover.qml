@@ -25,14 +25,10 @@ import 'common/util.js' as Util
 
 Column {
     id: coverArt
-    anchors {
-        left: parent.left
-        right: parent.right
-    }
+    width: parent.width
 
     Rectangle{
         id:emptySquare
-        anchors.top: parent.top
         width: parent.width
         height: parent.width
         visible: false
@@ -47,9 +43,8 @@ Column {
     }
 
     Rectangle {
-        anchors.top: parent.top
         width: parent.width
-        height: column.y + column.height + 2*Theme.paddingLarge
+        height: episodeTitleColumn.y + episodeTitleColumn.height + 2*Theme.paddingLarge
         visible: coverArtImage.visible
         gradient: Gradient {
             GradientStop { position: 0.0; color: Qt.rgba(0, 0, 0, 0.5) }
@@ -61,7 +56,7 @@ Column {
 
 
     Column {
-        id: column
+        id: episodeTitleColumn
 
         x: Theme.paddingMedium
         y: Theme.paddingMedium
@@ -103,21 +98,34 @@ Column {
     }
 
     Label {
-        id: durationLabel
+        id: progressLabel
+        y: parent.width
         width: parent.width
         visible: true
-        anchors.top: emptySquare.bottom
         horizontalAlignment: Text.AlignHCenter
-        text: Util.formatPosition(player.position/1000, player.duration/1000)
+        text: Util.formatDuration(player.position/1000)
         color: Theme.highlightColor
-        font.pixelSize: player.duration >= 3600000 ? Theme.fontSizeMedium : Theme.fontSizeLarge
+        font.pixelSize: Theme.fontSizeExtraLarge
         opacity: 1.0
     }
 
     Label {
+        id: durationLabel
+        visible: !sleepTimer.visible
+        width: parent.width
+        anchors.top: progressLabel.bottom
+        horizontalAlignment: Text.AlignHCenter
+        text: Util.formatDuration(player.duration/1000)
+        color: Theme.secondaryHighlightColor
+        font.pixelSize: Theme.fontSizeSmall
+        opacity: 1.0
+    }
+
+    Label {
+        id: sleepTimer
         visible: player.sleepTimerRunning
         text: qsTr("Sleep timer: ") + Util.formatDuration(player.sleepTimerRemaining)
-        anchors.top: durationLabel.bottom
+        anchors.top: progressLabel.bottom
         width: parent.width
         horizontalAlignment: Text.AlignHCenter
         color: Theme.secondaryHighlightColor
