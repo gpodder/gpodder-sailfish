@@ -18,7 +18,6 @@ Source0:    %{name}-%{version}.tar.bz2
 Requires:   pyotherside-qml-plugin-python3-qt5 >= 1.3.0
 Requires:   sailfishsilica-qt5
 Requires:   libsailfishapp-launcher
-Requires:   mpris-qt5
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 
 %description
