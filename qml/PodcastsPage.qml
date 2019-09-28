@@ -64,6 +64,11 @@ Page {
                 text: qsTr("Discover new podcasts")
                 onClicked: pgst.loadPage('DirectorySelectionDialog.qml');
             }
+
+            MenuItem {
+                text: qsTr("Import OPML")
+                onClicked: pgst.loadPage('ImportOPML.qml')
+            }
         }
 
         header: PageHeader {
