@@ -22,8 +22,8 @@ Dialog {
 
         ValueButton {
             id: importFile
-            label: "Import File"
-            value: selectedFile ? selectedFile : "None"
+            label: qsTr("Import File")
+            value: selectedFile
             onClicked: pageStack.push(filePickerPage)
         }
     }
