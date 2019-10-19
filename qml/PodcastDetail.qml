@@ -129,20 +129,30 @@ Page {
 
                 wrapMode: Text.WordWrap
             }
+            ListItem {
+                Label {
+                    id: sectionField
+                    text: qsTr("Section: ") + podcastDetail.section
 
-            Label {
-                text: qsTr("Section: ") + podcastDetail.section
+                    font.pixelSize: Theme.fontSizeSmall
+                    color: Theme.secondaryColor
 
-                font.pixelSize: Theme.fontSizeSmall
-                color: Theme.secondaryColor
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        margins: Theme.paddingMedium
+                    }
 
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    margins: Theme.paddingMedium
+                    wrapMode: Text.WordWrap
                 }
 
-                wrapMode: Text.WordWrap
+                menu: ContextMenu {
+                    container: sectionField
+                    MenuItem {
+                        text: qsTr("Edit Section")
+                        onClicked: pageStack.push(editPodcastPage)
+                    }
+                }
             }
 
             Label {
@@ -155,6 +165,30 @@ Page {
                 }
                 wrapMode: Text.WordWrap
                 onLinkActivated: Qt.openUrlExternally(link)
+            }
+        }
+    }
+    Component {
+        id: editPodcastPage
+
+        Dialog {
+            canAccept: sectionFieldInput.text != podcastDetail.section
+            onAccepted: {
+                py.call('main.change_section', [podcast_id, sectionFieldInput.text])
+                sectionField.text = qsTr("Section: ") + podcastDetail.section
+            }
+
+            Column {
+                anchors.fill: parent
+                DialogHeader {
+                    title: "Edit Podcast"
+                    acceptText: "Save"
+                }
+
+                TextField {
+                   id: sectionFieldInput
+                   text: podcastDetail.section
+                }
             }
         }
     }
