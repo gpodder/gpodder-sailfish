@@ -131,19 +131,32 @@ Page {
             }
             ListItem {
                 Label {
-                    id: sectionField
-                    text: qsTr("Section: ") + podcastDetail.section
+                    id: sectionTitle
+                    text: qsTr("Section: ")
 
-                    font.pixelSize: Theme.fontSizeSmall
-                    color: Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeMedium
+                    color: Theme.highlightColor
 
                     anchors {
                         left: parent.left
-                        right: parent.right
                         margins: Theme.paddingMedium
+                        verticalCenter: parent.verticalCenter
                     }
 
                     wrapMode: Text.WordWrap
+                }
+                Label {
+                    id: sectionField
+                    text: podcastDetail.section
+
+                    font.pixelSize: Theme.fontSizeMedium
+                    color: Theme.primaryColor
+
+                    anchors {
+                        left: sectionTitle.right
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
+                    }
                 }
 
                 menu: ContextMenu {
@@ -175,19 +188,24 @@ Page {
             canAccept: sectionFieldInput.text != podcastDetail.section
             onAccepted: {
                 py.call('main.change_section', [podcast_id, sectionFieldInput.text])
-                sectionField.text = qsTr("Section: ") + podcastDetail.section
+                sectionField.text = sectionFieldInput.text
             }
 
             Column {
                 anchors.fill: parent
                 DialogHeader {
-                    title: "Edit Podcast"
-                    acceptText: "Save"
+                    title: qsTr('Edit Section')
+                    acceptText: qsTr('Save')
                 }
 
                 TextField {
                    id: sectionFieldInput
                    text: podcastDetail.section
+
+                   anchors {
+                       left: parent.left
+                       right: parent.right
+                   }
                 }
             }
         }

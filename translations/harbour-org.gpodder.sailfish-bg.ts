@@ -326,9 +326,20 @@
         <translation>Детайли</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="134"/>
+        <location filename="../qml/PodcastDetail.qml" line="135"/>
         <source>Section: </source>
         <translation>Раздел: </translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastDetail.qml" line="165"/>
+        <location filename="../qml/PodcastDetail.qml" line="197"/>
+        <source>Edit Section</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastDetail.qml" line="198"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
