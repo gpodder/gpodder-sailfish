@@ -159,6 +159,8 @@ Page {
                     }
                 }
 
+                onClicked: openMenu()
+
                 menu: ContextMenu {
                     container: sectionField
                     MenuItem {
