@@ -331,13 +331,13 @@
         <translation>Раздел: </translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="165"/>
-        <location filename="../qml/PodcastDetail.qml" line="197"/>
+        <location filename="../qml/PodcastDetail.qml" line="167"/>
+        <location filename="../qml/PodcastDetail.qml" line="199"/>
         <source>Edit Section</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="198"/>
+        <location filename="../qml/PodcastDetail.qml" line="200"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
