@@ -66,7 +66,7 @@ Page {
             }
 
             MenuItem {
-                text: qsTr("Import OPML")
+                text: qsTr("Import/Export OPML")
                 onClicked: pgst.loadPage('ImportOPML.qml')
             }
         }
