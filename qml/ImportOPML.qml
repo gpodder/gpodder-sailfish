@@ -15,6 +15,7 @@ Dialog {
         (opmlAction == 'Import' && selectedFile != "None") || (opmlAction == 'Export' && exportFile.text != '')
     }
     onAccepted: {
+        focus = false
         opmlAction == 'Import' ? py.call('main.import_opml', [importOPML.selectedFile]) : py.call('main.export_opml', [exportFile.text])
     }
 
@@ -60,8 +61,9 @@ Dialog {
                 left: parent.left
                 right: parent.right
             }
+            EnterKey.enabled: text.length > 0
             EnterKey.iconSource: "image://theme/icon-m-enter-close"
-            EnterKey.onClicked: focus = false
+            EnterKey.onClicked: importOPML.accept()
         }
     }
 
