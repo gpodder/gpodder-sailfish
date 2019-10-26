@@ -16,7 +16,15 @@ Dialog {
     }
     onAccepted: {
         focus = false
-        opmlAction == 'Import' ? py.call('main.import_opml', [importOPML.selectedFile]) : py.call('main.export_opml', [exportFile.text])
+        if (opmlAction == 'Import') {
+            py.call('main.import_opml', [importOPML.selectedFile])
+        } else {
+            if(exportFile.text.charAt(0) != '/') {
+                exportFile.text = StandardPaths.home + '/' + exportFile.text
+            }
+
+            py.call('main.export_opml', [exportFile.text])
+        }
     }
 
     Column {
