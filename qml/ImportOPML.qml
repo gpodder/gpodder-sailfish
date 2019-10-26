@@ -78,6 +78,7 @@ Dialog {
     Component {
         id: filePickerPage
         FilePickerPage {
+            nameFilters: [ '*.opml' , '*.opml' ]
             onSelectedContentPropertiesChanged: {
                 importOPML.selectedFile = selectedContentProperties.filePath
             }
