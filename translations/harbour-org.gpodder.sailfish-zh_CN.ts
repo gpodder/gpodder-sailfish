@@ -11,7 +11,7 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="76"/>
         <source>Thomas Perl and the gPodder Team</source>
-        <translation>Thomas Perl 及gPodder 团队</translation>
+        <translation>Thomas Perl 及 gPodder 团队</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="77"/>
