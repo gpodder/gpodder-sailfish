@@ -129,20 +129,45 @@ Page {
 
                 wrapMode: Text.WordWrap
             }
+            ListItem {
+                Label {
+                    id: sectionTitle
+                    text: qsTr("Section: ")
 
-            Label {
-                text: qsTr("Section: ") + podcastDetail.section
+                    font.pixelSize: Theme.fontSizeMedium
+                    color: Theme.highlightColor
 
-                font.pixelSize: Theme.fontSizeSmall
-                color: Theme.secondaryColor
+                    anchors {
+                        left: parent.left
+                        margins: Theme.paddingMedium
+                        verticalCenter: parent.verticalCenter
+                    }
 
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    margins: Theme.paddingMedium
+                    wrapMode: Text.WordWrap
+                }
+                Label {
+                    id: sectionField
+                    text: podcastDetail.section
+
+                    font.pixelSize: Theme.fontSizeMedium
+                    color: Theme.primaryColor
+
+                    anchors {
+                        left: sectionTitle.right
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
+                    }
                 }
 
-                wrapMode: Text.WordWrap
+                onClicked: openMenu()
+
+                menu: ContextMenu {
+                    container: sectionField
+                    MenuItem {
+                        text: qsTr("Edit Section")
+                        onClicked: pageStack.push(editPodcastPage)
+                    }
+                }
             }
 
             Label {
@@ -155,6 +180,35 @@ Page {
                 }
                 wrapMode: Text.WordWrap
                 onLinkActivated: Qt.openUrlExternally(link)
+            }
+        }
+    }
+    Component {
+        id: editPodcastPage
+
+        Dialog {
+            canAccept: sectionFieldInput.text != podcastDetail.section
+            onAccepted: {
+                py.call('main.change_section', [podcast_id, sectionFieldInput.text])
+                sectionField.text = sectionFieldInput.text
+            }
+
+            Column {
+                anchors.fill: parent
+                DialogHeader {
+                    title: qsTr('Edit Section')
+                    acceptText: qsTr('Save')
+                }
+
+                TextField {
+                   id: sectionFieldInput
+                   text: podcastDetail.section
+
+                   anchors {
+                       left: parent.left
+                       right: parent.right
+                   }
+                }
             }
         }
     }

@@ -339,9 +339,20 @@
         <translation>Detalles del podcast</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="134"/>
+        <location filename="../qml/PodcastDetail.qml" line="135"/>
         <source>Section: </source>
         <translation>Sección: </translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastDetail.qml" line="167"/>
+        <location filename="../qml/PodcastDetail.qml" line="199"/>
+        <source>Edit Section</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastDetail.qml" line="200"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
