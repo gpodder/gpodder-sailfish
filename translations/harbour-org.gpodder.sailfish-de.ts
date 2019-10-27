@@ -214,13 +214,35 @@
 <context>
     <name>ImportOPML</name>
     <message>
-        <location filename="../qml/ImportOPML.qml" line="19"/>
+        <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Import OPML File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ImportOPML.qml" line="20"/>
+        <location filename="../qml/ImportOPML.qml" line="34"/>
+        <source>Export OPML File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="35"/>
+        <location filename="../qml/ImportOPML.qml" line="43"/>
         <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="35"/>
+        <location filename="../qml/ImportOPML.qml" line="47"/>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="56"/>
+        <source>Import File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="65"/>
+        <source>Enter filname</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -467,7 +489,7 @@
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="69"/>
-        <source>Import OPML</source>
+        <source>Import/Export OPML</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
