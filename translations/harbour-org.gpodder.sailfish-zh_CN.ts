@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="zh_CN">
 <context>
     <name>AboutPage</name>
     <message>
@@ -212,6 +212,41 @@
     </message>
 </context>
 <context>
+    <name>ImportOPML</name>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="34"/>
+        <source>Import OPML File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="34"/>
+        <source>Export OPML File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="35"/>
+        <location filename="../qml/ImportOPML.qml" line="43"/>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="35"/>
+        <location filename="../qml/ImportOPML.qml" line="47"/>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="56"/>
+        <source>Import File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="65"/>
+        <source>Enter filname</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PlayerChaptersDialog</name>
     <message>
         <location filename="../qml/PlayerChaptersDialog.qml" line="37"/>
@@ -230,7 +265,7 @@
 <context>
     <name>PlayerCover</name>
     <message>
-        <location filename="../qml/PlayerCover.qml" line="114"/>
+        <location filename="../qml/PlayerCover.qml" line="127"/>
         <source>Sleep timer: </source>
         <translation>睡眠计时器：</translation>
     </message>
@@ -253,12 +288,12 @@
         <translation>情况播放队列</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="203"/>
+        <location filename="../qml/PlayerPage.qml" line="204"/>
         <source>Pause</source>
         <translation>暂停</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="203"/>
+        <location filename="../qml/PlayerPage.qml" line="204"/>
         <source>Play</source>
         <translation>播放</translation>
     </message>
@@ -278,32 +313,32 @@
         <translation>睡眠计时器：</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="184"/>
+        <location filename="../qml/PlayerPage.qml" line="185"/>
         <source>- 1 min</source>
         <translation>-1分钟</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="194"/>
+        <location filename="../qml/PlayerPage.qml" line="195"/>
         <source>- 10 sec</source>
         <translation>-10秒</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="215"/>
+        <location filename="../qml/PlayerPage.qml" line="216"/>
         <source>+ 10 sec</source>
         <translation>+10秒</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="224"/>
+        <location filename="../qml/PlayerPage.qml" line="225"/>
         <source>+ 1 min</source>
         <translation>+1分钟</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="234"/>
+        <location filename="../qml/PlayerPage.qml" line="235"/>
         <source>Queue</source>
         <translation>队列</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="258"/>
+        <location filename="../qml/PlayerPage.qml" line="259"/>
         <source>Remove from queue</source>
         <translation>从队列移除</translation>
     </message>
@@ -326,9 +361,20 @@
         <translation>播客详情</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="134"/>
+        <location filename="../qml/PodcastDetail.qml" line="135"/>
         <source>Section: </source>
         <translation>片段：</translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastDetail.qml" line="167"/>
+        <location filename="../qml/PodcastDetail.qml" line="199"/>
+        <source>Edit Section</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastDetail.qml" line="200"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -401,12 +447,12 @@
     <message>
         <location filename="../qml/PodcastsCover.qml" line="37"/>
         <source>new episodes</source>
-        <translation新剧集></translation>
+        <translation>新剧集</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsCover.qml" line="38"/>
         <source>downloaded</source>
-        <translation已>下载</translation>
+        <translation>已下载</translation>
     </message>
 </context>
 <context>
@@ -442,12 +488,17 @@
         <translation>发现新播客</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="70"/>
+        <location filename="../qml/PodcastsPage.qml" line="69"/>
+        <source>Import/Export OPML</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastsPage.qml" line="75"/>
         <source>Subscriptions</source>
         <translation>订阅</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="87"/>
+        <location filename="../qml/PodcastsPage.qml" line="92"/>
         <source>No subscriptions</source>
         <translation>无订阅</translation>
     </message>
