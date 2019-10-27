@@ -53,4 +53,5 @@ TRANSLATIONS += \
 TRANSLATION_SOURCES += /$$_PRO_FILE_PWD_/gpodder-ui-qml/common/
 
 DISTFILES += \
+    qml/ImportOPML.qml \
     translations/*.ts

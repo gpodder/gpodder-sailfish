@@ -212,6 +212,19 @@
     </message>
 </context>
 <context>
+    <name>ImportOPML</name>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="19"/>
+        <source>Import OPML File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="20"/>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PlayerChaptersDialog</name>
     <message>
         <location filename="../qml/PlayerChaptersDialog.qml" line="37"/>
@@ -230,9 +243,9 @@
 <context>
     <name>PlayerCover</name>
     <message>
-        <location filename="../qml/PlayerCover.qml" line="44"/>
+        <location filename="../qml/PlayerCover.qml" line="127"/>
         <source>Sleep timer: </source>
-        <translation>Sleeptimer: </translation>
+        <translation type="unfinished">Sleeptimer: </translation>
     </message>
 </context>
 <context>
@@ -253,12 +266,12 @@
         <translation>Playliste löschen</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="177"/>
+        <location filename="../qml/PlayerPage.qml" line="204"/>
         <source>Pause</source>
         <translation>Pause</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="177"/>
+        <location filename="../qml/PlayerPage.qml" line="204"/>
         <source>Play</source>
         <translation>Abspielen</translation>
     </message>
@@ -273,37 +286,37 @@
         <translation>Player</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="100"/>
+        <location filename="../qml/PlayerPage.qml" line="126"/>
         <source>Sleep timer: </source>
         <translation>Sleeptimer: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="158"/>
+        <location filename="../qml/PlayerPage.qml" line="185"/>
         <source>- 1 min</source>
         <translation>- 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="168"/>
+        <location filename="../qml/PlayerPage.qml" line="195"/>
         <source>- 10 sec</source>
         <translation>- 10 s</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="189"/>
+        <location filename="../qml/PlayerPage.qml" line="216"/>
         <source>+ 10 sec</source>
         <translation>+ 10 s</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="198"/>
+        <location filename="../qml/PlayerPage.qml" line="225"/>
         <source>+ 1 min</source>
         <translation>+ 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="208"/>
+        <location filename="../qml/PlayerPage.qml" line="235"/>
         <source>Queue</source>
         <translation>Playliste</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="232"/>
+        <location filename="../qml/PlayerPage.qml" line="259"/>
         <source>Remove from queue</source>
         <translation>Von Playliste entfernen</translation>
     </message>
@@ -326,9 +339,20 @@
         <translation>Podcast Information</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="134"/>
+        <location filename="../qml/PodcastDetail.qml" line="135"/>
         <source>Section: </source>
         <translation>Kategorie: </translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastDetail.qml" line="167"/>
+        <location filename="../qml/PodcastDetail.qml" line="199"/>
+        <source>Edit Section</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastDetail.qml" line="200"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -442,12 +466,17 @@
         <translation>Neue Podcasts entdecken</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="70"/>
+        <location filename="../qml/PodcastsPage.qml" line="69"/>
+        <source>Import OPML</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastsPage.qml" line="75"/>
         <source>Subscriptions</source>
         <translation>Abonnierte Podcasts</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="87"/>
+        <location filename="../qml/PodcastsPage.qml" line="92"/>
         <source>No subscriptions</source>
         <translation>Keine abonnierten Podcasts</translation>
     </message>
