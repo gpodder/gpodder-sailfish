@@ -212,6 +212,19 @@
     </message>
 </context>
 <context>
+    <name>ImportOPML</name>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="19"/>
+        <source>Import OPML File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="20"/>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PlayerChaptersDialog</name>
     <message>
         <location filename="../qml/PlayerChaptersDialog.qml" line="37"/>
@@ -442,12 +455,17 @@
         <translation>Откриване на нови подкасти</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="70"/>
+        <location filename="../qml/PodcastsPage.qml" line="69"/>
+        <source>Import OPML</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PodcastsPage.qml" line="75"/>
         <source>Subscriptions</source>
         <translation>Абонаменти</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="87"/>
+        <location filename="../qml/PodcastsPage.qml" line="92"/>
         <source>No subscriptions</source>
         <translation>Няма абонаменти</translation>
     </message>
