@@ -214,14 +214,36 @@
 <context>
     <name>ImportOPML</name>
     <message>
-        <location filename="../qml/ImportOPML.qml" line="19"/>
+        <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Import OPML File</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar archivo OPML</translation>
     </message>
     <message>
-        <location filename="../qml/ImportOPML.qml" line="20"/>
+        <location filename="../qml/ImportOPML.qml" line="34"/>
+        <source>Export OPML File</source>
+        <translation>Exportar a archivo OPML</translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="35"/>
+        <location filename="../qml/ImportOPML.qml" line="43"/>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar</translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="35"/>
+        <location filename="../qml/ImportOPML.qml" line="47"/>
+        <source>Export</source>
+        <translation>Exportar</translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="56"/>
+        <source>Import File</source>
+        <translation>Importar archivo</translation>
+    </message>
+    <message>
+        <location filename="../qml/ImportOPML.qml" line="65"/>
+        <source>Enter filname</source>
+        <translation>Indica nombre del archivo</translation>
     </message>
 </context>
 <context>
@@ -245,7 +267,7 @@
     <message>
         <location filename="../qml/PlayerCover.qml" line="127"/>
         <source>Sleep timer: </source>
-        <translation type="unfinished">Temporizador: </translation>
+        <translation>Temporizador: </translation>
     </message>
 </context>
 <context>
@@ -347,12 +369,12 @@
         <location filename="../qml/PodcastDetail.qml" line="167"/>
         <location filename="../qml/PodcastDetail.qml" line="199"/>
         <source>Edit Section</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar sección</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="200"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar</translation>
     </message>
 </context>
 <context>
@@ -467,8 +489,8 @@
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="69"/>
-        <source>Import OPML</source>
-        <translation type="unfinished"></translation>
+        <source>Import/Export OPML</source>
+        <translation>Importar/Exportar OPML</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="75"/>
