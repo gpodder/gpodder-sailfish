@@ -26,7 +26,7 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="80"/>
         <source>Sailfish OS artwork by Stephan Beyerle</source>
-        <translation>旗鱼系统版本 由 Stephen Beyerle 开发</translation>
+        <translation>旗鱼系统版本插图由 Stephen Beyerle 绘制</translation>
     </message>
 </context>
 <context>
@@ -472,7 +472,7 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="73"/>
         <source>API Key (v3)</source>
-        <translation>API Key(v3)</translation>
+        <translation>API 密钥(v3)</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="82"/>
