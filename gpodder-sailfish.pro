@@ -48,10 +48,10 @@ TRANSLATIONS += \
     translations/harbour-org.gpodder.sailfish-de.ts \
     translations/harbour-org.gpodder.sailfish-bg.ts \
     translations/harbour-org.gpodder.sailfish-it.ts \
+    translations/harbour-org.gpodder.sailfish-zh_CN.ts \
     translations/harbour-org.gpodder.sailfish.ts
 
 TRANSLATION_SOURCES += /$$_PRO_FILE_PWD_/gpodder-ui-qml/common/
 
 DISTFILES += \
-    qml/ImportOPML.qml \
     translations/*.ts
