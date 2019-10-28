@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="bg_BG">
+<TS version="2.0" language="bg_BG">
 <context>
     <name>AboutPage</name>
     <message>
@@ -216,34 +216,34 @@
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Import OPML File</source>
-        <translation type="unfinished"></translation>
+        <translation>Внасяне на OPML файл</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Export OPML File</source>
-        <translation type="unfinished"></translation>
+        <translation>Изнасяне на OPML файл</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="35"/>
         <location filename="../qml/ImportOPML.qml" line="43"/>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Внасяне</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="35"/>
         <location filename="../qml/ImportOPML.qml" line="47"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Изнасяне</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="56"/>
         <source>Import File</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл за внасяне</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="65"/>
         <source>Enter filname</source>
-        <translation type="unfinished"></translation>
+        <translation>Въвеждане на файлово име</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../qml/PlayerCover.qml" line="127"/>
         <source>Sleep timer: </source>
-        <translation type="unfinished">Отброяване до заспиване: </translation>
+        <translation>Отброяване до заспиване: </translation>
     </message>
 </context>
 <context>
@@ -369,12 +369,12 @@
         <location filename="../qml/PodcastDetail.qml" line="167"/>
         <location filename="../qml/PodcastDetail.qml" line="199"/>
         <source>Edit Section</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактиране на раздел</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="200"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Записване</translation>
     </message>
 </context>
 <context>
@@ -490,7 +490,7 @@
     <message>
         <location filename="../qml/PodcastsPage.qml" line="69"/>
         <source>Import/Export OPML</source>
-        <translation type="unfinished"></translation>
+        <translation>Внос/износ на OPML</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="75"/>
