@@ -83,7 +83,7 @@
     <message>
         <location filename="../qml/EpisodeDetail.qml" line="179"/>
         <source>Shownotes</source>
-        <translation>shownotes</translation>
+        <translation>剧集说明</translation>
     </message>
 </context>
 <context>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="125"/>
         <source>Shownotes</source>
-        <translation>shownotes</translation>
+        <translation>剧集说明</translation>
     </message>
 </context>
 <context>
@@ -216,34 +216,34 @@
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Import OPML File</source>
-        <translation type="unfinished"></translation>
+        <translation>导入 OPML 文件</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Export OPML File</source>
-        <translation type="unfinished"></translation>
+        <translation>导出 OPML 文件</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="35"/>
         <location filename="../qml/ImportOPML.qml" line="43"/>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>导入</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="35"/>
         <location filename="../qml/ImportOPML.qml" line="47"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>导出</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="56"/>
         <source>Import File</source>
-        <translation type="unfinished"></translation>
+        <translation>导入文件</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="65"/>
         <source>Enter filname</source>
-        <translation type="unfinished"></translation>
+        <translation>输入文件名</translation>
     </message>
 </context>
 <context>
@@ -369,12 +369,12 @@
         <location filename="../qml/PodcastDetail.qml" line="167"/>
         <location filename="../qml/PodcastDetail.qml" line="199"/>
         <source>Edit Section</source>
-        <translation type="unfinished"></translation>
+        <translation>编辑片段</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="200"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>保存</translation>
     </message>
 </context>
 <context>
@@ -490,7 +490,7 @@
     <message>
         <location filename="../qml/PodcastsPage.qml" line="69"/>
         <source>Import/Export OPML</source>
-        <translation type="unfinished"></translation>
+        <translation>导入/导出 OPML</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="75"/>
@@ -523,7 +523,7 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="73"/>
         <source>API Key (v3)</source>
-        <translation>API Key(v3)</translation>
+        <translation>API 密钥(v3)</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="82"/>
