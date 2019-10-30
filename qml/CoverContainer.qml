@@ -65,7 +65,20 @@ CoverBackground {
         }
 
         CoverAction {
-            iconSource: 'image://theme/icon-cover-refresh'
+            iconSource: 'image://theme/icon-cover-sync'
+            onTriggered: {
+                if (!py.refreshing) {
+                    py.call('main.check_for_episodes');
+                }
+            }
+        }
+    }
+
+    CoverActionList {
+        enabled: player.episode == 0 && !player.isPlaying
+
+        CoverAction {
+            iconSource: 'image://theme/icon-cover-sync'
             onTriggered: {
                 if (!py.refreshing) {
                     py.call('main.check_for_episodes');

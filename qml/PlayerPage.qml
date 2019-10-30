@@ -66,11 +66,22 @@ Page {
             PageHeader {
                 title: qsTr("Player")
             }
-            
+
             SectionHeader {
 				text: qsTr("Now playing")
 				visible: player.episode!=0
-			}
+            }
+
+            Image {
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    margins: Theme.paddingMedium
+                }
+                id: coverImage
+                source: player.podcast_coverart
+                fillMode: Image.PreserveAspectFit
+                width: parent.width * 0.66
+            }
 
             Label {
                 anchors {
@@ -80,9 +91,24 @@ Page {
                 }
 
                 truncationMode: TruncationMode.Fade
-                horizontalAlignment: Text.AlignRight
+                horizontalAlignment: Text.AlignHCenter
+                text: player.podcast_title
+                color: Theme.secondaryHighlightColor
+                font.pixelSize: Theme.fontSizeSmall
+            }
+
+            Label {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    margins: Theme.paddingLarge
+                }
+
+                truncationMode: TruncationMode.Fade
+                horizontalAlignment: Text.AlignHCenter
                 text: player.episode_title
-                color: Theme.rgba(Theme.highlightColor, 0.7)
+                color: Theme.highlightColor
+                wrapMode: Text.Wrap
                 font.pixelSize: Theme.fontSizeSmall
             }
 
@@ -96,7 +122,7 @@ Page {
                 visible: player.sleepTimerRunning
 
                 truncationMode: TruncationMode.Fade
-                horizontalAlignment: Text.AlignRight
+                horizontalAlignment: Text.AlignHCenter
                 text: qsTr("Sleep timer: ") + Util.formatDuration(player.sleepTimerRemaining)
                 color: Theme.rgba(Theme.highlightColor, 0.7)
                 font.pixelSize: Theme.fontSizeExtraSmall
@@ -138,6 +164,7 @@ Page {
                 value: player.position
                 minimumValue: 0
                 maximumValue: player.duration
+                handleVisible: false
                 onDownChanged: {
                     if (!down) {
                         player.seekAndSync(sliderValue)
