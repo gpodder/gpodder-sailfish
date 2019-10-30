@@ -47,7 +47,7 @@
     <message>
         <location filename="../qml/DirectoryDialog.qml" line="45"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca</translation>
     </message>
     <message>
         <location filename="../qml/DirectoryDialog.qml" line="51"/>
@@ -216,34 +216,34 @@
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Import OPML File</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa file OPML</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Export OPML File</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta file OPML</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="35"/>
         <location filename="../qml/ImportOPML.qml" line="43"/>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="35"/>
         <location filename="../qml/ImportOPML.qml" line="47"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="56"/>
         <source>Import File</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa file</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="65"/>
         <source>Enter filname</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci nome file</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../qml/PlayerCover.qml" line="127"/>
         <source>Sleep timer: </source>
-        <translation type="unfinished">Timer spegnimento: </translation>
+        <translation>Timer spegnimento: </translation>
     </message>
 </context>
 <context>
@@ -369,12 +369,12 @@
         <location filename="../qml/PodcastDetail.qml" line="167"/>
         <location filename="../qml/PodcastDetail.qml" line="199"/>
         <source>Edit Section</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica sezione</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="200"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva</translation>
     </message>
 </context>
 <context>
@@ -490,7 +490,7 @@
     <message>
         <location filename="../qml/PodcastsPage.qml" line="69"/>
         <source>Import/Export OPML</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa/Esporta OPML</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="75"/>
