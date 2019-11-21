@@ -20,6 +20,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import QtMultimedia 5.0
 
 import 'common'
 import 'common/util.js' as Util
@@ -87,6 +88,12 @@ Page {
 
                     width: parent.width
                     height: width
+                }
+
+                VideoOutput {
+                    id: videoOutput
+                    anchors.fill: parent
+                    source: player
                 }
             }
 
