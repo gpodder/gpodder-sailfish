@@ -94,6 +94,8 @@ Page {
                     id: videoOutput
                     anchors.fill: parent
                     source: player
+                    visible: player.status >= MediaPlayer.Loaded && player.status <= MediaPlayer.EndOfMedia
+                    //flushMode: EmptyFrame //Qt 5.13+ not in SFOS (yet) :(
                 }
             }
 
