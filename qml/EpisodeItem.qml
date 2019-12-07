@@ -187,14 +187,14 @@ ListItem {
         }
 
         Label {
-            text: subtitle
+            text: total_time > 0 ? Util.formatDuration(total_time) + ' | ' + subtitle : subtitle
             anchors {
                 left: titleItem.left
                 right: titleItem.right
             }
             truncationMode: TruncationMode.Fade
             opacity: titleItem.opacity
-            visible: subtitle !== ''
+            visible: this.text !== ''
             font.pixelSize: Theme.fontSizeExtraSmall
         }
     }
