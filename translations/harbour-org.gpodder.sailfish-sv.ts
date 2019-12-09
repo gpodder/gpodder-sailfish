@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="sv">
 <context>
     <name>AboutPage</name>
     <message>
         <location filename="../qml/AboutPage.qml" line="47"/>
         <source>About gPodder</source>
-        <translation>Info su gPodder</translation>
+        <translation>Om gPodder</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="76"/>
         <source>Thomas Perl and the gPodder Team</source>
-        <translation>Thomas Perl e il team gPodder</translation>
+        <translation>Thomas Perl och gPodder Team</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="77"/>
         <source>License: ISC / GPLv3 or later</source>
-        <translation>Licenza: ISC / GPLv3 o successiva</translation>
+        <translation>Licens: ISC / GPLv3 eller senare</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="78"/>
         <source>Website: </source>
-        <translation>Sito web: </translation>
+        <translation>Webbplats: </translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="80"/>
         <source>Sailfish OS artwork by Stephan Beyerle</source>
-        <translation>Grafica per Sailfish OS di Stephan Beyerle</translation>
+        <translation>Sailfish OS grafisk konst av Stephan Beyerle</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../qml/AllEpisodesPage.qml" line="55"/>
         <source>Episodes: </source>
-        <translation>Episodi: </translation>
+        <translation>Avsnitt: </translation>
     </message>
     <message>
         <location filename="../qml/AllEpisodesPage.qml" line="71"/>
         <source>No episodes found</source>
-        <translation>Nessun episodio</translation>
+        <translation>Inga avsnitt hittades</translation>
     </message>
 </context>
 <context>
@@ -47,12 +47,12 @@
     <message>
         <location filename="../qml/DirectoryDialog.qml" line="45"/>
         <source>Search</source>
-        <translation>Cerca</translation>
+        <translation>Sök</translation>
     </message>
     <message>
         <location filename="../qml/DirectoryDialog.qml" line="51"/>
         <source>Search term</source>
-        <translation>Termine di ricerca</translation>
+        <translation>Sökterm</translation>
     </message>
 </context>
 <context>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../qml/DirectorySelectionDialog.qml" line="41"/>
         <source>Select provider</source>
-        <translation>Seleziona provider</translation>
+        <translation>Välj leverantör</translation>
     </message>
 </context>
 <context>
@@ -68,22 +68,22 @@
     <message>
         <location filename="../qml/EpisodeDetail.qml" line="63"/>
         <source>Visit website</source>
-        <translation>Visita sito web</translation>
+        <translation>Besök webbsidan</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeDetail.qml" line="81"/>
         <source>Episode details</source>
-        <translation>Dettagli episodi</translation>
+        <translation>Avsnittsinformation</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeDetail.qml" line="131"/>
         <source>Chapters</source>
-        <translation>Capitoli</translation>
+        <translation>Kapitel</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeDetail.qml" line="179"/>
         <source>Shownotes</source>
-        <translation>Note</translation>
+        <translation>Show notes</translation>
     </message>
 </context>
 <context>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../qml/EpisodeFilterDialog.qml" line="35"/>
         <source>Filter episode list</source>
-        <translation>Filtra lista episodi</translation>
+        <translation>Filtrera avsnittslistan</translation>
     </message>
 </context>
 <context>
@@ -99,42 +99,42 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Pause</source>
-        <translation>Pausa</translation>
+        <translation>Paus</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Play</source>
-        <translation>Riproduci</translation>
+        <translation>Spela</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="82"/>
         <source>Download</source>
-        <translation>Scarica</translation>
+        <translation>Ladda ner</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="92"/>
         <source>Enqueue</source>
-        <translation>Accoda</translation>
+        <translation>Köa</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="105"/>
         <source>Delete</source>
-        <translation>Elimina</translation>
+        <translation>Ta bort</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="111"/>
         <source>Deleting</source>
-        <translation>Eliminazione</translation>
+        <translation>Tar bort</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
         <source>Toggle New</source>
-        <translation>Segna come nuovo</translation>
+        <translation>Nytt av/på</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="125"/>
         <source>Shownotes</source>
-        <translation>Note</translation>
+        <translation>Show notes</translation>
     </message>
 </context>
 <context>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../qml/EpisodeListFilterItem.qml" line="33"/>
         <source>Filter: </source>
-        <translation>Filtro: </translation>
+        <translation>Filter: </translation>
     </message>
 </context>
 <context>
@@ -150,22 +150,22 @@
     <message>
         <location filename="../qml/EpisodesPage.qml" line="89"/>
         <source>Mark episodes as old</source>
-        <translation>Segna episodio come vecchio</translation>
+        <translation>Markera avsnitt som gamla</translation>
     </message>
     <message>
         <location filename="../qml/EpisodesPage.qml" line="96"/>
         <source>Enqueue episodes in player</source>
-        <translation>Accoda episodi nel player</translation>
+        <translation>Köa avsnitt i spelaren</translation>
     </message>
     <message>
         <location filename="../qml/EpisodesPage.qml" line="77"/>
         <source>Unsubscribe</source>
-        <translation>Disiscriviti</translation>
+        <translation>Sluta prenumerera</translation>
     </message>
     <message>
         <location filename="../qml/EpisodesPage.qml" line="117"/>
         <source>No episodes found</source>
-        <translation>Nessun episodio</translation>
+        <translation>Inga avsnitt hittades</translation>
     </message>
 </context>
 <context>
@@ -173,42 +173,42 @@
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="43"/>
         <source>All</source>
-        <translation>Tutti</translation>
+        <translation>Alla</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="44"/>
         <source>Fresh</source>
-        <translation>Nuovi</translation>
+        <translation>Nya</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
         <source>Downloaded</source>
-        <translation>Scaricati</translation>
+        <translation>Nerladdat</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Unplayed downloads</source>
-        <translation>Download non riprodotti</translation>
+        <translation>Ospelade nerladdningar</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Finished downloads</source>
-        <translation>Download completati</translation>
+        <translation>Slutförda nerladdningar</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Hide deleted</source>
-        <translation>Nascondi eliminati</translation>
+        <translation>Dölj borttagna</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Deleted episodes</source>
-        <translation>Episodi eliminati</translation>
+        <translation>Borttagna avsnitt</translation>
     </message>
     <message>
         <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Short downloads (&lt; 10 min)</source>
-        <translation>Download corti (&lt; 10 min)</translation>
+        <translation>Korta nerladdningar (&lt;10 min)</translation>
     </message>
 </context>
 <context>
@@ -216,34 +216,34 @@
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Import OPML File</source>
-        <translation>Importa file OPML</translation>
+        <translation>Importera OPML-fil</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Export OPML File</source>
-        <translation>Esporta file OPML</translation>
+        <translation>Exportera OPML-fil</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="35"/>
         <location filename="../qml/ImportOPML.qml" line="43"/>
         <source>Import</source>
-        <translation>Importa</translation>
+        <translation>Importera</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="35"/>
         <location filename="../qml/ImportOPML.qml" line="47"/>
         <source>Export</source>
-        <translation>Esporta</translation>
+        <translation>Exportera</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="56"/>
         <source>Import File</source>
-        <translation>Importa file</translation>
+        <translation>Importera fil</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="65"/>
         <source>Enter filname</source>
-        <translation>Inserisci nome file</translation>
+        <translation>Ange filnamn</translation>
     </message>
 </context>
 <context>
@@ -251,7 +251,7 @@
     <message>
         <location filename="../qml/PlayerChaptersDialog.qml" line="37"/>
         <source>Chapters</source>
-        <translation>Capitoli</translation>
+        <translation>Kapitel</translation>
     </message>
 </context>
 <context>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../qml/PlayerChaptersItem.qml" line="33"/>
         <source>Chapters</source>
-        <translation>Capitoli</translation>
+        <translation>Kapitel</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../qml/PlayerCover.qml" line="127"/>
         <source>Sleep timer: </source>
-        <translation>Timer spegnimento: </translation>
+        <translation>Insomningstimer: </translation>
     </message>
 </context>
 <context>
@@ -275,42 +275,42 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="44"/>
         <source>Stop sleep timer</source>
-        <translation>Ferma timer spegnimento</translation>
+        <translation>Stoppa insomningstimer</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="44"/>
         <source>Sleep timer</source>
-        <translation>Timer spegnimento</translation>
+        <translation>Insomningstimer</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="55"/>
         <source>Clear play queue</source>
-        <translation>Pulisci coda di riproduzione</translation>
+        <translation>Rensa uppspelningskön</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="204"/>
         <source>Pause</source>
-        <translation>Pausa</translation>
+        <translation>Pause</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="204"/>
         <source>Play</source>
-        <translation>Riproduci</translation>
+        <translation>Spela</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="71"/>
         <source>Now playing</source>
-        <translation>In riproduzione</translation>
+        <translation>Spelas nu</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="67"/>
         <source>Player</source>
-        <translation>Player</translation>
+        <translation>Spelare</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="126"/>
         <source>Sleep timer: </source>
-        <translation>Timer spegnimento: </translation>
+        <translation>Insomningstimer: </translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="185"/>
@@ -320,12 +320,12 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="195"/>
         <source>- 10 sec</source>
-        <translation>- 10 sec</translation>
+        <translation>- 10 sek</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="216"/>
         <source>+ 10 sec</source>
-        <translation>+ 10 sec</translation>
+        <translation>+ 10 sek</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="225"/>
@@ -335,12 +335,12 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="235"/>
         <source>Queue</source>
-        <translation>Coda</translation>
+        <translation>Köa</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="259"/>
         <source>Remove from queue</source>
-        <translation>Rimuovi dalla coda</translation>
+        <translation>Ta bort från kön</translation>
     </message>
 </context>
 <context>
@@ -348,33 +348,33 @@
     <message>
         <location filename="../qml/PodcastDetail.qml" line="66"/>
         <source>Copy feed URL</source>
-        <translation>Copia feed URL</translation>
+        <translation>Kopiera flödets URL</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="71"/>
         <source>Visit website</source>
-        <translation>Visita sito web</translation>
+        <translation>Besök webbsidan</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="89"/>
         <source>Podcast details</source>
-        <translation>Dettagli podcast</translation>
+        <translation>Poddinformation</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="135"/>
         <source>Section: </source>
-        <translation>Sezione: </translation>
+        <translation>Sektion: </translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="167"/>
         <location filename="../qml/PodcastDetail.qml" line="199"/>
         <source>Edit Section</source>
-        <translation>Modifica sezione</translation>
+        <translation>Redigera sektion</translation>
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="200"/>
         <source>Save</source>
-        <translation>Salva</translation>
+        <translation>Spara</translation>
     </message>
 </context>
 <context>
@@ -382,54 +382,54 @@
     <message>
         <location filename="../qml/PodcastItem.qml" line="30"/>
         <source>Refresh</source>
-        <translation>Aggiorna</translation>
+        <translation>Uppdatera</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="39"/>
         <source>Unsubscribe</source>
-        <translation>Disiscriviti</translation>
+        <translation>Sluta prenumerera</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="44"/>
         <source>Unsubscribing</source>
-        <translation>Annullamento iscrizione</translation>
+        <translation>Avslutar prenumeration</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="51"/>
         <location filename="../qml/PodcastItem.qml" line="58"/>
         <source>Rename</source>
-        <translation>Rinomina</translation>
+        <translation>Byt namn</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="57"/>
         <source>Rename podcast</source>
-        <translation>Rinomina podcast</translation>
+        <translation>Namnändra podden</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="59"/>
         <source>Podcast name</source>
-        <translation>Nome podcast</translation>
+        <translation>Poddnamn</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="69"/>
         <location filename="../qml/PodcastItem.qml" line="75"/>
         <source>Change section</source>
-        <translation>Cambia sezione</translation>
+        <translation>Ändra sektion</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="76"/>
         <source>Move</source>
-        <translation>Sposta</translation>
+        <translation>Flytta</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="77"/>
         <source>Section</source>
-        <translation>Sezione</translation>
+        <translation>Sektion</translation>
     </message>
     <message>
         <location filename="../qml/PodcastItem.qml" line="87"/>
         <source>Podcast detail</source>
-        <translation>Dettagli podcast</translation>
+        <translation>Poddinformation</translation>
     </message>
 </context>
 <context>
@@ -437,22 +437,22 @@
     <message>
         <location filename="../qml/PodcastsCover.qml" line="35"/>
         <source>podcasts</source>
-        <translation>podcast</translation>
+        <translation>poddar</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsCover.qml" line="36"/>
         <source>episodes</source>
-        <translation>episodi</translation>
+        <translation>avsnitt</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsCover.qml" line="37"/>
         <source>new episodes</source>
-        <translation>nuovi episodi</translation>
+        <translation>nya avsnitt</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsCover.qml" line="38"/>
         <source>downloaded</source>
-        <translation>scaricati</translation>
+        <translation>nerladdat</translation>
     </message>
 </context>
 <context>
@@ -460,47 +460,47 @@
     <message>
         <location filename="../qml/PodcastsPage.qml" line="41"/>
         <source>Settings</source>
-        <translation>Impostazioni</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="46"/>
         <source>Filter episodes</source>
-        <translation>Filtra episodi</translation>
+        <translation>Filtrera avsnitt</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="51"/>
         <source>Checking for new episodes...</source>
-        <translation>Controllo nuovi episodi...</translation>
+        <translation>Söker nya avsnitt...</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="51"/>
         <source>Check for new episodes</source>
-        <translation>Controlla nuovi episodi</translation>
+        <translation>Sök efter nya avsnitt</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="59"/>
         <source>Add new podcast</source>
-        <translation>Aggiungi nuovo podcast</translation>
+        <translation>Lägg till ny podd</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="64"/>
         <source>Discover new podcasts</source>
-        <translation>Scopri nuovi podcast</translation>
+        <translation>Upptäck nya poddar</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="69"/>
         <source>Import/Export OPML</source>
-        <translation>Importa/Esporta OPML</translation>
+        <translation>Importera/Exportera OPML</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="75"/>
         <source>Subscriptions</source>
-        <translation>iscrizioni</translation>
+        <translation>Prenumerationer</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="92"/>
         <source>No subscriptions</source>
-        <translation>Nessuna iscrizione</translation>
+        <translation>Inga prenumerationer</translation>
     </message>
 </context>
 <context>
@@ -508,12 +508,12 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="53"/>
         <source>About</source>
-        <translation>Info</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="63"/>
         <source>Settings</source>
-        <translation>Impostazioni</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="67"/>
@@ -523,17 +523,17 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="73"/>
         <source>API Key (v3)</source>
-        <translation>API Key (v3)</translation>
+        <translation>API-nyckel (v3)</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="82"/>
         <source>Limits</source>
-        <translation>Limiti</translation>
+        <translation>Begränsningar</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="88"/>
         <source>Maximum episodes per feed</source>
-        <translation>Massimo episodi per feed</translation>
+        <translation>Max antal avsnitt per flöde</translation>
     </message>
 </context>
 <context>
@@ -541,12 +541,12 @@
     <message>
         <location filename="../qml/SleepTimerDialog.qml" line="34"/>
         <source>Sleep timer</source>
-        <translation>Timer spegnimento</translation>
+        <translation>Insomningstimer</translation>
     </message>
     <message>
         <location filename="../qml/SleepTimerDialog.qml" line="57"/>
         <source> minutes</source>
-        <translation> minuti</translation>
+        <translation> minuter</translation>
     </message>
 </context>
 <context>
@@ -554,17 +554,17 @@
     <message>
         <location filename="../qml/Subscribe.qml" line="35"/>
         <source>Add subscription</source>
-        <translation>Aggiungi iscrizione</translation>
+        <translation>Lägg till prenumeration</translation>
     </message>
     <message>
         <location filename="../qml/Subscribe.qml" line="36"/>
         <source>Subscribe</source>
-        <translation>Iscriviti</translation>
+        <translation>Prenumerera</translation>
     </message>
     <message>
         <location filename="../qml/Subscribe.qml" line="42"/>
         <source>Feed URL</source>
-        <translation>URL feed</translation>
+        <translation>Flödets URL</translation>
     </message>
 </context>
 </TS>
