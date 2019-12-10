@@ -39,7 +39,7 @@ CoverBackground {
 
     PlayerCover {
         id: playerCover
-        visible: player.episode != 0 && player.isPlaying
+        visible: player.episode != 0
     }
 
     CoverActionList {
