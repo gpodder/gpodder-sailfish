@@ -20,6 +20,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import QtMultimedia 5.0
 
 import 'common/util.js' as Util
 
@@ -39,7 +40,7 @@ CoverBackground {
 
     PlayerCover {
         id: playerCover
-        visible: player.episode != 0
+        visible: player.episode != 0 && (player.isPlaying || player.playbackState == MediaPlayer.PausedState)
     }
 
     CoverActionList {
