@@ -187,10 +187,12 @@ Page {
         id: editPodcastPage
 
         Dialog {
+            id: sectionDialog
             canAccept: sectionFieldInput.text != podcastDetail.section
             onAccepted: {
                 py.call('main.change_section', [podcast_id, sectionFieldInput.text])
-                sectionField.text = sectionFieldInput.text
+                podcastDetail.section = sectionFieldInput.text
+                pageStack.pop()
             }
 
             Column {
@@ -208,6 +210,8 @@ Page {
                        left: parent.left
                        right: parent.right
                    }
+                   EnterKey.enabled: text.length > 0 && text != podcastDetail.section
+                   EnterKey.onClicked: sectionDialog.accept()
                 }
             }
         }
