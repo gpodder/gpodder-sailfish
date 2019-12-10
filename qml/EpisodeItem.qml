@@ -129,16 +129,6 @@ ListItem {
                     pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});
                 }
             }
-
-            Label {
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                }
-                text: total_time > 0 ? Util.formatDuration(total_time) : ''
-                visible: total_time > 0 ? 1 : 0
-                font.pixelSize: total_time >= 3600 ? Theme.fontSizeSmall : Theme.fontSizeMedium
-            }
-
         }
     }
 
