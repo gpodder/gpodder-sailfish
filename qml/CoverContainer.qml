@@ -24,8 +24,9 @@ import QtMultimedia 5.0
 
 import 'common/util.js' as Util
 
-
 CoverBackground {
+    property bool cover_stat:true;
+    property bool cover_player:true;
     Image {
         source: 'cover.png'
         anchors.horizontalCenter: parent.horizontalCenter
@@ -35,35 +36,47 @@ CoverBackground {
 
     PodcastsCover {
         id: podcastsCover
-        visible: !playerCover.visible
+        visible: !playerCover.visible || (cover_stat && !cover_player)
     }
 
     PlayerCover {
         id: playerCover
-        visible: player.episode != 0 && (player.isPlaying || player.playbackState == MediaPlayer.PausedState)
+        visible: cover_player && player.episode != 0 && (player.isPlaying || player.playbackState == MediaPlayer.PausedState)
     }
 
     CoverActionList {
-        enabled: player.episode != 0 && player.isPlaying
+        enabled: cover_player && player.episode != 0 && player.isPlaying
 
         CoverAction {
             iconSource: 'image://theme/icon-cover-pause'
             onTriggered: player.pause();
         }
-
         CoverAction {
-            iconSource: 'image://theme/icon-cover-next-song'
+            iconSource: 'icon-cover-forward.png'
             onTriggered: player.seekAndSync(player.position + 1000 * 30);
         }
     }
 
     CoverActionList {
-        enabled: player.episode != 0 && !player.isPlaying
+        enabled: cover_player && player.episode != 0 && !player.isPlaying
 
         CoverAction {
             iconSource: 'image://theme/icon-cover-play'
             onTriggered: player.play();
+
         }
+
+        CoverAction {
+            iconSource: 'image://theme/icon-cover-next'
+            onTriggered: {
+                cover_player=false;
+                cover_stat=true;
+            }
+        }
+    }
+
+    CoverActionList {
+        enabled: cover_stat && player.episode == 0 && !player.isPlaying
 
         CoverAction {
             iconSource: 'image://theme/icon-cover-sync'
@@ -76,7 +89,15 @@ CoverBackground {
     }
 
     CoverActionList {
-        enabled: player.episode == 0 && !player.isPlaying
+        enabled: cover_stat && !cover_player
+
+        CoverAction {
+            iconSource: 'image://theme/icon-cover-previous'
+            onTriggered: {
+                cover_stat=false;
+                cover_player=true;
+            }
+        }
 
         CoverAction {
             iconSource: 'image://theme/icon-cover-sync'
