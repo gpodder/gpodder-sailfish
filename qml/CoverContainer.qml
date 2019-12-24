@@ -76,7 +76,7 @@ CoverBackground {
     }
 
     CoverActionList {
-        enabled: cover_stat && (player.episode == 0 || (player.episode != 0 && player.playbackState != MediaPlayer.PausedState && player.playbackState != MediaPlayer.PlayingState))
+        enabled: player.episode == 0 || (player.episode != 0 && player.playbackState == MediaPlayer.StoppedState)
 
         CoverAction {
             iconSource: 'image://theme/icon-cover-sync'
