@@ -41,11 +41,11 @@ CoverBackground {
 
     PlayerCover {
         id: playerCover
-        visible: cover_player && player.episode != 0 && (player.isPlaying || player.playbackState == MediaPlayer.PausedState)
+        visible: cover_player && player.episode != 0 && (player.playbackState == MediaPlayer.PlayingState || player.playbackState == MediaPlayer.PausedState)
     }
 
     CoverActionList {
-        enabled: cover_player && player.episode != 0 && player.isPlaying
+        enabled: cover_player && player.episode != 0 && player.playbackState == MediaPlayer.PlayingState
 
         CoverAction {
             iconSource: 'image://theme/icon-cover-pause'
@@ -58,7 +58,7 @@ CoverBackground {
     }
 
     CoverActionList {
-        enabled: cover_player && player.episode != 0 && !player.isPlaying
+        enabled: cover_player && player.episode != 0 && player.playbackState == MediaPlayer.PausedState
 
         CoverAction {
             iconSource: 'image://theme/icon-cover-play'
@@ -76,7 +76,7 @@ CoverBackground {
     }
 
     CoverActionList {
-        enabled: cover_stat && player.episode == 0 && !player.isPlaying
+        enabled: cover_stat && (player.episode == 0 || (player.episode != 0 && player.playbackState != MediaPlayer.PausedState && player.playbackState != MediaPlayer.PlayingState))
 
         CoverAction {
             iconSource: 'image://theme/icon-cover-sync'
