@@ -367,12 +367,12 @@
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="167"/>
-        <location filename="../qml/PodcastDetail.qml" line="199"/>
+        <location filename="../qml/PodcastDetail.qml" line="201"/>
         <source>Edit Section</source>
         <translation>编辑片段</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="200"/>
+        <location filename="../qml/PodcastDetail.qml" line="202"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
