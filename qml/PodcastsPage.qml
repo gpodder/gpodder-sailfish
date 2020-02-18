@@ -88,7 +88,7 @@ Page {
         }
 
         ViewPlaceholder {
-            enabled: podcastListModel.count == 0 && py.ready
+            enabled: podcastListModel.count === 0 && podcastListModel.firstRun && py.ready
             text: qsTr("No subscriptions")
         }
     }
