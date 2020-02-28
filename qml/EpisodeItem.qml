@@ -177,7 +177,7 @@ ListItem {
         }
 
         Label {
-            text: total_time > 0 ? Util.formatDuration(total_time) + ' | ' + subtitle : subtitle
+            text: total_time > 0 ? (subtitle != '' ? Util.formatDuration(total_time) + ' | ' + subtitle : Util.formatDuration(total_time)) : subtitle
             anchors {
                 left: titleItem.left
                 right: titleItem.right
