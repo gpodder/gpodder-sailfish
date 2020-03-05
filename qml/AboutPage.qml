@@ -73,7 +73,7 @@ Page {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     text: [
-                        '© 2005-2019 '+ qsTr("Thomas Perl and the gPodder Team"),
+                        '© 2005-2020 '+ qsTr("Thomas Perl and the gPodder Team"),
                         qsTr("License: ISC / GPLv3 or later"),
                         qsTr("Website: ") + 'http://gpodder.org/',
                         '',
