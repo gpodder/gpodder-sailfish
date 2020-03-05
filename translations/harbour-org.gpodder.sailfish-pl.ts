@@ -490,7 +490,7 @@
     <message>
         <location filename="../qml/PodcastsPage.qml" line="69"/>
         <source>Import/Export OPML</source>
-        <translation>Impost/Eksport OMPL</translation>
+        <translation>Import/Eksport OMPL</translation>
     </message>
     <message>
         <location filename="../qml/PodcastsPage.qml" line="75"/>
