@@ -171,6 +171,7 @@ Page {
             }
 
             Label {
+                textFormat: Text.StyledText
                 text: podcastDetail.description
                 linkColor: Theme.highlightColor
                 anchors {
