@@ -26,7 +26,7 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="80"/>
         <source>Sailfish OS artwork by Stephan Beyerle</source>
-        <translation>旗鱼系统版本 由 Stephen Beyerle 开发</translation>
+        <translation>旗鱼系统版本由 Stephen Beyerle 开发</translation>
     </message>
 </context>
 <context>

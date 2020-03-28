@@ -189,6 +189,7 @@ Page {
             }
 
             Label {
+                textFormat: Text.StyledText
                 text: detailPage.description
                 linkColor: Theme.highlightColor
                 anchors {
