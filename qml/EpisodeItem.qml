@@ -190,38 +190,13 @@ ListItem {
         }
     }
 
-    Rectangle {
+    ArtArea {
         id: artArea
         anchors {
             left: parent.left
         }
         height: titleItem.height + subtitleItem.height
         width: titleItem.height + subtitleItem.height
-
-        color: "transparent"
-
-        Rectangle {
-            id: episodeArtArea
-            color: "red"
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            height: parent.height * 0.9
-            width: parent.width * 0.9
-            radius: 5
-        }
-        Rectangle {
-            id: podcastArtArea
-            color: "blue"
-            anchors {
-                right: parent.right
-                bottom: parent.bottom
-            }
-            radius: 5
-            height: parent.height * 0.4
-            width: parent.width * 0.4
-        }
     }
 
     Label {
@@ -268,4 +243,3 @@ ListItem {
         }
     }
 }
-
