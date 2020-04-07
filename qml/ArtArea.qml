@@ -39,7 +39,7 @@ Item {
             anchors.centerIn: parent
 
             font.pixelSize: parent.height * 0.8
-            text: title[0]
+            text: episodesPage.title[0]
             color: Theme.highlightColor
         }
     }
