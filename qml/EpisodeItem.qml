@@ -197,6 +197,7 @@ ListItem {
         }
         height: titleItem.height + subtitleItem.height
         width: titleItem.height + subtitleItem.height
+        property string title_char: podcast_title[0]
     }
 
     Label {
