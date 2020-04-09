@@ -72,15 +72,18 @@ Page {
 				visible: player.episode!=0
             }
 
-            Image {
+            ArtArea {
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                     margins: Theme.paddingMedium
                 }
                 id: coverImage
-                source: player.podcast_coverart
-                fillMode: Image.PreserveAspectFit
+                property string cover_art: player.cover_art
+                property string episode_art: player.episode_art
+                property string title_char: player.podcast_title[0]
+
                 width: parent.width * 0.66
+                height: width
             }
 
             Label {
