@@ -8,7 +8,7 @@ Item {
 
         anchors {
             left: parent.left
-            right: parent.right
+            top: parent.top
         }
         height: episode_art ? parent.height * 0.9 : parent.height
         width: episode_art ? parent.width * 0.9 : parent.width
@@ -23,7 +23,7 @@ Item {
             right: parent.right
             bottom: parent.bottom
         }
-
+        opacity: 0.75
         height: parent.height * 0.4
         width: parent.width * 0.4
         source: cover_art
@@ -39,7 +39,7 @@ Item {
             anchors.centerIn: parent
 
             font.pixelSize: parent.height * 0.8
-            text: episodesPage.title[0]
+            text: title_char
             color: Theme.highlightColor
         }
     }
