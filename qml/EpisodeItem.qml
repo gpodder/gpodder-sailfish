@@ -126,7 +126,12 @@ ListItem {
                 icon.source: 'image://theme/icon-m-about'
                 onClicked: {
                     episodeItem.closeMenu();
-                    pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});
+                    pgst.loadPage('EpisodeDetail.qml',
+                                  {episode_id: id,
+                                   title: title,
+                                   cover_art: cover_art,
+                                   episode_art: episode_art,
+                                   podcast_title: podcast_title});
                 }
             }
         }
