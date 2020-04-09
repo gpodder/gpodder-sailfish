@@ -34,12 +34,11 @@ Column {
         visible: false
     }
 
-    Image {
+    ArtArea {
         id: coverArtImage
-        visible: source != ""
-        source: player.podcast_coverart
-        sourceSize.width: parent.width
-        fillMode: Image.Pad
+        visible: episode_art != '' || cover_art != ''
+        width: parent.width
+        height: width
     }
 
     Rectangle {

@@ -126,7 +126,12 @@ ListItem {
                 icon.source: 'image://theme/icon-m-about'
                 onClicked: {
                     episodeItem.closeMenu();
-                    pgst.loadPage('EpisodeDetail.qml', {episode_id: id, title: title});
+                    pgst.loadPage('EpisodeDetail.qml',
+                                  {episode_id: id,
+                                   title: title,
+                                   cover_art: cover_art,
+                                   episode_art: episode_art,
+                                   podcast_title: podcast_title});
                 }
             }
         }
@@ -141,7 +146,7 @@ ListItem {
 
     Column {
         anchors {
-            left: parent.left
+            left: artArea.right
             right: downloadStatusIcon.left
             verticalCenter: parent.verticalCenter
             margins: Theme.paddingMedium
@@ -177,6 +182,7 @@ ListItem {
         }
 
         Label {
+            id: subtitleItem
             text: total_time > 0 ? (subtitle != '' ? Util.formatDuration(total_time) + ' | ' + subtitle : Util.formatDuration(total_time)) : subtitle
             anchors {
                 left: titleItem.left
@@ -187,6 +193,16 @@ ListItem {
             visible: this.text !== ''
             font.pixelSize: Theme.fontSizeExtraSmall
         }
+    }
+
+    ArtArea {
+        id: artArea
+        anchors {
+            left: parent.left
+        }
+        height: titleItem.height + subtitleItem.height
+        width: titleItem.height + subtitleItem.height
+        property string title_char: podcast_title[0]
     }
 
     Label {
@@ -233,4 +249,3 @@ ListItem {
         }
     }
 }
-
