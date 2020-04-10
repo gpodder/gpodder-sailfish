@@ -99,42 +99,42 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Pause</source>
-        <translation type="unfinished">Pause</translation>
+        <translation>Paus</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Play</source>
-        <translation type="unfinished">Spela</translation>
+        <translation>Spela</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="82"/>
         <source>Download</source>
-        <translation type="unfinished"></translation>
+        <translation>Ladda ner</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="92"/>
         <source>Enqueue</source>
-        <translation type="unfinished"></translation>
+        <translation>Köa</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="105"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta bort</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="111"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar bort</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
         <source>Toggle New</source>
-        <translation type="unfinished"></translation>
+        <translation>Ny av/på</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="125"/>
         <source>Shownotes</source>
-        <translation type="unfinished">Show notes</translation>
+        <translation>Visa notiser</translation>
     </message>
 </context>
 <context>
