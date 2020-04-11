@@ -99,32 +99,32 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Pause</source>
-        <translation type="unfinished">Pauza</translation>
+        <translation>Pauza</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Play</source>
-        <translation type="unfinished">Odtwarzaj</translation>
+        <translation>Odtwarzaj</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="82"/>
         <source>Download</source>
-        <translation type="unfinished"></translation>
+        <translation>Pobierz</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="92"/>
         <source>Enqueue</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolejkuj</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="105"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Usuń</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="111"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Usuwanie</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
