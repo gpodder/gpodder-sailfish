@@ -207,31 +207,6 @@ ListItem {
         property string title_char: podcast_title[0]
     }
 
-    Label {
-        id: downloadStatusIcon
-
-        anchors {
-            right: parent.right
-            verticalCenter: parent.verticalCenter
-            rightMargin: text ? Theme.paddingMedium : 0
-        }
-
-        font.pixelSize: Theme.fontSizeLarge
-        font.bold: true
-
-        opacity: titleItem.opacity
-
-        color: titleItem.color
-
-        text: {
-            switch (downloadState) {
-                case Constants.state.normal: return '';
-                case Constants.state.downloaded: return '';
-                case Constants.state.deleted: return '';
-            }
-        }
-    }
-
     Rectangle {
         id: downloadStatusIndicator
         anchors {
