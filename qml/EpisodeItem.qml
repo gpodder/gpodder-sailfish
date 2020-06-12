@@ -42,7 +42,7 @@ ListItem {
             left: parent.left
         }
 
-        height: parent.height * 0.2
+        height: parent.height * 0.1
         width: parent.width * progress
 
         color: Theme.highlightColor
@@ -55,7 +55,7 @@ ListItem {
             left: parent.left
         }
 
-        height: parent.height * 0.2
+        height: parent.height * 0.1
         width: parent.width * playbackProgress
 
         color: isPlaying ? Theme.highlightColor : Theme.secondaryHighlightColor
@@ -147,7 +147,7 @@ ListItem {
     Column {
         anchors {
             left: artArea.right
-            right: downloadStatusIcon.left
+            right: downloadStatusIndicator.left
             verticalCenter: parent.verticalCenter
             margins: Theme.paddingMedium
         }
@@ -183,7 +183,7 @@ ListItem {
 
         Label {
             id: subtitleItem
-            text: total_time > 0 ? (subtitle != '' ? Util.formatDuration(total_time) + ' | ' + subtitle : Util.formatDuration(total_time)) : subtitle
+            text: (mime[0] === 'video' ? '🎬' : '') + (total_time > 0 ? (subtitle != '' ? Util.formatDuration(total_time) + ' | ' + subtitle : Util.formatDuration(total_time)) : subtitle)
             anchors {
                 left: titleItem.left
                 right: titleItem.right
@@ -199,54 +199,32 @@ ListItem {
         id: artArea
         anchors {
             left: parent.left
+            verticalCenter: parent.verticalCenter
         }
-        height: titleItem.height + subtitleItem.height
-        width: titleItem.height + subtitleItem.height
+        height: parent.height * 0.8
+        width: parent.height * 0.8
         property string episode_art: ''
         property string title_char: podcast_title[0]
     }
 
-    Label {
-        id: videoIcon
-
+    Rectangle {
+        id: downloadStatusIndicator
         anchors {
             right: parent.right
             verticalCenter: parent.verticalCenter
-            rightMargin: text ? Theme.paddingMedium : 0
         }
 
-        font.pixelSize: Theme.fontSizeLarge
-        font.bold: true
+        height: parent.height * 0.8
+        width: parent.height * 0.1
 
-        opacity: titleItem.opacity
-
-        color: titleItem.color
-
-        text: mime[0] == 'video' ? '🎬' : '';
-    }
-
-    Label {
-        id: downloadStatusIcon
-
-        anchors {
-            right: mime[0] == 'video' ? videoIcon.left : parent.right
-            verticalCenter: parent.verticalCenter
-            rightMargin: text ? Theme.paddingMedium : 0
-        }
-
-        font.pixelSize: Theme.fontSizeLarge
-        font.bold: true
-
-        opacity: titleItem.opacity
-
-        color: titleItem.color
-
-        text: {
+        visible: {
             switch (downloadState) {
-                case Constants.state.normal: return '';
-                case Constants.state.downloaded: return '♫';
-                case Constants.state.deleted: return '';
+                case Constants.state.normal: return false;
+                case Constants.state.downloaded: return true;
+                case Constants.state.deleted: return false;
             }
         }
+        color: Theme.highlightColor
+        opacity: .8
     }
 }
