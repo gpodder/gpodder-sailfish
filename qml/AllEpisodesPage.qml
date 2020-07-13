@@ -47,6 +47,12 @@ Page {
 
         PullDownMenu {
             EpisodeListFilterItem { id: filterItem; model: episodeListModel }
+            
+            MenuItem {
+                text: py.refreshing ? qsTr("Checking for new episodes...") : qsTr("Check for new episodes")
+                enabled: podcastListModel.count > 0 && !py.refreshing
+                onClicked: py.call('main.check_for_episodes');
+            }
         }
 
         VerticalScrollDecorator { flickable: filteredEpisodesList }
