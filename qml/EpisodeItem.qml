@@ -183,7 +183,7 @@ ListItem {
 
         Label {
             id: subtitleItem
-            text: (mime[0] === 'video' ? '🎬' : '') + (total_time > 0 ? (subtitle != '' ? Util.formatDuration(total_time) + ' | ' + subtitle : Util.formatDuration(total_time)) : subtitle)
+            text: (mime[0] === 'video' ? '🎬' : '') + published + ' | ' + (total_time > 0 ?  Util.formatDuration(total_time) + (subtitle != '' ? ' | ' + subtitle :'') : subtitle)
             anchors {
                 left: titleItem.left
                 right: titleItem.right
