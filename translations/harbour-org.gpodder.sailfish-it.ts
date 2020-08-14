@@ -66,22 +66,22 @@
 <context>
     <name>EpisodeDetail</name>
     <message>
-        <location filename="../qml/EpisodeDetail.qml" line="63"/>
+        <location filename="../qml/EpisodeDetail.qml" line="66"/>
         <source>Visit website</source>
         <translation>Visita sito web</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeDetail.qml" line="81"/>
+        <location filename="../qml/EpisodeDetail.qml" line="84"/>
         <source>Episode details</source>
         <translation>Dettagli episodi</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeDetail.qml" line="131"/>
+        <location filename="../qml/EpisodeDetail.qml" line="145"/>
         <source>Chapters</source>
         <translation>Capitoli</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeDetail.qml" line="179"/>
+        <location filename="../qml/EpisodeDetail.qml" line="193"/>
         <source>Shownotes</source>
         <translation>Note</translation>
     </message>
@@ -99,42 +99,42 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Pause</source>
-        <translation>Pausa</translation>
+        <translation type="unfinished">Pausa</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="70"/>
         <source>Play</source>
-        <translation>Riproduci</translation>
+        <translation type="unfinished">Riproduci</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="82"/>
         <source>Download</source>
-        <translation>Scarica</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="92"/>
         <source>Enqueue</source>
-        <translation>Accoda</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="105"/>
         <source>Delete</source>
-        <translation>Elimina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="111"/>
         <source>Deleting</source>
-        <translation>Eliminazione</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
         <source>Toggle New</source>
-        <translation>Segna come nuovo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="125"/>
         <source>Shownotes</source>
-        <translation>Note</translation>
+        <translation type="unfinished">Note</translation>
     </message>
 </context>
 <context>
@@ -265,7 +265,7 @@
 <context>
     <name>PlayerCover</name>
     <message>
-        <location filename="../qml/PlayerCover.qml" line="127"/>
+        <location filename="../qml/PlayerCover.qml" line="126"/>
         <source>Sleep timer: </source>
         <translation>Timer spegnimento: </translation>
     </message>
@@ -288,12 +288,12 @@
         <translation>Pulisci coda di riproduzione</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="204"/>
+        <location filename="../qml/PlayerPage.qml" line="211"/>
         <source>Pause</source>
         <translation>Pausa</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="204"/>
+        <location filename="../qml/PlayerPage.qml" line="211"/>
         <source>Play</source>
         <translation>Riproduci</translation>
     </message>
@@ -308,37 +308,37 @@
         <translation>Player</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="126"/>
+        <location filename="../qml/PlayerPage.qml" line="133"/>
         <source>Sleep timer: </source>
         <translation>Timer spegnimento: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="185"/>
+        <location filename="../qml/PlayerPage.qml" line="192"/>
         <source>- 1 min</source>
         <translation>- 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="195"/>
+        <location filename="../qml/PlayerPage.qml" line="202"/>
         <source>- 10 sec</source>
         <translation>- 10 sec</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="216"/>
+        <location filename="../qml/PlayerPage.qml" line="223"/>
         <source>+ 10 sec</source>
         <translation>+ 10 sec</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="225"/>
+        <location filename="../qml/PlayerPage.qml" line="232"/>
         <source>+ 1 min</source>
         <translation>+ 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="235"/>
+        <location filename="../qml/PlayerPage.qml" line="242"/>
         <source>Queue</source>
         <translation>Coda</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="259"/>
+        <location filename="../qml/PlayerPage.qml" line="266"/>
         <source>Remove from queue</source>
         <translation>Rimuovi dalla coda</translation>
     </message>
@@ -367,12 +367,12 @@
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="167"/>
-        <location filename="../qml/PodcastDetail.qml" line="201"/>
+        <location filename="../qml/PodcastDetail.qml" line="202"/>
         <source>Edit Section</source>
         <translation>Modifica sezione</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="202"/>
+        <location filename="../qml/PodcastDetail.qml" line="203"/>
         <source>Save</source>
         <translation>Salva</translation>
     </message>

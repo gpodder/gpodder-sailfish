@@ -34,6 +34,9 @@ Page {
     property string link
     property bool ready: false
     property var chapters: ([])
+    property string episode_art
+    property string cover_art
+    property string title_char
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 
@@ -79,6 +82,17 @@ Page {
 
             PageHeader {
                 title: qsTr("Episode details")
+            }
+
+            CustomExpander {
+                width: parent.width
+                expandedHeight: width
+
+                ArtArea {
+                    id: coverImage
+                    width: parent.width
+                    height: width
+                }
             }
 
             Label {

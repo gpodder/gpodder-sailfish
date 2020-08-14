@@ -66,22 +66,22 @@
 <context>
     <name>EpisodeDetail</name>
     <message>
-        <location filename="../qml/EpisodeDetail.qml" line="63"/>
+        <location filename="../qml/EpisodeDetail.qml" line="66"/>
         <source>Visit website</source>
         <translation>Интернет страница</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeDetail.qml" line="81"/>
+        <location filename="../qml/EpisodeDetail.qml" line="84"/>
         <source>Episode details</source>
         <translation>Детайли</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeDetail.qml" line="131"/>
+        <location filename="../qml/EpisodeDetail.qml" line="145"/>
         <source>Chapters</source>
         <translation>Глави</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeDetail.qml" line="179"/>
+        <location filename="../qml/EpisodeDetail.qml" line="193"/>
         <source>Shownotes</source>
         <translation>Описание</translation>
     </message>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="92"/>
         <source>Enqueue</source>
-        <translation>В опашката</translation>
+        <translation>Към опашката</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="105"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="111"/>
         <source>Deleting</source>
-        <translation>Ще се изтрие</translation>
+        <translation>Изтрива се</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="119"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../qml/EpisodeListFilterItem.qml" line="33"/>
         <source>Filter: </source>
-        <translation>Филтер: </translation>
+        <translation>Филтър: </translation>
     </message>
 </context>
 <context>
@@ -265,7 +265,7 @@
 <context>
     <name>PlayerCover</name>
     <message>
-        <location filename="../qml/PlayerCover.qml" line="127"/>
+        <location filename="../qml/PlayerCover.qml" line="126"/>
         <source>Sleep timer: </source>
         <translation>Отброяване до заспиване: </translation>
     </message>
@@ -288,12 +288,12 @@
         <translation>Изчистване на опашката</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="204"/>
+        <location filename="../qml/PlayerPage.qml" line="211"/>
         <source>Pause</source>
         <translation>Паузиране</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="204"/>
+        <location filename="../qml/PlayerPage.qml" line="211"/>
         <source>Play</source>
         <translation>Пускане</translation>
     </message>
@@ -308,37 +308,37 @@
         <translation>Прослушване</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="126"/>
+        <location filename="../qml/PlayerPage.qml" line="133"/>
         <source>Sleep timer: </source>
         <translation>Отброяване до заспиване: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="185"/>
+        <location filename="../qml/PlayerPage.qml" line="192"/>
         <source>- 1 min</source>
         <translation>- 1 мин</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="195"/>
+        <location filename="../qml/PlayerPage.qml" line="202"/>
         <source>- 10 sec</source>
         <translation>- 10 сек</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="216"/>
+        <location filename="../qml/PlayerPage.qml" line="223"/>
         <source>+ 10 sec</source>
         <translation>+ 10 сек</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="225"/>
+        <location filename="../qml/PlayerPage.qml" line="232"/>
         <source>+ 1 min</source>
         <translation>+ 1 мин</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="235"/>
+        <location filename="../qml/PlayerPage.qml" line="242"/>
         <source>Queue</source>
         <translation>Опашка</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="259"/>
+        <location filename="../qml/PlayerPage.qml" line="266"/>
         <source>Remove from queue</source>
         <translation>Премахване от опашката</translation>
     </message>
@@ -367,12 +367,12 @@
     </message>
     <message>
         <location filename="../qml/PodcastDetail.qml" line="167"/>
-        <location filename="../qml/PodcastDetail.qml" line="201"/>
+        <location filename="../qml/PodcastDetail.qml" line="202"/>
         <source>Edit Section</source>
         <translation>Редактиране на раздел</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="202"/>
+        <location filename="../qml/PodcastDetail.qml" line="203"/>
         <source>Save</source>
         <translation>Записване</translation>
     </message>
