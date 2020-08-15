@@ -8,11 +8,11 @@ Dialog {
     id: importOPML
     allowedOrientations: Orientation.All
 
-    property string selectedFile: "None"
+    property string selectedFile: qsTr("None")
     property string opmlAction: "Import"
 
     canAccept: {
-        (opmlAction == 'Import' && selectedFile != "None") || (opmlAction == 'Export' && exportFile.text != '')
+        (opmlAction == 'Import' && selectedFile != qsTr("None")) || (opmlAction == 'Export' && exportFile.text != '')
     }
     onAccepted: {
         focus = false

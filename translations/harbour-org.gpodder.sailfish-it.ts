@@ -214,6 +214,12 @@
 <context>
     <name>ImportOPML</name>
     <message>
+        <location filename="../qml/ImportOPML.qml" line="11"/>
+        <location filename="../qml/ImportOPML.qml" line="15"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
         <source>Import OPML File</source>
         <translation>Importa file OPML</translation>
