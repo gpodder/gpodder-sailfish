@@ -31,8 +31,9 @@ Page {
     onStatusChanged: pgst.handlePageStatusChange(status)
 
     Component.onCompleted: {
-        episodeListModel.setQuery(episodeListModel.queries.Downloaded);
-        episodeListModel.reload();
+        py.getConfig('ui.qml.episode_list.filter_eql', function (value) {
+            episodeListModel.setQuery(value);
+        });
     }
 
     BusyIndicator {
@@ -47,6 +48,17 @@ Page {
 
         PullDownMenu {
             EpisodeListFilterItem { id: filterItem; model: episodeListModel }
+
+            MenuItem {
+                text: py.refreshing ? qsTr("Checking for new episodes...") : qsTr("Check for new episodes")
+                enabled: podcastListModel.count > 0 && !py.refreshing
+                onClicked: {
+                    episodeListModel.ready = false;
+                    py.call('main.check_for_episodes',[],function (){
+                        episodeListModel.reload();
+                    });
+                }
+            }
         }
 
         VerticalScrollDecorator { flickable: filteredEpisodesList }

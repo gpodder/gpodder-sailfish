@@ -32,14 +32,24 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="55"/>
-        <source>Episodes: </source>
-        <translation>Avsnitt: </translation>
+        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <source>Checking for new episodes...</source>
+        <translation type="unfinished">Söker nya avsnitt...</translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="71"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <source>Check for new episodes</source>
+        <translation type="unfinished">Sök efter nya avsnitt</translation>
+    </message>
+    <message>
+        <location filename="../qml/AllEpisodesPage.qml" line="67"/>
+        <source>Episodes: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AllEpisodesPage.qml" line="83"/>
         <source>No episodes found</source>
-        <translation>Inga avsnitt hittades</translation>
+        <translation type="unfinished">Inga avsnitt hittades</translation>
     </message>
 </context>
 <context>
@@ -171,42 +181,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
         <source>All</source>
         <translation>Alla</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Fresh</source>
         <translation>Nya</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Downloaded</source>
         <translation>Nerladdat</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Unplayed downloads</source>
         <translation>Ospelade nerladdningar</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Finished downloads</source>
         <translation>Slutförda nerladdningar</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Hide deleted</source>
         <translation>Dölj borttagna</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="51"/>
         <source>Deleted episodes</source>
         <translation>Borttagna avsnitt</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="52"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>Korta nerladdningar (&lt;10 min)</translation>
     </message>
@@ -339,12 +349,17 @@
         <translation>+ 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="242"/>
+        <location filename="../qml/PlayerPage.qml" line="241"/>
+        <source>rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="251"/>
         <source>Queue</source>
         <translation>Köa</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="266"/>
+        <location filename="../qml/PlayerPage.qml" line="275"/>
         <source>Remove from queue</source>
         <translation>Ta bort från kön</translation>
     </message>
@@ -504,7 +519,7 @@
         <translation>Prenumerationer</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="92"/>
+        <location filename="../qml/PodcastsPage.qml" line="99"/>
         <source>No subscriptions</source>
         <translation>Inga prenumerationer</translation>
     </message>

@@ -32,14 +32,24 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="55"/>
-        <source>Episodes: </source>
-        <translation>Выпуски: </translation>
+        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <source>Checking for new episodes...</source>
+        <translation type="unfinished">Проверка новых выпусков...</translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="71"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <source>Check for new episodes</source>
+        <translation type="unfinished">Проверить новые выпуски</translation>
+    </message>
+    <message>
+        <location filename="../qml/AllEpisodesPage.qml" line="67"/>
+        <source>Episodes: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AllEpisodesPage.qml" line="83"/>
         <source>No episodes found</source>
-        <translation>Нет выпусков</translation>
+        <translation type="unfinished">Нет выпусков</translation>
     </message>
 </context>
 <context>
@@ -171,42 +181,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
         <source>All</source>
         <translation>Все</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Fresh</source>
         <translation>Последние</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Downloaded</source>
         <translation>Скачанные</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Unplayed downloads</source>
         <translation>Непрослушанные</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Finished downloads</source>
         <translation>Завершенные закачки</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Hide deleted</source>
         <translation>Скрыть удаленные</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="51"/>
         <source>Deleted episodes</source>
         <translation>Удаленные выпуски</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="52"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>Короткие (&lt; 10 минут)</translation>
     </message>
@@ -339,12 +349,17 @@
         <translation>+ 1 мин</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="242"/>
+        <location filename="../qml/PlayerPage.qml" line="241"/>
+        <source>rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="251"/>
         <source>Queue</source>
         <translation>Очередь</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="266"/>
+        <location filename="../qml/PlayerPage.qml" line="275"/>
         <source>Remove from queue</source>
         <translation>Убрать из очереди</translation>
     </message>
@@ -504,7 +519,7 @@
         <translation>Подписки</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="92"/>
+        <location filename="../qml/PodcastsPage.qml" line="99"/>
         <source>No subscriptions</source>
         <translation>Нет подписок</translation>
     </message>

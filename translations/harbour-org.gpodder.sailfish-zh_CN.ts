@@ -32,14 +32,24 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="55"/>
-        <source>Episodes: </source>
-        <translation>剧集：</translation>
+        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <source>Checking for new episodes...</source>
+        <translation type="unfinished">正在检测新剧集……</translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="71"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <source>Check for new episodes</source>
+        <translation type="unfinished">检测新剧集</translation>
+    </message>
+    <message>
+        <location filename="../qml/AllEpisodesPage.qml" line="67"/>
+        <source>Episodes: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AllEpisodesPage.qml" line="83"/>
         <source>No episodes found</source>
-        <translation>没有找到剧集</translation>
+        <translation type="unfinished">没有找到剧集</translation>
     </message>
 </context>
 <context>
@@ -171,42 +181,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
         <source>All</source>
         <translation>全部</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Fresh</source>
         <translation>新的</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Downloaded</source>
         <translation>下载</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Unplayed downloads</source>
         <translation>未播放的下载</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Finished downloads</source>
         <translation>已完成的下载</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Hide deleted</source>
         <translation>隐藏已删除</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="51"/>
         <source>Deleted episodes</source>
         <translation>已删除剧集</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="52"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>较短的下载（10分钟以内）</translation>
     </message>
@@ -339,12 +349,17 @@
         <translation>+1分钟</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="242"/>
+        <location filename="../qml/PlayerPage.qml" line="241"/>
+        <source>rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="251"/>
         <source>Queue</source>
         <translation>队列</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="266"/>
+        <location filename="../qml/PlayerPage.qml" line="275"/>
         <source>Remove from queue</source>
         <translation>从队列移除</translation>
     </message>
@@ -504,7 +519,7 @@
         <translation>订阅</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="92"/>
+        <location filename="../qml/PodcastsPage.qml" line="99"/>
         <source>No subscriptions</source>
         <translation>无订阅</translation>
     </message>

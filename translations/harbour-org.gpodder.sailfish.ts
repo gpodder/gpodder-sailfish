@@ -32,12 +32,22 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="55"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <source>Checking for new episodes...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <source>Check for new episodes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AllEpisodesPage.qml" line="67"/>
         <source>Episodes: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="71"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="83"/>
         <source>No episodes found</source>
         <translation type="unfinished"></translation>
     </message>
@@ -171,42 +181,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
         <source>All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Fresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Downloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Unplayed downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Finished downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Hide deleted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="51"/>
         <source>Deleted episodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="52"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -339,12 +349,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="242"/>
+        <location filename="../qml/PlayerPage.qml" line="241"/>
+        <source>rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="251"/>
         <source>Queue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="266"/>
+        <location filename="../qml/PlayerPage.qml" line="275"/>
         <source>Remove from queue</source>
         <translation type="unfinished"></translation>
     </message>
@@ -504,7 +519,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="92"/>
+        <location filename="../qml/PodcastsPage.qml" line="99"/>
         <source>No subscriptions</source>
         <translation type="unfinished"></translation>
     </message>
