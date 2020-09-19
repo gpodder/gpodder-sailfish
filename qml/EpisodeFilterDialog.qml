@@ -36,9 +36,10 @@ Page {
         }
 
         model: {
+            var filters = filterSelector.model.filters;
             var result = [];
-            for (var i in filterSelector.model.filters) {
-                result.push(filterSelector.model.filters[i].label);
+            for (var i in filters) {
+                result.push(filterSelector.model.getFormattedLabel(i))
             }
             return result;
         }
@@ -49,9 +50,25 @@ Page {
             highlighted: down || (index == filterSelector.selectedIndex)
 
             onClicked: {      
-                console.debug("Selected filter id ", index)
-                filterSelector.model.setQueryFromIndex(index);
-                pageStack.pop();
+                console.debug("Selected filter id ", index);
+                var filter = filterSelector.model.filters[index];
+                if(filter.hasParameters){
+                    pageStack.push('TextInputDialog.qml', {
+                        inputLabel: qsTr("Search for"),
+                        initialValue: filter.searchTerm,
+                        acceptText: qsTr("Search"),
+                        acceptDestinationAction: PageStackAction.Pop,
+                        acceptDestination: pageStack.previousPage(),
+                        callback: function (searchTerm) {
+                            console.debug("got search term:",searchTerm)
+                            filter.searchTerm=searchTerm;
+                            filterSelector.model.setQueryFromIndex(index);
+                        }
+                    }, true);
+                }else{
+                    filterSelector.model.setQueryFromIndex(index);
+                    pageStack.pop();
+                }
             }
 
             Label {

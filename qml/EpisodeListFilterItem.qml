@@ -28,8 +28,8 @@ MenuItem {
     id: episodeListFilterItem
 
     property var model
-    property string currentFilter: model.filters[model.currentFilterIndex].label
+    property string currentFilter: model.getFormattedLabel()
 
-    text: qsTr("Filter: ") + currentFilter
+    text: qsTr("Change Filter")
     onClicked: pageStack.push('EpisodeFilterDialog.qml', { model: model });
 }

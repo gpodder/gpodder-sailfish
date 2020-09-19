@@ -30,12 +30,6 @@ Page {
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 
-    Component.onCompleted: {
-        py.getConfig('ui.qml.episode_list.filter_eql', function (value) {
-            episodeListModel.setQuery(value);
-        });
-    }
-
     BusyIndicator {
         visible: !episodeListModel.ready
         running: visible
@@ -64,10 +58,13 @@ Page {
         VerticalScrollDecorator { flickable: filteredEpisodesList }
 
         header: PageHeader {
-            title: qsTr("Episodes: ") + filterItem.currentFilter
+            title: episodeListModel.ready, "Episodes: "+ episodeListModel.getFormattedLabel()
         }
 
-        model: GPodderEpisodeListModel { id: episodeListModel }
+        model: GPodderEpisodeListModel {
+            id: episodeListModel
+        }
+
         GPodderEpisodeListModelConnections {}
 
         section.property: 'section'

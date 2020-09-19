@@ -22,7 +22,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Dialog {
-    id: rename
+    id: textInput
     allowedOrientations: Orientation.All
 
     property string activityName
@@ -32,26 +32,25 @@ Dialog {
     property var callback
 
     canAccept: input.text != ''
-    onAccepted: rename.callback(input.text);
+    onAccepted: textInput.callback(input.text);
 
     Column {
         anchors.fill: parent
 
         DialogHeader {
-            title: rename.activityName
-            acceptText: rename.affirmativeAction
+            title: textInput.activityName
+            acceptText: textInput.affirmativeAction
         }
 
         TextField {
             id: input
             width: parent.width
-            label: rename.inputLabel
+            label: textInput.inputLabel
             placeholderText: label
             text: initialValue
             focus: enabled
-            enabled: rename.status == PageStatus.Active
-            //inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
-            EnterKey.onClicked: rename.accept()
+            enabled: textInput.status == PageStatus.Active
+            EnterKey.onClicked: textInput.accept()
         }
     }
 }

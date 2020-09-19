@@ -28,6 +28,11 @@ Page {
     id: podcastsPage
     allowedOrientations: Orientation.All
 
+    Component.onCompleted: {
+        //preload page when not busy
+        pgst.loadPage('AllEpisodesPage.qml')
+    }
+
     SilicaListView {
         id: podcastList
         anchors.fill: parent
@@ -43,7 +48,7 @@ Page {
             }
 
             MenuItem {
-                text: qsTr("Filter episodes")
+                text: qsTr("Episodelist")
                 onClicked: pgst.loadPage('AllEpisodesPage.qml');
             }
 

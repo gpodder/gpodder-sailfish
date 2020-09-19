@@ -53,7 +53,7 @@ ListItem {
                 onClicked: {
                     podcastItem.closeMenu();
                     var ctx = { py: py, id: id };
-                    pageStack.push('RenameDialog.qml', {
+                    pageStack.push('TextInputDialog.qml', {
                         activityName: qsTr("Rename podcast"),
                         affirmativeAction: qsTr("Rename"),
                         inputLabel: qsTr("Podcast name"),

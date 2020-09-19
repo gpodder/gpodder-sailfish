@@ -32,22 +32,17 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="47"/>
         <source>Checking for new episodes...</source>
         <translation type="unfinished">Проверява се за нови...</translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="53"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="47"/>
         <source>Check for new episodes</source>
         <translation type="unfinished">Проверяване за нови епизоди</translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="67"/>
-        <source>Episodes: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="83"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="80"/>
         <source>No episodes found</source>
         <translation type="unfinished">Няма намерени епизоди</translation>
     </message>
@@ -103,6 +98,16 @@
         <source>Filter episode list</source>
         <translation>Филтър</translation>
     </message>
+    <message>
+        <location filename="../qml/EpisodeFilterDialog.qml" line="57"/>
+        <source>Search for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodeFilterDialog.qml" line="59"/>
+        <source>Search</source>
+        <translation type="unfinished">Търсене</translation>
+    </message>
 </context>
 <context>
     <name>EpisodeItem</name>
@@ -151,8 +156,8 @@
     <name>EpisodeListFilterItem</name>
     <message>
         <location filename="../qml/EpisodeListFilterItem.qml" line="33"/>
-        <source>Filter: </source>
-        <translation>Филтър: </translation>
+        <source>Change Filter</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -181,44 +186,49 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
         <source>All</source>
         <translation>Всички</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Fresh</source>
         <translation>Нови и неизтеглени</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Downloaded</source>
         <translation>Изтеглени</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Unplayed downloads</source>
         <translation>Непускани епизоди</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Finished downloads</source>
         <translation>Изслушани епизоди</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="50"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="51"/>
         <source>Hide deleted</source>
         <translation>Без изтритите</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="51"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="52"/>
         <source>Deleted episodes</source>
         <translation>Изтрити епизоди</translation>
     </message>
     <message>
-        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="52"/>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="53"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>Кратки епизоди (&lt; 10 мин)</translation>
+    </message>
+    <message>
+        <location filename="../gpodder-ui-qml/common/GPodderEpisodeListModel.qml" line="54"/>
+        <source>Includes Text: %s</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -349,17 +359,12 @@
         <translation>+ 1 мин</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="241"/>
-        <source>rate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/PlayerPage.qml" line="251"/>
+        <location filename="../qml/PlayerPage.qml" line="242"/>
         <source>Queue</source>
         <translation>Опашка</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="275"/>
+        <location filename="../qml/PlayerPage.qml" line="266"/>
         <source>Remove from queue</source>
         <translation>Премахване от опашката</translation>
     </message>
@@ -479,47 +484,47 @@
 <context>
     <name>PodcastsPage</name>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="41"/>
+        <location filename="../qml/PodcastsPage.qml" line="46"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="46"/>
-        <source>Filter episodes</source>
-        <translation>Филтриране на епизодите</translation>
+        <location filename="../qml/PodcastsPage.qml" line="51"/>
+        <source>Episodelist</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="51"/>
+        <location filename="../qml/PodcastsPage.qml" line="56"/>
         <source>Checking for new episodes...</source>
         <translation>Проверява се за нови...</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="51"/>
+        <location filename="../qml/PodcastsPage.qml" line="56"/>
         <source>Check for new episodes</source>
         <translation>Проверяване за нови епизоди</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="59"/>
+        <location filename="../qml/PodcastsPage.qml" line="64"/>
         <source>Add new podcast</source>
         <translation>Добавяне на нов подкаст</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="64"/>
+        <location filename="../qml/PodcastsPage.qml" line="69"/>
         <source>Discover new podcasts</source>
         <translation>Откриване на нови подкасти</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="69"/>
+        <location filename="../qml/PodcastsPage.qml" line="74"/>
         <source>Import/Export OPML</source>
         <translation>Внос/износ на OPML</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="75"/>
+        <location filename="../qml/PodcastsPage.qml" line="80"/>
         <source>Subscriptions</source>
         <translation>Абонаменти</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="99"/>
+        <location filename="../qml/PodcastsPage.qml" line="104"/>
         <source>No subscriptions</source>
         <translation>Няма абонаменти</translation>
     </message>

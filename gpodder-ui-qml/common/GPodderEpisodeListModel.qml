@@ -39,17 +39,19 @@ ListModel {
         HideDeleted: 'not deleted',
         Deleted: 'deleted',
         ShortDownloads: 'downloaded and min > 0 and min < 10',
+        TextSearch: '/.*%s.*/i'
     })
 
     property var filters: ([
-        { label: qsTr("All"), query: episodeListModel.queries.All },
-        { label: qsTr("Fresh"), query: episodeListModel.queries.Fresh },
-        { label: qsTr("Downloaded"), query: episodeListModel.queries.Downloaded },
-        { label: qsTr("Unplayed downloads"), query: episodeListModel.queries.UnplayedDownloads },
-        { label: qsTr("Finished downloads"), query: episodeListModel.queries.FinishedDownloads },
-        { label: qsTr("Hide deleted"), query: episodeListModel.queries.HideDeleted },
-        { label: qsTr("Deleted episodes"), query: episodeListModel.queries.Deleted },
-        { label: qsTr("Short downloads (< 10 min)"), query: episodeListModel.queries.ShortDownloads },
+        { label: qsTr("All"), query: episodeListModel.queries.All, hasParameters:false },
+        { label: qsTr("Fresh"), query: episodeListModel.queries.Fresh, hasParameters:false },
+        { label: qsTr("Downloaded"), query: episodeListModel.queries.Downloaded, hasParameters:false },
+        { label: qsTr("Unplayed downloads"), query: episodeListModel.queries.UnplayedDownloads, hasParameters:false },
+        { label: qsTr("Finished downloads"), query: episodeListModel.queries.FinishedDownloads, hasParameters:false },
+        { label: qsTr("Hide deleted"), query: episodeListModel.queries.HideDeleted, hasParameters:false },
+        { label: qsTr("Deleted episodes"), query: episodeListModel.queries.Deleted, hasParameters:false },
+        { label: qsTr("Short downloads (< 10 min)"), query: episodeListModel.queries.ShortDownloads, hasParameters:false },
+        { label: qsTr("Includes Text: %s"), query: episodeListModel.queries.TextSearch, hasParameters:true, searchTerm: ""}
     ])
 
     property bool ready: false
@@ -61,8 +63,19 @@ ListModel {
         py.call('main.get_config_value', ['ui.qml.episode_list.filter_eql'], function (result) {
             console.debug("got query from storage: '",result,"'")
             setQueryFromUpdate(result);
-            reload();
         });
+    }
+
+    function getFormattedLabel(i){
+        if(i === undefined){
+            i = currentFilterIndex
+        }
+        console.assert(i>=0&&i<filters.length, "invalid filter label request")
+        if(filters[i].hasParameters){
+            return filters[i].label.replace("%s",filters[i].searchTerm);
+        }else{
+            return filters[i].label;
+        }
     }
 
     function forEachEpisode(callback) {
@@ -86,7 +99,8 @@ ListModel {
 
     function setQueryEx(query, update) {
         console.info("changing query from '",currentCustomQuery,"' to '",query,"',")
-        if(query === currentCustomQuery){
+        if(query === currentCustomQuery && !filters[currentFilterIndex].hasParameters){
+            console.debug("filter already selected, skipping...");
             return;
         }
         for (var i=0; i<filters.length; i++) {
@@ -119,12 +133,11 @@ ListModel {
     }
 
     function reload(callback) {
-        var query;
-        if (currentFilterIndex !== -1) {
-            query = filters[currentFilterIndex].query;
-        } else {
-            query = currentCustomQuery;
+        var query = filters[currentFilterIndex].query;
+        if(filters[currentFilterIndex].hasParameters){//text search
+            query = query.replace("%s",filters[currentFilterIndex].searchTerm)
         }
+
         console.info("reloading with query: '",query,"'.")
 
         ready = false;
