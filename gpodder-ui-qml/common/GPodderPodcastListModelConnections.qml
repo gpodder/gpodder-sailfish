@@ -28,9 +28,11 @@ Connections {
     }
 
     onUpdatingPodcast: {
+        console.debug("got on updating",podcast_id)
         for (var i=0; i<podcastListModel.count; i++) {
             var podcast = podcastListModel.get(i);
             if (podcast.id === podcast_id) {
+                console.debug("podcast",i,"is updating")
                 podcastListModel.setProperty(i, 'updating', true);
                 break;
             }
@@ -40,7 +42,8 @@ Connections {
     onUpdatedPodcast: {
         var model = podcastListModel;
         for (var i=0; i<model.count; i++) {
-            if (model.get(i).id === podcast.id) {
+            if (model.get(i).id === podcast.id) {                
+                console.debug("podcast",i,"is updated")
                 model.set(i, podcast);
                 break;
             }
