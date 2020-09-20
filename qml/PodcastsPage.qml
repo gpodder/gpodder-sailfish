@@ -28,11 +28,6 @@ Page {
     id: podcastsPage
     allowedOrientations: Orientation.All
 
-    Component.onCompleted: {
-        //preload page when not busy
-        pgst.loadPage('AllEpisodesPage.qml')
-    }
-
     SilicaListView {
         id: podcastList
         anchors.fill: parent
