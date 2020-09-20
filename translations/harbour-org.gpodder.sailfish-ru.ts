@@ -42,7 +42,7 @@
         <translation type="unfinished">Проверить новые выпуски</translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="80"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="76"/>
         <source>No episodes found</source>
         <translation type="unfinished">Нет выпусков</translation>
     </message>
@@ -163,22 +163,22 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="89"/>
+        <location filename="../qml/EpisodesPage.qml" line="90"/>
         <source>Mark episodes as old</source>
         <translation>Отметить выпуски как старые</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="96"/>
+        <location filename="../qml/EpisodesPage.qml" line="97"/>
         <source>Enqueue episodes in player</source>
         <translation>В очередь проигрывателя</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="78"/>
         <source>Unsubscribe</source>
         <translation>Отменить подписку</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="117"/>
+        <location filename="../qml/EpisodesPage.qml" line="118"/>
         <source>No episodes found</source>
         <translation>Нет выпусков</translation>
     </message>
@@ -484,47 +484,47 @@
 <context>
     <name>PodcastsPage</name>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="46"/>
+        <location filename="../qml/PodcastsPage.qml" line="41"/>
         <source>Settings</source>
         <translation>Настройка</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="51"/>
+        <location filename="../qml/PodcastsPage.qml" line="46"/>
         <source>Episodelist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="56"/>
+        <location filename="../qml/PodcastsPage.qml" line="51"/>
         <source>Checking for new episodes...</source>
         <translation>Проверка новых выпусков...</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="56"/>
+        <location filename="../qml/PodcastsPage.qml" line="51"/>
         <source>Check for new episodes</source>
         <translation>Проверить новые выпуски</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="64"/>
+        <location filename="../qml/PodcastsPage.qml" line="59"/>
         <source>Add new podcast</source>
         <translation>Добавить подписку</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="69"/>
+        <location filename="../qml/PodcastsPage.qml" line="64"/>
         <source>Discover new podcasts</source>
         <translation>Поиск подкастов</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="74"/>
+        <location filename="../qml/PodcastsPage.qml" line="69"/>
         <source>Import/Export OPML</source>
         <translation>Импорт/экспорт OPML</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="80"/>
+        <location filename="../qml/PodcastsPage.qml" line="75"/>
         <source>Subscriptions</source>
         <translation>Подписки</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="104"/>
+        <location filename="../qml/PodcastsPage.qml" line="99"/>
         <source>No subscriptions</source>
         <translation>Нет подписок</translation>
     </message>

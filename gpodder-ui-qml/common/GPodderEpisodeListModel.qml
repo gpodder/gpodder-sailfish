@@ -58,14 +58,6 @@ ListModel {
     property int currentFilterIndex: 0
     property string currentCustomQuery: queries.All
 
-    Component.onCompleted: {
-        // Request filter, then load episodes
-        py.call('main.get_config_value', ['ui.qml.episode_list.filter_eql'], function (result) {
-            console.debug("got query from storage: '",result,"'")
-            setQueryFromUpdate(result);
-        });
-    }
-
     function getFormattedLabel(i){
         if(i === undefined){
             i = currentFilterIndex

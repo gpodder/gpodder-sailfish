@@ -31,7 +31,7 @@ Page {
     onStatusChanged: pgst.handlePageStatusChange(status)
 
     BusyIndicator {
-        visible: !episodeListModel.ready
+        visible: !allPodcastsEpisodesModel.ready
         running: visible
         anchors.centerIn: parent
     }
@@ -41,15 +41,15 @@ Page {
         anchors.fill: parent
 
         PullDownMenu {
-            EpisodeListFilterItem { id: filterItem; model: episodeListModel }
+            EpisodeListFilterItem { id: filterItem; model: allPodcastsEpisodesModel }
 
             MenuItem {
                 text: py.refreshing ? qsTr("Checking for new episodes...") : qsTr("Check for new episodes")
                 enabled: podcastListModel.count > 0 && !py.refreshing
                 onClicked: {
-                    episodeListModel.ready = false;
+                    allPodcastsEpisodesModel.ready = false;
                     py.call('main.check_for_episodes',[],function (){
-                        episodeListModel.reload();
+                        allPodcastsEpisodesModel.reload();
                     });
                 }
             }
@@ -58,14 +58,10 @@ Page {
         VerticalScrollDecorator { flickable: filteredEpisodesList }
 
         header: PageHeader {
-            title: episodeListModel.ready, "Episodes: "+ episodeListModel.getFormattedLabel()
+            title: allPodcastsEpisodesModel.ready, "Episodes: "+ allPodcastsEpisodesModel.getFormattedLabel()
         }
 
-        model: GPodderEpisodeListModel {
-            id: episodeListModel
-        }
-
-        GPodderEpisodeListModelConnections {}
+        model: allPodcastsEpisodesModel
 
         section.property: 'section'
         section.delegate: SectionHeader {
@@ -76,7 +72,7 @@ Page {
         delegate: EpisodeItem {}
 
         ViewPlaceholder {
-            enabled: filteredEpisodesList.count == 0 && episodeListModel.ready
+            enabled: filteredEpisodesList.count == 0 && allPodcastsEpisodesModel.ready
             text: qsTr("No episodes found")
         }
     }

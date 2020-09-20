@@ -42,6 +42,7 @@ Python {
     signal updatedEpisode(var episode)
     signal updateStats()
     signal configChanged(string key, var value)
+    signal initialized()
 
     Component.onCompleted: {
         setHandler('hello', function (coreversion, uiversion, parserversion) {
@@ -73,6 +74,7 @@ Python {
         importModule('main', function() {
             py.call('main.initialize', [py.progname], function() {
                 py.ready = true;
+                emit(initialized());
             });
         });
     }

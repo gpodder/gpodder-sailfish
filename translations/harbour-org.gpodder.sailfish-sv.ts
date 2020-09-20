@@ -42,7 +42,7 @@
         <translation type="unfinished">Sök efter nya avsnitt</translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="80"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="76"/>
         <source>No episodes found</source>
         <translation type="unfinished">Inga avsnitt hittades</translation>
     </message>
@@ -163,22 +163,22 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="89"/>
+        <location filename="../qml/EpisodesPage.qml" line="90"/>
         <source>Mark episodes as old</source>
         <translation>Markera avsnitt som gamla</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="96"/>
+        <location filename="../qml/EpisodesPage.qml" line="97"/>
         <source>Enqueue episodes in player</source>
         <translation>Köa avsnitt i spelaren</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="78"/>
         <source>Unsubscribe</source>
         <translation>Sluta prenumerera</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="117"/>
+        <location filename="../qml/EpisodesPage.qml" line="118"/>
         <source>No episodes found</source>
         <translation>Inga avsnitt hittades</translation>
     </message>
@@ -484,47 +484,47 @@
 <context>
     <name>PodcastsPage</name>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="46"/>
+        <location filename="../qml/PodcastsPage.qml" line="41"/>
         <source>Settings</source>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="51"/>
+        <location filename="../qml/PodcastsPage.qml" line="46"/>
         <source>Episodelist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="56"/>
+        <location filename="../qml/PodcastsPage.qml" line="51"/>
         <source>Checking for new episodes...</source>
         <translation>Söker nya avsnitt...</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="56"/>
+        <location filename="../qml/PodcastsPage.qml" line="51"/>
         <source>Check for new episodes</source>
         <translation>Sök efter nya avsnitt</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="64"/>
+        <location filename="../qml/PodcastsPage.qml" line="59"/>
         <source>Add new podcast</source>
         <translation>Lägg till ny podd</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="69"/>
+        <location filename="../qml/PodcastsPage.qml" line="64"/>
         <source>Discover new podcasts</source>
         <translation>Upptäck nya poddar</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="74"/>
+        <location filename="../qml/PodcastsPage.qml" line="69"/>
         <source>Import/Export OPML</source>
         <translation>Importera/Exportera OPML</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="80"/>
+        <location filename="../qml/PodcastsPage.qml" line="75"/>
         <source>Subscriptions</source>
         <translation>Prenumerationer</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="104"/>
+        <location filename="../qml/PodcastsPage.qml" line="99"/>
         <source>No subscriptions</source>
         <translation>Inga prenumerationer</translation>
     </message>
