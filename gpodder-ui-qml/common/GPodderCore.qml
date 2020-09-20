@@ -74,7 +74,7 @@ Python {
         importModule('main', function() {
             py.call('main.initialize', [py.progname], function() {
                 py.ready = true;
-                emit(initialized());
+                initialized();
             });
         });
     }

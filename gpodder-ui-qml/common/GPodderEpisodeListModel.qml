@@ -28,7 +28,7 @@ ListModel {
 
     property int podcast_id: -1
 
-    property bool cached: false
+    property bool changeConfig: false
 
     property var queries: ({
         All: '',
@@ -58,6 +58,7 @@ ListModel {
     property int currentFilterIndex: 0
     property string currentCustomQuery: queries.All
 
+
     function getFormattedLabel(i){
         if(i === undefined){
             i = currentFilterIndex
@@ -81,7 +82,7 @@ ListModel {
         setQueryEx(filters[index].query,true);
     }
 
-    function setQueryFromUpdate(query) {
+    function setQueryFromConfigUpdate(query) {
         setQueryEx(query, false);
     }
 
@@ -90,15 +91,15 @@ ListModel {
     }
 
     function setQueryEx(query, update) {
-        console.info("changing query from '",currentCustomQuery,"' to '",query,"',")
-        if(query === currentCustomQuery && !filters[currentFilterIndex].hasParameters){
-            console.debug("filter already selected, skipping...");
+        console.info(podcast_id,"changing query from '",currentCustomQuery,"' to '",query,"',")
+        if(ready && query === currentCustomQuery && !filters[currentFilterIndex].hasParameters){
+            console.debug(podcast_id, "filter already selected, skipping...");
             return;
         }
         for (var i=0; i<filters.length; i++) {
             if (filters[i].query === query) {                
                 currentCustomQuery = query;
-                if (update) {
+                if (update && changeConfig) {
                    updateConfig();
                 }
                 currentFilterIndex = i;
@@ -130,7 +131,7 @@ ListModel {
             query = query.replace("%s",filters[currentFilterIndex].searchTerm)
         }
 
-        console.info("reloading with query: '",query,"'.")
+        console.info(podcast_id, "reloading with query: '",query,"'.")
 
         ready = false;
         py.call('main.load_episodes', [podcast_id, query], function (episodes) {

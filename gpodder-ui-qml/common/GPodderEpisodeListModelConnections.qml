@@ -51,7 +51,7 @@ Connections {
 
     onConfigChanged: {
         if (key === 'ui.qml.episode_list.filter_eql') {
-            model.setQueryFromUpdate(value);
+            model.setQueryFromConfigUpdate(value);
         }
     }
 }

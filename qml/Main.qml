@@ -66,7 +66,7 @@ PodcastsPage {
         onInitialized: {
             py.getConfig( 'ui.qml.episode_list.filter_eql', function (result) {
                 console.debug("got query from storage: '",result,"'")
-                allPodcastsEpisodesModel.setQueryFromUpdate(result);
+                allPodcastsEpisodesModel.setQuery(result);
             });
         }
     }
@@ -84,6 +84,7 @@ PodcastsPage {
 
     GPodderEpisodeListModel {
        id: allPodcastsEpisodesModel
+       changeConfig: true
    }
    GPodderEpisodeListModelConnections {
         model: allPodcastsEpisodesModel
