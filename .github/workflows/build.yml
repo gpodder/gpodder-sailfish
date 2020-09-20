@@ -1,0 +1,46 @@
+name: Gpodder build
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Prepare
+      run: mkdir output
+
+    - name: Build armv7hl
+      id: build_armv7hl
+      uses: coderus/github-sfos-build@master
+      with:
+        release: 3.3.0.14
+      
+    - name: Upload build result
+      uses: actions/upload-artifact@v2
+      with:
+        name: gpodder-rpms
+        path: RPMS
+
+    - name: Create release
+      if: contains(github.ref, 'release')
+      run: |
+        set -x
+        assets=()
+        for asset in RPMS/*.rpm; do
+          assets+=("-a" "$asset")
+        done
+        tag_name="${GITHUB_REF##*/}"
+        hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
