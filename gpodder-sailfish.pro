@@ -18,13 +18,13 @@ SOURCES +=
 
 DEPLOY_PATH = /usr/share/$${TARGET}
 
-common.files = gpodder-ui-qml/common/
+common.files = common/
 common.path = $${DEPLOY_PATH}/qml/
 gpodder.files = gpodder-core/src/*
 gpodder.path = $${DEPLOY_PATH}/
 minidb.files = minidb/minidb.py
 minidb.path = $${DEPLOY_PATH}/
-mainpy.files = gpodder-ui-qml/main.py
+mainpy.files = common/main.py
 mainpy.path = $${DEPLOY_PATH}/
 podcastparser.files = podcastparser/podcastparser.py
 podcastparser.path = $${DEPLOY_PATH}/
