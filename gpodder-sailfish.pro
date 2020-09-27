@@ -54,7 +54,7 @@ TRANSLATIONS += \
     translations/harbour-org.gpodder.sailfish-ru.ts \
     translations/harbour-org.gpodder.sailfish.ts
 
-TRANSLATION_SOURCES += /$$_PRO_FILE_PWD_/gpodder-ui-qml/common/
+TRANSLATION_SOURCES += /$$_PRO_FILE_PWD_/common/
 
 DISTFILES += \
     translations/*.ts
