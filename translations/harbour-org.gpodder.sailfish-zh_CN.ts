@@ -217,7 +217,7 @@
         <location filename="../qml/ImportOPML.qml" line="11"/>
         <location filename="../qml/ImportOPML.qml" line="15"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>无</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
