@@ -65,7 +65,7 @@ MediaPlayer {
 
     function enqueueEpisode(episode_id, callback) {
         py.call('main.show_episode', [episode_id], function (episode) {
-            if (episode_id != player.episode && !queue.some(function (queued) {
+            if (episode_id !== player.episode && !queue.some(function (queued) {
                 return queued.episode_id === episode_id;
             })) {
                 queue.push({
@@ -89,7 +89,7 @@ MediaPlayer {
     }
 
     function playbackEpisode(episode_id) {
-        if (episode == episode_id) {
+        if (episode === episode_id) {
             // If the episode is already loaded, just start playing
             play();
             return;
@@ -125,7 +125,7 @@ MediaPlayer {
             seekAfterPlay = true;
 
             // Notify interested parties that the player is now active
-            if (old_episode == 0) {
+            if (old_episode === 0) {
                 player.playerCreated();
             }
 

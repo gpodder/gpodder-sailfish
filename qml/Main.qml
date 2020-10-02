@@ -33,13 +33,13 @@ PodcastsPage {
     onStatusChanged: pgst.handlePageStatusChange(status)
 
     function handlePageStatusChange(st) {
-        if (st == PageStatus.Active) {
+        if (st === PageStatus.Active) {
             createPlayerPage();
         }
     }
 
     function createPlayerPage() {
-        if (player.episode != 0) {
+        if (player.episode !== 0) {
             if (playerPage === undefined) {
                 playerPage = Qt.createComponent('PlayerPage.qml').createObject(pgst);
             }
@@ -77,7 +77,7 @@ PodcastsPage {
 
     function loadPage(filename, properties, replace) {
         var component = Qt.createComponent(filename);
-        if (component.status != Component.Ready) {
+        if (component.status !== Component.Ready) {
             console.log('Error loading ' + filename + ':' +
                 component.errorString());
         }
@@ -86,7 +86,7 @@ PodcastsPage {
             properties = {};
         }
 
-        if (replace != true) {
+        if (!replace) {
             pageStack.push(component.createObject(pgst, properties));
         } else {
             pageStack.replace(component.createObject(pgst, properties));

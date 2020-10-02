@@ -26,7 +26,7 @@ import 'constants.js' as Constants
 ListModel {
     id: episodeListModel
 
-    property var podcast_id: -1
+    property int podcast_id: -1
 
     property var queries: ({
         All: '',

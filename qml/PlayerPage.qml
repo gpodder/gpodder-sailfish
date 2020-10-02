@@ -69,7 +69,7 @@ Page {
 
             SectionHeader {
 				text: qsTr("Now playing")
-				visible: player.episode!=0
+                visible: player.episode !== 0
             }
 
             CustomExpander {
