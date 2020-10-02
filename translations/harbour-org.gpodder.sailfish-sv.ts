@@ -367,18 +367,18 @@
         <translation>Poddinformation</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="135"/>
+        <location filename="../qml/PodcastDetail.qml" line="136"/>
         <source>Section: </source>
         <translation>Sektion: </translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="167"/>
-        <location filename="../qml/PodcastDetail.qml" line="202"/>
+        <location filename="../qml/PodcastDetail.qml" line="168"/>
+        <location filename="../qml/PodcastDetail.qml" line="203"/>
         <source>Edit Section</source>
         <translation>Redigera sektion</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="203"/>
+        <location filename="../qml/PodcastDetail.qml" line="204"/>
         <source>Save</source>
         <translation>Spara</translation>
     </message>

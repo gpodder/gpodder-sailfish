@@ -104,6 +104,7 @@ ListItem {
     Image {
         id: cover
         visible: !updating && coverart
+        asynchronous: true
 
         anchors {
             left: parent.left

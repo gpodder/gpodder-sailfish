@@ -95,6 +95,7 @@ Page {
 
                 Image {
                     id: coverImage
+                    asynchronous: true
                     source: podcastDetail.coverart
                     fillMode: Image.PreserveAspectFit
                     width: parent.width

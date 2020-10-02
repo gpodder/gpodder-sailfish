@@ -34,6 +34,7 @@ ListItem {
 
     Image {
         id: cover
+        asynchronous: true
         opacity: image && status == Image.Ready
         Behavior on opacity { FadeAnimation { } }
 
