@@ -24,13 +24,13 @@ import 'util.js' as Util
 
 ListModel {
     id: podcastListModel
-    property bool firstRun: false
+    property bool initialized: false
 
     function reload() {
         py.call('main.load_podcasts', [], function (podcasts) {
             Util.updateModelFrom(podcastListModel, podcasts);
-            if(!firstRun) {
-                firstRun = true;
+            if(!initialized) {
+                initialized = true;
             }
         });
     }

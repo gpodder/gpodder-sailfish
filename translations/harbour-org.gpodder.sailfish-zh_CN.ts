@@ -32,12 +32,12 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="55"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="50"/>
         <source>Episodes: </source>
         <translation>剧集：</translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="71"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="65"/>
         <source>No episodes found</source>
         <translation>没有找到剧集</translation>
     </message>
@@ -148,22 +148,22 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="89"/>
+        <location filename="../qml/EpisodesPage.qml" line="90"/>
         <source>Mark episodes as old</source>
         <translation>标记剧集已播放</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="96"/>
+        <location filename="../qml/EpisodesPage.qml" line="97"/>
         <source>Enqueue episodes in player</source>
         <translation>排列播放器的剧集</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="78"/>
         <source>Unsubscribe</source>
         <translation>取消订阅</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="117"/>
+        <location filename="../qml/EpisodesPage.qml" line="118"/>
         <source>No episodes found</source>
         <translation>没有找到剧集</translation>
     </message>
@@ -171,42 +171,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="42"/>
         <source>All</source>
         <translation>全部</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
         <source>Fresh</source>
         <translation>新的</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
         <source>Downloaded</source>
         <translation>下载</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
         <source>Unplayed downloads</source>
         <translation>未播放的下载</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Finished downloads</source>
         <translation>已完成的下载</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Hide deleted</source>
         <translation>隐藏已删除</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Deleted episodes</source>
         <translation>已删除剧集</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="50"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>较短的下载（10分钟以内）</translation>
     </message>
@@ -504,7 +504,7 @@
         <translation>订阅</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="92"/>
+        <location filename="../qml/PodcastsPage.qml" line="99"/>
         <source>No subscriptions</source>
         <translation>无订阅</translation>
     </message>
