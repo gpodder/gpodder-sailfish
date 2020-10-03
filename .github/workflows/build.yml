@@ -1,6 +1,9 @@
-name: Gpodder build
+name: Gpodder build release for tag
 
-on:  release
+on:  
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -25,7 +28,6 @@ jobs:
         path: RPMS
 
     - name: Create release
-      if: contains(github.ref, 'release')
       run: |
         set -x
         assets=()
