@@ -41,7 +41,7 @@ import datetime
 import re
 
 logger = logging.getLogger(__name__)
-
+logging.basicConfig(level=logging.INFO)
 
 def run_in_background_thread(f):
     """Decorator for functions that take longer to finish
