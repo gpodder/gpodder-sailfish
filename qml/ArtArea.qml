@@ -5,6 +5,7 @@ Item {
     Image {
         id: episodeArtArea
         visible: episode_art || cover_art ? true : false
+        asynchronous: true
 
         anchors {
             left: parent.left
@@ -18,6 +19,7 @@ Item {
     Image {
         id: podcastArtArea
         visible: episode_art && cover_art ? true : false
+        asynchronous: true
 
         anchors {
             right: parent.right
