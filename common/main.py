@@ -21,9 +21,6 @@
 # to check if the core version is compatible with the QML UI version.
 __version__ = '4.11.9'
 
-import sys
-import os
-
 import pyotherside
 import gpodder
 import podcastparser
@@ -80,7 +77,7 @@ class gPotherSide:
         self.core.shutdown()
 
     def _config_option_changed(self, name, old_value, new_value):
-        logger.warn('Config option changed: %s = %s -> %s', name, old_value, new_value)
+        logger.warning('Config option changed: %s = %s -> %s', name, old_value, new_value)
         pyotherside.send('config-changed', name, new_value)
 
     def _get_episode_by_id(self, episode_id):
@@ -384,7 +381,7 @@ class gPotherSide:
             'title': episode.title,
             'podcast_title': episode.podcast.title,
             'cover_art': self._get_cover(episode.podcast),
-            'episode_art' : self._get_episode_art(episode),
+            'episode_art': self._get_episode_art(episode),
             'source': episode.local_filename(False) if episode.state == gpodder.STATE_DOWNLOADED else episode.url,
             'position': episode.current_position,
             'total': episode.total_time,
@@ -552,7 +549,6 @@ def pill_image_provider(image_id, requested_size):
     text_lx = width / 4
     text_rx = width * 3 / 4
 
-    charheight = font_size
     charwidth = font_size / 1.3
 
     if left_text:

@@ -86,7 +86,7 @@ PodcastsPage {
             properties = {};
         }
 
-        if (!replace) {
+        if (replace !== true) {
             pageStack.push(component.createObject(pgst, properties));
         } else {
             pageStack.replace(component.createObject(pgst, properties));
