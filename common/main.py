@@ -39,6 +39,7 @@ import functools
 import time
 import datetime
 import re
+from concurrent.futures import ThreadPoolExecutor
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -342,23 +343,31 @@ class gPotherSide:
     def check_for_episodes(self, url=None):
         if self._checking_for_new_episodes:
             return
-
         self._checking_for_new_episodes = True
         pyotherside.send('refreshing', True)
         podcasts = [podcast for podcast in self._get_podcasts_sorted() if url is None or podcast.url == url]
-        for index, podcast in enumerate(podcasts):
-            pyotherside.send('refresh-progress', index, len(podcasts))
-            pyotherside.send('updating-podcast', podcast.id)
-            try:
-                podcast.update()
-            except Exception as e:
-                logger.warn('Could not update %s: %s', podcast.url, e, exc_info=True)
-            pyotherside.send('updated-podcast', self.convert_podcast(podcast))
-            pyotherside.send('update-stats')
-
+        logger.info("updating %d podcasts", len(podcasts))
+        with ThreadPoolExecutor() as executor:
+            for idx, p in enumerate(podcasts):
+                executor.submit(self._update_single_podcast, idx, p, len(podcasts))
+        logger.info("finished updating podcasts")
         self.core.save()
         self._checking_for_new_episodes = False
         pyotherside.send('refreshing', False)
+
+    def _update_single_podcast(self, index, podcast, num_podcasts):
+        try:
+            pyotherside.send('refresh-progress', index, num_podcasts)
+            pyotherside.send('updating-podcast', podcast.id)
+            try:
+                podcast.update()
+                logger.info("updated podcast: %d", podcast.id)
+            except Exception as e:
+                logger.warning('Could not update %s: %s', podcast.url, e, exc_info=True)
+            pyotherside.send('updated-podcast', self.convert_podcast(podcast))
+            pyotherside.send('update-stats')
+        except Exception as e:
+            logger.warning('Error in update task', e, exc_info=True)
 
     def _get_episode_art(self, episode):
         filename = self.core.cover_downloader.get_cover(episode.podcast, False, episode)
