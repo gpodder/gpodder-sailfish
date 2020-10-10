@@ -31,10 +31,10 @@ MprisPlayer {
     // Mpris2 Player Interface
     canControl: true
 
-    canGoNext: player.playbackState != MediaPlayer.StoppedState
-    canGoPrevious: player.playbackState != MediaPlayer.StoppedState
-    canPause: player.playbackState != MediaPlayer.StoppedState
-    canPlay: player.playbackState != MediaPlayer.StoppedState
+    canGoNext: player.playbackState !== MediaPlayer.StoppedState
+    canGoPrevious: player.playbackState !== MediaPlayer.StoppedState
+    canPause: player.playbackState !== MediaPlayer.StoppedState
+    canPlay: player.playbackState !== MediaPlayer.StoppedState
     canSeek: false
 
     loopStatus: Mpris.None
@@ -42,8 +42,8 @@ MprisPlayer {
     volume: 1
 
     playbackStatus: {
-        if (player.playbackState == MediaPlayer.PlayingState) return Mpris.Playing
-        else if (player.playbackState == MediaPlayer.PausedState) return Mpris.Paused
+        if (player.playbackState === MediaPlayer.PlayingState) return Mpris.Playing
+        else if (player.playbackState === MediaPlayer.PausedState) return Mpris.Paused
         else return Mpris.Stopped
     }
 

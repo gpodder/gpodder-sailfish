@@ -35,14 +35,14 @@ Connections {
     }
     onUpdatedEpisode: {
         for (var i=0; i<episodeListModel.count; i++) {
-            if (episodeListModel.get(i).id == episode.id) {
+            if (episodeListModel.get(i).id === episode.id) {
                 episodeListModel.set(i, episode);
                 break;
             }
         }
     }
     onEpisodeListChanged: {
-        if (episodeListModel.podcast_id == podcast_id) {
+        if (episodeListModel.podcast_id === podcast_id) {
             episodeListModel.reload();
         }
     }

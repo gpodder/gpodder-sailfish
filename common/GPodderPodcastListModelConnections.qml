@@ -30,7 +30,7 @@ Connections {
     onUpdatingPodcast: {
         for (var i=0; i<podcastListModel.count; i++) {
             var podcast = podcastListModel.get(i);
-            if (podcast.id == podcast_id) {
+            if (podcast.id === podcast_id) {
                 podcastListModel.setProperty(i, 'updating', true);
                 break;
             }
@@ -39,7 +39,7 @@ Connections {
 
     onUpdatedPodcast: {
         for (var i=0; i<podcastListModel.count; i++) {
-            if (podcastListModel.get(i).id == podcast.id) {
+            if (podcastListModel.get(i).id === podcast.id) {
                 podcastListModel.set(i, podcast);
                 break;
             }
