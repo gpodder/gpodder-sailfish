@@ -31,6 +31,7 @@ CoverBackground {
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width
         height: sourceSize.height * width / sourceSize.width
+        asynchronous: true
     }
 
     PodcastsCover {

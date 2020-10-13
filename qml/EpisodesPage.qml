@@ -79,7 +79,7 @@ Page {
                 onClicked: {
                     remorse.execute("Unsubscribing", function() {
                         py.call('main.unsubscribe', [episodesPage.podcast_id]);
-                        if (pageStack.currentPage == episodesPage) {
+                        if (pageStack.currentPage === episodesPage) {
                             pageStack.pop();
                         }
                     })

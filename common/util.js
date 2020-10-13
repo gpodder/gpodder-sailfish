@@ -32,12 +32,12 @@ function updateModelFrom(model, data) {
     }
 }
 
-function updateModelWith(model, key, value, update) {
-    for (var row=0; row<model.count; row++) {
+function updateModelWith(model, idKey, id, propertiesToSet) {
+    for (var row = 0; row < model.count; row++) {
         var current = model.get(row);
-        if (current[key] == value) {
-            for (var key in update) {
-                model.setProperty(row, key, update[key]);
+        if (current[idKey] === id) {
+            for (var key in propertiesToSet) {
+                model.setProperty(row, key, propertiesToSet[key]);
             }
         }
     }

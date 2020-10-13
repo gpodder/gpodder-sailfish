@@ -26,7 +26,7 @@ import 'common/util.js' as Util
 
 ListItem {
     id: episodeItem
-    property bool isPlaying: ((player.episode == id) && player.isPlaying)
+    property bool isPlaying: ((player.episode === id) && player.isPlaying)
     property variant mime: mime_type.split('/')
 
     Rectangle {
@@ -81,7 +81,7 @@ ListItem {
             IconMenuItem {
                 text: qsTr("Download")
                 icon.source: 'image://theme/icon-m-download'
-                visible: downloadState != Constants.state.downloaded
+                visible: downloadState !== Constants.state.downloaded
                 onClicked: {
                     episodeItem.closeMenu();
                     py.call('main.download_episode', [id]);
@@ -93,7 +93,7 @@ ListItem {
                 icon.source: 'image://theme/icon-m-add'
 				onClicked: {
                     player.enqueueEpisode(id, function () {
-						if (player.episode==0) {
+                        if (player.episode === 0) {
 								player.jumpToQueueIndex(0);
 						}
 					});
@@ -104,7 +104,7 @@ ListItem {
             IconMenuItem {
                 text: qsTr("Delete")
                 icon.source: 'image://theme/icon-m-delete'
-                visible: downloadState != Constants.state.deleted
+                visible: downloadState !== Constants.state.deleted
                 onClicked: {
                     episodeItem.closeMenu();
                     var ctx = { py: py, id: id };

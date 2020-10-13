@@ -217,7 +217,7 @@
         <location filename="../qml/ImportOPML.qml" line="11"/>
         <location filename="../qml/ImportOPML.qml" line="15"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>无</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
@@ -367,18 +367,18 @@
         <translation>播客详情</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="135"/>
+        <location filename="../qml/PodcastDetail.qml" line="136"/>
         <source>Section: </source>
         <translation>片段：</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="167"/>
-        <location filename="../qml/PodcastDetail.qml" line="202"/>
+        <location filename="../qml/PodcastDetail.qml" line="168"/>
+        <location filename="../qml/PodcastDetail.qml" line="203"/>
         <source>Edit Section</source>
         <translation>编辑片段</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastDetail.qml" line="203"/>
+        <location filename="../qml/PodcastDetail.qml" line="204"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>

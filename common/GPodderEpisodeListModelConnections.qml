@@ -35,7 +35,7 @@ Connections {
             {'playbackProgress': progress});
     }
     onUpdatedEpisode: {
-        for (var i=0; i<model.count; i++) {
+        for (var i=0; i < model.count; i++) {
             if (model.get(i).id === episode.id) {
                 model.set(i, episode);
                 break;

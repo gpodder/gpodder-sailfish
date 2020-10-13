@@ -19,10 +19,7 @@
 # of gpodder-core, but we might have a different release schedule later on. If
 # we decide to have parallel releases, we can at least start using this version
 # to check if the core version is compatible with the QML UI version.
-__version__ = '4.11.1'
-
-import sys
-import os
+__version__ = '4.11.9'
 
 import pyotherside
 import gpodder
@@ -39,9 +36,10 @@ import functools
 import time
 import datetime
 import re
+from concurrent.futures import ThreadPoolExecutor
 
 logger = logging.getLogger(__name__)
-
+logging.basicConfig(level=logging.INFO)
 
 def run_in_background_thread(f):
     """Decorator for functions that take longer to finish
@@ -79,7 +77,7 @@ class gPotherSide:
         self.core.shutdown()
 
     def _config_option_changed(self, name, old_value, new_value):
-        logger.warn('Config option changed: %s = %s -> %s', name, old_value, new_value)
+        logger.warning('Config option changed: %s = %s -> %s', name, old_value, new_value)
         pyotherside.send('config-changed', name, new_value)
 
     def _get_episode_by_id(self, episode_id):
@@ -342,23 +340,31 @@ class gPotherSide:
     def check_for_episodes(self, url=None):
         if self._checking_for_new_episodes:
             return
-
         self._checking_for_new_episodes = True
         pyotherside.send('refreshing', True)
         podcasts = [podcast for podcast in self._get_podcasts_sorted() if url is None or podcast.url == url]
-        for index, podcast in enumerate(podcasts):
-            pyotherside.send('refresh-progress', index, len(podcasts))
-            pyotherside.send('updating-podcast', podcast.id)
-            try:
-                podcast.update()
-            except Exception as e:
-                logger.warn('Could not update %s: %s', podcast.url, e, exc_info=True)
-            pyotherside.send('updated-podcast', self.convert_podcast(podcast))
-            pyotherside.send('update-stats')
-
+        logger.info("updating %d podcasts", len(podcasts))
+        with ThreadPoolExecutor() as executor:
+            for idx, p in enumerate(podcasts):
+                executor.submit(self._update_single_podcast, idx, p, len(podcasts))
+        logger.info("finished updating podcasts")
         self.core.save()
         self._checking_for_new_episodes = False
         pyotherside.send('refreshing', False)
+
+    def _update_single_podcast(self, index, podcast, num_podcasts):
+        try:
+            pyotherside.send('refresh-progress', index, num_podcasts)
+            pyotherside.send('updating-podcast', podcast.id)
+            try:
+                podcast.update()
+                logger.info("updated podcast: %d", podcast.id)
+            except Exception as e:
+                logger.warning('Could not update %s: %s', podcast.url, e, exc_info=True)
+            pyotherside.send('updated-podcast', self.convert_podcast(podcast))
+            pyotherside.send('update-stats')
+        except Exception as e:
+            logger.warning('Error in update task', e, exc_info=True)
 
     def _get_episode_art(self, episode):
         filename = self.core.cover_downloader.get_cover(episode.podcast, False, episode)
@@ -375,7 +381,7 @@ class gPotherSide:
             'title': episode.title,
             'podcast_title': episode.podcast.title,
             'cover_art': self._get_cover(episode.podcast),
-            'episode_art' : self._get_episode_art(episode),
+            'episode_art': self._get_episode_art(episode),
             'source': episode.local_filename(False) if episode.state == gpodder.STATE_DOWNLOADED else episode.url,
             'position': episode.current_position,
             'total': episode.total_time,
@@ -543,7 +549,6 @@ def pill_image_provider(image_id, requested_size):
     text_lx = width / 4
     text_rx = width * 3 / 4
 
-    charheight = font_size
     charwidth = font_size / 1.3
 
     if left_text:
