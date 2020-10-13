@@ -39,13 +39,12 @@ Page {
     RemorsePopup { id: remorse }
 
     Component.onCompleted: {
-        episodeListModel.podcast_id = podcast_id;
-        episodeListModel.setQuery(episodeListModel.queries.All);
-        episodeListModel.reload();
+        singlePodcastEpisodesModel.podcast_id = podcast_id;
+        singlePodcastEpisodesModel.setQuery(singlePodcastEpisodesModel.queries.All);
     }
 
     BusyIndicator {
-        visible: !episodeListModel.ready
+        visible: !singlePodcastEpisodesModel.ready
         running: visible
         anchors.centerIn: parent
     }
@@ -69,8 +68,10 @@ Page {
             }
         }
 
-        model: GPodderEpisodeListModel { id: episodeListModel }
-        GPodderEpisodeListModelConnections {}
+        model: GPodderEpisodeListModel { id: singlePodcastEpisodesModel }
+        GPodderEpisodeListModelConnections {
+            model: singlePodcastEpisodesModel
+        }
 
         PullDownMenu {
             MenuItem {
@@ -101,19 +102,19 @@ Page {
                         }
                     });
 
-                    episodeListModel.forEachEpisode(function (episode) {
+                    singlePodcastEpisodesModel.forEachEpisode(function (episode) {
                         player.enqueueEpisode(episode.id, startPlayback);
                     });
                 }
             }
 
-            EpisodeListFilterItem { model: episodeListModel }
+            EpisodeListFilterItem { model: singlePodcastEpisodesModel }
         }
 
         delegate: EpisodeItem {}
 
         ViewPlaceholder {
-            enabled: episodeList.count == 0 && episodeListModel.ready
+            enabled: episodeList.count == 0 && singlePodcastEpisodesModel.ready
             text: qsTr("No episodes found")
         }
     }

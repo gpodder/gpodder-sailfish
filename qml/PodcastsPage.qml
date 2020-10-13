@@ -83,12 +83,19 @@ Page {
 
         model: podcastListModel
 
+        BusyIndicator {
+            size: BusyIndicatorSize.Large
+            anchors.centerIn: parent
+            visible: !podcastListModel.initialized
+            running: visible
+        }
+
         delegate: PodcastItem {
             onClicked: pgst.loadPage('EpisodesPage.qml', {'podcast_id': id, 'title': title});
         }
 
         ViewPlaceholder {
-            enabled: podcastListModel.count === 0 && podcastListModel.firstRun
+            enabled: podcastListModel.count === 0 && podcastListModel.initialized
             text: qsTr("No subscriptions")
         }
     }

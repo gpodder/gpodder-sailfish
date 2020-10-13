@@ -32,12 +32,12 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="55"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="50"/>
         <source>Episodes: </source>
         <translation>Episoden: </translation>
     </message>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="71"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="65"/>
         <source>No episodes found</source>
         <translation>Keine Episoden gefunden</translation>
     </message>
@@ -148,22 +148,22 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="89"/>
+        <location filename="../qml/EpisodesPage.qml" line="90"/>
         <source>Mark episodes as old</source>
         <translation>Markiere Folge als gehört</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="96"/>
+        <location filename="../qml/EpisodesPage.qml" line="97"/>
         <source>Enqueue episodes in player</source>
         <translation>Episoden zur Playliste hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="78"/>
         <source>Unsubscribe</source>
         <translation>Abonnement aufheben</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="117"/>
+        <location filename="../qml/EpisodesPage.qml" line="118"/>
         <source>No episodes found</source>
         <translation>Keine Episoden gefunden</translation>
     </message>
@@ -171,42 +171,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="42"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
         <source>Fresh</source>
         <translation>Neu</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
         <source>Downloaded</source>
         <translation>Heruntergeladen</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
         <source>Unplayed downloads</source>
         <translation>Heruntergeladen &amp; Nicht abgespielt</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Finished downloads</source>
         <translation>Heruntergeladen &amp; Fertig</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Hide deleted</source>
         <translation>Gelöschte ausblenden</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Deleted episodes</source>
         <translation>Gelöscht</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="50"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>Heruntergeladen &amp; Länge &lt; 10min</translation>
     </message>
@@ -504,7 +504,7 @@
         <translation>Abonnierte Podcasts</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="92"/>
+        <location filename="../qml/PodcastsPage.qml" line="99"/>
         <source>No subscriptions</source>
         <translation>Keine abonnierten Podcasts</translation>
     </message>
