@@ -97,42 +97,42 @@
 <context>
     <name>EpisodeItem</name>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="70"/>
+        <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Pause</source>
         <translation>Паузиране</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="70"/>
+        <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Play</source>
         <translation>Пускане</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="82"/>
+        <location filename="../qml/EpisodeItem.qml" line="92"/>
         <source>Download</source>
         <translation>Изтегляне</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="92"/>
+        <location filename="../qml/EpisodeItem.qml" line="102"/>
         <source>Enqueue</source>
         <translation>Към опашката</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="105"/>
+        <location filename="../qml/EpisodeItem.qml" line="115"/>
         <source>Delete</source>
         <translation>Изтриване</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="111"/>
+        <location filename="../qml/EpisodeItem.qml" line="121"/>
         <source>Deleting</source>
         <translation>Изтрива се</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="119"/>
+        <location filename="../qml/EpisodeItem.qml" line="129"/>
         <source>Toggle New</source>
         <translation>Като нов</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="125"/>
+        <location filename="../qml/EpisodeItem.qml" line="135"/>
         <source>Shownotes</source>
         <translation>Описание</translation>
     </message>
@@ -512,34 +512,39 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="53"/>
+        <location filename="../qml/SettingsPage.qml" line="55"/>
         <source>About</source>
         <translation>Относно</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="63"/>
+        <location filename="../qml/SettingsPage.qml" line="65"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="67"/>
+        <location filename="../qml/SettingsPage.qml" line="69"/>
         <source>YouTube</source>
         <translation>YouTube</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="73"/>
+        <location filename="../qml/SettingsPage.qml" line="75"/>
         <source>API Key (v3)</source>
         <translation>API ключ (v3)</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="82"/>
+        <location filename="../qml/SettingsPage.qml" line="84"/>
         <source>Limits</source>
         <translation>Ограничения</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="88"/>
+        <location filename="../qml/SettingsPage.qml" line="90"/>
         <source>Maximum episodes per feed</source>
         <translation>Максимален брой епизоди за RSS емисия</translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="100"/>
+        <source>Allow Downloads via mobile data</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

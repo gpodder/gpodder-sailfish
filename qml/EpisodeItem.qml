@@ -28,6 +28,7 @@ ListItem {
     id: episodeItem
     property bool isPlaying: ((player.episode === id) && player.isPlaying)
     property variant mime: mime_type.split('/')
+    property var downloaded: downloadState === 1
 
     Rectangle {
         anchors.fill: parent
@@ -73,8 +74,16 @@ ListItem {
                     if (episodeItem.isPlaying) {
                         player.pause();
                     } else {
-                        player.playbackEpisode(id);
+                        if(downloaded === false){
+                            connectionUtil.executeIfConnectionAllowed(doPlayback)
+                        }else {
+                            doPlayback();
+                        }
                     }
+                }
+
+                function doPlayback(){
+                    player.playbackEpisode(id);
                 }
             }
 

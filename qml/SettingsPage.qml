@@ -35,10 +35,12 @@ Page {
             py.getConfig('limit.episodes', function (value) {
                 limit_episodes.value = value;
             });
+            cellularDownloadsEnabled.checked = configCellularDownloadsEnabled.value;
         } else if (status === PageStatus.Deactivating) {
             py.setConfig('plugins.youtube.api_key_v3', youtube_api_key_v3.text);
             py.setConfig('limit.episodes', parseInt(limit_episodes.value));
             youtube_api_key_v3.focus = false;
+            configCellularDownloadsEnabled.value = cellularDownloadsEnabled.checked
         }
     }
 
@@ -92,6 +94,13 @@ Page {
                 maximumValue: 1000
                 stepSize: 100
             }
+
+            TextSwitch {
+                id: cellularDownloadsEnabled
+                text: qsTr("Allow Downloads via mobile data")
+                checked: configCellularDownloadsEnabled.value
+            }
+
         }
     }
 }

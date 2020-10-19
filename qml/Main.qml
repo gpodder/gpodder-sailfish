@@ -20,8 +20,10 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Nemo.Configuration 1.0
 
 import 'common'
+import 'utils'
 
 PodcastsPage {
     id: pgst
@@ -72,6 +74,10 @@ PodcastsPage {
     MprisPlayer {}
     MediaKeys {}
 
+    ConnectionUtil {
+        id: connectionUtil
+    }
+
     GPodderPodcastListModel { id: podcastListModel }
     GPodderPodcastListModelConnections {}
 
@@ -99,4 +105,11 @@ PodcastsPage {
         visible: !py.ready
         running: visible
     }
+
+    ConfigurationValue {
+        id: configCellularDownloadsEnabled
+        key: "/apps/ControlPanel/gpodder/cellularDownloadsEnabled"
+        defaultValue: false
+    }
+
 }

@@ -97,42 +97,42 @@
 <context>
     <name>EpisodeItem</name>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="70"/>
+        <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Pause</source>
         <translation>Pauza</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="70"/>
+        <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Play</source>
         <translation>Odtwarzaj</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="82"/>
+        <location filename="../qml/EpisodeItem.qml" line="92"/>
         <source>Download</source>
         <translation>Pobierz</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="92"/>
+        <location filename="../qml/EpisodeItem.qml" line="102"/>
         <source>Enqueue</source>
         <translation>Kolejkuj</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="105"/>
+        <location filename="../qml/EpisodeItem.qml" line="115"/>
         <source>Delete</source>
         <translation>Usuń</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="111"/>
+        <location filename="../qml/EpisodeItem.qml" line="121"/>
         <source>Deleting</source>
         <translation>Usuwanie</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="119"/>
+        <location filename="../qml/EpisodeItem.qml" line="129"/>
         <source>Toggle New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="125"/>
+        <location filename="../qml/EpisodeItem.qml" line="135"/>
         <source>Shownotes</source>
         <translation type="unfinished">Opis odcinka</translation>
     </message>
@@ -512,34 +512,39 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="53"/>
+        <location filename="../qml/SettingsPage.qml" line="55"/>
         <source>About</source>
         <translation>O gPodder</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="63"/>
+        <location filename="../qml/SettingsPage.qml" line="65"/>
         <source>Settings</source>
         <translation>Ustawienia</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="67"/>
+        <location filename="../qml/SettingsPage.qml" line="69"/>
         <source>YouTube</source>
         <translation>YouTube</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="73"/>
+        <location filename="../qml/SettingsPage.qml" line="75"/>
         <source>API Key (v3)</source>
         <translation>Klucz API (v3)</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="82"/>
+        <location filename="../qml/SettingsPage.qml" line="84"/>
         <source>Limits</source>
         <translation>Limity</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="88"/>
+        <location filename="../qml/SettingsPage.qml" line="90"/>
         <source>Maximum episodes per feed</source>
         <translation>Maksymalna liczba odcinków na kanał</translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="100"/>
+        <source>Allow Downloads via mobile data</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
