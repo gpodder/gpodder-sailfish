@@ -99,42 +99,42 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Pause</source>
-        <translation>Паузиране</translation>
+        <translation type="unfinished">Паузиране</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Play</source>
-        <translation>Пускане</translation>
+        <translation type="unfinished">Пускане</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="92"/>
+        <location filename="../qml/EpisodeItem.qml" line="103"/>
         <source>Download</source>
-        <translation>Изтегляне</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="102"/>
+        <location filename="../qml/EpisodeItem.qml" line="113"/>
         <source>Enqueue</source>
-        <translation>Към опашката</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="115"/>
+        <location filename="../qml/EpisodeItem.qml" line="126"/>
         <source>Delete</source>
-        <translation>Изтриване</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="121"/>
+        <location filename="../qml/EpisodeItem.qml" line="132"/>
         <source>Deleting</source>
-        <translation>Изтрива се</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="129"/>
+        <location filename="../qml/EpisodeItem.qml" line="140"/>
         <source>Toggle New</source>
-        <translation>Като нов</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="135"/>
+        <location filename="../qml/EpisodeItem.qml" line="146"/>
         <source>Shownotes</source>
-        <translation>Описание</translation>
+        <translation type="unfinished">Описание</translation>
     </message>
 </context>
 <context>

@@ -23,6 +23,7 @@ import Sailfish.Silica 1.0
 
 import 'common/constants.js' as Constants
 import 'common/util.js' as Util
+import 'connectionManagement'
 
 ListItem {
     id: episodeItem
@@ -75,16 +76,26 @@ ListItem {
                         player.pause();
                     } else {
                         if(downloaded === false){
-                            connectionUtil.executeIfConnectionAllowed(doPlayback)
+                            // curried function below to create a closure
+                            // see e.g. https://stackoverflow.com/questions/28898526
+                            connectionUtil.executeIfConnectionAllowed(
+                                function(callee, argument1, argument2){
+                                    return function(){
+                                        callee(argument1,argument2)};
+                                }(doPlayback,player,id)
+                            );
                         }else {
-                            doPlayback();
+                            doPlayback(player,id);
                         }
                     }
                 }
 
-                function doPlayback(){
-                    player.playbackEpisode(id);
+                function doPlayback(mediaPlayer,id){
+                    console.info("playing episode", id);
+                    mediaPlayer.playbackEpisode(id);
                 }
+
+
             }
 
             IconMenuItem {

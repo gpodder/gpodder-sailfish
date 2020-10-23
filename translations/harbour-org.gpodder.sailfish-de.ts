@@ -107,32 +107,32 @@
         <translation type="unfinished">Abspielen</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="92"/>
+        <location filename="../qml/EpisodeItem.qml" line="103"/>
         <source>Download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="102"/>
+        <location filename="../qml/EpisodeItem.qml" line="113"/>
         <source>Enqueue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="115"/>
+        <location filename="../qml/EpisodeItem.qml" line="126"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="121"/>
+        <location filename="../qml/EpisodeItem.qml" line="132"/>
         <source>Deleting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="129"/>
+        <location filename="../qml/EpisodeItem.qml" line="140"/>
         <source>Toggle New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="135"/>
+        <location filename="../qml/EpisodeItem.qml" line="146"/>
         <source>Shownotes</source>
         <translation type="unfinished">Shownotes</translation>
     </message>

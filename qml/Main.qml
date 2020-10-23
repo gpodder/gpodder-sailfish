@@ -23,7 +23,7 @@ import Sailfish.Silica 1.0
 import Nemo.Configuration 1.0
 
 import 'common'
-import 'utils'
+import 'connectionManagement'
 
 PodcastsPage {
     id: pgst
@@ -74,7 +74,7 @@ PodcastsPage {
     MprisPlayer {}
     MediaKeys {}
 
-    ConnectionUtil {
+    ConnectionUtils {
         id: connectionUtil
     }
 

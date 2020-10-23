@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Nemo.DBus 2.0
 
 QtObject {
+
     property DBusInterface connmanWifi: DBusInterface {
           bus: DBus.SystemBus
           service: "net.connman"
@@ -35,9 +36,12 @@ QtObject {
     }
 
 
-    function downloadBlockedDialog(callback){
-        console.info("suppressing playback, because not on wifi!");
-        pageStack.push(Qt.resolvedUrl("../ConnectionBlockedDialog.qml"),{"callback":callback})
+    /**
+      * @return signal binding for executing callback anyway
+      **/
+    function downloadBlockedDialog(callback){        
+        console.info("creating connection blocked dialog, because not on wifi!");
+        pageStack.push("ConnectionBlockedDialog.qml").accepted.connect(callback)
     }
 
     function executeIfConnectionAllowed(callback){

@@ -99,40 +99,40 @@
     <message>
         <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Pause</source>
-        <translation>Pauza</translation>
+        <translation type="unfinished">Pauza</translation>
     </message>
     <message>
         <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Play</source>
-        <translation>Odtwarzaj</translation>
+        <translation type="unfinished">Odtwarzaj</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="92"/>
+        <location filename="../qml/EpisodeItem.qml" line="103"/>
         <source>Download</source>
-        <translation>Pobierz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="102"/>
+        <location filename="../qml/EpisodeItem.qml" line="113"/>
         <source>Enqueue</source>
-        <translation>Kolejkuj</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="115"/>
+        <location filename="../qml/EpisodeItem.qml" line="126"/>
         <source>Delete</source>
-        <translation>Usuń</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="121"/>
+        <location filename="../qml/EpisodeItem.qml" line="132"/>
         <source>Deleting</source>
-        <translation>Usuwanie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="129"/>
+        <location filename="../qml/EpisodeItem.qml" line="140"/>
         <source>Toggle New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="135"/>
+        <location filename="../qml/EpisodeItem.qml" line="146"/>
         <source>Shownotes</source>
         <translation type="unfinished">Opis odcinka</translation>
     </message>
