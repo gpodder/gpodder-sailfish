@@ -52,7 +52,7 @@ Page {
         VerticalScrollDecorator { flickable: filteredEpisodesList }
 
         header: PageHeader {
-            title: qsTr("Episodes: ") + filterItem.currentFilter
+            title: filterItem.currentFilter + ": " + filteredEpisodesList.count
         }
 
         model: GPodderEpisodeListModel { id: episodeListModel }
