@@ -32,11 +32,6 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="55"/>
-        <source>Episodes: </source>
-        <translation>Odcinki:</translation>
-    </message>
-    <message>
         <location filename="../qml/AllEpisodesPage.qml" line="71"/>
         <source>No episodes found</source>
         <translation>Brak odcinków</translation>

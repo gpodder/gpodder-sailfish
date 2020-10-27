@@ -32,11 +32,6 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="55"/>
-        <source>Episodes: </source>
-        <translation>Епизоди: </translation>
-    </message>
-    <message>
         <location filename="../qml/AllEpisodesPage.qml" line="71"/>
         <source>No episodes found</source>
         <translation>Няма намерени епизоди</translation>
@@ -217,7 +212,8 @@
         <location filename="../qml/ImportOPML.qml" line="11"/>
         <location filename="../qml/ImportOPML.qml" line="15"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Никой</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
