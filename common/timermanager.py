@@ -29,7 +29,7 @@ class TimerManager():
 [Unit]
 Description=%s service
 [Service]
-ExecStart=/bin/bash -c "echo 'gpodder service started!' | systemd-cat "
+ExecStart=/usr/share/harbour-org.gpodder.sailfish/service.py 
             """ % self.unit_name)
 
     def write_timer(self, interval="*-*-* *:*:0"):
