@@ -478,12 +478,7 @@ class gPotherSide:
             self.timermanager.write_service()
         self.timermanager.write_timer(interval)
         self.timermanager.activate_timer()
-        self.set_config_value("scheduled_update_interval", interval)
-
-    def get_scheduled_update(self):
-        return self.get_config_value("scheduled_update_interval")
-
-
+        self.set_config_value("update.scheduled_interval", interval)
 
 
 PILL_TEMPLATE = """<?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -625,3 +620,5 @@ get_config_value = gpotherside.get_config_value
 get_directory_providers = gpotherside.get_directory_providers
 get_directory_entries = gpotherside.get_directory_entries
 show_podcast = gpotherside.show_podcast
+disable_scheduled_update = gpotherside.disable_scheduled_update
+set_scheduled_update = gpotherside.set_scheduled_update
