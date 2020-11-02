@@ -37,6 +37,7 @@ import time
 import datetime
 import re
 from concurrent.futures import ThreadPoolExecutor
+from timermanager import TimerManager
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -64,6 +65,7 @@ class gPotherSide:
     def __init__(self):
         self.core = None
         self._checking_for_new_episodes = False
+        self.timermanager = TimerManager()
 
     def initialize(self, progname):
         assert self.core is None, 'Already initialized'
@@ -448,13 +450,13 @@ class gPotherSide:
             return p.priority
 
         return [{
-            'label': provider.name,
+            'label': provider.unit_name,
             'can_search': provider.kind == provider.PROVIDER_SEARCH
         } for provider in sorted(registry.directory.select(select_provider), key=provider_sort_key, reverse=True)]
 
     def get_directory_entries(self, provider, query):
         def match_provider(p):
-            return p.name == provider
+            return p.unit_name == provider
 
         for provider in registry.directory.select(match_provider):
             return [{
@@ -466,6 +468,22 @@ class gPotherSide:
             } for e in provider.on_string(query)]
 
         return []
+
+    def disable_scheduled_update(self):
+        if self.timermanager.timer_and_service_exist():
+            self.timermanager.deactivate_timer()
+
+    def set_scheduled_update(self, interval):
+        if not self.timermanager.timer_and_service_exist():
+            self.timermanager.write_service()
+        self.timermanager.write_timer(interval)
+        self.timermanager.activate_timer()
+        self.set_config_value("scheduled_update_interval", interval)
+
+    def get_scheduled_update(self):
+        return self.get_config_value("scheduled_update_interval")
+
+
 
 
 PILL_TEMPLATE = """<?xml version="1.0" encoding="UTF-8" standalone="no"?>
