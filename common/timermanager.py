@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 class TimerManager():
     def __init__(self, unit_name="harbour-org.gpodder.sailfish",
-                 unit_file_location="/home/defaultuser/.config/systemd/user/"):
+                 unit_file_location=pathlib.Path.home().joinpath(".config/systemd/user/")):
         self.unit_name = unit_name
         self.prefix = unit_file_location
         self.prefixpath = pathlib.Path(self.prefix)
