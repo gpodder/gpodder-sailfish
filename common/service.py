@@ -35,7 +35,7 @@ if not args.dry_run:
 bus = dbus.SessionBus(private=False)
 notify = dbus.Interface(bus.get_object("org.freedesktop.Notifications", "/org/freedesktop/Notifications"),
                         'org.freedesktop.Notifications')
-notify.Notify(appname, 200, "/usr/share/icons/hicolor/86x86/apps/%s.png" %appname,
+notify.Notify("GPodder", 200, "/usr/share/icons/hicolor/86x86/apps/%s.png" %appname,
               _('gpodder.refresh_notification_title'),
               _('gpodder.refresh_notification_body'),
               ["", "default", "", "app"],
