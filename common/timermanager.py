@@ -29,7 +29,8 @@ class TimerManager():
 [Unit]
 Description=%s service
 [Service]
-ExecStart=/usr/share/harbour-org.gpodder.sailfish/service.py 
+WorkingDirectory=/usr/share/harbour-org.gpodder.sailfish/
+ExecStart=/usr/bin/python3 /usr/share/harbour-org.gpodder.sailfish/service.py 
             """ % self.unit_name)
 
     def write_timer(self, interval="*-*-* *:*:0"):
