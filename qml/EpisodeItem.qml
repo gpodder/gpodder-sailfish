@@ -65,9 +65,9 @@ ListItem {
     onClicked: openMenu()
 
     menu: Component {
-        IconContextMenu {
+        GpodderIconContextMenu {
             IconMenuItem {
-                text: episodeItem.isPlaying ? qsTr("Pause") : qsTr("Play")
+                text: episodeItem.isPlaying ? qsTr('Pause') : qsTr('Play')
                 icon.source: 'image://theme/icon-m-' + (episodeItem.isPlaying ? 'pause' : 'play')
                 onClicked: {
                     if (episodeItem.isPlaying) {

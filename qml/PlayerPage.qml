@@ -188,7 +188,7 @@ Page {
                 height: Theme.itemSizeLarge
                 spacing: Theme.paddingMedium
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: qsTr("- 1 min")
                     icon.source: 'image://theme/icon-m-previous'
 
@@ -198,7 +198,7 @@ Page {
                     }
                 }
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: qsTr("- 10 sec")
                     icon.source: 'image://theme/icon-m-previous'
                     GPodderAutoFire {
@@ -207,7 +207,7 @@ Page {
                     }
                 }
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: player.isPlaying ? qsTr("Pause") : qsTr("Play")
                     onClicked: {
                         if (player.isPlaying) {
@@ -219,7 +219,7 @@ Page {
                     icon.source: player.isPlaying ? 'image://theme/icon-m-pause' : 'image://theme/icon-m-play'
                 }
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: qsTr("+ 10 sec")
                     icon.source: 'image://theme/icon-m-next'
                     GPodderAutoFire {
@@ -228,7 +228,7 @@ Page {
                     }
                 }
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: qsTr("+ 1 min")
                     icon.source: 'image://theme/icon-m-next'
                     GPodderAutoFire {

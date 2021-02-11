@@ -25,7 +25,7 @@ ListItem {
     id: podcastItem
 
     menu: Component {
-        IconContextMenu {
+        GpodderIconContextMenu {
             IconMenuItem {
                 text: qsTr("Refresh")
                 icon.source: 'image://theme/icon-m-sync'
