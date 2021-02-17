@@ -25,8 +25,8 @@ ListItem {
     id: podcastItem
 
     menu: Component {
-        IconContextMenu {
-            IconMenuItem {
+        GpodderIconContextMenu {
+            GpodderIconMenuItem {
                 text: qsTr("Refresh")
                 icon.source: 'image://theme/icon-m-sync'
                 onClicked: {
@@ -35,7 +35,7 @@ ListItem {
                 }
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Unsubscribe")
                 icon.source: 'image://theme/icon-m-delete'
                 onClicked: {
@@ -47,7 +47,7 @@ ListItem {
                 }
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Rename")
                 icon.source: 'image://theme/icon-m-edit'
                 onClicked: {
@@ -65,7 +65,7 @@ ListItem {
                 }
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Change section")
                 icon.source: 'image://theme/icon-m-shuffle'
                 onClicked: {
@@ -83,7 +83,7 @@ ListItem {
                 }
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Podcast detail")
                 icon.source: 'image://theme/icon-m-about'
                 onClicked: {
