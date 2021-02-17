@@ -120,7 +120,7 @@ class gPotherSide:
         filename = self.core.cover_downloader.get_cover(podcast)
         if not filename:
             return ''
-        return 'file://' + filename
+        return filename
 
     def _get_playback_progress(self, episode):
         if episode.total_time > 0 and episode.current_position > 0:
@@ -299,6 +299,7 @@ class gPotherSide:
         # TODO: Handle the case where there is already a DownloadTask
         episode.download(progress_callback)
         self.core.save()
+        self.core.cover_downloader.get_cover(self._get_podcast_by_id(episode.podcast_id), download=True, episode=episode)
         self._episode_state_changed(episode)
 
     def delete_episode(self, episode_id):
@@ -370,7 +371,7 @@ class gPotherSide:
         filename = self.core.cover_downloader.get_cover(episode.podcast, False, episode)
         if not filename:
             return ''
-        return 'file://' + filename
+        return filename
 
     def play_episode(self, episode_id):
         episode = self._get_episode_by_id(episode_id)
