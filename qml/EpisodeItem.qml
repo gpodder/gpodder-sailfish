@@ -66,7 +66,7 @@ ListItem {
 
     menu: Component {
         GpodderIconContextMenu {
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: episodeItem.isPlaying ? qsTr('Pause') : qsTr('Play')
                 icon.source: 'image://theme/icon-m-' + (episodeItem.isPlaying ? 'pause' : 'play')
                 onClicked: {
@@ -78,7 +78,7 @@ ListItem {
                 }
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Download")
                 icon.source: 'image://theme/icon-m-download'
                 visible: downloadState !== Constants.state.downloaded
@@ -88,7 +88,7 @@ ListItem {
                 }
             }
             
-            IconMenuItem {
+            GpodderIconMenuItem {
 				text: qsTr("Enqueue")
                 icon.source: 'image://theme/icon-m-add'
 				onClicked: {
@@ -101,7 +101,7 @@ ListItem {
                 }
 			}
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Delete")
                 icon.source: 'image://theme/icon-m-delete'
                 visible: downloadState !== Constants.state.deleted
@@ -114,14 +114,14 @@ ListItem {
                 }
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 id: toggleNew
                 text: qsTr("Toggle New")
                 icon.source: 'image://theme/icon-m-favorite' + (isNew ? '-selected' : '')
                 onClicked: Util.disableUntilReturn(toggleNew, py, 'main.toggle_new', [id]);
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Shownotes")
                 icon.source: 'image://theme/icon-m-about'
                 onClicked: {
