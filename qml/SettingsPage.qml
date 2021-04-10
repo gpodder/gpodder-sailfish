@@ -35,12 +35,25 @@ Page {
             py.getConfig('limit.episodes', function (value) {
                 limit_episodes.value = value;
             });
+            py.getConfig('update.scheduled_interval', function (value) {
+                if(value) settingsPage.automaticUpdateTime = value;
+            });
         } else if (status === PageStatus.Deactivating) {
             py.setConfig('plugins.youtube.api_key_v3', youtube_api_key_v3.text);
             py.setConfig('limit.episodes', parseInt(limit_episodes.value));
             youtube_api_key_v3.focus = false;
+            if(settingsPage.automaticUpdateTime){
+                py.call('main.set_scheduled_update',[settingsPage.automaticUpdateTime])
+                console.info("setting scheduled updater to:",settingsPage.automaticUpdateTime)
+            }
+            else{
+                py.call('main.disable_scheduled_update')
+                console.info("disabling scheduled updater")
+            }
         }
     }
+
+    property var automaticUpdateTime
 
     SilicaFlickable {
         id: settingsList
@@ -91,6 +104,31 @@ Page {
                 minimumValue: 100
                 maximumValue: 1000
                 stepSize: 100
+            }
+
+            SectionHeader {
+                text: qsTr("Automatic Updates")
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Label{
+                text: settingsPage.automaticUpdateTime
+            }
+
+            Button {
+                id: automatic_update_time
+                text: qsTr("Choose Time")
+                onClicked: {
+                    var dialog = pageStack.push("Sailfish.Silica.TimePickerDialog", {
+                       hour: 6,
+                       minute: 0,
+                       hourMode: DateTime.TwelveHours
+                   })
+                   dialog.accepted.connect(function() {
+                       settingsPage.automaticUpdateTime = "*-*-* "+dialog.hour+":"+dialog.minute+":*"
+                   })
+                }
+
             }
         }
     }

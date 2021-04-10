@@ -507,34 +507,44 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="53"/>
+        <location filename="../qml/SettingsPage.qml" line="66"/>
         <source>About</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="63"/>
+        <location filename="../qml/SettingsPage.qml" line="76"/>
         <source>Settings</source>
         <translation>Impostazioni</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="67"/>
+        <location filename="../qml/SettingsPage.qml" line="80"/>
         <source>YouTube</source>
         <translation>YouTube</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="73"/>
+        <location filename="../qml/SettingsPage.qml" line="86"/>
         <source>API Key (v3)</source>
         <translation>API Key (v3)</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="82"/>
+        <location filename="../qml/SettingsPage.qml" line="95"/>
         <source>Limits</source>
         <translation>Limiti</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="88"/>
+        <location filename="../qml/SettingsPage.qml" line="101"/>
         <source>Maximum episodes per feed</source>
         <translation>Massimo episodi per feed</translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="110"/>
+        <source>Automatic Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="120"/>
+        <source>Choose Time</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -1,0 +1,7 @@
+#: common/service.py:27 common/service.py:29
+msgid "gpodder.refresh_notification_title"
+msgstr "GPodder refreshed"
+
+#: common/service.py:27 common/service.py:29
+msgid "gpodder.refresh_notification_body"
+msgstr "All podcasts have been updated!"
