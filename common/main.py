@@ -39,7 +39,7 @@ import re
 from concurrent.futures import ThreadPoolExecutor
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 def run_in_background_thread(f):
     """Decorator for functions that take longer to finish
