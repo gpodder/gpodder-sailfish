@@ -59,6 +59,52 @@ Page {
             }
         }
 
+        VideoOutput {
+            id: videoOutputPP
+            //anchors.fill: parent
+            source: player
+            visible: player.status >= MediaPlayer.Loaded && player.status <= MediaPlayer.EndOfMedia
+            //flushMode: EmptyFrame //Qt 5.13+ not in SFOS (yet) :(
+            width: column.width
+            height: implicitHeight
+            Drag.active: dragArea.drag.active
+
+            MouseArea {
+                id: dragArea
+                anchors.fill: parent
+
+                onDoubleClicked: {
+                                     if(videoOutputPP.state == "videoFullScreen") {
+                                         videoOutputPP.state = "videoSmall"
+                                     } else {
+                                         videoOutputPP.state = "videoFullScreen"
+                                     }
+                                 }
+                /*onClicked: {
+                    if (player.isPlaying) {
+                        player.pause();
+                    } else {
+                        player.play();
+                    }
+                }*/
+                drag.target: parent
+            }
+            State {
+                name: "videoFullScreen"
+                ParentChange {
+                    target: videoOutputPP
+                    parent: column
+                }
+            }
+            State {
+                name: "videoSmall"
+                ParentChange {
+                    target: videoOutputPP
+                    parent: playQueueRepeater
+                }
+            }
+        }
+
         Column {
             id: column
 
@@ -74,6 +120,7 @@ Page {
             }
 
             CustomExpander {
+                id: expander
                 width: parent.width
                 expandedHeight: width
                 ArtArea {
@@ -90,13 +137,19 @@ Page {
                     height: width
                 }
 
-                VideoOutput {
-                    id: videoOutput
-                    anchors.fill: parent
-                    source: player
-                    visible: player.status >= MediaPlayer.Loaded && player.status <= MediaPlayer.EndOfMedia
-                    //flushMode: EmptyFrame //Qt 5.13+ not in SFOS (yet) :(
-                }
+
+                /*IconButton {
+                    text: "Fullscreen"
+
+                    anchors {
+                        left: videoOutput.left
+                        bottom: videoOutput.bottom
+                    }
+
+                    icon: 'image://theme/icon-m-scale'
+                    onClicked: console.log('[not implemented] switch to fullscreen')
+                }*/
+
             }
 
             Label {
