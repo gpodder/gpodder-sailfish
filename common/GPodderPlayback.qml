@@ -273,4 +273,10 @@ MediaPlayer {
             py.playbackProgress(episode, position / duration);
         }
     }
+
+    onPlaybackRateChanged: {
+        if(isPlaying) {
+            seekAndSync(position - 0.1);
+        }
+    }
 }
