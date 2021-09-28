@@ -122,6 +122,8 @@ MediaPlayer {
                 player.source = source;
             }
 
+            player.playbackRate = speedSlider.sliderValue;
+
             if(episode.position <= (episode.total - 10)) {
                 player.seekTargetSeconds = episode.position;
             } else {
