@@ -276,7 +276,7 @@ MediaPlayer {
 
     onPlaybackRateChanged: {
         if(isPlaying) {
-            seekAndSync(position - 0.1);
+            seekAndSync(position - 0.01);
         }
     }
 }
