@@ -38,6 +38,9 @@ MediaPlayer {
     property bool isPaused: playbackState == MediaPlayer.PausedState
     property bool isStopped: playbackState == MediaPlayer.StoppedState
 
+    property bool changePlaybackRate: false
+    property double requestedPlaybackRate: 1.0
+
     property bool inhibitPositionEvents: false
     property bool seekAfterPlay: false
     property int seekTargetSeconds: 0
@@ -122,10 +125,17 @@ MediaPlayer {
                 player.source = source;
             }
 
-            if(episode.position <= (episode.total - 10)) {
+            if (episode.position <= (episode.total - 10)) {
                 player.seekTargetSeconds = episode.position;
             } else {
                 player.seekTargetSeconds = 0;
+            }
+
+            if (seekTargetSeconds < 1 && playbackRate != 1) {
+                requestedPlaybackRate = playbackRate;
+                playbackRate = 1;
+                changePlaybackRate = true;
+                inhibitPositionEvents = false;
             }
 
             seekAfterPlay = true;
@@ -278,11 +288,23 @@ MediaPlayer {
             // Directly update the playback progress in the episode list
             py.playbackProgress(episode, position / duration);
         }
+        if (changePlaybackRate && position > 1) {
+            playbackRate = requestedPlaybackRate;
+            changePlaybackRate = false;
+            inhibitPositionEvents = true;
+        }
     }
 
     onPlaybackRateChanged: {
-        if(isPlaying) {
-            seekAndSync(position - 0.01);
+        if (isPlaying) {
+            if (position > 1) {
+                seekAndSync(position - 0.01);
+            } else {
+                changePlaybackRate = true;
+                requestedPlaybackRate = playbackRate;
+                playbackRate = 1;
+                inhibitPositionEvents = false;
+            }
         }
     }
 }
