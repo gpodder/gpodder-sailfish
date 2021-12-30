@@ -19,7 +19,7 @@
 # of gpodder-core, but we might have a different release schedule later on. If
 # we decide to have parallel releases, we can at least start using this version
 # to check if the core version is compatible with the QML UI version.
-__version__ = '4.12.0'
+__version__ = '4.12.90'
 
 import pyotherside
 import gpodder
