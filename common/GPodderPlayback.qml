@@ -125,13 +125,15 @@ MediaPlayer {
                 player.source = source;
             }
 
+            // If the last episode was played until the end (within 10s of the end) reset to the beginning.
             if (episode.position <= (episode.total - 10)) {
                 player.seekTargetSeconds = episode.position;
             } else {
                 player.seekTargetSeconds = 0;
             }
 
-            if (seekTargetSeconds < 1 && playbackRate != 1) {
+            // Only allow playbackRate to be changed after 5 seconds so seekAndSync() doesn't rewind to before 0.
+            if (seekTargetSeconds < 5 && playbackRate != 1) {
                 requestedPlaybackRate = playbackRate;
                 playbackRate = 1;
                 changePlaybackRate = true;
@@ -287,17 +289,17 @@ MediaPlayer {
 
             // Directly update the playback progress in the episode list
             py.playbackProgress(episode, position / duration);
-        }
-        if (changePlaybackRate && position > 1) {
-            playbackRate = requestedPlaybackRate;
-            changePlaybackRate = false;
-            inhibitPositionEvents = true;
+
+            if (changePlaybackRate && position > 5) {
+                playbackRate = requestedPlaybackRate;
+                changePlaybackRate = false;
+            }
         }
     }
 
     onPlaybackRateChanged: {
         if (isPlaying) {
-            if (position > 1) {
+            if (position > 5) {
                 seekAndSync(position - 0.01);
             } else {
                 changePlaybackRate = true;
