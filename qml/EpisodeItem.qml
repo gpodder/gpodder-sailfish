@@ -80,7 +80,7 @@ ListItem {
 
             GpodderIconMenuItem {
                 text: qsTr("Download")
-                icon.source: 'image://theme/icon-m-download'
+                icon.source: 'image://theme/icon-m-cloud-download'
                 visible: downloadState !== Constants.state.downloaded
                 onClicked: {
                     episodeItem.closeMenu();
