@@ -26,7 +26,7 @@ MprisPlayer {
 
 
     // Mpris2 Root Interface
-    identity: "Mpris gpodder-sailfish"
+    identity: "gPodder"
 
     // Mpris2 Player Interface
     canControl: true
