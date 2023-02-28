@@ -1,7 +1,7 @@
 
 import QtQuick 2.0
 import QtMultimedia 5.0
-import org.nemomobile.mpris 1.0
+import Amber.Mpris 1.0
 
 MprisPlayer {
 
@@ -11,19 +11,13 @@ MprisPlayer {
 
     property string artist
     property string song
+    property string cover
 
-    onArtistChanged: {
-        var metadata = mprisPlayer.metadata
-        metadata[Mpris.metadataToString(Mpris.Artist)] = artist // Podcast Title
-        mprisPlayer.metadata = metadata
-    }
+    onArtistChanged: mprisPlayer.metaData.contributingArtist = artist
 
-    onSongChanged: {
-        var metadata = mprisPlayer.metadata
-        metadata[Mpris.metadataToString(Mpris.Title)] = song // Episode Title
-        mprisPlayer.metadata = metadata
-    }
+    onSongChanged: mprisPlayer.metaData.title = song
 
+    onCoverChanged: mprisPlayer.metaData.artUrl = cover
 
     // Mpris2 Root Interface
     identity: "gPodder"
@@ -37,7 +31,7 @@ MprisPlayer {
     canPlay: player.playbackState !== MediaPlayer.StoppedState
     canSeek: false
 
-    loopStatus: Mpris.None
+    loopStatus: Mpris.LoopNone
     shuffle: false
     volume: 1
 
@@ -50,6 +44,7 @@ MprisPlayer {
     onPlaybackStatusChanged: {
         song = player.episode_title
         artist = player.podcast_title
+        cover = player.cover_art
     }
 
     onPauseRequested: {
