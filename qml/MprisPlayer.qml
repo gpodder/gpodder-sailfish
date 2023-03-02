@@ -44,7 +44,7 @@ MprisPlayer {
     onPlaybackStatusChanged: {
         song = player.episode_title
         artist = player.podcast_title
-        if (player.episode_art != '') {
+        if (player.episode_art !== '') {
             cover = player.episode_art
         } else {
             cover = player.cover_art
