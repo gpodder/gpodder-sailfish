@@ -237,6 +237,60 @@ Page {
                     }
                 }
             }
+            ListItem {
+                anchors.horizontalCenter: parent.horizontalCenter
+                Label {
+                    id: playbackspeedTitle
+                    text: qsTr("Playback speed: ")
+
+                    font.pixelSize: Theme.fontSizeMedium
+                    color: Theme.highlightColor
+
+                    anchors {
+                        right: parent.horizontalCenter
+                        margins: Theme.paddingMedium
+                        verticalCenter: parent.verticalCenter
+                    }
+
+                    wrapMode: Text.WordWrap
+                }
+                Label {
+                    id: sectionField
+                    text: player.playbackRate
+
+                    font.pixelSize: Theme.fontSizeMedium
+                    color: Theme.primaryColor
+
+                    anchors {
+                        left: parent.horizontalCenter
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
+                    }
+                }
+
+                onClicked: openMenu()
+
+                menu: ContextMenu {
+                    container: sectionField
+                    MenuItem {
+                        Slider {
+                            id: speedSlider
+                            width: parent.width
+
+                            value: player.playbackRate
+                            valueText: Math.round(value * 100) / 100
+                            minimumValue: 0.5
+                            maximumValue: 3.0
+                            stepSize: 0.05
+                            onDownChanged: {
+                                if (!down) {
+                                    player.playbackRate = sliderValue
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
             SectionHeader {
                 text: qsTr("Queue")
