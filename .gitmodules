@@ -1,9 +1,9 @@
 [submodule "gpodder-core"]
 	path = gpodder-core
-	url = git://github.com/gpodder/gpodder-core.git
+	url = https://github.com/gpodder/gpodder-core.git
 [submodule "podcastparser"]
 	path = podcastparser
-	url = git://github.com/gpodder/podcastparser.git
+	url = https://github.com/gpodder/podcastparser.git
 [submodule "minidb"]
 	path = minidb
-	url = git://github.com/thp/minidb.git
+	url = https://github.com/thp/minidb.git
