@@ -334,12 +334,17 @@
         <translation>+ 1 мин</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="242"/>
+        <location filename="../qml/PlayerPage.qml" line="244"/>
+        <source>Playback speed: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="296"/>
         <source>Queue</source>
         <translation>Очередь</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="266"/>
+        <location filename="../qml/PlayerPage.qml" line="320"/>
         <source>Remove from queue</source>
         <translation>Убрать из очереди</translation>
     </message>
