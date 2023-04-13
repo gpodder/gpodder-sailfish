@@ -154,7 +154,7 @@ ListItem {
         }
 
         truncationMode: TruncationMode.Fade
-        text: title
+        text: (url.indexOf("://soundcloud.com/") > 0? '⚠' : '') + title
         color: (newEpisodes || podcastItem.highlighted) ? Theme.highlightColor : Theme.primaryColor
     }
 

@@ -162,6 +162,7 @@ ListItem {
 
             truncationMode: TruncationMode.Fade
             text: title
+            font.strikeout: (source.indexOf("://api.soundcloud.com/") > 0 ? true : false)
 
             // need to set opacity via color, as truncationMode overrides opacity
             color: {
