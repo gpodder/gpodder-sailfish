@@ -212,7 +212,7 @@
         <location filename="../qml/ImportOPML.qml" line="11"/>
         <location filename="../qml/ImportOPML.qml" line="15"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Inget</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="34"/>
@@ -336,7 +336,7 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="244"/>
         <source>Playback speed: </source>
-        <translation type="unfinished"></translation>
+        <translation>Uppspelningshastighet: </translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="296"/>
