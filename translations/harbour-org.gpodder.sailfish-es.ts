@@ -334,12 +334,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="304"/>
+        <location filename="../qml/PlayerPage.qml" line="306"/>
+        <source>Playback speed: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="296"/>
         <source>Queue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="328"/>
+        <location filename="../qml/PlayerPage.qml" line="382"/>
         <source>Remove from queue</source>
         <translation type="unfinished"></translation>
     </message>

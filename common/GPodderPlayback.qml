@@ -38,6 +38,9 @@ MediaPlayer {
     property bool isPaused: playbackState == MediaPlayer.PausedState
     property bool isStopped: playbackState == MediaPlayer.StoppedState
 
+    property bool changePlaybackRate: false
+    property double requestedPlaybackRate: 1.0
+
     property bool inhibitPositionEvents: false
     property bool seekAfterPlay: false
     property int seekTargetSeconds: 0
@@ -121,7 +124,22 @@ MediaPlayer {
             } else {
                 player.source = source;
             }
-            player.seekTargetSeconds = episode.position;
+
+            // If the last episode was played until the end (within 10s of the end) reset to the beginning.
+            if (episode.position <= (episode.total - 10)) {
+                player.seekTargetSeconds = episode.position;
+            } else {
+                player.seekTargetSeconds = 0;
+            }
+
+            // Only allow playbackRate to be changed after 5 seconds so seekAndSync() doesn't rewind to before 0.
+            if (seekTargetSeconds < 5 && playbackRate != 1) {
+                requestedPlaybackRate = playbackRate;
+                playbackRate = 1;
+                changePlaybackRate = true;
+                inhibitPositionEvents = false;
+            }
+
             seekAfterPlay = true;
 
             // Notify interested parties that the player is now active
@@ -273,6 +291,24 @@ MediaPlayer {
 
             // Directly update the playback progress in the episode list
             py.playbackProgress(episode, position / duration);
+
+            if (changePlaybackRate && position > 5) {
+                playbackRate = requestedPlaybackRate;
+                changePlaybackRate = false;
+            }
+        }
+    }
+
+    onPlaybackRateChanged: {
+        if (isPlaying) {
+            if (position > 5) {
+                seekAndSync(position - 0.01);
+            } else {
+                changePlaybackRate = true;
+                requestedPlaybackRate = playbackRate;
+                playbackRate = 1;
+                inhibitPositionEvents = false;
+            }
         }
     }
 }

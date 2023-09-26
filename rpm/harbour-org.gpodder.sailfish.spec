@@ -8,7 +8,7 @@
 
 Summary:    Media and podcast aggregator
 Name:       harbour-org.gpodder.sailfish
-Version:    4.12.0
+Version:    4.13.1
 Release:    1
 Group:      System/GUI/Other
 License:    ISC / GPLv3
@@ -18,7 +18,7 @@ Source0:    %{name}-%{version}.tar.bz2
 Requires:   pyotherside-qml-plugin-python3-qt5 >= 1.3.0
 Requires:   sailfishsilica-qt5
 Requires:   libsailfishapp-launcher
-Requires:   mpris-qt5
+Requires:   qml(Amber.Mpris)
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 
 %description

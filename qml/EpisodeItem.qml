@@ -80,7 +80,7 @@ ListItem {
 
             GpodderIconMenuItem {
                 text: qsTr("Download")
-                icon.source: 'image://theme/icon-m-download'
+                icon.source: 'image://theme/icon-m-cloud-download'
                 visible: downloadState !== Constants.state.downloaded
                 onClicked: {
                     episodeItem.closeMenu();
@@ -162,6 +162,7 @@ ListItem {
 
             truncationMode: TruncationMode.Fade
             text: title
+            font.strikeout: (source.indexOf("://api.soundcloud.com/") > 0 ? true : false)
 
             // need to set opacity via color, as truncationMode overrides opacity
             color: {
