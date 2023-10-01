@@ -11,8 +11,8 @@ Item {
             left: parent.left
             top: parent.top
         }
-        height: episode_art ? parent.height * 0.9 : parent.height
-        width: episode_art ? parent.width * 0.9 : parent.width
+        height: episode_art !== '' && cover_art !== '' ? parent.height * 0.9 : parent.height
+        width: episode_art !== '' && cover_art !== '' ? parent.width * 0.9 : parent.width
 
         source: episode_art ? episode_art : cover_art
     }
@@ -32,7 +32,7 @@ Item {
     }
     Rectangle {
         anchors.fill: parent
-        visible: !cover_art && !episode_art ? true : false
+        visible: cover_art === '' && episode_art === '' ? true : false
         color: Theme.rgba(Theme.highlightColor, 0.5)
 
         clip: true

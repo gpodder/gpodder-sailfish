@@ -104,11 +104,11 @@ MediaPlayer {
         player.stop();
 
         py.call('main.play_episode', [episode_id], function (episode) {
-            if (episode.video) {
+            /*if (episode.video) {
                 player.inhibitPositionEvents = false;
                 Qt.openUrlExternally(episode.source);
                 return;
-            }
+            }*/
 
             // Load media / prepare and start playback
             var old_episode = player.episode;
@@ -146,6 +146,8 @@ MediaPlayer {
             if (old_episode === 0) {
                 player.playerCreated();
             }
+
+            console.log('Source: %s', source);
 
             player.play();
         });
