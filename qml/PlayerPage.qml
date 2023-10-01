@@ -88,23 +88,23 @@ Page {
                     id: dragArea
                     anchors.fill: parent
 
-                    onDoubleClicked: {
+                    /*onDoubleClicked: {
                                          if(videoOutputPP.state == "videoFullScreen") {
                                              videoOutputPP.state = "videoSmall"
                                          } else {
                                              videoOutputPP.state = "videoFullScreen"
                                          }
-                                     }
-                    /*onClicked: {
+                                     }*/
+                    onClicked: {
                         if (player.isPlaying) {
                             player.pause();
                         } else {
                             player.play();
                         }
-                    }*/
+                    }
                     //drag.target: parent
                 }
-                State {
+                /*State {
                     name: "videoFullScreen"
                     ParentChange {
                         target: videoOutputPP
@@ -117,7 +117,7 @@ Page {
                         target: videoOutputPP
                         parent: playQueueRepeater
                     }
-                }
+                }*/
             }
 
             CustomExpander {
