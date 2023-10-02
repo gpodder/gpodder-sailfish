@@ -274,77 +274,77 @@
 <context>
     <name>PlayerPage</name>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="45"/>
+        <location filename="../qml/PlayerPage.qml" line="46"/>
         <source>Stop sleep timer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="45"/>
+        <location filename="../qml/PlayerPage.qml" line="46"/>
         <source>Sleep timer</source>
         <translation type="unfinished">Temporizador</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="56"/>
+        <location filename="../qml/PlayerPage.qml" line="57"/>
         <source>Clear play queue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="114"/>
+        <location filename="../qml/PlayerPage.qml" line="69"/>
         <source>Player</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="118"/>
+        <location filename="../qml/PlayerPage.qml" line="73"/>
         <source>Now playing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="210"/>
+        <location filename="../qml/PlayerPage.qml" line="250"/>
         <source>Sleep timer: </source>
         <translation type="unfinished">Temporizador: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="269"/>
+        <location filename="../qml/PlayerPage.qml" line="289"/>
         <source>- 1 min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="279"/>
+        <location filename="../qml/PlayerPage.qml" line="299"/>
         <source>- 10 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="288"/>
+        <location filename="../qml/PlayerPage.qml" line="308"/>
         <source>Pause</source>
         <translation type="unfinished">Pausar</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="288"/>
+        <location filename="../qml/PlayerPage.qml" line="308"/>
         <source>Play</source>
         <translation type="unfinished">Reproducir</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="300"/>
+        <location filename="../qml/PlayerPage.qml" line="320"/>
         <source>+ 10 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="309"/>
+        <location filename="../qml/PlayerPage.qml" line="329"/>
         <source>+ 1 min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="321"/>
+        <location filename="../qml/PlayerPage.qml" line="341"/>
         <source>Playback speed: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="373"/>
+        <location filename="../qml/PlayerPage.qml" line="393"/>
         <source>Queue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="397"/>
+        <location filename="../qml/PlayerPage.qml" line="417"/>
         <source>Remove from queue</source>
         <translation type="unfinished"></translation>
     </message>
