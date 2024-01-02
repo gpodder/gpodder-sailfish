@@ -378,7 +378,7 @@ Page {
                             valueText: Math.round(value * 100) / 100
                             minimumValue: 0.5
                             maximumValue: 3.0
-                            stepSize: 0.05
+                            stepSize: 0.25
                             onDownChanged: {
                                 if (!down) {
                                     player.playbackRate = sliderValue
