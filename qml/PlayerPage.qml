@@ -124,7 +124,7 @@ Page {
                 id: expander
                 width: parent.width
                 expandedHeight: width
-                visible: !player.hasVideo
+                visible: !player.hasVideo && player.episode_art !== ''
                 ArtArea {
                     anchors {
                         horizontalCenter: parent.horizontalCenter
