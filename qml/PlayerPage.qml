@@ -61,8 +61,8 @@ Page {
         }
 
         Flow {
+            id: pageFlow
             width: parent.width
-            height: parent.height
 
             Column {
                 id: artColumn
@@ -70,13 +70,9 @@ Page {
 
                 VideoOutput {
                     id: videoOutputPP
-                    //anchors.fill: parent
                     source: player
                     visible: player.hasVideo && player.status >= MediaPlayer.Loaded && player.status <= MediaPlayer.EndOfMedia
-                    //flushMode: EmptyFrame //Qt 5.13+ not in SFOS (yet) :(
                     width: parent.width
-                    height: implicitHeight < Screen.height ? implicitHeight : Screen.height
-                    //Drag.active: dragArea.drag.active
 
                     MouseArea {
                         id: dragArea
@@ -96,7 +92,6 @@ Page {
                                 player.play();
                             }
                         }
-                        //drag.target: parent
                     }
                     /*State {
                         name: "videoFullScreen"
@@ -118,12 +113,11 @@ Page {
                     id: art
 
                     width: parent.width
-                    height: implicitHeight < Screen.height ? implicitHeight : Screen.height
                     fillMode: Image.PreserveAspectFit
 
                     visible: !player.hasVideo && (player.episode_art !== '' || player.podcast_cover !== '')
 
-                    source: player.episode_art !== '' ? player.episode_art : player.podcast_cover
+                    source: player.episode_art !== '' ? player.episode_art : player.cover_art
                 }
             }
             Column {
@@ -162,9 +156,6 @@ Page {
                         Label {
                             id: podcast_title
                             anchors {
-                                //left: podcast_cover.right
-                                //right: parent.right
-                                //top: parent.top
                                 margins: Theme.paddingLarge
                             }
 
@@ -176,18 +167,13 @@ Page {
                         }
 
                         Item {
-                            //id: padding_podcast_title
                             width: parent.width
-                            //anchors.top: podcast_title.bottom
                             height: Theme.paddingSmall
                         }
 
                         Label {
                             id: episode_title
                             anchors {
-                                //left: podcast_cover.right
-                                //right: parent.right
-                                //top: podcast_title.bottom
                                 margins: Theme.paddingLarge
                             }
 
@@ -200,9 +186,7 @@ Page {
                         }
 
                         Item {
-                            //id: padding_episode_title
                             width: parent.width
-                            //anchors.top: episode_title.bottom
                             height: Theme.paddingSmall
                         }
                     }
@@ -210,7 +194,6 @@ Page {
 
                 Label {
                     anchors {
-                        //top: episode_title.bottom
                         horizontalCenter: parent.horizontalCenter
                     }
 
@@ -422,16 +405,5 @@ Page {
 
             }
         }
-
-        /*Column {
-            id: column
-
-            width: playerPage.width
-
-            PageHeader {
-                title: qsTr("Player")
-            }
-
-        }*/
     }
 }
