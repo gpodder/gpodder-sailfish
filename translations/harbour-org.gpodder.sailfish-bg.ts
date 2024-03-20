@@ -97,44 +97,44 @@
 <context>
     <name>EpisodeItem</name>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="70"/>
+        <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Pause</source>
-        <translation>Паузиране</translation>
+        <translation type="unfinished">Паузиране</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="70"/>
+        <location filename="../qml/EpisodeItem.qml" line="72"/>
         <source>Play</source>
-        <translation>Пускане</translation>
+        <translation type="unfinished">Пускане</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="82"/>
+        <location filename="../qml/EpisodeItem.qml" line="103"/>
         <source>Download</source>
-        <translation>Изтегляне</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="92"/>
+        <location filename="../qml/EpisodeItem.qml" line="113"/>
         <source>Enqueue</source>
-        <translation>Към опашката</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="105"/>
+        <location filename="../qml/EpisodeItem.qml" line="126"/>
         <source>Delete</source>
-        <translation>Изтриване</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="111"/>
+        <location filename="../qml/EpisodeItem.qml" line="132"/>
         <source>Deleting</source>
-        <translation>Изтрива се</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="119"/>
+        <location filename="../qml/EpisodeItem.qml" line="140"/>
         <source>Toggle New</source>
-        <translation>Като нов</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodeItem.qml" line="125"/>
+        <location filename="../qml/EpisodeItem.qml" line="146"/>
         <source>Shownotes</source>
-        <translation>Описание</translation>
+        <translation type="unfinished">Описание</translation>
     </message>
 </context>
 <context>
@@ -518,34 +518,39 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="53"/>
+        <location filename="../qml/SettingsPage.qml" line="55"/>
         <source>About</source>
         <translation>Относно</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="63"/>
+        <location filename="../qml/SettingsPage.qml" line="65"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="67"/>
+        <location filename="../qml/SettingsPage.qml" line="69"/>
         <source>YouTube</source>
         <translation>YouTube</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="73"/>
+        <location filename="../qml/SettingsPage.qml" line="75"/>
         <source>API Key (v3)</source>
         <translation>API ключ (v3)</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="82"/>
+        <location filename="../qml/SettingsPage.qml" line="84"/>
         <source>Limits</source>
         <translation>Ограничения</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="88"/>
+        <location filename="../qml/SettingsPage.qml" line="90"/>
         <source>Maximum episodes per feed</source>
         <translation>Максимален брой епизоди за RSS емисия</translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="100"/>
+        <source>Allow Downloads via mobile data</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

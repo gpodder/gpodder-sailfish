@@ -23,11 +23,13 @@ import Sailfish.Silica 1.0
 
 import 'common/constants.js' as Constants
 import 'common/util.js' as Util
+import 'connectionManagement'
 
 ListItem {
     id: episodeItem
     property bool isPlaying: ((player.episode === id) && player.isPlaying)
     property variant mime: mime_type.split('/')
+    property var downloaded: downloadState === 1
 
     Rectangle {
         anchors.fill: parent
@@ -73,9 +75,27 @@ ListItem {
                     if (episodeItem.isPlaying) {
                         player.pause();
                     } else {
-                        player.playbackEpisode(id);
+                        if(downloaded === false){
+                            // curried function below to create a closure
+                            // see e.g. https://stackoverflow.com/questions/28898526
+                            connectionUtil.executeIfConnectionAllowed(
+                                function(callee, argument1, argument2){
+                                    return function(){
+                                        callee(argument1,argument2)};
+                                }(doPlayback,player,id)
+                            );
+                        }else {
+                            doPlayback(player,id);
+                        }
                     }
                 }
+
+                function doPlayback(mediaPlayer,id){
+                    console.info("playing episode", id);
+                    mediaPlayer.playbackEpisode(id);
+                }
+
+
             }
 
             GpodderIconMenuItem {
