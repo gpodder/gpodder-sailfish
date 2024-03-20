@@ -20,12 +20,14 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import QtMultimedia 5.0
 
 import 'common'
 import 'common/util.js' as Util
 
 Page {
     id: playerPage
+
     allowedOrientations: Orientation.All
 
     SilicaFlickable {
@@ -72,51 +74,166 @@ Page {
                 visible: player.episode !== 0
             }
 
+            VideoOutput {
+                id: videoOutputPP
+                //anchors.fill: parent
+                source: player
+                visible: player.hasVideo && player.status >= MediaPlayer.Loaded && player.status <= MediaPlayer.EndOfMedia
+                //flushMode: EmptyFrame //Qt 5.13+ not in SFOS (yet) :(
+                width: playerPage.isPortrait ? parent.width : parent.width
+                height: playerPage.isPortrait ? implicitHeight : implicitHeight
+                //Drag.active: dragArea.drag.active
+
+                MouseArea {
+                    id: dragArea
+                    anchors.fill: parent
+
+                    /*onDoubleClicked: {
+                                         if(videoOutputPP.state == "videoFullScreen") {
+                                             videoOutputPP.state = "videoSmall"
+                                         } else {
+                                             videoOutputPP.state = "videoFullScreen"
+                                         }
+                                     }*/
+                    onClicked: {
+                        if (player.isPlaying) {
+                            player.pause();
+                        } else {
+                            player.play();
+                        }
+                    }
+                    //drag.target: parent
+                }
+                /*State {
+                    name: "videoFullScreen"
+                    ParentChange {
+                        target: videoOutputPP
+                        parent: column
+                    }
+                }
+                State {
+                    name: "videoSmall"
+                    ParentChange {
+                        target: videoOutputPP
+                        parent: playQueueRepeater
+                    }
+                }*/
+            }
+
             CustomExpander {
+                id: expander
                 width: parent.width
                 expandedHeight: width
+                visible: !player.hasVideo
                 ArtArea {
                     anchors {
                         horizontalCenter: parent.horizontalCenter
                         margins: Theme.paddingMedium
                     }
                     id: coverImage
-                    property string cover_art: player.cover_art
+                    property string cover_art: ''
                     property string episode_art: player.episode_art
                     property string title_char: player.podcast_title[0]
 
                     width: parent.width
                     height: width
                 }
+
+                /*IconButton {
+                    text: "Fullscreen"
+
+                    anchors {
+                        left: videoOutput.left
+                        bottom: videoOutput.bottom
+                    }
+
+                    icon: 'image://theme/icon-m-scale'
+                    onClicked: console.log('[not implemented] switch to fullscreen')
+                }*/
+
+            }
+
+            Item {
+                height: Theme.paddingSmall
+                width: parent.width
+            }
+
+            Row {
+                id: playing_info_block
+                width: parent.width
+
+                Image {
+                    id: podcast_cover
+                    height: playerPage.isPortrait ? parent.width * 0.2 : parent.width * 0.1
+                    width: this.height
+
+                    source: player.cover_art
+                }
+
+                Item {
+                    width: Theme.paddingSmall
+                    height: parent.height
+                }
+
+                Column {
+                    Label {
+                        id: podcast_title
+                        anchors {
+                            //left: podcast_cover.right
+                            //right: parent.right
+                            //top: parent.top
+                            margins: Theme.paddingLarge
+                        }
+
+                        truncationMode: TruncationMode.Fade
+                        horizontalAlignment: Text.AlignHLeft
+                        text: player.podcast_title
+                        color: Theme.secondaryHighlightColor
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+
+                    Item {
+                        //id: padding_podcast_title
+                        width: parent.width
+                        //anchors.top: podcast_title.bottom
+                        height: Theme.paddingSmall
+                    }
+
+                    Label {
+                        id: episode_title
+                        anchors {
+                            //left: podcast_cover.right
+                            //right: parent.right
+                            //top: podcast_title.bottom
+                            margins: Theme.paddingLarge
+                        }
+
+                        truncationMode: TruncationMode.Fade
+                        horizontalAlignment: Text.AlignHLeft
+                        text: player.episode_title
+                        color: Theme.highlightColor
+                        wrapMode: Text.Wrap
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+
+                    Item {
+                        //id: padding_episode_title
+                        width: parent.width
+                        //anchors.top: episode_title.bottom
+                        height: Theme.paddingSmall
+                    }
+                }
             }
 
             Label {
                 anchors {
-                    left: parent.left
-                    right: parent.right
-                    margins: Theme.paddingLarge
+                    //top: episode_title.bottom
+                    horizontalCenter: parent.horizontalCenter
                 }
 
-                truncationMode: TruncationMode.Fade
-                horizontalAlignment: Text.AlignHCenter
-                text: player.podcast_title
-                color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeSmall
-            }
-
-            Label {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    margins: Theme.paddingLarge
-                }
-
-                truncationMode: TruncationMode.Fade
-                horizontalAlignment: Text.AlignHCenter
-                text: player.episode_title
-                color: Theme.highlightColor
-                wrapMode: Text.Wrap
-                font.pixelSize: Theme.fontSizeSmall
+                font.pixelSize: Theme.fontSizeLarge
+                text: Util.formatPosition(positionSlider.value/1000, player.duration/1000)
+                color: positionSlider.highlighted ? Theme.highlightColor : Theme.primaryColor
             }
 
             Label {
@@ -144,26 +261,6 @@ Page {
                 }
             }
 
-            Item {
-                width: parent.width
-                height: Theme.paddingSmall
-            }
-
-            Label {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-
-                font.pixelSize: Theme.fontSizeLarge
-                text: Util.formatPosition(positionSlider.value/1000, player.duration/1000)
-                color: positionSlider.highlighted ? Theme.highlightColor : Theme.primaryColor
-            }
-
-            Item {
-                width: parent.width
-                height: Theme.paddingSmall
-            }
-
             Slider {
                 id: positionSlider
                 width: parent.width
@@ -188,7 +285,7 @@ Page {
                 height: Theme.itemSizeLarge
                 spacing: Theme.paddingMedium
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: qsTr("- 1 min")
                     icon.source: 'image://theme/icon-m-previous'
 
@@ -198,7 +295,7 @@ Page {
                     }
                 }
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: qsTr("- 10 sec")
                     icon.source: 'image://theme/icon-m-previous'
                     GPodderAutoFire {
@@ -207,7 +304,7 @@ Page {
                     }
                 }
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: player.isPlaying ? qsTr("Pause") : qsTr("Play")
                     onClicked: {
                         if (player.isPlaying) {
@@ -219,7 +316,7 @@ Page {
                     icon.source: player.isPlaying ? 'image://theme/icon-m-pause' : 'image://theme/icon-m-play'
                 }
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: qsTr("+ 10 sec")
                     icon.source: 'image://theme/icon-m-next'
                     GPodderAutoFire {
@@ -228,12 +325,66 @@ Page {
                     }
                 }
 
-                IconMenuItem {
+                GpodderIconMenuItem {
                     text: qsTr("+ 1 min")
                     icon.source: 'image://theme/icon-m-next'
                     GPodderAutoFire {
                         running: parent.down
                         onFired: player.seekAndSync(player.position + 1000 * 60)
+                    }
+                }
+            }
+            ListItem {
+                anchors.horizontalCenter: parent.horizontalCenter
+                Label {
+                    id: playbackspeedTitle
+                    text: qsTr("Playback speed: ")
+
+                    font.pixelSize: Theme.fontSizeMedium
+                    color: Theme.highlightColor
+
+                    anchors {
+                        right: parent.horizontalCenter
+                        margins: Theme.paddingMedium
+                        verticalCenter: parent.verticalCenter
+                    }
+
+                    wrapMode: Text.WordWrap
+                }
+                Label {
+                    id: sectionField
+                    text: player.playbackRate
+
+                    font.pixelSize: Theme.fontSizeMedium
+                    color: Theme.primaryColor
+
+                    anchors {
+                        left: parent.horizontalCenter
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
+                    }
+                }
+
+                onClicked: openMenu()
+
+                menu: ContextMenu {
+                    container: sectionField
+                    MenuItem {
+                        Slider {
+                            id: speedSlider
+                            width: parent.width
+
+                            value: player.playbackRate
+                            valueText: Math.round(value * 100) / 100
+                            minimumValue: 0.5
+                            maximumValue: 3.0
+                            stepSize: 0.05
+                            onDownChanged: {
+                                if (!down) {
+                                    player.playbackRate = sliderValue
+                                }
+                            }
+                        }
                     }
                 }
             }

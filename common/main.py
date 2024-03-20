@@ -19,7 +19,7 @@
 # of gpodder-core, but we might have a different release schedule later on. If
 # we decide to have parallel releases, we can at least start using this version
 # to check if the core version is compatible with the QML UI version.
-__version__ = '4.11.9'
+__version__ = '4.14.0'
 
 import pyotherside
 import gpodder
@@ -120,7 +120,7 @@ class gPotherSide:
         filename = self.core.cover_downloader.get_cover(podcast)
         if not filename:
             return ''
-        return 'file://' + filename
+        return filename
 
     def _get_playback_progress(self, episode):
         if episode.total_time > 0 and episode.current_position > 0:
@@ -175,7 +175,8 @@ class gPotherSide:
             'total_time': episode.total_time,
             'episode_art': self._get_episode_art(episode),
             'cover_art': self._get_cover(episode.podcast),
-            'podcast_title': episode.podcast.title
+            'podcast_title': episode.podcast.title,
+            'source': episode.local_filename(False) if episode.state == gpodder.STATE_DOWNLOADED else episode.url,
         }
 
     def _format_published_section(self, now, tnow, published):
@@ -238,7 +239,7 @@ class gPotherSide:
             Import subscriptions from a local file
         """
         for channel in opml.Importer(url).items:
-            self.subscribe(channel['url'])
+            self.subscribe(channel['url'], channel['section'])
 
     @run_in_background_thread
     def export_opml(self, uri):
@@ -249,7 +250,7 @@ class gPotherSide:
         opml.Exporter(uri).write(self.core.model.get_podcasts())
 
     @run_in_background_thread
-    def subscribe(self, url):
+    def subscribe(self, url, section = None):
         url = self.core.model.normalize_feed_url(url)
         # TODO: Check if subscription already exists
 
@@ -261,7 +262,11 @@ class gPotherSide:
             pyotherside.send('podcast-list-changed')
         show_loading()
 
-        self.core.model.load_podcast(url, create=True)
+        podcast = self.core.model.load_podcast(url, create=True)
+
+        if section is not None:
+            podcast.section = section
+
         self.core.save()
         pyotherside.send('podcast-list-changed')
         pyotherside.send('update-stats')
@@ -299,6 +304,7 @@ class gPotherSide:
         # TODO: Handle the case where there is already a DownloadTask
         episode.download(progress_callback)
         self.core.save()
+        self.core.cover_downloader.get_cover(self._get_podcast_by_id(episode.podcast_id), download=True, episode=episode)
         self._episode_state_changed(episode)
 
     def delete_episode(self, episode_id):
@@ -370,7 +376,7 @@ class gPotherSide:
         filename = self.core.cover_downloader.get_cover(episode.podcast, False, episode)
         if not filename:
             return ''
-        return 'file://' + filename
+        return filename
 
     def play_episode(self, episode_id):
         episode = self._get_episode_by_id(episode_id)

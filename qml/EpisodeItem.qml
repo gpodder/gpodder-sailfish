@@ -65,9 +65,9 @@ ListItem {
     onClicked: openMenu()
 
     menu: Component {
-        IconContextMenu {
-            IconMenuItem {
-                text: episodeItem.isPlaying ? qsTr("Pause") : qsTr("Play")
+        GpodderIconContextMenu {
+            GpodderIconMenuItem {
+                text: episodeItem.isPlaying ? qsTr('Pause') : qsTr('Play')
                 icon.source: 'image://theme/icon-m-' + (episodeItem.isPlaying ? 'pause' : 'play')
                 onClicked: {
                     if (episodeItem.isPlaying) {
@@ -78,9 +78,9 @@ ListItem {
                 }
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Download")
-                icon.source: 'image://theme/icon-m-download'
+                icon.source: 'image://theme/icon-m-cloud-download'
                 visible: downloadState !== Constants.state.downloaded
                 onClicked: {
                     episodeItem.closeMenu();
@@ -88,7 +88,7 @@ ListItem {
                 }
             }
             
-            IconMenuItem {
+            GpodderIconMenuItem {
 				text: qsTr("Enqueue")
                 icon.source: 'image://theme/icon-m-add'
 				onClicked: {
@@ -101,7 +101,7 @@ ListItem {
                 }
 			}
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Delete")
                 icon.source: 'image://theme/icon-m-delete'
                 visible: downloadState !== Constants.state.deleted
@@ -114,14 +114,14 @@ ListItem {
                 }
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 id: toggleNew
                 text: qsTr("Toggle New")
                 icon.source: 'image://theme/icon-m-favorite' + (isNew ? '-selected' : '')
                 onClicked: Util.disableUntilReturn(toggleNew, py, 'main.toggle_new', [id]);
             }
 
-            IconMenuItem {
+            GpodderIconMenuItem {
                 text: qsTr("Shownotes")
                 icon.source: 'image://theme/icon-m-about'
                 onClicked: {
@@ -162,6 +162,7 @@ ListItem {
 
             truncationMode: TruncationMode.Fade
             text: title
+            font.strikeout: (source.indexOf("://api.soundcloud.com/") > 0 ? true : false)
 
             // need to set opacity via color, as truncationMode overrides opacity
             color: {
