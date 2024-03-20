@@ -239,7 +239,7 @@ class gPotherSide:
             Import subscriptions from a local file
         """
         for channel in opml.Importer(url).items:
-            self.subscribe(channel['url'])
+            self.subscribe(channel['url'], channel['section'])
 
     @run_in_background_thread
     def export_opml(self, uri):
@@ -250,7 +250,7 @@ class gPotherSide:
         opml.Exporter(uri).write(self.core.model.get_podcasts())
 
     @run_in_background_thread
-    def subscribe(self, url):
+    def subscribe(self, url, section = None):
         url = self.core.model.normalize_feed_url(url)
         # TODO: Check if subscription already exists
 
@@ -262,7 +262,11 @@ class gPotherSide:
             pyotherside.send('podcast-list-changed')
         show_loading()
 
-        self.core.model.load_podcast(url, create=True)
+        podcast = self.core.model.load_podcast(url, create=True)
+
+        if section is not None:
+            podcast.section = section
+
         self.core.save()
         pyotherside.send('podcast-list-changed')
         pyotherside.send('update-stats')
