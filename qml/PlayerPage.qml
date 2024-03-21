@@ -66,7 +66,7 @@ Page {
 
             Column {
                 id: artColumn
-                width: isPortrait ? parent.width : parent.width * 0.5
+                width: isPortrait ? parent.width : parent.width * 0.55
 
                 VideoOutput {
                     id: videoOutputPP
@@ -116,12 +116,13 @@ Page {
                     fillMode: Image.PreserveAspectFit
 
                     visible: !player.hasVideo && (player.episode_art !== '' || player.podcast_cover !== '')
+                    asynchronous: true
 
                     source: player.episode_art !== '' ? player.episode_art : player.cover_art
                 }
             }
             Column {
-                width: isPortrait ? parent.width : parent.width * 0.5
+                width: isPortrait ? parent.width : parent.width * 0.45
 
                 SectionHeader {
                     text: qsTr("Now playing")
