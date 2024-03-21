@@ -32,12 +32,7 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="50"/>
-        <source>Episodes: </source>
-        <translation>Odcinki:</translation>
-    </message>
-    <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="71"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="65"/>
         <source>No episodes found</source>
         <translation>Brak odcinków</translation>
     </message>
@@ -171,42 +166,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="42"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
         <source>All</source>
         <translation>Wszytskie</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
         <source>Fresh</source>
         <translation>Nowe</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
         <source>Downloaded</source>
         <translation>Pobrane</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Unplayed downloads</source>
         <translation>Nieodtworzone pobrane</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Finished downloads</source>
         <translation>Zakończone pobrania</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Hide deleted</source>
         <translation>Ukryj usunięte</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Deleted episodes</source>
         <translation>Usunięte odcinki</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>Krótkie pobrane (&lt; 10min)</translation>
     </message>
@@ -294,62 +289,57 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="69"/>
-        <source>Player</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/PlayerPage.qml" line="73"/>
+        <location filename="../qml/PlayerPage.qml" line="127"/>
         <source>Now playing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="250"/>
+        <location filename="../qml/PlayerPage.qml" line="216"/>
         <source>Sleep timer: </source>
         <translation type="unfinished">Wyłącznik czasowy: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="289"/>
+        <location filename="../qml/PlayerPage.qml" line="255"/>
         <source>- 1 min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="299"/>
+        <location filename="../qml/PlayerPage.qml" line="265"/>
         <source>- 10 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="308"/>
+        <location filename="../qml/PlayerPage.qml" line="274"/>
         <source>Pause</source>
         <translation type="unfinished">Pauza</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="308"/>
+        <location filename="../qml/PlayerPage.qml" line="274"/>
         <source>Play</source>
         <translation type="unfinished">Odtwarzaj</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="320"/>
+        <location filename="../qml/PlayerPage.qml" line="286"/>
         <source>+ 10 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="329"/>
+        <location filename="../qml/PlayerPage.qml" line="295"/>
         <source>+ 1 min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="341"/>
+        <location filename="../qml/PlayerPage.qml" line="307"/>
         <source>Playback speed: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="393"/>
+        <location filename="../qml/PlayerPage.qml" line="359"/>
         <source>Queue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="417"/>
+        <location filename="../qml/PlayerPage.qml" line="383"/>
         <source>Remove from queue</source>
         <translation type="unfinished"></translation>
     </message>
