@@ -34,9 +34,6 @@ Page {
         id: flickable
         anchors.fill: parent
 
-        contentWidth: column.width
-        contentHeight: column.height + column.spacing
-
         PullDownMenu {
             PlayerChaptersItem {
                 model: player.episode_chapters
