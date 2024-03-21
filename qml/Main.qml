@@ -62,6 +62,13 @@ PodcastsPage {
     GPodderCore {
         id: py
         progname: 'harbour-org.gpodder.sailfish'
+
+        onInitialized: {
+           py.getConfig( 'ui.qml.episode_list.filter_eql', function (result) {
+               console.debug("got query from storage: '",result,"'")
+               allPodcastsEpisodesModel.setQueryFromConfigUpdate(result);
+           });
+        }
     }
 
     GPodderPlayback {
@@ -74,6 +81,13 @@ PodcastsPage {
 
     GPodderPodcastListModel { id: podcastListModel }
     GPodderPodcastListModelConnections {}
+
+    GPodderEpisodeListModel {
+       id: allPodcastsEpisodesModel
+    }
+    GPodderEpisodeListModelConnections {
+       model: allPodcastsEpisodesModel
+    }
 
     function loadPage(filename, properties, replace) {
         var component = Qt.createComponent(filename);

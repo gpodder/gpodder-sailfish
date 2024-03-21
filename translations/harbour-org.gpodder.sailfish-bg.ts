@@ -32,6 +32,11 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
+        <location filename="../qml/AllEpisodesPage.qml" line="50"/>
+        <source>Episodes: </source>
+        <translation>Епизоди: </translation>
+    </message>
+    <message>
         <location filename="../qml/AllEpisodesPage.qml" line="71"/>
         <source>No episodes found</source>
         <translation>Няма намерени епизоди</translation>
@@ -143,22 +148,22 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="89"/>
+        <location filename="../qml/EpisodesPage.qml" line="90"/>
         <source>Mark episodes as old</source>
         <translation>Отбелязване като стари</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="96"/>
+        <location filename="../qml/EpisodesPage.qml" line="97"/>
         <source>Enqueue episodes in player</source>
         <translation>Добавяне към опашката</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="78"/>
         <source>Unsubscribe</source>
         <translation>Отабониране</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="117"/>
+        <location filename="../qml/EpisodesPage.qml" line="118"/>
         <source>No episodes found</source>
         <translation>Няма намерени епизоди</translation>
     </message>
@@ -166,42 +171,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="42"/>
         <source>All</source>
         <translation>Всички</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
         <source>Fresh</source>
         <translation>Нови и неизтеглени</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
         <source>Downloaded</source>
         <translation>Изтеглени</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
         <source>Unplayed downloads</source>
         <translation>Непускани епизоди</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Finished downloads</source>
         <translation>Изслушани епизоди</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Hide deleted</source>
         <translation>Без изтритите</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Deleted episodes</source>
         <translation>Изтрити епизоди</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="50"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>Кратки епизоди (&lt; 10 мин)</translation>
     </message>
@@ -505,7 +510,7 @@
         <translation>Абонаменти</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="92"/>
+        <location filename="../qml/PodcastsPage.qml" line="99"/>
         <source>No subscriptions</source>
         <translation>Няма абонаменти</translation>
     </message>

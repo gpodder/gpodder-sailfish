@@ -30,13 +30,8 @@ Page {
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 
-    Component.onCompleted: {
-        episodeListModel.setQuery(episodeListModel.queries.Downloaded);
-        episodeListModel.reload();
-    }
-
     BusyIndicator {
-        visible: !episodeListModel.ready
+        visible: !allPodcastsEpisodesModel.ready
         running: visible
         anchors.centerIn: parent
     }
@@ -46,7 +41,7 @@ Page {
         anchors.fill: parent
 
         PullDownMenu {
-            EpisodeListFilterItem { id: filterItem; model: episodeListModel }
+            EpisodeListFilterItem { id: filterItem; model: allPodcastsEpisodesModel }
         }
 
         VerticalScrollDecorator { flickable: filteredEpisodesList }
@@ -55,8 +50,7 @@ Page {
             title: filterItem.currentFilter + ": " + filteredEpisodesList.count
         }
 
-        model: GPodderEpisodeListModel { id: episodeListModel }
-        GPodderEpisodeListModelConnections {}
+        model: allPodcastsEpisodesModel
 
         section.property: 'section'
         section.delegate: SectionHeader {
@@ -67,7 +61,7 @@ Page {
         delegate: EpisodeItem {}
 
         ViewPlaceholder {
-            enabled: filteredEpisodesList.count == 0 && episodeListModel.ready
+            enabled: filteredEpisodesList.count == 0 && allPodcastsEpisodesModel.ready
             text: qsTr("No episodes found")
         }
     }
