@@ -32,7 +32,11 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
+<<<<<<< HEAD
         <location filename="../qml/AllEpisodesPage.qml" line="65"/>
+=======
+        <location filename="../qml/AllEpisodesPage.qml" line="71"/>
+>>>>>>> upstream/master
         <source>No episodes found</source>
         <translation type="unfinished"></translation>
     </message>
@@ -143,22 +147,22 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="90"/>
+        <location filename="../qml/EpisodesPage.qml" line="89"/>
         <source>Mark episodes as old</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="97"/>
+        <location filename="../qml/EpisodesPage.qml" line="96"/>
         <source>Enqueue episodes in player</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="78"/>
+        <location filename="../qml/EpisodesPage.qml" line="77"/>
         <source>Unsubscribe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="118"/>
+        <location filename="../qml/EpisodesPage.qml" line="117"/>
         <source>No episodes found</source>
         <translation type="unfinished"></translation>
     </message>
@@ -499,7 +503,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="99"/>
+        <location filename="../qml/PodcastsPage.qml" line="92"/>
         <source>No subscriptions</source>
         <translation type="unfinished"></translation>
     </message>

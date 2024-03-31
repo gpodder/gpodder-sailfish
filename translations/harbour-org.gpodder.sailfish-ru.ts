@@ -32,7 +32,7 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="65"/>
+        <location filename="../qml/AllEpisodesPage.qml" line="71"/>
         <source>No episodes found</source>
         <translation>Нет выпусков</translation>
     </message>
@@ -143,22 +143,22 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="90"/>
+        <location filename="../qml/EpisodesPage.qml" line="89"/>
         <source>Mark episodes as old</source>
         <translation>Отметить выпуски как старые</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="97"/>
+        <location filename="../qml/EpisodesPage.qml" line="96"/>
         <source>Enqueue episodes in player</source>
         <translation>В очередь проигрывателя</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="78"/>
+        <location filename="../qml/EpisodesPage.qml" line="77"/>
         <source>Unsubscribe</source>
         <translation>Отменить подписку</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="118"/>
+        <location filename="../qml/EpisodesPage.qml" line="117"/>
         <source>No episodes found</source>
         <translation>Нет выпусков</translation>
     </message>
@@ -499,7 +499,7 @@
         <translation>Подписки</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="99"/>
+        <location filename="../qml/PodcastsPage.qml" line="92"/>
         <source>No subscriptions</source>
         <translation>Нет подписок</translation>
     </message>
