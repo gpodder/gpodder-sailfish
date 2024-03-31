@@ -32,11 +32,6 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="50"/>
-        <source>Episodes: </source>
-        <translation>Odcinki:</translation>
-    </message>
-    <message>
         <location filename="../qml/AllEpisodesPage.qml" line="71"/>
         <source>No episodes found</source>
         <translation>Brak odcinków</translation>
@@ -148,22 +143,22 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="90"/>
+        <location filename="../qml/EpisodesPage.qml" line="89"/>
         <source>Mark episodes as old</source>
         <translation>Oznacz odcinki jako stare</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="97"/>
+        <location filename="../qml/EpisodesPage.qml" line="96"/>
         <source>Enqueue episodes in player</source>
         <translation>Kolejkuj odcinki w odtwarzaczu</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="78"/>
+        <location filename="../qml/EpisodesPage.qml" line="77"/>
         <source>Unsubscribe</source>
         <translation>Anuluj subskrypcję</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="118"/>
+        <location filename="../qml/EpisodesPage.qml" line="117"/>
         <source>No episodes found</source>
         <translation>Brak odcinków</translation>
     </message>
@@ -171,42 +166,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="42"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
         <source>All</source>
         <translation>Wszytskie</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
         <source>Fresh</source>
         <translation>Nowe</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
         <source>Downloaded</source>
         <translation>Pobrane</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Unplayed downloads</source>
         <translation>Nieodtworzone pobrane</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Finished downloads</source>
         <translation>Zakończone pobrania</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Hide deleted</source>
         <translation>Ukryj usunięte</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Deleted episodes</source>
         <translation>Usunięte odcinki</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>Krótkie pobrane (&lt; 10min)</translation>
     </message>
@@ -509,7 +504,7 @@
         <translation>Subskrypcje</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="99"/>
+        <location filename="../qml/PodcastsPage.qml" line="92"/>
         <source>No subscriptions</source>
         <translation>Brak subskrybcji</translation>
     </message>

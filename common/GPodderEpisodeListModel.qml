@@ -24,9 +24,9 @@ import 'util.js' as Util
 import 'constants.js' as Constants
 
 ListModel {
-    property int podcast_id: -1
-    property var myself: this
+    id: episodeListModel
 
+    property int podcast_id: -1
 
     property var queries: ({
         All: '',
@@ -40,19 +40,27 @@ ListModel {
     })
 
     property var filters: ([
-        { label: qsTr("All"), query: queries.All },
-        { label: qsTr("Fresh"), query: queries.Fresh },
-        { label: qsTr("Downloaded"), query: queries.Downloaded },
-        { label: qsTr("Unplayed downloads"), query: queries.UnplayedDownloads },
-        { label: qsTr("Finished downloads"), query: queries.FinishedDownloads },
-        { label: qsTr("Hide deleted"), query: queries.HideDeleted },
-        { label: qsTr("Deleted episodes"), query: queries.Deleted },
-        { label: qsTr("Short downloads (< 10 min)"), query: queries.ShortDownloads },
+        { label: qsTr("All"), query: episodeListModel.queries.All },
+        { label: qsTr("Fresh"), query: episodeListModel.queries.Fresh },
+        { label: qsTr("Downloaded"), query: episodeListModel.queries.Downloaded },
+        { label: qsTr("Unplayed downloads"), query: episodeListModel.queries.UnplayedDownloads },
+        { label: qsTr("Finished downloads"), query: episodeListModel.queries.FinishedDownloads },
+        { label: qsTr("Hide deleted"), query: episodeListModel.queries.HideDeleted },
+        { label: qsTr("Deleted episodes"), query: episodeListModel.queries.Deleted },
+        { label: qsTr("Short downloads (< 10 min)"), query: episodeListModel.queries.ShortDownloads },
     ])
 
     property bool ready: false
     property int currentFilterIndex: -1
     property string currentCustomQuery: queries.All
+
+    Component.onCompleted: {
+        // Request filter, then load episodes
+        py.call('main.get_config_value', ['ui.qml.episode_list.filter_eql'], function (result) {
+            setQueryFromUpdate(result);
+            reload();
+        });
+    }
 
     function forEachEpisode(callback) {
         // Go from bottom up (= chronological order)
@@ -61,12 +69,12 @@ ListModel {
         }
     }
 
-    function setQueryFromIndex(index) {
-        console.debug("Setting filter index ", index)
-        setQueryEx(filters[index].query, true);
+    function setQueryIndex(index) {
+        currentFilterIndex = index;
+        py.call('main.set_config_value', ['ui.qml.episode_list.filter_eql', filters[currentFilterIndex].query]);
     }
 
-    function setQueryFromConfigUpdate(query) {
+    function setQueryFromUpdate(query) {
         setQueryEx(query, false);
     }
 
@@ -77,32 +85,29 @@ ListModel {
     function setQueryEx(query, update) {
         for (var i=0; i<filters.length; i++) {
             if (filters[i].query === query) {
-                currentCustomQuery = query;
-                currentFilterIndex = i;
-                console.debug("found index ", i, " for query '", query, "'");
-                if (update && podcast_id === -1) {
-                    updateQueryFilterConfig();
+                if (update) {
+                    py.call('main.set_config_value', ['ui.qml.episode_list.filter_eql', query]);
                 }
-                reload();
+                currentFilterIndex = i;
                 return;
             }
         }
-        console.warn("Could not find a predefined query for: '",query,"' Resetting to the all-query");
-        setQueryFromIndex(0);
-    }
 
-    function updateQueryFilterConfig(){
-        console.info("saving selected filter: ", currentFilterIndex, "='", currentCustomQuery, "'.")
-        py.call('main.set_config_value', ['ui.qml.episode_list.filter_eql', currentCustomQuery])
+        currentFilterIndex = -1;
+        currentCustomQuery = query;
+
+        if (update) {
+            py.call('main.set_config_value', ['ui.qml.episode_list.filter_eql', query]);
+        }
     }
 
     function loadAllEpisodes(callback) {
-        podcast_id = -1;
+        episodeListModel.podcast_id = -1;
         reload(callback);
     }
 
-    function loadEpisodes(podcast, callback) {
-        podcast_id = podcast;
+    function loadEpisodes(podcast_id, callback) {
+        episodeListModel.podcast_id = podcast_id;
         reload(callback);
     }
 
@@ -115,10 +120,10 @@ ListModel {
             query = currentCustomQuery;
         }
 
-        myself.ready = false;
+        ready = false;
         py.call('main.load_episodes', [podcast_id, query], function (episodes) {
-            Util.updateModelFrom( myself, episodes);
-             myself.ready = true;
+            Util.updateModelFrom(episodeListModel, episodes);
+            episodeListModel.ready = true;
             if (callback !== undefined) {
                 callback();
             }

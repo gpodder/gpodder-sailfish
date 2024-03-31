@@ -32,11 +32,6 @@
 <context>
     <name>AllEpisodesPage</name>
     <message>
-        <location filename="../qml/AllEpisodesPage.qml" line="50"/>
-        <source>Episodes: </source>
-        <translation>Avsnitt: </translation>
-    </message>
-    <message>
         <location filename="../qml/AllEpisodesPage.qml" line="71"/>
         <source>No episodes found</source>
         <translation>Inga avsnitt hittades</translation>
@@ -148,22 +143,22 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="90"/>
+        <location filename="../qml/EpisodesPage.qml" line="89"/>
         <source>Mark episodes as old</source>
         <translation>Markera avsnitt som gamla</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="97"/>
+        <location filename="../qml/EpisodesPage.qml" line="96"/>
         <source>Enqueue episodes in player</source>
         <translation>Köa avsnitt i spelaren</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="78"/>
+        <location filename="../qml/EpisodesPage.qml" line="77"/>
         <source>Unsubscribe</source>
         <translation>Sluta prenumerera</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="118"/>
+        <location filename="../qml/EpisodesPage.qml" line="117"/>
         <source>No episodes found</source>
         <translation>Inga avsnitt hittades</translation>
     </message>
@@ -171,42 +166,42 @@
 <context>
     <name>GPodderEpisodeListModel</name>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="42"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
         <source>All</source>
         <translation>Alla</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="43"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
         <source>Fresh</source>
         <translation>Nya</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="44"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
         <source>Downloaded</source>
         <translation>Nerladdat</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="45"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
         <source>Unplayed downloads</source>
         <translation>Ospelade nerladdningar</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="46"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
         <source>Finished downloads</source>
         <translation>Slutförda nerladdningar</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="47"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
         <source>Hide deleted</source>
         <translation>Dölj borttagna</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="48"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
         <source>Deleted episodes</source>
         <translation>Borttagna avsnitt</translation>
     </message>
     <message>
-        <location filename="../common/GPodderEpisodeListModel.qml" line="49"/>
+        <location filename="../common/GPodderEpisodeListModel.qml" line="50"/>
         <source>Short downloads (&lt; 10 min)</source>
         <translation>Korta nerladdningar (&lt;10 min)</translation>
     </message>
@@ -509,7 +504,7 @@
         <translation>Prenumerationer</translation>
     </message>
     <message>
-        <location filename="../qml/PodcastsPage.qml" line="99"/>
+        <location filename="../qml/PodcastsPage.qml" line="92"/>
         <source>No subscriptions</source>
         <translation>Inga prenumerationer</translation>
     </message>
