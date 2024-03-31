@@ -24,37 +24,33 @@ import 'util.js' as Util
 
 Connections {
     target: py
-    property var model
 
     onDownloadProgress: {
-        Util.updateModelWith(model, 'id', episode_id,
+        Util.updateModelWith(episodeListModel, 'id', episode_id,
             {'progress': progress});
     }
     onPlaybackProgress: {
-        Util.updateModelWith(model, 'id', episode_id,
+        Util.updateModelWith(episodeListModel, 'id', episode_id,
             {'playbackProgress': progress});
     }
     onUpdatedEpisode: {
-        for (var i=0; i < model.count; i++) {
-            if (model.get(i).id === episode.id) {
-                model.set(i, episode);
+        for (var i=0; i<episodeListModel.count; i++) {
+            if (episodeListModel.get(i).id === episode.id) {
+                episodeListModel.set(i, episode);
                 break;
             }
         }
     }
     onEpisodeListChanged: {
-        if (model.podcast_id === podcast_id) {
-            model.reload();
+        if (episodeListModel.podcast_id === podcast_id) {
+            episodeListModel.reload();
         }
     }
 
     onConfigChanged: {
         if (key === 'ui.qml.episode_list.filter_eql') {
-            model.setQueryFromConfigUpdate(value);
+            episodeListModel.setQueryFromUpdate(value);
+            episodeListModel.reload();
         }
-    }
-
-    onReadyChanged: {
-        model.reload();
     }
 }

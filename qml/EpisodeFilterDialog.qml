@@ -49,7 +49,8 @@ Page {
             highlighted: down || (index == filterSelector.selectedIndex)
 
             onClicked: {
-                filterSelector.model.setQueryFromIndex(index);
+                filterSelector.model.currentFilterIndex = index;
+                filterSelector.model.reload();
                 pageStack.pop();
             }
 
