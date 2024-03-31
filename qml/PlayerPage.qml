@@ -34,6 +34,7 @@ Page {
         id: flickable
         anchors.fill: parent
 
+        contentWidth: isPortrait ? Screen.width : Screen.height
         contentHeight: isPortrait ? artColumn.height + infoColumn.height : Math.max(artColumn.height + infoColumn.height)
 
         PullDownMenu {
@@ -61,7 +62,7 @@ Page {
 
         Flow {
             id: pageFlow
-            width: parent.width
+            width: playerPage.width
 
             Column {
                 id: artColumn
