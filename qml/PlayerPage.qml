@@ -34,6 +34,8 @@ Page {
         id: flickable
         anchors.fill: parent
 
+        contentHeight: isPortrait ? artColumn.height + infoColumn.height : Math.max(artColumn.height + infoColumn.height)
+
         PullDownMenu {
             PlayerChaptersItem {
                 model: player.episode_chapters
@@ -110,6 +112,7 @@ Page {
                     id: art
 
                     width: parent.width
+                    height: isLandscape ? (implicitHeight > Screen.width ? Screen.width : paintedHeight ) : paintedHeight
                     fillMode: Image.PreserveAspectFit
 
                     visible: !player.hasVideo && (player.episode_art !== '' || player.podcast_cover !== '')
@@ -119,6 +122,8 @@ Page {
                 }
             }
             Column {
+                id: infoColumn
+
                 width: isPortrait ? parent.width : parent.width * 0.45
 
                 SectionHeader {
@@ -138,7 +143,7 @@ Page {
 
                     Image {
                         id: podcast_cover
-                        height: playerPage.isPortrait ? parent.width * 0.2 : parent.width * 0.1
+                        height: parent.width * 0.2
                         width: this.height
                         visible: (player.cover_art !== '' && player.episode_art !== '')
 
