@@ -276,57 +276,57 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="46"/>
         <source>Stop sleep timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Stopp tiduret</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="46"/>
         <source>Sleep timer</source>
-        <translation type="unfinished">Insomningstimer</translation>
+        <translation>Insomningstidur</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="57"/>
         <source>Clear play queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Rensa spelningskön</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="131"/>
         <source>Now playing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nu spelas</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="220"/>
         <source>Sleep timer: </source>
-        <translation type="unfinished">Insomningstimer: </translation>
+        <translation>Insomningstidur: </translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="259"/>
         <source>- 1 min</source>
-        <translation type="unfinished"></translation>
+        <translation>- 1 min</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="269"/>
         <source>- 10 sec</source>
-        <translation type="unfinished"></translation>
+        <translation>- 10 sek</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="278"/>
         <source>Pause</source>
-        <translation type="unfinished">Paus</translation>
+        <translation>Paus</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="278"/>
         <source>Play</source>
-        <translation type="unfinished">Spela</translation>
+        <translation>Spela</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="290"/>
         <source>+ 10 sec</source>
-        <translation type="unfinished"></translation>
+        <translation>+ 10 sek</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="299"/>
         <source>+ 1 min</source>
-        <translation type="unfinished"></translation>
+        <translation>+ 1 min</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="311"/>
@@ -336,12 +336,12 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="363"/>
         <source>Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Köa</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="387"/>
         <source>Remove from queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta bort från kön</translation>
     </message>
 </context>
 <context>
