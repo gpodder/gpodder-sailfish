@@ -276,72 +276,72 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="46"/>
         <source>Stop sleep timer</source>
-        <translation type="unfinished"></translation>
+        <translation>Detener temporizador</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="46"/>
         <source>Sleep timer</source>
-        <translation type="unfinished">Temporizador</translation>
+        <translation>Temporizador</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="57"/>
         <source>Clear play queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar cola</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="131"/>
         <source>Now playing</source>
-        <translation type="unfinished"></translation>
+        <translation>Reproduciendo</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="220"/>
         <source>Sleep timer: </source>
-        <translation type="unfinished">Temporizador: </translation>
+        <translation>Temporizador: </translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="259"/>
         <source>- 1 min</source>
-        <translation type="unfinished"></translation>
+        <translation>- 1 min</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="269"/>
         <source>- 10 sec</source>
-        <translation type="unfinished"></translation>
+        <translation>- 10 seg</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="278"/>
         <source>Pause</source>
-        <translation type="unfinished">Pausar</translation>
+        <translation>Pausar</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="278"/>
         <source>Play</source>
-        <translation type="unfinished">Reproducir</translation>
+        <translation>Reproducir</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="290"/>
         <source>+ 10 sec</source>
-        <translation type="unfinished"></translation>
+        <translation>+ 10 seg</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="299"/>
         <source>+ 1 min</source>
-        <translation type="unfinished"></translation>
+        <translation>+ 1 min</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="311"/>
         <source>Playback speed: </source>
-        <translation type="unfinished"></translation>
+        <translation>Velocidad: </translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="363"/>
         <source>Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Cola</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="387"/>
         <source>Remove from queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitar de la cola</translation>
     </message>
 </context>
 <context>
