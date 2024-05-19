@@ -274,72 +274,72 @@
 <context>
     <name>PlayerPage</name>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="46"/>
+        <location filename="../qml/PlayerPage.qml" line="59"/>
         <source>Stop sleep timer</source>
         <translation>Detener temporizador</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="46"/>
+        <location filename="../qml/PlayerPage.qml" line="59"/>
         <source>Sleep timer</source>
         <translation>Temporizador</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="57"/>
+        <location filename="../qml/PlayerPage.qml" line="70"/>
         <source>Clear play queue</source>
         <translation>Borrar cola</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="131"/>
+        <location filename="../qml/PlayerPage.qml" line="146"/>
         <source>Now playing</source>
         <translation>Reproduciendo</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="220"/>
+        <location filename="../qml/PlayerPage.qml" line="235"/>
         <source>Sleep timer: </source>
         <translation>Temporizador: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="259"/>
+        <location filename="../qml/PlayerPage.qml" line="274"/>
         <source>- 1 min</source>
         <translation>- 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="269"/>
+        <location filename="../qml/PlayerPage.qml" line="284"/>
         <source>- 10 sec</source>
         <translation>- 10 seg</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="278"/>
+        <location filename="../qml/PlayerPage.qml" line="293"/>
         <source>Pause</source>
         <translation>Pausar</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="278"/>
+        <location filename="../qml/PlayerPage.qml" line="293"/>
         <source>Play</source>
         <translation>Reproducir</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="290"/>
+        <location filename="../qml/PlayerPage.qml" line="305"/>
         <source>+ 10 sec</source>
         <translation>+ 10 seg</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="299"/>
+        <location filename="../qml/PlayerPage.qml" line="314"/>
         <source>+ 1 min</source>
         <translation>+ 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="311"/>
+        <location filename="../qml/PlayerPage.qml" line="326"/>
         <source>Playback speed: </source>
         <translation>Velocidad: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="363"/>
+        <location filename="../qml/PlayerPage.qml" line="375"/>
         <source>Queue</source>
         <translation>Cola</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="387"/>
+        <location filename="../qml/PlayerPage.qml" line="399"/>
         <source>Remove from queue</source>
         <translation>Quitar de la cola</translation>
     </message>
@@ -507,34 +507,49 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="53"/>
+        <location filename="../qml/SettingsPage.qml" line="65"/>
         <source>About</source>
         <translation>Acerca de</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="63"/>
+        <location filename="../qml/SettingsPage.qml" line="75"/>
         <source>Settings</source>
         <translation>Ajustes</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="67"/>
+        <location filename="../qml/SettingsPage.qml" line="79"/>
         <source>YouTube</source>
         <translation>YouTube</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="73"/>
+        <location filename="../qml/SettingsPage.qml" line="85"/>
         <source>API Key (v3)</source>
         <translation>Clave API (v3)</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="82"/>
+        <location filename="../qml/SettingsPage.qml" line="94"/>
         <source>Limits</source>
         <translation>Límites</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="88"/>
+        <location filename="../qml/SettingsPage.qml" line="100"/>
         <source>Maximum episodes per feed</source>
         <translation>Núm. máximo de episodios por canal</translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="110"/>
+        <source>Speed increments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="120"/>
+        <source>Playback speed - lower limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="136"/>
+        <source>Playback speed - upper limit</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
