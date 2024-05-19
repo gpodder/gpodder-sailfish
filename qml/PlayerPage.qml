@@ -30,6 +30,19 @@ Page {
 
     allowedOrientations: Orientation.All
 
+    onStatusChanged: {
+        if (status === PageStatus.Activating) {
+            py.getConfig('ui.qml.playback_speed.stepSize', function (value) {
+                speedSlider.stepSize = value;
+            });
+            py.getConfig('ui.qml.playback_speed.minimumValue', function (value) {
+                speedSlider.minimumValue = value;
+            });
+            py.getConfig('ui.qml.playback_speed.maximumValue', function (value) {
+                speedSlider.maximumValue = value;
+            });
+        }
+    }
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
@@ -120,6 +133,8 @@ Page {
                     asynchronous: true
 
                     source: player.episode_art !== '' ? player.episode_art : player.cover_art
+
+                    onStateChanged: console.log("source: " + source)
                 }
             }
             Column {
@@ -346,9 +361,6 @@ Page {
 
                                 value: player.playbackRate
                                 valueText: Math.round(value * 100) / 100
-                                minimumValue: 0.5
-                                maximumValue: 3.0
-                                stepSize: 0.25
                                 onDownChanged: {
                                     if (!down) {
                                         player.playbackRate = sliderValue
