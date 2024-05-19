@@ -35,9 +35,21 @@ Page {
             py.getConfig('limit.episodes', function (value) {
                 limit_episodes.value = value;
             });
+            py.getConfig('ui.qml.playback_speed.stepSize', function (value) {
+                speed_increment.value = value;
+            });
+            py.getConfig('ui.qml.playback_speed.minimumValue', function (value) {
+                speed_min.text = value;
+            });
+            py.getConfig('ui.qml.playback_speed.maximumValue', function (value) {
+                speed_max.text = value;
+            });
         } else if (status === PageStatus.Deactivating) {
             py.setConfig('plugins.youtube.api_key_v3', youtube_api_key_v3.text);
             py.setConfig('limit.episodes', parseInt(limit_episodes.value));
+            py.setConfig('ui.qml.playback_speed.stepSize', parseFloat(speed_increment.value));
+            py.setConfig('ui.qml.playback_speed.minimumValue', parseFloat(speed_min.text));
+            py.setConfig('ui.qml.playback_speed.maximumValue', parseFloat(speed_max.text));
             youtube_api_key_v3.focus = false;
         }
     }
@@ -91,6 +103,48 @@ Page {
                 minimumValue: 100
                 maximumValue: 1000
                 stepSize: 100
+            }
+
+            Slider {
+                id: speed_increment
+                label: qsTr("Speed increments")
+                valueText: value
+                width: parent.width
+                minimumValue: speed_increment.stepSize
+                maximumValue: 1.00
+                stepSize: 0.05
+            }
+
+            TextField {
+                id: speed_min
+                label: qsTr("Playback speed - lower limit")
+                placeholderText: label
+                width: parent.width
+                inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhFormattedNumbersOnly
+                EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
+                EnterKey.onClicked: focus = false
+                validator: DoubleValidator {
+                    bottom: speed_increment.value
+                    decimals: 2
+                    notation: DoubleValidator.StandardNotation
+                    top: parseFloat(speed_max.text) - speed_increment.stepSize
+                }
+            }
+
+            TextField {
+                id: speed_max
+                label: qsTr("Playback speed - upper limit")
+                placeholderText: label
+                width: parent.width
+                inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhFormattedNumbersOnly
+                EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
+                EnterKey.onClicked: focus = false
+                validator: DoubleValidator {
+                    bottom: parseFloat(speed_min.text) + speed_increment.stepSize
+                    decimals: 2
+                    notation: DoubleValidator.StandardNotation
+                    top: 5
+                }
             }
         }
     }
