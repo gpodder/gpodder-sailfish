@@ -507,48 +507,53 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="65"/>
+        <location filename="../qml/SettingsPage.qml" line="69"/>
         <source>About</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="75"/>
+        <location filename="../qml/SettingsPage.qml" line="79"/>
         <source>Settings</source>
         <translation>Impostazioni</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="79"/>
+        <location filename="../qml/SettingsPage.qml" line="83"/>
         <source>YouTube</source>
         <translation>YouTube</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="85"/>
+        <location filename="../qml/SettingsPage.qml" line="89"/>
         <source>API Key (v3)</source>
         <translation>API Key (v3)</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="94"/>
+        <location filename="../qml/SettingsPage.qml" line="98"/>
         <source>Limits</source>
         <translation>Limiti</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="100"/>
+        <location filename="../qml/SettingsPage.qml" line="104"/>
         <source>Maximum episodes per feed</source>
         <translation>Massimo episodi per feed</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="110"/>
+        <location filename="../qml/SettingsPage.qml" line="114"/>
         <source>Speed increments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="120"/>
+        <location filename="../qml/SettingsPage.qml" line="124"/>
         <source>Playback speed - lower limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="136"/>
+        <location filename="../qml/SettingsPage.qml" line="140"/>
         <source>Playback speed - upper limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="156"/>
+        <source>Path for storing podcast data - requires restart</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
