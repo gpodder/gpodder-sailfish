@@ -44,12 +44,16 @@ Page {
             py.getConfig('ui.qml.playback_speed.maximumValue', function (value) {
                 speed_max.text = value;
             });
+            py.getConfig('fs.downloads', function (value) {
+                downloads_folder.text = value;
+            });
         } else if (status === PageStatus.Deactivating) {
             py.setConfig('plugins.youtube.api_key_v3', youtube_api_key_v3.text);
             py.setConfig('limit.episodes', parseInt(limit_episodes.value));
             py.setConfig('ui.qml.playback_speed.stepSize', parseFloat(speed_increment.value));
             py.setConfig('ui.qml.playback_speed.minimumValue', parseFloat(speed_min.text));
             py.setConfig('ui.qml.playback_speed.maximumValue', parseFloat(speed_max.text));
+            py.setConfig('fs.downloads', downloads_folder.text);
             youtube_api_key_v3.focus = false;
         }
     }
@@ -145,6 +149,16 @@ Page {
                     notation: DoubleValidator.StandardNotation
                     top: 5
                 }
+            }
+
+            TextField {
+                id: downloads_folder
+                label: qsTr("Path for storing podcast data - requires restart")
+                placeholderText: label
+                width: parent.width
+                inputMethodHints: Qt.ImhNoPredictiveText
+                EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
+                EnterKey.onClicked: focus = false
             }
         }
     }
