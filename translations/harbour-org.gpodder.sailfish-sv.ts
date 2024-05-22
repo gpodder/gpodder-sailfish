@@ -539,22 +539,22 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="114"/>
         <source>Speed increments</source>
-        <translation type="unfinished"></translation>
+        <translation>Hastighetsökning</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="124"/>
         <source>Playback speed - lower limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Uppspelningshastighet - Nedre gräns</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="140"/>
         <source>Playback speed - upper limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Uppspelningshastighet - Övre gräns</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="156"/>
         <source>Path for storing podcast data - requires restart</source>
-        <translation type="unfinished"></translation>
+        <translation>Sökväg för lagring av podcastdata - Kräver omstart</translation>
     </message>
 </context>
 <context>
