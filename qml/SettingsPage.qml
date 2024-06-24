@@ -129,6 +129,16 @@ Page {
                 horizontalAlignment: Text.AlignHCenter
             }
 
+            Slider {
+                id: speed_increment
+                label: qsTr("Increments")
+                valueText: value
+                width: parent.width
+                minimumValue: speed_increment.stepSize
+                maximumValue: 1.00
+                stepSize: 0.05
+            }
+
             Row {
                 width: parent.width
 
@@ -163,16 +173,6 @@ Page {
                         top: 5
                     }
                 }
-            }
-
-            Slider {
-                id: speed_increment
-                label: qsTr("Increments")
-                valueText: value
-                width: parent.width
-                minimumValue: speed_increment.stepSize
-                maximumValue: 1.00
-                stepSize: 0.05
             }
 
             SectionHeader {
