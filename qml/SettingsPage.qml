@@ -20,6 +20,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Sailfish.Pickers 1.0
 
 import 'common'
 
@@ -45,7 +46,7 @@ Page {
                 speed_max.text = value;
             });
             py.getConfig('fs.downloads', function (value) {
-                downloads_folder.text = value;
+                downloads_folder_picker.value = value;
             });
         } else if (status === PageStatus.Deactivating) {
             py.setConfig('plugins.youtube.api_key_v3', youtube_api_key_v3.text);
@@ -53,7 +54,7 @@ Page {
             py.setConfig('ui.qml.playback_speed.stepSize', parseFloat(speed_increment.value));
             py.setConfig('ui.qml.playback_speed.minimumValue', parseFloat(speed_min.text));
             py.setConfig('ui.qml.playback_speed.maximumValue', parseFloat(speed_max.text));
-            py.setConfig('fs.downloads', downloads_folder.text);
+            py.setConfig('fs.downloads', downloads_folder_picker.value);
             youtube_api_key_v3.focus = false;
         }
     }
@@ -61,6 +62,8 @@ Page {
     SilicaFlickable {
         id: settingsList
         anchors.fill: parent
+
+        contentHeight: column.height + Theme.paddingLarge*2
 
         VerticalScrollDecorator { flickable: settingsList }
 
@@ -72,6 +75,7 @@ Page {
         }
 
         Column {
+            id: column
             width: parent.width
             spacing: Theme.paddingMedium
 
@@ -151,14 +155,21 @@ Page {
                 }
             }
 
-            TextField {
-                id: downloads_folder
-                label: qsTr("Path for storing podcast data - requires restart")
-                placeholderText: label
-                width: parent.width
-                inputMethodHints: Qt.ImhNoPredictiveText
-                EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
-                EnterKey.onClicked: focus = false
+            ValueButton {
+                id: downloads_folder_picker
+                anchors.horizontalCenter: parent.horizontalCenter
+                label: qsTr("Downloads directory")
+                onClicked: pageStack.push(folderPickerPage)
+            }
+
+            Component {
+                id: folderPickerPage
+                FolderPickerPage {
+                    dialogTitle: qsTr("Download to")
+                    onSelectedPathChanged: {
+                        py.setConfig('fs.downloads', selectedPath);
+                    }
+                }
             }
         }
     }
