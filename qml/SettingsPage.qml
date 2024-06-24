@@ -47,6 +47,8 @@ Page {
             });
             py.getConfig('fs.downloads', function (value) {
                 downloads_folder_picker.value = value;
+                py.call('main.get_path_media_status', [value], function(status) {
+                    nomedia_toggle.checked = status; });
             });
         } else if (status === PageStatus.Deactivating) {
             py.setConfig('plugins.youtube.api_key_v3', youtube_api_key_v3.text);
@@ -160,6 +162,13 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
                 label: qsTr("Downloads directory")
                 onClicked: pageStack.push(folderPickerPage)
+            }
+
+            TextSwitch {
+                id: nomedia_toggle
+                text: qsTr("Prevent tracker scanning")
+                description: qsTr("Set a .nomedia file in the Downloads folder to prevent gpodder media showing up in the gallery/mediaplayer.")
+                onCheckedChanged: py.call('main.toggle_path_nomedia', [downloads_folder_picker.value, nomedia_toggle.checked]);
             }
 
             Component {
