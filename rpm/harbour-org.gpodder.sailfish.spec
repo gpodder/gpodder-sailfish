@@ -8,7 +8,7 @@
 
 Summary:    Media and podcast aggregator
 Name:       harbour-org.gpodder.sailfish
-Version:    4.16.2
+Version:    4.16.3
 Release:    1
 Group:      System/GUI/Other
 License:    ISC / GPLv3
