@@ -6,7 +6,7 @@ in the device repositories starting with Sailfish OS 1.0.3.8.
 
 ## Getting Started with Development
 
-As of July 2019 an effort was made to make the product play nice in the SDK.
+As of July 2019 an effort was made to make the project play nice in the SDK.
 You can now open the project in the SailfishOS SDK and build/deploy directly from there.
 The method listed below for developing probably still work too.
 To use the build method listed below you will need to revert to the old RPM spec file.
