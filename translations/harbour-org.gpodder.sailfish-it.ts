@@ -517,57 +517,62 @@
         <translation>Impostazioni</translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="89"/>
-        <source>YouTube</source>
-        <translation>YouTube</translation>
-    </message>
-    <message>
-        <location filename="../qml/SettingsPage.qml" line="95"/>
-        <source>API Key (v3)</source>
-        <translation>API Key (v3)</translation>
-    </message>
-    <message>
-        <location filename="../qml/SettingsPage.qml" line="104"/>
-        <source>Limits</source>
-        <translation>Limiti</translation>
-    </message>
-    <message>
-        <location filename="../qml/SettingsPage.qml" line="110"/>
-        <source>Maximum episodes per feed</source>
-        <translation>Massimo episodi per feed</translation>
-    </message>
-    <message>
-        <location filename="../qml/SettingsPage.qml" line="120"/>
-        <source>Speed increments</source>
+        <location filename="../qml/SettingsPage.qml" line="128"/>
+        <source>Playback Speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="130"/>
-        <source>Playback speed - lower limit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/SettingsPage.qml" line="146"/>
-        <source>Playback speed - upper limit</source>
+        <location filename="../qml/SettingsPage.qml" line="147"/>
+        <source>Lower limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="163"/>
+        <source>Upper limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="179"/>
+        <source>YouTube</source>
+        <translation>YouTube</translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="185"/>
+        <source>API Key (v3)</source>
+        <translation>API Key (v3)</translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="113"/>
+        <source>Limits</source>
+        <translation>Limiti</translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="119"/>
+        <source>Maximum episodes per feed</source>
+        <translation>Massimo episodi per feed</translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="134"/>
+        <source>Increments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SettingsPage.qml" line="91"/>
         <source>Downloads directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="169"/>
+        <location filename="../qml/SettingsPage.qml" line="97"/>
         <source>Prevent tracker scanning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="170"/>
+        <location filename="../qml/SettingsPage.qml" line="98"/>
         <source>Set a .nomedia file in the Downloads folder to prevent gpodder media showing up in the gallery/mediaplayer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SettingsPage.qml" line="177"/>
+        <location filename="../qml/SettingsPage.qml" line="105"/>
         <source>Download to</source>
         <translation type="unfinished"></translation>
     </message>

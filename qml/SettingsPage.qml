@@ -85,78 +85,6 @@ Page {
                 title: qsTr("Settings")
             }
 
-            SectionHeader {
-                text: qsTr("YouTube")
-                horizontalAlignment: Text.AlignHCenter
-            }
-
-            TextField {
-                id: youtube_api_key_v3
-                label: qsTr("API Key (v3)")
-                placeholderText: label
-                width: parent.width
-                inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
-                EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
-                EnterKey.onClicked: focus = false
-            }
-
-            SectionHeader {
-                text: qsTr("Limits")
-                horizontalAlignment: Text.AlignHCenter
-            }
-
-            Slider {
-                id: limit_episodes
-                label: qsTr("Maximum episodes per feed")
-                valueText: value
-                width: parent.width
-                minimumValue: 100
-                maximumValue: 1000
-                stepSize: 100
-            }
-
-            Slider {
-                id: speed_increment
-                label: qsTr("Speed increments")
-                valueText: value
-                width: parent.width
-                minimumValue: speed_increment.stepSize
-                maximumValue: 1.00
-                stepSize: 0.05
-            }
-
-            TextField {
-                id: speed_min
-                label: qsTr("Playback speed - lower limit")
-                placeholderText: label
-                width: parent.width
-                inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhFormattedNumbersOnly
-                EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
-                EnterKey.onClicked: focus = false
-                validator: DoubleValidator {
-                    bottom: speed_increment.value
-                    decimals: 2
-                    notation: DoubleValidator.StandardNotation
-                    top: parseFloat(speed_max.text) - speed_increment.stepSize
-                }
-            }
-
-            TextField {
-                id: speed_max
-                label: qsTr("Playback speed - upper limit")
-                placeholderText: label
-                width: parent.width
-                inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhFormattedNumbersOnly
-                EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
-                EnterKey.onClicked: focus = false
-                validator: DoubleValidator {
-                    bottom: parseFloat(speed_min.text) + speed_increment.stepSize
-                    decimals: 2
-                    notation: DoubleValidator.StandardNotation
-                    top: 5
-                }
-            }
-
             ValueButton {
                 id: downloads_folder_picker
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -179,6 +107,87 @@ Page {
                         py.setConfig('fs.downloads', selectedPath);
                     }
                 }
+            }
+
+            SectionHeader {
+                text: qsTr("Limits")
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Slider {
+                id: limit_episodes
+                label: qsTr("Maximum episodes per feed")
+                valueText: value
+                width: parent.width
+                minimumValue: 100
+                maximumValue: 1000
+                stepSize: 100
+            }
+
+            SectionHeader {
+                text: qsTr("Playback Speed")
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Slider {
+                id: speed_increment
+                label: qsTr("Increments")
+                valueText: value
+                width: parent.width
+                minimumValue: speed_increment.stepSize
+                maximumValue: 1.00
+                stepSize: 0.05
+            }
+
+            Row {
+                width: parent.width
+
+                TextField {
+                    id: speed_min
+                    label: qsTr("Lower limit")
+                    placeholderText: label
+                    width: parent.width / 2
+                    inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhFormattedNumbersOnly
+                    EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
+                    EnterKey.onClicked: focus = false
+                    validator: DoubleValidator {
+                        bottom: speed_increment.value
+                        decimals: 2
+                        notation: DoubleValidator.StandardNotation
+                        top: parseFloat(speed_max.text) - speed_increment.stepSize
+                    }
+                }
+
+                TextField {
+                    id: speed_max
+                    label: qsTr("Upper limit")
+                    placeholderText: label
+                    width: parent.width / 2
+                    inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhFormattedNumbersOnly
+                    EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
+                    EnterKey.onClicked: focus = false
+                    validator: DoubleValidator {
+                        bottom: parseFloat(speed_min.text) + speed_increment.stepSize
+                        decimals: 2
+                        notation: DoubleValidator.StandardNotation
+                        top: 5
+                    }
+                }
+            }
+
+            SectionHeader {
+                text: qsTr("YouTube")
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            TextField {
+                id: youtube_api_key_v3
+                label: qsTr("API Key (v3)")
+                placeholderText: label
+                width: parent.width
+                inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
+                EnterKey.iconSource: (text.length > 0) ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"
+                EnterKey.onClicked: focus = false
             }
         }
     }
