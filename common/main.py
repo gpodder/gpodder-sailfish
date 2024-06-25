@@ -36,6 +36,7 @@ import functools
 import time
 import datetime
 import re
+import os
 from concurrent.futures import ThreadPoolExecutor
 
 logger = logging.getLogger(__name__)
@@ -446,6 +447,30 @@ class gPotherSide:
     def get_config_value(self, option):
         return self.core.config.get_field(option)
 
+    def get_path_media_status(self, path):
+        """
+        Returns whether a .nomedia file exists in the provided path (usually the new downloads_path)
+        .nomedia on SFOS signifies to the tracker not to scan the folder.
+        """
+        nomedia_path = '{}/.nomedia'.format(path)
+        nomedia_exists = os.path.isfile(nomedia_path)
+        logger.debug('path {} - {}'.format(nomedia_path, nomedia_exists))
+        return nomedia_exists
+
+    def toggle_path_nomedia(self, path, status):
+        """
+        Adds/removes the .nomedia file from the downloads path.
+        """
+        nomedia_path = '{}/.nomedia'.format(path)
+        if status:
+            logger.debug('Create nomedia file at {}'.format(nomedia_path))
+            open(nomedia_path, 'w')
+
+        else:
+            logger.debug('Remove nomedia file at {}'.format(nomedia_path))
+            os.remove(nomedia_path)
+
+
     def get_directory_providers(self):
         def select_provider(p):
             return p.kind in (p.PROVIDER_SEARCH, p.PROVIDER_STATIC)
@@ -610,6 +635,8 @@ mark_episodes_as_old = gpotherside.mark_episodes_as_old
 save_playback_state = gpotherside.save_playback_state
 set_config_value = gpotherside.set_config_value
 get_config_value = gpotherside.get_config_value
+get_path_media_status = gpotherside.get_path_media_status
+toggle_path_nomedia = gpotherside.toggle_path_nomedia
 get_directory_providers = gpotherside.get_directory_providers
 get_directory_entries = gpotherside.get_directory_entries
 show_podcast = gpotherside.show_podcast
