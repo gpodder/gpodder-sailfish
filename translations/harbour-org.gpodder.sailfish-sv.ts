@@ -519,17 +519,17 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="128"/>
         <source>Playback Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Uppspelningshastighet</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="147"/>
         <source>Lower limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Lägsta gräns</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="163"/>
         <source>Upper limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Övre gräns</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="179"/>
@@ -554,27 +554,27 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="134"/>
         <source>Increments</source>
-        <translation type="unfinished"></translation>
+        <translation>Steg</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="91"/>
         <source>Downloads directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Nerladdningsmapp</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="97"/>
         <source>Prevent tracker scanning</source>
-        <translation type="unfinished"></translation>
+        <translation>Förhindra mediaskanning</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="98"/>
         <source>Set a .nomedia file in the Downloads folder to prevent gpodder media showing up in the gallery/mediaplayer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Skapa en tom .nomedia-fil i nerladdningsmappen, för att förhindra att gpodder-media visas i galleriet/mediaspelaren.</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="105"/>
         <source>Download to</source>
-        <translation type="unfinished"></translation>
+        <translation>Ladda ner till</translation>
     </message>
 </context>
 <context>
