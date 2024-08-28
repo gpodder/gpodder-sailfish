@@ -38,6 +38,14 @@
     </message>
 </context>
 <context>
+    <name>Directory</name>
+    <message>
+        <location filename="../qml/Directory.qml" line="67"/>
+        <source>Nothing found</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DirectoryDialog</name>
     <message>
         <location filename="../qml/DirectoryDialog.qml" line="45"/>
