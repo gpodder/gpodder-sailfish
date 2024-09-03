@@ -62,6 +62,14 @@ Page {
                 pageStack.pop();
             }
         }
+
+        Label {
+            text: qsTr("Nothing found")
+            visible: parent.count === 0 && !busyIndicator.visible
+            anchors.fill: parent
+            horizontalAlignment: Qt.AlignHCenter
+            verticalAlignment: Qt.AlignVCenter
+        }
     }
 
     BusyIndicator {
