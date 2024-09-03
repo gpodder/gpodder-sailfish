@@ -203,7 +203,7 @@ Page {
             }
 
             Label {
-                textFormat: Text.StyledText
+                textFormat: Text.RichText
                 text: detailPage.description
                 linkColor: Theme.highlightColor
                 anchors {
