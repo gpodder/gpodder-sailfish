@@ -69,6 +69,7 @@ PodcastsPage {
         onPlayerCreated: pgst.createPlayerPage();
     }
     
+    GpodderNotifications {}
     MprisPlayer {}
     MediaKeys {}
 
