@@ -42,6 +42,7 @@ Python {
     signal updatedEpisode(var episode)
     signal updateStats()
     signal configChanged(string key, var value)
+    signal coreError(string message)
 
     Component.onCompleted: {
         setHandler('hello', function (coreversion, uiversion, parserversion) {
@@ -66,6 +67,7 @@ Python {
         setHandler('updated-episode', py.updatedEpisode);
         setHandler('update-stats', py.updateStats);
         setHandler('config-changed', py.configChanged);
+        setHandler('core-error', py.coreError);
 
         addImportPath(Qt.resolvedUrl('../..'));
 

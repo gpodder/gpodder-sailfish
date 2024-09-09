@@ -263,7 +263,12 @@ class gPotherSide:
             pyotherside.send('podcast-list-changed')
         show_loading()
 
-        podcast = self.core.model.load_podcast(url, create=True)
+        try:
+            podcast = self.core.model.load_podcast(url, create=True)
+        except Exception as e:
+            pyotherside.send('core-error', 'Podcast: {}\nFeed URL: {}\nload_podcast error: {}'.format(podcast.title, podcast.url, str(e)))
+            pyotherside.send('podcast-list-changed')
+            return false
 
         if section is not None:
             podcast.section = section
@@ -365,9 +370,9 @@ class gPotherSide:
             pyotherside.send('updating-podcast', podcast.id)
             try:
                 podcast.update()
-                logger.info("updated podcast: %d", podcast.id)
             except Exception as e:
-                logger.warning('Could not update %s: %s', podcast.url, e, exc_info=True)
+                logger.warning('Could not update %s: %s', 'podcast.url', str(e))
+                pyotherside.send('core-error', 'Could not update: {}\nFeed URL: {}\nError: {}'.format(podcast.title, podcast.url, str(e)))
             pyotherside.send('updated-podcast', self.convert_podcast(podcast))
             pyotherside.send('update-stats')
         except Exception as e:
@@ -488,13 +493,16 @@ class gPotherSide:
             return p.name == provider
 
         for provider in registry.directory.select(match_provider):
-            return [{
-                'title': e.title,
-                'url': e.url,
-                'image': e.image,
-                'subscribers': e.subscribers,
-                'description': e.description,
-            } for e in provider.on_string(query)]
+            try:
+                return [{
+                    'title': e.title,
+                    'url': e.url,
+                    'image': e.image,
+                    'subscribers': e.subscribers,
+                    'description': e.description,
+                } for e in provider.on_string(query)]
+            except Exception as e:
+                pyotherside.send('core-error', format(str(e)))
 
         return []
 
