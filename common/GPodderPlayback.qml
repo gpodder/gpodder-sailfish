@@ -147,7 +147,7 @@ MediaPlayer {
                 player.playerCreated();
             }
 
-            console.log('Source: %s', source);
+            console.log('Source: ', source);
 
             player.play();
         });
