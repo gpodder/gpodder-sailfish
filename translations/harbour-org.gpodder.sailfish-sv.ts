@@ -42,7 +42,7 @@
     <message>
         <location filename="../qml/Directory.qml" line="67"/>
         <source>Nothing found</source>
-        <translation type="unfinished"></translation>
+        <translation>Inget hittades</translation>
     </message>
 </context>
 <context>
