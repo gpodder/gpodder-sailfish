@@ -16,6 +16,7 @@ Item {
 
         onCoreError: {
             core_notification.body = message;
+            core_notification.replacesId = 0;
             core_notification.publish();
         }
     }
@@ -34,6 +35,7 @@ Item {
 
         onError: {
             playback_notification.body = errorString + '\nURI: ' + player.source;
+            playback_notification.replacesId = 0;
             playback_notification.publish();
         }
     }
