@@ -266,7 +266,7 @@ class gPotherSide:
         try:
             podcast = self.core.model.load_podcast(url, create=True)
         except Exception as e:
-            pyotherside.send('core-error', 'Podcast: {}\nFeed URL: {}\nload_podcast error: {}'.format(podcast.title, podcast.url, str(e)))
+            pyotherside.send('core-error', 'Feed URL: {}\nload_podcast error: {}'.format(url, str(e)))
             pyotherside.send('podcast-list-changed')
             return false
 
