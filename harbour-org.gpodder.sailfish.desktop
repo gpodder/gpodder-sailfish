@@ -4,3 +4,8 @@ X-Nemo-Application-Type=silica-qt5
 Name=gPodder
 Icon=harbour-org.gpodder.sailfish
 Exec=sailfish-qml harbour-org.gpodder.sailfish
+
+[X-Sailjail]
+Permissions=Audio;UserDirs;RemovableMedia;Internet
+OrganizationName=org.gpodder
+ApplicationName=harbour-org.gpodder.sailfish
