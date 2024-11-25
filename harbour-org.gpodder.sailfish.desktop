@@ -9,3 +9,6 @@ Exec=sailfish-qml harbour-org.gpodder.sailfish
 Permissions=Audio;UserDirs;RemovableMedia;Internet
 OrganizationName=org.gpodder
 ApplicationName=harbour-org.gpodder.sailfish
+
+[X-HarbourBackup]
+BackupPathList=.config/harbour-org.gpodder.sailfish:.local/share/harbour-org.gpodder.sailfish
