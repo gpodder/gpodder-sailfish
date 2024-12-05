@@ -20,7 +20,7 @@ Dialog {
             py.call('main.import_opml', [importOPML.selectedFile])
         } else {
             if(exportFile.text.charAt(0) != '/') {
-                exportFile.text = StandardPaths.home + '/' + exportFile.text
+                exportFile.text = StandardPaths.documents + '/' + exportFile.text
             }
 
             py.call('main.export_opml', [exportFile.text])
