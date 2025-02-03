@@ -42,7 +42,7 @@
     <message>
         <location filename="../qml/Directory.qml" line="67"/>
         <source>Nothing found</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha encontrado nada</translation>
     </message>
 </context>
 <context>
@@ -527,17 +527,17 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="128"/>
         <source>Playback Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Velocidad de reproducción</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="147"/>
         <source>Lower limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Límite inferior</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="163"/>
         <source>Upper limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Límite superior</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="179"/>
@@ -562,27 +562,27 @@
     <message>
         <location filename="../qml/SettingsPage.qml" line="134"/>
         <source>Increments</source>
-        <translation type="unfinished"></translation>
+        <translation>Incremento</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="91"/>
         <source>Downloads directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio de descarga</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="97"/>
         <source>Prevent tracker scanning</source>
-        <translation type="unfinished"></translation>
+        <translation>Evitar el escaneo del rastreador</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="98"/>
         <source>Set a .nomedia file in the Downloads folder to prevent gpodder media showing up in the gallery/mediaplayer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Crea un archivo .nomedia en la carpeta de descargas para evitar que los archivos multimedia de gpodder se muestren en la galería/reproductor multimedia.</translation>
     </message>
     <message>
         <location filename="../qml/SettingsPage.qml" line="105"/>
         <source>Download to</source>
-        <translation type="unfinished"></translation>
+        <translation>Descargar en</translation>
     </message>
 </context>
 <context>
