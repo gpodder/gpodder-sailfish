@@ -43,6 +43,7 @@ Python {
     signal updateStats()
     signal configChanged(string key, var value)
     signal coreError(string message)
+    signal loadingText(string message)
 
     Component.onCompleted: {
         setHandler('hello', function (coreversion, uiversion, parserversion) {
@@ -68,6 +69,7 @@ Python {
         setHandler('update-stats', py.updateStats);
         setHandler('config-changed', py.configChanged);
         setHandler('core-error', py.coreError);
+        setHandler('loading-text', py.loadingText);
 
         addImportPath(Qt.resolvedUrl('../..'));
 
