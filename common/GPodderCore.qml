@@ -52,7 +52,7 @@ Python {
             py.parserversion = parserversion;
 
             console.log('gPodder Core ' + py.coreversion);
-            console.log('gPodder QML UI ' + py.uiversion);
+            console.log('gPodder Sailfish ' + py.uiversion);
             console.log('Podcastparser ' + py.parserversion);
             console.log('PyOtherSide ' + py.pluginVersion());
             console.log('Python ' + py.pythonVersion());
