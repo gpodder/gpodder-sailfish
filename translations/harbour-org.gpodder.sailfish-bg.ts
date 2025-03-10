@@ -257,6 +257,19 @@
     </message>
 </context>
 <context>
+    <name>Main</name>
+    <message>
+        <location filename="../qml/Main.qml" line="113"/>
+        <source>Initializing Core</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="115"/>
+        <source>Loading Podcasts</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PlayerChaptersDialog</name>
     <message>
         <location filename="../qml/PlayerChaptersDialog.qml" line="37"/>

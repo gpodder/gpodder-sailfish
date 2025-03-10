@@ -43,6 +43,7 @@ Python {
     signal updateStats()
     signal configChanged(string key, var value)
     signal coreError(string message)
+    signal loadingText(string message_id)
 
     Component.onCompleted: {
         setHandler('hello', function (coreversion, uiversion, parserversion) {
@@ -51,7 +52,7 @@ Python {
             py.parserversion = parserversion;
 
             console.log('gPodder Core ' + py.coreversion);
-            console.log('gPodder QML UI ' + py.uiversion);
+            console.log('gPodder Sailfish ' + py.uiversion);
             console.log('Podcastparser ' + py.parserversion);
             console.log('PyOtherSide ' + py.pluginVersion());
             console.log('Python ' + py.pythonVersion());
@@ -68,6 +69,7 @@ Python {
         setHandler('update-stats', py.updateStats);
         setHandler('config-changed', py.configChanged);
         setHandler('core-error', py.coreError);
+        setHandler('loading-text', py.loadingText);
 
         addImportPath(Qt.resolvedUrl('../..'));
 
