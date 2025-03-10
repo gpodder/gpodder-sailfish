@@ -43,7 +43,7 @@ Python {
     signal updateStats()
     signal configChanged(string key, var value)
     signal coreError(string message)
-    signal loadingText(string message)
+    signal loadingText(string message_id)
 
     Component.onCompleted: {
         setHandler('hello', function (coreversion, uiversion, parserversion) {

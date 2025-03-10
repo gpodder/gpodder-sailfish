@@ -109,7 +109,13 @@ PodcastsPage {
             Connections {
                 target: py
                 onLoadingText: {
-                    loadingIndicatorText.text += "\n" + message
+                    if (message_id === 'initializing-core') {
+                        loadingIndicatorText.text += '\n' + qsTr('Initializing Core');
+                    } else if (message_id === 'loading-podcasts') {
+                        loadingIndicatorText.text += '\n' + qsTr('Loading Podcasts');
+                    } else {
+                        loadingIndicatorText.text += '\n' + message_id;
+                    }
                 }
             }
         }
