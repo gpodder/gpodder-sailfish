@@ -69,7 +69,9 @@ class gPotherSide:
     def initialize(self, progname):
         assert self.core is None, 'Already initialized'
 
+        pyotherside.send('loading-text', 'initializing-core')
         self.core = core.Core(progname=progname)
+        pyotherside.send('loading-text', 'loading-podcasts')
         pyotherside.send('podcast-list-changed')
 
         self.core.config.add_observer(self._config_option_changed)

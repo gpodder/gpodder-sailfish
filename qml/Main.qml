@@ -97,7 +97,27 @@ PodcastsPage {
     BusyIndicator {
         size: BusyIndicatorSize.Large
         anchors.centerIn: parent
-        visible: !py.ready
+        visible: !podcastListModel.firstRun
         running: visible
+        Label {
+            id: loadingIndicatorText
+            anchors.top: parent.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            horizontalAlignment: Text.AlignHCenter
+            text: 'gPodder ' + py.uiversion
+
+            Connections {
+                target: py
+                onLoadingText: {
+                    if (message_id === 'initializing-core') {
+                        loadingIndicatorText.text += '\n' + qsTr('Initializing Core');
+                    } else if (message_id === 'loading-podcasts') {
+                        loadingIndicatorText.text += '\n' + qsTr('Loading Podcasts');
+                    } else {
+                        loadingIndicatorText.text += '\n' + message_id;
+                    }
+                }
+            }
+        }
     }
 }
