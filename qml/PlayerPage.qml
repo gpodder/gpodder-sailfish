@@ -126,7 +126,7 @@ Page {
                     id: art
 
                     width: parent.width
-                    height: isLandscape ? (implicitHeight > Screen.width ? Screen.width : paintedHeight ) : paintedHeight
+                    height: status === Image.ready ? (isLandscape ? (implicitHeight > Screen.width ? Screen.width : paintedHeight ) : paintedHeight) : width
                     fillMode: Image.PreserveAspectFit
 
                     visible: !player.hasVideo && (player.episode_art !== '' || player.podcast_cover !== '')
@@ -134,7 +134,6 @@ Page {
 
                     source: player.episode_art !== '' ? player.episode_art : player.cover_art
 
-                    onStateChanged: console.log("source: " + source)
                 }
             }
             Column {
