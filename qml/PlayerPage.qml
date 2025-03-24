@@ -126,7 +126,6 @@ Page {
                     id: art
 
                     width: parent.width
-                    height: status === Image.ready ? (isLandscape ? (implicitHeight > Screen.width ? Screen.width : paintedHeight ) : paintedHeight) : width
                     fillMode: Image.PreserveAspectFit
 
                     visible: !player.hasVideo && (player.episode_art !== '' || player.podcast_cover !== '')
@@ -134,6 +133,27 @@ Page {
 
                     source: player.episode_art !== '' ? player.episode_art : player.cover_art
 
+                    function setArtImageHeight() {
+                        if (art.status === Image.Ready) {
+                            var calcHeight = (art.implicitHeight * (art.width / art.implicitWidth));
+
+                            if (isLandscape && Screen.width < calcHeight) {
+                                art.height = Screen.width
+                            } else {
+                                art.height = calcHeight;
+                            }
+                        } else {
+                            art.height = isLandscape ? Screen.width : art.width;
+                        }
+                    }
+
+                    onWidthChanged: {
+                        setArtImageHeight();
+                    }
+
+                    onStatusChanged: {
+                        setArtImageHeight();
+                    }
                 }
             }
             Column {
@@ -417,7 +437,6 @@ Page {
                         }
                     }
                 }
-
             }
         }
     }
