@@ -310,59 +310,69 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="146"/>
+        <location filename="../qml/PlayerPage.qml" line="165"/>
         <source>Now playing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="235"/>
+        <location filename="../qml/PlayerPage.qml" line="269"/>
         <source>Sleep timer: </source>
         <translation type="unfinished">Sleep Timer: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="274"/>
+        <location filename="../qml/PlayerPage.qml" line="308"/>
         <source>- 1 min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="284"/>
+        <location filename="../qml/PlayerPage.qml" line="318"/>
         <source>- 10 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="293"/>
+        <location filename="../qml/PlayerPage.qml" line="327"/>
         <source>Pause</source>
         <translation type="unfinished">Pause</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="293"/>
+        <location filename="../qml/PlayerPage.qml" line="327"/>
         <source>Play</source>
         <translation type="unfinished">Abspielen</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="305"/>
+        <location filename="../qml/PlayerPage.qml" line="339"/>
         <source>+ 10 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="314"/>
+        <location filename="../qml/PlayerPage.qml" line="348"/>
         <source>+ 1 min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="326"/>
+        <location filename="../qml/PlayerPage.qml" line="360"/>
         <source>Playback speed: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="375"/>
+        <location filename="../qml/PlayerPage.qml" line="409"/>
         <source>Queue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="399"/>
+        <location filename="../qml/PlayerPage.qml" line="433"/>
         <source>Remove from queue</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="475"/>
+        <source>Chapters</source>
+        <translation type="unfinished">Kapitel</translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="525"/>
+        <source>Shownotes</source>
+        <translation type="unfinished">Shownotes</translation>
     </message>
 </context>
 <context>
