@@ -310,59 +310,69 @@
         <translation>Rensa spelningskön</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="146"/>
+        <location filename="../qml/PlayerPage.qml" line="165"/>
         <source>Now playing</source>
         <translation>Nu spelas</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="235"/>
+        <location filename="../qml/PlayerPage.qml" line="269"/>
         <source>Sleep timer: </source>
         <translation>Insomningstidur: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="274"/>
+        <location filename="../qml/PlayerPage.qml" line="308"/>
         <source>- 1 min</source>
         <translation>- 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="284"/>
+        <location filename="../qml/PlayerPage.qml" line="318"/>
         <source>- 10 sec</source>
         <translation>- 10 sek</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="293"/>
+        <location filename="../qml/PlayerPage.qml" line="327"/>
         <source>Pause</source>
         <translation>Paus</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="293"/>
+        <location filename="../qml/PlayerPage.qml" line="327"/>
         <source>Play</source>
         <translation>Spela</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="305"/>
+        <location filename="../qml/PlayerPage.qml" line="339"/>
         <source>+ 10 sec</source>
         <translation>+ 10 sek</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="314"/>
+        <location filename="../qml/PlayerPage.qml" line="348"/>
         <source>+ 1 min</source>
         <translation>+ 1 min</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="326"/>
+        <location filename="../qml/PlayerPage.qml" line="360"/>
         <source>Playback speed: </source>
         <translation>Uppspelningshastighet: </translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="375"/>
+        <location filename="../qml/PlayerPage.qml" line="409"/>
         <source>Queue</source>
         <translation>Köa</translation>
     </message>
     <message>
-        <location filename="../qml/PlayerPage.qml" line="399"/>
+        <location filename="../qml/PlayerPage.qml" line="433"/>
         <source>Remove from queue</source>
         <translation>Ta bort från kön</translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="475"/>
+        <source>Chapters</source>
+        <translation type="unfinished">Kapitel</translation>
+    </message>
+    <message>
+        <location filename="../qml/PlayerPage.qml" line="525"/>
+        <source>Shownotes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

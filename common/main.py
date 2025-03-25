@@ -69,9 +69,9 @@ class gPotherSide:
     def initialize(self, progname):
         assert self.core is None, 'Already initialized'
 
-        pyotherside.send('loading-text', 'initializing-core')
+        pyotherside.send('loading-text', 'initializing-core', False)
         self.core = core.Core(progname=progname)
-        pyotherside.send('loading-text', 'loading-podcasts')
+        pyotherside.send('loading-text', 'loading-podcasts', False)
         pyotherside.send('podcast-list-changed')
 
         self.core.config.add_observer(self._config_option_changed)
@@ -401,6 +401,9 @@ class gPotherSide:
             'total': episode.total_time,
             'video': episode.file_type() == 'video',
             'chapters': getattr(episode, 'chapters', []),
+            'description': episode.description_html or episode.description,
+            'metadata': ' | '.join(self._format_metadata(episode)),
+            'link': episode.link if episode.link != episode.url else '',
         }
 
     def report_playback_event(self, episode_id, position_from, position_to, duration):

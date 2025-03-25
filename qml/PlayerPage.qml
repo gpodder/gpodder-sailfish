@@ -126,7 +126,6 @@ Page {
                     id: art
 
                     width: parent.width
-                    height: isLandscape ? (implicitHeight > Screen.width ? Screen.width : paintedHeight ) : paintedHeight
                     fillMode: Image.PreserveAspectFit
 
                     visible: !player.hasVideo && (player.episode_art !== '' || player.podcast_cover !== '')
@@ -134,7 +133,27 @@ Page {
 
                     source: player.episode_art !== '' ? player.episode_art : player.cover_art
 
-                    onStateChanged: console.log("source: " + source)
+                    function setArtImageHeight() {
+                        if (art.status === Image.Ready) {
+                            var calcHeight = (art.implicitHeight * (art.width / art.implicitWidth));
+
+                            if (isLandscape && Screen.width < calcHeight) {
+                                art.height = Screen.width
+                            } else {
+                                art.height = calcHeight;
+                            }
+                        } else {
+                            art.height = isLandscape ? Screen.width : art.width;
+                        }
+                    }
+
+                    onWidthChanged: {
+                        setArtImageHeight();
+                    }
+
+                    onStatusChanged: {
+                        setArtImageHeight();
+                    }
                 }
             }
             Column {
@@ -207,6 +226,21 @@ Page {
                         Item {
                             width: parent.width
                             height: Theme.paddingSmall
+                        }
+
+                        Label {
+                            text: player.metadata
+
+                            font.pixelSize: Theme.fontSizeSmall
+                            color: Theme.secondaryColor
+
+                            anchors {
+                                left: parent.left
+                                right: parent.right
+                                margins: Theme.paddingMedium
+                            }
+
+                            wrapMode: Text.WordWrap
                         }
                     }
                 }
@@ -419,6 +453,98 @@ Page {
                     }
                 }
 
+                CustomExpander {
+                    id: chaptersExpander
+                    visible: player.episode_chapters.length > 0
+
+                    width: parent.width
+                    expandedHeight: chaptersColumn.childrenRect.height
+
+                    Column {
+                        id: chaptersColumn
+
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            margins: Theme.paddingMedium
+                        }
+
+                        Item { height: Theme.paddingMedium; width: parent.width }
+
+                        Label {
+                            text: qsTr("Chapters")
+                            anchors {
+                                left: parent.left
+                            }
+                            color: Theme.highlightColor
+                        }
+
+                        Repeater {
+                            model: player.episode_chapters
+
+                            delegate: ListItem {
+                                enabled: false
+                                contentHeight: Theme.itemSizeExtraSmall
+
+                                Label {
+                                    id: durationLabel
+
+                                    anchors {
+                                        left: parent.left
+                                        verticalCenter: parent.verticalCenter
+                                    }
+
+                                    text: Util.formatDuration(modelData.start)
+                                    font.pixelSize: Theme.fontSizeSmall
+                                    color: Theme.secondaryColor
+                                }
+
+                                Label {
+                                    id: titleLabel
+
+                                    anchors {
+                                        left: durationLabel.right
+                                        verticalCenter: parent.verticalCenter
+                                        leftMargin: Theme.paddingMedium
+                                        right: parent.right
+                                    }
+
+                                    width: parent.width
+                                    text: modelData.title
+                                    color: Theme.primaryColor
+                                    truncationMode: TruncationMode.Fade
+                                }
+                            }
+                        }
+                    }
+                }
+
+                CustomExpander {
+                    Label {
+                        id: showNotesExpanderTitle
+                        text: qsTr("Shownotes")
+                        color: Theme.highlightColor
+
+                        anchors {
+                            left: parent.left
+                            leftMargin: Theme.paddingMedium
+                        }
+                    }
+
+                    Label {
+                        textFormat: Text.RichText
+                        text: player.description
+                        linkColor: Theme.highlightColor
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            margins: Theme.paddingMedium
+                            top: showNotesExpanderTitle.bottom
+                        }
+                        wrapMode: Text.WordWrap
+                        onLinkActivated: Qt.openUrlExternally(link)
+                    }
+                }
             }
         }
     }

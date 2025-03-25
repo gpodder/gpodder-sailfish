@@ -114,7 +114,11 @@ PodcastsPage {
                     } else if (message_id === 'loading-podcasts') {
                         loadingIndicatorText.text += '\n' + qsTr('Loading Podcasts');
                     } else {
-                        loadingIndicatorText.text += '\n' + message_id;
+                        if (!replace) {
+                            loadingIndicatorText.text += '\n' + message_id;
+                        } else {
+                            loadingIndicatorText.text = loadingIndicatorText.text.replace(/((.*\n)*)([^\n]+)/gm, "$1" + message_id)
+                        }
                     }
                 }
             }
