@@ -260,12 +260,12 @@
     <message>
         <location filename="../qml/Main.qml" line="113"/>
         <source>Initializing Core</source>
-        <translation type="unfinished"></translation>
+        <translation>Startar kärnan</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="115"/>
         <source>Loading Podcasts</source>
-        <translation type="unfinished"></translation>
+        <translation>Läser in poddar</translation>
     </message>
 </context>
 <context>
@@ -367,12 +367,12 @@
     <message>
         <location filename="../qml/PlayerPage.qml" line="475"/>
         <source>Chapters</source>
-        <translation type="unfinished">Kapitel</translation>
+        <translation>Kapitel</translation>
     </message>
     <message>
         <location filename="../qml/PlayerPage.qml" line="525"/>
         <source>Shownotes</source>
-        <translation type="unfinished"></translation>
+        <translation>Shownotes</translation>
     </message>
 </context>
 <context>
