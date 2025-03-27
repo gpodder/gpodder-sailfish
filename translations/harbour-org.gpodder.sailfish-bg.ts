@@ -268,6 +268,46 @@
         <source>Loading Podcasts</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../qml/Main.qml" line="117"/>
+        <source>Migration check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="119"/>
+        <source> - Dummy Run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="121"/>
+        <source>Checking Data folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="123"/>
+        <source>Checking Config folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="125"/>
+        <source>Checking Cache folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="127"/>
+        <source> - OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="129"/>
+        <source> - Needs migration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="131"/>
+        <source> - User inhibited</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PlayerChaptersDialog</name>
