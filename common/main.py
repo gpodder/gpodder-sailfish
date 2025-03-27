@@ -66,8 +66,39 @@ class gPotherSide:
         self.core = None
         self._checking_for_new_episodes = False
 
+    def migrate_progname(self, progname):
+        OLD_PROGNAME = 'harbour-org.gpodder.sailfish'
+
+        pyotherside.send('loading-text', 'check-migration', False)
+
+        home = os.path.expanduser('~')
+
+        xdg_data_home = os.environ.get('XDG_DATA_HOME', os.path.join(home, '.local', 'share'))
+        xdg_config_home = os.environ.get('XDG_CONFIG_HOME', os.path.join(home, '.config'))
+        xdg_cache_home = os.environ.get('XDG_CACHE_HOME', os.path.join(home, '.cache'))
+
+        old_paths = {}
+        old_paths['data'] = os.path.join(xdg_data_home, OLD_PROGNAME)
+        old_paths['config'] = os.path.join(xdg_config_home, OLD_PROGNAME)
+        old_paths['cache'] = os.path.join(xdg_cache_home, OLD_PROGNAME)
+
+        if OLD_PROGNAME == progname:
+            pyotherside.send('loading-text', 'check-migration-dummy-run', True)
+
+            for key, path in old_paths.items():
+                pyotherside.send('loading-text', f'check-migration-{key}', False)
+                if not os.path.isdir(path):
+                    pyotherside.send('loading-text', 'migration-not-needed', False)
+                    continue
+                if os.path.isfile(f'{path}/.gpodder-migrate-ignore'):
+                    pyotherside.send('loading-text', 'migration-ignore', False)
+                    continue
+                pyotherside.send('loading-text', 'migration-needed', False)
+
     def initialize(self, progname):
         assert self.core is None, 'Already initialized'
+
+        self.migrate_progname(progname)
 
         pyotherside.send('loading-text', 'initializing-core', False)
         self.core = core.Core(progname=progname)
