@@ -86,13 +86,14 @@ class gPotherSide:
             pyotherside.send('loading-text', 'check-migration-dummy-run', True)
 
             for key, path in old_paths.items():
+                pyotherside.send('loading-text', f'check-migration-{key}', False)
                 if not os.path.isdir(path):
-                    pyotherside.send('loading-text', f'check-migration-{key}-not-needed', False)
+                    pyotherside.send('loading-text', 'migration-not-needed', False)
                     continue
                 if os.path.isfile(f'{path}/.gpodder-migrate-ignore'):
-                    pyotherside.send('loading-text', f'check-migration-{key}-ignore', False)
+                    pyotherside.send('loading-text', 'migration-ignore', False)
                     continue
-                pyotherside.send('loading-text', f'check-migration-{key}-needed', False)
+                pyotherside.send('loading-text', 'migration-needed', False)
 
     def initialize(self, progname):
         assert self.core is None, 'Already initialized'

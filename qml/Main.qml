@@ -113,6 +113,22 @@ PodcastsPage {
                         loadingIndicatorText.text += '\n' + qsTr('Initializing Core');
                     } else if (message_id === 'loading-podcasts') {
                         loadingIndicatorText.text += '\n' + qsTr('Loading Podcasts');
+                    } else if (message_id === 'check-migration') {
+                        loadingIndicatorText.text += '\n' + qsTr('Migration check');
+                    } else if (message_id === 'check-migration-dummy-run') {
+                        loadingIndicatorText.text += qsTr(' - Dummy Run');
+                    } else if (message_id === 'check-migration-data') {
+                        loadingIndicatorText.text += '\n' + qsTr('Checking Data folder');
+                    } else if (message_id === 'check-migration-config') {
+                        loadingIndicatorText.text += '\n' + qsTr('Checking Config folder');
+                    } else if (message_id === 'check-migration-cache') {
+                        loadingIndicatorText.text += '\n' + qsTr('Checking Cache folder');
+                    } else if (message_id === 'migration-not-needed') {
+                        loadingIndicatorText.text += qsTr(' - OK');
+                    } else if (message_id === 'migration-needed') {
+                        loadingIndicatorText.text += qsTr(' - Needs migration');
+                    } else if (message_id === 'migration-ignore') {
+                        loadingIndicatorText.text += qsTr(' - User inhibited');
                     } else {
                         if (!replace) {
                             loadingIndicatorText.text += '\n' + message_id;
