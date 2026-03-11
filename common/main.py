@@ -19,7 +19,7 @@
 # of gpodder-core, but we might have a different release schedule later on. If
 # we decide to have parallel releases, we can at least start using this version
 # to check if the core version is compatible with the QML UI version.
-__version__ = '4.17.4'
+__version__ = '4.18.1'
 
 import pyotherside
 import gpodder
@@ -37,6 +37,7 @@ import time
 import datetime
 import re
 import os
+import shutil
 from concurrent.futures import ThreadPoolExecutor
 
 logger = logging.getLogger(__name__)
@@ -82,18 +83,49 @@ class gPotherSide:
         old_paths['config'] = os.path.join(xdg_config_home, OLD_PROGNAME)
         old_paths['cache'] = os.path.join(xdg_cache_home, OLD_PROGNAME)
 
+        new_paths = {}
+
         if OLD_PROGNAME == progname:
             pyotherside.send('loading-text', 'check-migration-dummy-run', True)
+            dry_run = True
+        else:
+            pyotherside.send('loading-text', 'check-migration', True)
 
-            for key, path in old_paths.items():
-                pyotherside.send('loading-text', f'check-migration-{key}', False)
-                if not os.path.isdir(path):
-                    pyotherside.send('loading-text', 'migration-not-needed', False)
-                    continue
-                if os.path.isfile(f'{path}/.gpodder-migrate-ignore'):
-                    pyotherside.send('loading-text', 'migration-ignore', False)
-                    continue
-                pyotherside.send('loading-text', 'migration-needed', False)
+            new_paths['data'] = os.path.join(xdg_data_home, progname)
+            new_paths['config'] = os.path.join(xdg_config_home, progname)
+            new_paths['cache'] = os.path.join(xdg_cache_home, progname)
+
+            dry_run = False
+
+        for key, path in old_paths.items():
+            pyotherside.send('loading-text', f'check-migration-{key}', False)
+            if not os.path.isdir(path):
+                pyotherside.send('loading-text', 'migration-not-needed', False)
+                continue
+            if os.path.isfile(f'{path}/.gpodder-migrate-ignore'):
+                pyotherside.send('loading-text', 'migration-ignore', False)
+                continue
+            if not dry_run and key in new_paths and os.path.isdir(new_paths[key]):
+                pyotherside.send('loading-text', 'migration-potential-collision', False)
+                continue
+            pyotherside.send('loading-text', 'migration-needed', False)
+            if not dry_run and key in new_paths:
+                pyotherside.send('loading-text', f'starting-migration-{key}', False)
+                # os.rename(path, new_paths[key]) OR shutil.move()
+                # Since both base paths are identical os.rename should be sufficient
+                # However shutil.move() will also cover user created edgecases
+                try:
+                    shutil.move(path, new_paths[key])
+                    pyotherside.send('loading-text', f'finished-migration-{key}', False)
+                except shutil.Error as e:
+                    pyotherside.send('loading-text', f'error-moving', False)
+                    pyotherside.send('core-error', f'Error moving {key}: {e}')
+                    pyotherside.send('loading-text', f'failed-migration-{key}', False)
+                except Exception as e:
+                    pyotherside.send('loading-text', f'unexpected-error', False)
+                    pyotherside.send('core-error', f'Error migrating {key}: {e}')
+                    pyotherside.send('loading-text', f'failed-migration-{key}', False)
+                continue
 
     def initialize(self, progname):
         assert self.core is None, 'Already initialized'
