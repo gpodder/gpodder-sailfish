@@ -73,14 +73,14 @@ Page {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     text: [
-                        '© 2005-2020 '+ qsTr("Thomas Perl and the gPodder Team"),
+                        '© 2005-2025 '+ qsTr("Thomas Perl and the gPodder Team"),
                         qsTr("License: ISC / GPLv3 or later"),
                         qsTr("Website: ") + 'http://gpodder.org/',
                         '',
                         qsTr("Sailfish OS artwork by Stephan Beyerle"),
                         '',
                         'gPodder Core ' + py.coreversion,
-                        'gPodder QML UI ' + py.uiversion,
+                        'gPodder Sailfish ' + py.uiversion,
                         'Podcastparser ' + py.parserversion,
                         'PyOtherSide ' + py.pluginVersion(),
                         'Python ' + py.pythonVersion()
