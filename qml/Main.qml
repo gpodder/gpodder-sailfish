@@ -67,10 +67,11 @@ PodcastsPage {
     GPodderPlayback {
         id: player
         onPlayerCreated: pgst.createPlayerPage();
+        onDurationChanged: mprisPlayer.duration = duration
     }
     
     GpodderNotifications {}
-    MprisPlayer {}
+    MprisPlayer { id: mprisPlayer }
     MediaKeys {}
 
     GPodderPodcastListModel { id: podcastListModel }

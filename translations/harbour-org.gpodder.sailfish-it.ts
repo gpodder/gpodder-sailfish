@@ -258,52 +258,52 @@
 <context>
     <name>Main</name>
     <message>
-        <location filename="../qml/Main.qml" line="113"/>
+        <location filename="../qml/Main.qml" line="114"/>
         <source>Initializing Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Main.qml" line="115"/>
+        <location filename="../qml/Main.qml" line="116"/>
         <source>Loading Podcasts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Main.qml" line="117"/>
+        <location filename="../qml/Main.qml" line="118"/>
         <source>Migration check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Main.qml" line="119"/>
+        <location filename="../qml/Main.qml" line="120"/>
         <source> - Dummy Run</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Main.qml" line="121"/>
+        <location filename="../qml/Main.qml" line="122"/>
         <source>Checking Data folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Main.qml" line="123"/>
+        <location filename="../qml/Main.qml" line="124"/>
         <source>Checking Config folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Main.qml" line="125"/>
+        <location filename="../qml/Main.qml" line="126"/>
         <source>Checking Cache folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Main.qml" line="127"/>
+        <location filename="../qml/Main.qml" line="128"/>
         <source> - OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Main.qml" line="129"/>
+        <location filename="../qml/Main.qml" line="130"/>
         <source> - Needs migration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Main.qml" line="131"/>
+        <location filename="../qml/Main.qml" line="132"/>
         <source> - User inhibited</source>
         <translation type="unfinished"></translation>
     </message>

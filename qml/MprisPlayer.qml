@@ -12,12 +12,15 @@ MprisPlayer {
     property string artist
     property string song
     property string cover
+    property int duration
 
     onArtistChanged: mprisPlayer.metaData.contributingArtist = artist
 
     onSongChanged: mprisPlayer.metaData.title = song
 
     onCoverChanged: mprisPlayer.metaData.artUrl = cover
+
+    onDurationChanged: mprisPlayer.metaData.duration = duration
 
     // Mpris2 Root Interface
     identity: "gPodder"
@@ -44,6 +47,7 @@ MprisPlayer {
     onPlaybackStatusChanged: {
         song = player.episode_title
         artist = player.podcast_title
+
         if (player.episode_art !== '') {
             cover = player.episode_art
         } else {
@@ -71,4 +75,5 @@ MprisPlayer {
         player.seekAndSync(player.position - 1000 * 10)
     }
     
+    onPositionRequested: position = player.position
 }
