@@ -270,42 +270,42 @@
     <message>
         <location filename="../qml/Main.qml" line="118"/>
         <source>Migration check</source>
-        <translation type="unfinished"></translation>
+        <translation>Migrationskontroll</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="120"/>
         <source> - Dummy Run</source>
-        <translation type="unfinished"></translation>
+        <translation> - Dummy-körning</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="122"/>
         <source>Checking Data folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Kollar datamappen</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="124"/>
         <source>Checking Config folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Kollar configmappen</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="126"/>
         <source>Checking Cache folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Kollar cachemappen</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="128"/>
         <source> - OK</source>
-        <translation type="unfinished"></translation>
+        <translation> - OK</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="130"/>
         <source> - Needs migration</source>
-        <translation type="unfinished"></translation>
+        <translation> - Kräver migrering</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="132"/>
         <source> - User inhibited</source>
-        <translation type="unfinished"></translation>
+        <translation> - Stoppad av användare</translation>
     </message>
 </context>
 <context>
