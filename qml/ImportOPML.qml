@@ -19,7 +19,7 @@ Dialog {
         if (opmlAction == 'Import') {
             py.call('main.import_opml', [importOPML.selectedFile])
         } else {
-            if(exportFile.text.charAt(0) != '/') {
+            if(exportFile.text.charAt(0) != '/' && exportFile.text.charAt(0) != '~') {
                 exportFile.text = StandardPaths.documents + '/' + exportFile.text
             }
 
@@ -61,8 +61,8 @@ Dialog {
 
         TextField {
             id: exportFile
-            label: 'Filename'
-            placeholderText: qsTr('Enter filname')
+            label: qsTr('Filename, stored in Documents')
+            placeholderText: qsTr('Enter filename')
             visible: opmlAction == 'Export' ? true : false
 
             anchors {
