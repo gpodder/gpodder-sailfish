@@ -252,7 +252,7 @@
     <message>
         <location filename="../qml/ImportOPML.qml" line="64"/>
         <source>Filename, stored in Documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Filnamn, lagrad i Dokument</translation>
     </message>
     <message>
         <location filename="../qml/ImportOPML.qml" line="65"/>
