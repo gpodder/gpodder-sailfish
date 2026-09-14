@@ -30,6 +30,7 @@ Page {
 
     property int podcast_id
     property string title
+    property string feed_url: ''
 
     onStatusChanged: pgst.handlePageStatusChange(status)
 
@@ -38,10 +39,28 @@ Page {
 
     RemorsePopup { id: remorse }
 
+    function refreshFeed() {
+        if (feed_url !== '') {
+            py.call('main.check_for_episodes', [feed_url]);
+            return;
+        }
+
+        py.call('main.show_podcast', [podcast_id], function (podcast) {
+            feed_url = podcast.url;
+            py.call('main.check_for_episodes', [feed_url]);
+        });
+    }
+
     Component.onCompleted: {
         episodeListModel.podcast_id = podcast_id;
         episodeListModel.setQuery(episodeListModel.queries.All);
         episodeListModel.reload();
+
+        if (feed_url === '') {
+            py.call('main.show_podcast', [podcast_id], function (podcast) {
+                feed_url = podcast.url;
+            });
+        }
     }
 
     BusyIndicator {
@@ -73,6 +92,14 @@ Page {
         GPodderEpisodeListModelConnections {}
 
         PullDownMenu {
+            busy: py.refreshing
+
+            MenuItem {
+                text: py.refreshing ? qsTr("Checking for new episodes...") : qsTr("Check for new episodes")
+                enabled: !py.refreshing
+                onClicked: episodesPage.refreshFeed();
+            }
+
             MenuItem {
                 text: qsTr("Unsubscribe")
                 onClicked: {

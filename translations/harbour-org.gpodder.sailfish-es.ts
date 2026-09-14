@@ -151,22 +151,32 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="89"/>
+        <location filename="../qml/EpisodesPage.qml" line="98"/>
+        <source>Checking for new episodes...</source>
+        <translation type="unfinished">Buscando nuevos episodios...</translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodesPage.qml" line="98"/>
+        <source>Check for new episodes</source>
+        <translation type="unfinished">Buscar nuevos episodios</translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodesPage.qml" line="116"/>
         <source>Mark episodes as old</source>
         <translation>Marcar episodios como antiguos</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="96"/>
+        <location filename="../qml/EpisodesPage.qml" line="123"/>
         <source>Enqueue episodes in player</source>
         <translation>Poner episodios en cola</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="104"/>
         <source>Unsubscribe</source>
         <translation>Eliminar suscripción</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="117"/>
+        <location filename="../qml/EpisodesPage.qml" line="144"/>
         <source>No episodes found</source>
         <translation>No se han encontrado episodios</translation>
     </message>

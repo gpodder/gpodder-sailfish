@@ -151,22 +151,32 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="89"/>
+        <location filename="../qml/EpisodesPage.qml" line="98"/>
+        <source>Checking for new episodes...</source>
+        <translation type="unfinished">正在检测新剧集……</translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodesPage.qml" line="98"/>
+        <source>Check for new episodes</source>
+        <translation type="unfinished">检测新剧集</translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodesPage.qml" line="116"/>
         <source>Mark episodes as old</source>
         <translation>标记剧集已播放</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="96"/>
+        <location filename="../qml/EpisodesPage.qml" line="123"/>
         <source>Enqueue episodes in player</source>
         <translation>排列播放器的剧集</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="104"/>
         <source>Unsubscribe</source>
         <translation>取消订阅</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="117"/>
+        <location filename="../qml/EpisodesPage.qml" line="144"/>
         <source>No episodes found</source>
         <translation>没有找到剧集</translation>
     </message>

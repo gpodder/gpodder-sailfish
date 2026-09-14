@@ -151,22 +151,32 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="89"/>
+        <location filename="../qml/EpisodesPage.qml" line="98"/>
+        <source>Checking for new episodes...</source>
+        <translation type="unfinished">Söker nya avsnitt...</translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodesPage.qml" line="98"/>
+        <source>Check for new episodes</source>
+        <translation type="unfinished">Sök efter nya avsnitt</translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodesPage.qml" line="116"/>
         <source>Mark episodes as old</source>
         <translation>Markera avsnitt som gamla</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="96"/>
+        <location filename="../qml/EpisodesPage.qml" line="123"/>
         <source>Enqueue episodes in player</source>
         <translation>Köa avsnitt i spelaren</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="104"/>
         <source>Unsubscribe</source>
         <translation>Sluta prenumerera</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="117"/>
+        <location filename="../qml/EpisodesPage.qml" line="144"/>
         <source>No episodes found</source>
         <translation>Inga avsnitt hittades</translation>
     </message>
