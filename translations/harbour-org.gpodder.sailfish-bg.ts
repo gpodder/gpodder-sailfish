@@ -151,22 +151,32 @@
 <context>
     <name>EpisodesPage</name>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="89"/>
+        <location filename="../qml/EpisodesPage.qml" line="98"/>
+        <source>Checking for new episodes...</source>
+        <translation type="unfinished">Проверява се за нови...</translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodesPage.qml" line="98"/>
+        <source>Check for new episodes</source>
+        <translation type="unfinished">Проверяване за нови епизоди</translation>
+    </message>
+    <message>
+        <location filename="../qml/EpisodesPage.qml" line="116"/>
         <source>Mark episodes as old</source>
         <translation>Отбелязване като стари</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="96"/>
+        <location filename="../qml/EpisodesPage.qml" line="123"/>
         <source>Enqueue episodes in player</source>
         <translation>Добавяне към опашката</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="77"/>
+        <location filename="../qml/EpisodesPage.qml" line="104"/>
         <source>Unsubscribe</source>
         <translation>Отабониране</translation>
     </message>
     <message>
-        <location filename="../qml/EpisodesPage.qml" line="117"/>
+        <location filename="../qml/EpisodesPage.qml" line="144"/>
         <source>No episodes found</source>
         <translation>Няма намерени епизоди</translation>
     </message>

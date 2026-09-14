@@ -439,6 +439,7 @@ class gPotherSide:
                 logger.warning('Could not update %s: %s', 'podcast.url', str(e))
                 pyotherside.send('core-error', 'Could not update: {}\nFeed URL: {}\nError: {}'.format(podcast.title, podcast.url, str(e)))
             pyotherside.send('updated-podcast', self.convert_podcast(podcast))
+            pyotherside.send('episode-list-changed', podcast.id)
             pyotherside.send('update-stats')
         except Exception as e:
             logger.warning('Error in update task', e, exc_info=True)

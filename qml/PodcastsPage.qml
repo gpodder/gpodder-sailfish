@@ -84,7 +84,7 @@ Page {
         model: podcastListModel
 
         delegate: PodcastItem {
-            onClicked: pgst.loadPage('EpisodesPage.qml', {'podcast_id': id, 'title': title});
+            onClicked: pgst.loadPage('EpisodesPage.qml', {'podcast_id': id, 'title': title, 'feed_url': url});
         }
 
         ViewPlaceholder {
