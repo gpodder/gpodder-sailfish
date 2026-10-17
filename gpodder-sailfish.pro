@@ -52,6 +52,7 @@ TRANSLATIONS += \
     translations/harbour-org.gpodder.sailfish-sv.ts \
     translations/harbour-org.gpodder.sailfish-pl.ts \
     translations/harbour-org.gpodder.sailfish-ru.ts \
+    translations/harbour-org.gpodder.sailfish-fr.ts \
     translations/harbour-org.gpodder.sailfish.ts
 
 TRANSLATION_SOURCES += /$$_PRO_FILE_PWD_/common/
